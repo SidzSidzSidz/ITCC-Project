@@ -1,0 +1,12 @@
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Sid\Enrollment1-main\WindowsApp1\WindowsApp1\obj\Debug\Enrollment1-project.vbprojAssemblyReference.cache
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Sid\Enrollment1-main\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Sid\Enrollment1-main\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Sid\Enrollment1-main\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Sid\Enrollment1-main\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Sid\Enrollment1-main\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Sid\Enrollment1-main\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Sid\Enrollment1-main\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Sid\Enrollment1-main\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Enrollment1Form.resources
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Sid\Enrollment1-main\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Sid\Enrollment1-main\WindowsApp1\WindowsApp1\obj\Debug\Enrollment1-project.vbproj.GenerateResource.cache
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Sid\Enrollment1-main\WindowsApp1\WindowsApp1\obj\Debug\Enrollment1-project.vbproj.CoreCompileInputs.cache
