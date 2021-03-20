@@ -1,0 +1,13 @@
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Paolo\search-form-main\SearchSection\obj\Debug\SearchSection-project.vbprojAssemblyReference.cache
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Paolo\search-form-main\SearchSection\obj\Debug\SearchSection.exe
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Paolo\search-form-main\SearchSection\obj\Debug\SearchSection.xml
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Paolo\search-form-main\SearchSection\obj\Debug\SearchSection.pdb
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Paolo\search-form-main\SearchSection\bin\Debug\SearchSection.exe.config
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Paolo\search-form-main\SearchSection\bin\Debug\SearchSection.exe
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Paolo\search-form-main\SearchSection\bin\Debug\SearchSection.pdb
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Paolo\search-form-main\SearchSection\bin\Debug\SearchSection.xml
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Paolo\search-form-main\SearchSection\obj\Debug\SearchSection.StudentInformation.resources
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Paolo\search-form-main\SearchSection\obj\Debug\SearchSection.Search.resources
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Paolo\search-form-main\SearchSection\obj\Debug\SearchSection.Resources.resources
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Paolo\search-form-main\SearchSection\obj\Debug\SearchSection-project.vbproj.GenerateResource.cache
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Paolo\search-form-main\SearchSection\obj\Debug\SearchSection-project.vbproj.CoreCompileInputs.cache

@@ -1,0 +1,11 @@
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Rapha\Maya-Pro--main\ITCC - 42 Enrollment System\bin\Debug\ITCC - 42 Enrollment System.exe.config
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Rapha\Maya-Pro--main\ITCC - 42 Enrollment System\bin\Debug\ITCC - 42 Enrollment System.exe
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Rapha\Maya-Pro--main\ITCC - 42 Enrollment System\bin\Debug\ITCC - 42 Enrollment System.pdb
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Rapha\Maya-Pro--main\ITCC - 42 Enrollment System\bin\Debug\ITCC - 42 Enrollment System.xml
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Rapha\Maya-Pro--main\ITCC - 42 Enrollment System\obj\Debug\ITCC___42_Enrollment_System.Login.resources
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Rapha\Maya-Pro--main\ITCC - 42 Enrollment System\obj\Debug\ITCC___42_Enrollment_System.Resources.resources
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Rapha\Maya-Pro--main\ITCC - 42 Enrollment System\obj\Debug\LoginForm-project.vbproj.GenerateResource.cache
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Rapha\Maya-Pro--main\ITCC - 42 Enrollment System\obj\Debug\LoginForm-project.vbproj.CoreCompileInputs.cache
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Rapha\Maya-Pro--main\ITCC - 42 Enrollment System\obj\Debug\ITCC - 42 Enrollment System.exe
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Rapha\Maya-Pro--main\ITCC - 42 Enrollment System\obj\Debug\ITCC - 42 Enrollment System.xml
+C:\Users\Maya Asuero\Documents\GitHub\ITCC-modified\Rapha\Maya-Pro--main\ITCC - 42 Enrollment System\obj\Debug\ITCC - 42 Enrollment System.pdb

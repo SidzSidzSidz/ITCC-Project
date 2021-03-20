@@ -1,0 +1,15 @@
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\bin\Debug\ITCC-42_Enrollment.exe.config
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\bin\Debug\ITCC-42_Enrollment.exe
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\bin\Debug\ITCC-42_Enrollment.pdb
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\bin\Debug\ITCC-42_Enrollment.xml
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\bin\Debug\aa\ITCC-42_Enrollment.resources.dll
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\obj\Debug\ITCC-42_Enrollment.vbprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\obj\Debug\ITCC_42_Enrollment.Resources.resources
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\obj\Debug\ITCC-42_Enrollment.vbproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\obj\Debug\ITCC-42_Enrollment.vbproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\obj\Debug\aa\ITCC-42_Enrollment.resources.dll
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\obj\Debug\ITCC-42_Enrollment.exe
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\obj\Debug\ITCC-42_Enrollment.xml
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\obj\Debug\ITCC-42_Enrollment.pdb
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\obj\Debug\ITCC_42_Enrollment.Enrollment2Form.resources
+C:\Users\Administrator\source\repos\ITCC-42_Enrollment\ITCC-42_Enrollment\obj\Debug\ITCC_42_Enrollment.Enrollment2Form.aa.resources
