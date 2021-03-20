@@ -11,7 +11,13 @@
 
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub Enrollment_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        enrollment_form.Show()
+        Me.Close()
+
+    End Sub
+
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
 
     End Sub
 End Class
