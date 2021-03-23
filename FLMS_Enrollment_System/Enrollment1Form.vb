@@ -16,4 +16,8 @@
     Private Sub SearchSBar_Click(sender As Object, e As EventArgs) Handles SearchSBar.Click
 
     End Sub
+
+    Private Sub EnrollmentSBar_Click(sender As Object, e As EventArgs) Handles EnrollmentSBar.Click
+
+    End Sub
 End Class

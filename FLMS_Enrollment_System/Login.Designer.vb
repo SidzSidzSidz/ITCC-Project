@@ -38,7 +38,7 @@ Partial Class Login
         Me.LoginBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.LoginBtn.Name = "LoginBtn"
         Me.LoginBtn.Size = New System.Drawing.Size(176, 47)
-        Me.LoginBtn.TabIndex = 11
+        Me.LoginBtn.TabIndex = 12
         Me.LoginBtn.Text = "Login"
         Me.LoginBtn.UseVisualStyleBackColor = True
         '
