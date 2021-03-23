@@ -34,4 +34,7 @@
         StudentInfo.Show()
     End Sub
 
+    Private Sub Search_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Application.Exit()
+    End Sub
 End Class
