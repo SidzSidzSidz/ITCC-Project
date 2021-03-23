@@ -1,7 +1,7 @@
 ﻿Public Class Search
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles LogoutBtn.Click
-        Me.Close()
+        Me.Hide()
         Login.Show()
 
     End Sub

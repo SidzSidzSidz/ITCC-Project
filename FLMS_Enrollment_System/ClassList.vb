@@ -19,7 +19,7 @@
     End Sub
 
     Private Sub LogoutBtn_Click(sender As Object, e As EventArgs) Handles LogoutBtn.Click
-        Me.Close()
+        Me.Hide()
         Login.Show()
     End Sub
 End Class

@@ -24,7 +24,11 @@
     End Sub
 
     Private Sub LogoutBtn_Click(sender As Object, e As EventArgs) Handles LogoutBtn.Click
-        Me.Close()
+        Me.Hide()
         Login.Show()
+    End Sub
+
+    Private Sub SearchSBar_Click(sender As Object, e As EventArgs) Handles SearchSBar.Click
+
     End Sub
 End Class

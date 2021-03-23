@@ -21,12 +21,12 @@
     End Sub
 
     Private Sub CListPB_Click(sender As Object, e As EventArgs) Handles CListPB.Click, ClassListSBar.Click
-        Me.Close()
+        Me.Hide()
         ClassList.Show()
     End Sub
 
     Private Sub SearchPB_Click(sender As Object, e As EventArgs) Handles SearchPB.Click, SearchSBar.Click
-        Me.Close()
+        Me.Hide()
         Search.Show()
     End Sub
 
@@ -35,7 +35,7 @@
     End Sub
 
     Private Sub LogoutBtn_Click_1(sender As Object, e As EventArgs) Handles LogoutBtn.Click
-        Me.Close()
+        Me.Hide()
         Login.Show()
     End Sub
 

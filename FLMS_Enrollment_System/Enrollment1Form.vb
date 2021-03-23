@@ -14,7 +14,7 @@
     End Sub
 
     Private Sub SearchSBar_Click(sender As Object, e As EventArgs) Handles SearchSBar.Click, SearchPB.Click
-        Me.Close()
+        Me.Hide()
         Search.Show()
     End Sub
 
@@ -25,7 +25,7 @@
     'End Sub
 
     Private Sub ClassListSBar_Click(sender As Object, e As EventArgs) Handles ClassListSBar.Click, CListPB.Click
-        Me.Close()
+        Me.Hide()
         ClassList.Show()
     End Sub
 
@@ -35,7 +35,7 @@
 
     Private Sub LogoutBtn_Click(sender As Object, e As EventArgs) Handles LogoutBtn.Click
         ' TODO: check if textboxes are filled
-        Me.Close()
+        Me.Hide()
         Login.Show()
     End Sub
 
