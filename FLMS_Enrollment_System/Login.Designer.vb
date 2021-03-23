@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Login
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Login
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.LoginBtn = New System.Windows.Forms.Button()
@@ -38,32 +38,32 @@ Partial Class Login
         Me.LoginBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.LoginBtn.Name = "LoginBtn"
         Me.LoginBtn.Size = New System.Drawing.Size(176, 47)
-        Me.LoginBtn.TabIndex = 12
+        Me.LoginBtn.TabIndex = 11
         Me.LoginBtn.Text = "Login"
         Me.LoginBtn.UseVisualStyleBackColor = True
         '
         'LoginPasswordTextBox1
         '
         Me.LoginPasswordTextBox1.BackColor = System.Drawing.Color.White
-        Me.LoginPasswordTextBox1.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoginPasswordTextBox1.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!)
         Me.LoginPasswordTextBox1.ForeColor = System.Drawing.SystemColors.WindowText
         Me.LoginPasswordTextBox1.Location = New System.Drawing.Point(784, 278)
         Me.LoginPasswordTextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.LoginPasswordTextBox1.Name = "LoginPasswordTextBox1"
-        Me.LoginPasswordTextBox1.Size = New System.Drawing.Size(260, 27)
-        Me.LoginPasswordTextBox1.TabIndex = 10
+        Me.LoginPasswordTextBox1.Size = New System.Drawing.Size(260, 34)
+        Me.LoginPasswordTextBox1.TabIndex = 13
         Me.LoginPasswordTextBox1.Text = "Password"
         '
         'LoginUserTextBox
         '
         Me.LoginUserTextBox.BackColor = System.Drawing.Color.White
-        Me.LoginUserTextBox.Font = New System.Drawing.Font("Microsoft YaHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoginUserTextBox.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!)
         Me.LoginUserTextBox.ForeColor = System.Drawing.SystemColors.WindowText
         Me.LoginUserTextBox.Location = New System.Drawing.Point(784, 215)
         Me.LoginUserTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.LoginUserTextBox.Name = "LoginUserTextBox"
-        Me.LoginUserTextBox.Size = New System.Drawing.Size(260, 27)
-        Me.LoginUserTextBox.TabIndex = 11
+        Me.LoginUserTextBox.Size = New System.Drawing.Size(260, 34)
+        Me.LoginUserTextBox.TabIndex = 12
         Me.LoginUserTextBox.Text = "Username"
         '
         'Label2
@@ -111,7 +111,7 @@ Partial Class Login
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "FLMS Enrollment System"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
