@@ -28,4 +28,9 @@
         Me.Hide()
         ClassList.Show()
     End Sub
+
+    Private Sub Search_btn_Click(sender As Object, e As EventArgs) Handles Search_btn.Click
+        Me.Hide()
+        StudentInfo.Show()
+    End Sub
 End Class
