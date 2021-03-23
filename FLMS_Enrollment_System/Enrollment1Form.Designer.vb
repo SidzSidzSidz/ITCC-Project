@@ -91,6 +91,7 @@ Partial Class Enrollment1Form
         '
         'RCardBtn
         '
+        Me.RCardBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.RCardBtn.Location = New System.Drawing.Point(514, 463)
         Me.RCardBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.RCardBtn.Name = "RCardBtn"
@@ -101,6 +102,7 @@ Partial Class Enrollment1Form
         '
         'MoralBtn
         '
+        Me.MoralBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MoralBtn.Location = New System.Drawing.Point(386, 463)
         Me.MoralBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.MoralBtn.Name = "MoralBtn"
@@ -111,6 +113,7 @@ Partial Class Enrollment1Form
         '
         'NSOBtn
         '
+        Me.NSOBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.NSOBtn.Location = New System.Drawing.Point(258, 463)
         Me.NSOBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.NSOBtn.Name = "NSOBtn"
@@ -174,6 +177,7 @@ Partial Class Enrollment1Form
         '
         'F137Btn
         '
+        Me.F137Btn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.F137Btn.Location = New System.Drawing.Point(637, 463)
         Me.F137Btn.Margin = New System.Windows.Forms.Padding(2)
         Me.F137Btn.Name = "F137Btn"
@@ -478,6 +482,7 @@ Partial Class Enrollment1Form
         '
         'LogoutBtn
         '
+        Me.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LogoutBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
         Me.LogoutBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LogoutBtn.Location = New System.Drawing.Point(46, 607)
@@ -490,6 +495,7 @@ Partial Class Enrollment1Form
         'AddStaffSBar
         '
         Me.AddStaffSBar.AutoSize = True
+        Me.AddStaffSBar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.AddStaffSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.AddStaffSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.AddStaffSBar.Location = New System.Drawing.Point(72, 467)
@@ -501,6 +507,7 @@ Partial Class Enrollment1Form
         'SearchSBar
         '
         Me.SearchSBar.AutoSize = True
+        Me.SearchSBar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.SearchSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.SearchSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.SearchSBar.Location = New System.Drawing.Point(72, 397)
@@ -512,6 +519,7 @@ Partial Class Enrollment1Form
         'ClassListSBar
         '
         Me.ClassListSBar.AutoSize = True
+        Me.ClassListSBar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ClassListSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.ClassListSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.ClassListSBar.Location = New System.Drawing.Point(72, 327)
@@ -523,6 +531,7 @@ Partial Class Enrollment1Form
         'EnrollmentSBar
         '
         Me.EnrollmentSBar.AutoSize = True
+        Me.EnrollmentSBar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.EnrollmentSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.EnrollmentSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.EnrollmentSBar.Location = New System.Drawing.Point(72, 257)
@@ -546,6 +555,7 @@ Partial Class Enrollment1Form
         '
         'SearchPB
         '
+        Me.SearchPB.Cursor = System.Windows.Forms.Cursors.Hand
         Me.SearchPB.Image = CType(resources.GetObject("SearchPB.Image"), System.Drawing.Image)
         Me.SearchPB.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.SearchPB.Location = New System.Drawing.Point(21, 387)
@@ -557,6 +567,7 @@ Partial Class Enrollment1Form
         '
         'AddStaffPB
         '
+        Me.AddStaffPB.Cursor = System.Windows.Forms.Cursors.Hand
         Me.AddStaffPB.Image = CType(resources.GetObject("AddStaffPB.Image"), System.Drawing.Image)
         Me.AddStaffPB.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.AddStaffPB.Location = New System.Drawing.Point(21, 457)
@@ -568,6 +579,7 @@ Partial Class Enrollment1Form
         '
         'CListPB
         '
+        Me.CListPB.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CListPB.Image = CType(resources.GetObject("CListPB.Image"), System.Drawing.Image)
         Me.CListPB.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.CListPB.Location = New System.Drawing.Point(21, 317)
@@ -579,6 +591,7 @@ Partial Class Enrollment1Form
         '
         'EnrollmentPB
         '
+        Me.EnrollmentPB.Cursor = System.Windows.Forms.Cursors.Hand
         Me.EnrollmentPB.Image = CType(resources.GetObject("EnrollmentPB.Image"), System.Drawing.Image)
         Me.EnrollmentPB.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.EnrollmentPB.Location = New System.Drawing.Point(21, 247)
