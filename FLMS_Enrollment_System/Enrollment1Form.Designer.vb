@@ -32,25 +32,12 @@ Partial Class Enrollment1Form
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.F137Btn = New System.Windows.Forms.Button()
         Me.BirthdayDTP = New System.Windows.Forms.DateTimePicker()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -69,15 +56,27 @@ Partial Class Enrollment1Form
         Me.LRNTBox = New System.Windows.Forms.TextBox()
         Me.SuffixTBox = New System.Windows.Forms.TextBox()
         Me.LastNameTBox = New System.Windows.Forms.TextBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.LastSchoolTBox = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Sidebar = New System.Windows.Forms.Panel()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.LogoutBtn = New System.Windows.Forms.Button()
+        Me.AddStaffSBar = New System.Windows.Forms.Label()
+        Me.SearchSBar = New System.Windows.Forms.Label()
+        Me.ClassListSBar = New System.Windows.Forms.Label()
+        Me.EnrollmentSBar = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.SearchPB = New System.Windows.Forms.PictureBox()
+        Me.AddStaffPB = New System.Windows.Forms.PictureBox()
+        Me.CListPB = New System.Windows.Forms.PictureBox()
+        Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
+        Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
+        CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NextBtn
@@ -173,137 +172,6 @@ Partial Class Enrollment1Form
         Me.Label25.TabIndex = 28
         Me.Label25.Text = "Form 137"
         '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label17.Location = New System.Drawing.Point(18, 466)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(166, 13)
-        Me.Label17.TabIndex = 17
-        Me.Label17.Text = "-----------------------------------------------------"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label18.Location = New System.Drawing.Point(16, 396)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(166, 13)
-        Me.Label18.TabIndex = 18
-        Me.Label18.Text = "-----------------------------------------------------"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label19.Location = New System.Drawing.Point(18, 326)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(166, 13)
-        Me.Label19.TabIndex = 19
-        Me.Label19.Text = "-----------------------------------------------------"
-        '
-        'Button5
-        '
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.Button5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Button5.Location = New System.Drawing.Point(46, 607)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(105, 44)
-        Me.Button5.TabIndex = 16
-        Me.Button5.Text = "Log Out"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Label20.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label20.Location = New System.Drawing.Point(72, 495)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(93, 25)
-        Me.Label20.TabIndex = 12
-        Me.Label20.Text = "Add Staff"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Label21.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label21.Location = New System.Drawing.Point(72, 425)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(75, 25)
-        Me.Label21.TabIndex = 13
-        Me.Label21.Text = "Search"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Label22.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label22.Location = New System.Drawing.Point(72, 355)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(97, 25)
-        Me.Label22.TabIndex = 14
-        Me.Label22.Text = "Class List"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Label23.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label23.Location = New System.Drawing.Point(72, 285)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(104, 25)
-        Me.Label23.TabIndex = 15
-        Me.Label23.Text = "Enrollment"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label24.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label24.Location = New System.Drawing.Point(13, 219)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(171, 31)
-        Me.Label24.TabIndex = 7
-        Me.Label24.Text = "Lorem Ipsum"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(11, 41)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(175, 175)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 6
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox3.Location = New System.Drawing.Point(21, 415)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(45, 45)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 8
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
-        Me.PictureBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox8.Location = New System.Drawing.Point(21, 485)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(45, 45)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 9
-        Me.PictureBox8.TabStop = False
-        '
         'F137Btn
         '
         Me.F137Btn.Location = New System.Drawing.Point(637, 463)
@@ -365,17 +233,6 @@ Partial Class Enrollment1Form
         Me.Label5.Size = New System.Drawing.Size(34, 17)
         Me.Label5.TabIndex = 32
         Me.Label5.Text = "LRN"
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox7.Location = New System.Drawing.Point(21, 275)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(45, 45)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox7.TabIndex = 11
-        Me.PictureBox7.TabStop = False
         '
         'Label11
         '
@@ -559,17 +416,6 @@ Partial Class Enrollment1Form
         Me.LastNameTBox.Size = New System.Drawing.Size(200, 28)
         Me.LastNameTBox.TabIndex = 14
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox2.Location = New System.Drawing.Point(21, 345)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(45, 45)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 10
-        Me.PictureBox2.TabStop = False
-        '
         'LastSchoolTBox
         '
         Me.LastSchoolTBox.Location = New System.Drawing.Point(257, 349)
@@ -579,35 +425,175 @@ Partial Class Enrollment1Form
         Me.LastSchoolTBox.Size = New System.Drawing.Size(200, 28)
         Me.LastSchoolTBox.TabIndex = 16
         '
-        'Panel1
+        'Sidebar
         '
-        Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Panel1.Controls.Add(Me.Label17)
-        Me.Panel1.Controls.Add(Me.Label18)
-        Me.Panel1.Controls.Add(Me.Label19)
-        Me.Panel1.Controls.Add(Me.Button5)
-        Me.Panel1.Controls.Add(Me.Label20)
-        Me.Panel1.Controls.Add(Me.Label21)
-        Me.Panel1.Controls.Add(Me.Label22)
-        Me.Panel1.Controls.Add(Me.Label23)
-        Me.Panel1.Controls.Add(Me.Label24)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.PictureBox3)
-        Me.Panel1.Controls.Add(Me.PictureBox8)
-        Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Controls.Add(Me.PictureBox7)
-        Me.Panel1.Location = New System.Drawing.Point(0, -38)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(196, 720)
-        Me.Panel1.TabIndex = 7
+        Me.Sidebar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Sidebar.Controls.Add(Me.Label17)
+        Me.Sidebar.Controls.Add(Me.Label18)
+        Me.Sidebar.Controls.Add(Me.Label19)
+        Me.Sidebar.Controls.Add(Me.LogoutBtn)
+        Me.Sidebar.Controls.Add(Me.AddStaffSBar)
+        Me.Sidebar.Controls.Add(Me.SearchSBar)
+        Me.Sidebar.Controls.Add(Me.ClassListSBar)
+        Me.Sidebar.Controls.Add(Me.EnrollmentSBar)
+        Me.Sidebar.Controls.Add(Me.PictureBox2)
+        Me.Sidebar.Controls.Add(Me.SearchPB)
+        Me.Sidebar.Controls.Add(Me.AddStaffPB)
+        Me.Sidebar.Controls.Add(Me.CListPB)
+        Me.Sidebar.Controls.Add(Me.EnrollmentPB)
+        Me.Sidebar.Location = New System.Drawing.Point(0, 0)
+        Me.Sidebar.Name = "Sidebar"
+        Me.Sidebar.Size = New System.Drawing.Size(196, 692)
+        Me.Sidebar.TabIndex = 42
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label17.Location = New System.Drawing.Point(18, 438)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(166, 13)
+        Me.Label17.TabIndex = 5
+        Me.Label17.Text = "-----------------------------------------------------"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label18.Location = New System.Drawing.Point(16, 368)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(166, 13)
+        Me.Label18.TabIndex = 5
+        Me.Label18.Text = "-----------------------------------------------------"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label19.Location = New System.Drawing.Point(18, 298)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(166, 13)
+        Me.Label19.TabIndex = 5
+        Me.Label19.Text = "-----------------------------------------------------"
+        '
+        'LogoutBtn
+        '
+        Me.LogoutBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.LogoutBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LogoutBtn.Location = New System.Drawing.Point(46, 607)
+        Me.LogoutBtn.Name = "LogoutBtn"
+        Me.LogoutBtn.Size = New System.Drawing.Size(105, 44)
+        Me.LogoutBtn.TabIndex = 4
+        Me.LogoutBtn.Text = "Log Out"
+        Me.LogoutBtn.UseVisualStyleBackColor = True
+        '
+        'AddStaffSBar
+        '
+        Me.AddStaffSBar.AutoSize = True
+        Me.AddStaffSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.AddStaffSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.AddStaffSBar.Location = New System.Drawing.Point(72, 467)
+        Me.AddStaffSBar.Name = "AddStaffSBar"
+        Me.AddStaffSBar.Size = New System.Drawing.Size(93, 25)
+        Me.AddStaffSBar.TabIndex = 3
+        Me.AddStaffSBar.Text = "Add Staff"
+        '
+        'SearchSBar
+        '
+        Me.SearchSBar.AutoSize = True
+        Me.SearchSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.SearchSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.SearchSBar.Location = New System.Drawing.Point(72, 397)
+        Me.SearchSBar.Name = "SearchSBar"
+        Me.SearchSBar.Size = New System.Drawing.Size(75, 25)
+        Me.SearchSBar.TabIndex = 3
+        Me.SearchSBar.Text = "Search"
+        '
+        'ClassListSBar
+        '
+        Me.ClassListSBar.AutoSize = True
+        Me.ClassListSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.ClassListSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.ClassListSBar.Location = New System.Drawing.Point(72, 327)
+        Me.ClassListSBar.Name = "ClassListSBar"
+        Me.ClassListSBar.Size = New System.Drawing.Size(97, 25)
+        Me.ClassListSBar.TabIndex = 3
+        Me.ClassListSBar.Text = "Class List"
+        '
+        'EnrollmentSBar
+        '
+        Me.EnrollmentSBar.AutoSize = True
+        Me.EnrollmentSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.EnrollmentSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.EnrollmentSBar.Location = New System.Drawing.Point(72, 257)
+        Me.EnrollmentSBar.Name = "EnrollmentSBar"
+        Me.EnrollmentSBar.Size = New System.Drawing.Size(104, 25)
+        Me.EnrollmentSBar.TabIndex = 3
+        Me.EnrollmentSBar.Text = "Enrollment"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox2.InitialImage = CType(resources.GetObject("PictureBox2.InitialImage"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(11, 13)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(175, 175)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 0
+        Me.PictureBox2.TabStop = False
+        '
+        'SearchPB
+        '
+        Me.SearchPB.Image = CType(resources.GetObject("SearchPB.Image"), System.Drawing.Image)
+        Me.SearchPB.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.SearchPB.Location = New System.Drawing.Point(21, 387)
+        Me.SearchPB.Name = "SearchPB"
+        Me.SearchPB.Size = New System.Drawing.Size(45, 45)
+        Me.SearchPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.SearchPB.TabIndex = 2
+        Me.SearchPB.TabStop = False
+        '
+        'AddStaffPB
+        '
+        Me.AddStaffPB.Image = CType(resources.GetObject("AddStaffPB.Image"), System.Drawing.Image)
+        Me.AddStaffPB.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.AddStaffPB.Location = New System.Drawing.Point(21, 457)
+        Me.AddStaffPB.Name = "AddStaffPB"
+        Me.AddStaffPB.Size = New System.Drawing.Size(45, 45)
+        Me.AddStaffPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.AddStaffPB.TabIndex = 2
+        Me.AddStaffPB.TabStop = False
+        '
+        'CListPB
+        '
+        Me.CListPB.Image = CType(resources.GetObject("CListPB.Image"), System.Drawing.Image)
+        Me.CListPB.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CListPB.Location = New System.Drawing.Point(21, 317)
+        Me.CListPB.Name = "CListPB"
+        Me.CListPB.Size = New System.Drawing.Size(45, 45)
+        Me.CListPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.CListPB.TabIndex = 2
+        Me.CListPB.TabStop = False
+        '
+        'EnrollmentPB
+        '
+        Me.EnrollmentPB.Image = CType(resources.GetObject("EnrollmentPB.Image"), System.Drawing.Image)
+        Me.EnrollmentPB.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.EnrollmentPB.Location = New System.Drawing.Point(21, 247)
+        Me.EnrollmentPB.Name = "EnrollmentPB"
+        Me.EnrollmentPB.Size = New System.Drawing.Size(45, 45)
+        Me.EnrollmentPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.EnrollmentPB.TabIndex = 2
+        Me.EnrollmentPB.TabStop = False
         '
         'Enrollment1Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.NextBtn)
         Me.Controls.Add(Me.RCardBtn)
         Me.Controls.Add(Me.MoralBtn)
@@ -642,16 +628,16 @@ Partial Class Enrollment1Form
         Me.Controls.Add(Me.SuffixTBox)
         Me.Controls.Add(Me.LastNameTBox)
         Me.Controls.Add(Me.LastSchoolTBox)
-        Me.Controls.Add(Me.Panel1)
         Me.Name = "Enrollment1Form"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Sidebar.ResumeLayout(False)
+        Me.Sidebar.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -666,25 +652,12 @@ Partial Class Enrollment1Form
     Friend WithEvents Label9 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label25 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label21 As Label
-    Friend WithEvents Label22 As Label
-    Friend WithEvents Label23 As Label
-    Friend WithEvents Label24 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents F137Btn As Button
     Friend WithEvents BirthdayDTP As DateTimePicker
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label14 As Label
@@ -703,7 +676,19 @@ Partial Class Enrollment1Form
     Friend WithEvents LRNTBox As TextBox
     Friend WithEvents SuffixTBox As TextBox
     Friend WithEvents LastNameTBox As TextBox
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents LastSchoolTBox As TextBox
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Sidebar As Panel
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents LogoutBtn As Button
+    Friend WithEvents AddStaffSBar As Label
+    Friend WithEvents SearchSBar As Label
+    Friend WithEvents ClassListSBar As Label
+    Friend WithEvents EnrollmentSBar As Label
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents SearchPB As PictureBox
+    Friend WithEvents AddStaffPB As PictureBox
+    Friend WithEvents CListPB As PictureBox
+    Friend WithEvents EnrollmentPB As PictureBox
 End Class

@@ -30,6 +30,12 @@ Partial Class Enrollment2Form
         Me.YearLevelBox = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.EnrolleeName = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.NoStudentsLabel = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.SlotsLeftLabel = New System.Windows.Forms.Label()
+        Me.EnrollBtn = New System.Windows.Forms.Button()
         Me.Sidebar = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -39,25 +45,19 @@ Partial Class Enrollment2Form
         Me.SearchSBar = New System.Windows.Forms.Label()
         Me.ClassListSBar = New System.Windows.Forms.Label()
         Me.EnrollmentSBar = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.SearchPB = New System.Windows.Forms.PictureBox()
         Me.AddStaffPB = New System.Windows.Forms.PictureBox()
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.NoStudentsLabel = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.SlotsLeftLabel = New System.Windows.Forms.Label()
-        Me.EnrollBtn = New System.Windows.Forms.Button()
         CType(Me.StudentsDTB, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.Sidebar.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label12
@@ -129,6 +129,77 @@ Partial Class Enrollment2Form
         Me.EnrolleeName.TabIndex = 10
         Me.EnrolleeName.Text = "Name Of Enrollee"
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.Label13)
+        Me.Panel1.Controls.Add(Me.NoStudentsLabel)
+        Me.Panel1.Controls.Add(Me.Label14)
+        Me.Panel1.Controls.Add(Me.SlotsLeftLabel)
+        Me.Panel1.Controls.Add(Me.EnrollBtn)
+        Me.Panel1.Location = New System.Drawing.Point(985, 156)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(267, 495)
+        Me.Panel1.TabIndex = 15
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.Label13.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label13.Location = New System.Drawing.Point(49, 23)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(169, 22)
+        Me.Label13.TabIndex = 4
+        Me.Label13.Text = "Number of Students"
+        '
+        'NoStudentsLabel
+        '
+        Me.NoStudentsLabel.AutoSize = True
+        Me.NoStudentsLabel.BackColor = System.Drawing.Color.Transparent
+        Me.NoStudentsLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 60.0!)
+        Me.NoStudentsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.NoStudentsLabel.Location = New System.Drawing.Point(92, 47)
+        Me.NoStudentsLabel.Name = "NoStudentsLabel"
+        Me.NoStudentsLabel.Size = New System.Drawing.Size(83, 91)
+        Me.NoStudentsLabel.TabIndex = 5
+        Me.NoStudentsLabel.Text = "0"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.Label14.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label14.Location = New System.Drawing.Point(90, 152)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(85, 22)
+        Me.Label14.TabIndex = 4
+        Me.Label14.Text = "Slots Left"
+        '
+        'SlotsLeftLabel
+        '
+        Me.SlotsLeftLabel.AutoSize = True
+        Me.SlotsLeftLabel.BackColor = System.Drawing.Color.Transparent
+        Me.SlotsLeftLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 60.0!)
+        Me.SlotsLeftLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.SlotsLeftLabel.Location = New System.Drawing.Point(92, 185)
+        Me.SlotsLeftLabel.Name = "SlotsLeftLabel"
+        Me.SlotsLeftLabel.Size = New System.Drawing.Size(83, 91)
+        Me.SlotsLeftLabel.TabIndex = 5
+        Me.SlotsLeftLabel.Text = "0"
+        '
+        'EnrollBtn
+        '
+        Me.EnrollBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.EnrollBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.EnrollBtn.Location = New System.Drawing.Point(61, 384)
+        Me.EnrollBtn.Name = "EnrollBtn"
+        Me.EnrollBtn.Size = New System.Drawing.Size(145, 64)
+        Me.EnrollBtn.TabIndex = 4
+        Me.EnrollBtn.Text = "Enroll"
+        Me.EnrollBtn.UseVisualStyleBackColor = True
+        '
         'Sidebar
         '
         Me.Sidebar.BackColor = System.Drawing.SystemColors.ActiveCaption
@@ -140,15 +211,15 @@ Partial Class Enrollment2Form
         Me.Sidebar.Controls.Add(Me.SearchSBar)
         Me.Sidebar.Controls.Add(Me.ClassListSBar)
         Me.Sidebar.Controls.Add(Me.EnrollmentSBar)
-        Me.Sidebar.Controls.Add(Me.PictureBox1)
+        Me.Sidebar.Controls.Add(Me.PictureBox2)
         Me.Sidebar.Controls.Add(Me.SearchPB)
         Me.Sidebar.Controls.Add(Me.AddStaffPB)
         Me.Sidebar.Controls.Add(Me.CListPB)
         Me.Sidebar.Controls.Add(Me.EnrollmentPB)
         Me.Sidebar.Location = New System.Drawing.Point(0, 0)
         Me.Sidebar.Name = "Sidebar"
-        Me.Sidebar.Size = New System.Drawing.Size(196, 720)
-        Me.Sidebar.TabIndex = 7
+        Me.Sidebar.Size = New System.Drawing.Size(196, 692)
+        Me.Sidebar.TabIndex = 16
         '
         'Label8
         '
@@ -235,18 +306,18 @@ Partial Class Enrollment2Form
         Me.EnrollmentSBar.TabIndex = 3
         Me.EnrollmentSBar.Text = "Enrollment"
         '
-        'PictureBox1
+        'PictureBox2
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(11, 13)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(175, 175)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox2.InitialImage = CType(resources.GetObject("PictureBox2.InitialImage"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(11, 13)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(175, 175)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 0
+        Me.PictureBox2.TabStop = False
         '
         'SearchPB
         '
@@ -292,82 +363,12 @@ Partial Class Enrollment2Form
         Me.EnrollmentPB.TabIndex = 2
         Me.EnrollmentPB.TabStop = False
         '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Controls.Add(Me.NoStudentsLabel)
-        Me.Panel1.Controls.Add(Me.Label14)
-        Me.Panel1.Controls.Add(Me.SlotsLeftLabel)
-        Me.Panel1.Controls.Add(Me.EnrollBtn)
-        Me.Panel1.Location = New System.Drawing.Point(985, 156)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(267, 495)
-        Me.Panel1.TabIndex = 15
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.Label13.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label13.Location = New System.Drawing.Point(49, 23)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(169, 22)
-        Me.Label13.TabIndex = 4
-        Me.Label13.Text = "Number of Students"
-        '
-        'NoStudentsLabel
-        '
-        Me.NoStudentsLabel.AutoSize = True
-        Me.NoStudentsLabel.BackColor = System.Drawing.Color.Transparent
-        Me.NoStudentsLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 60.0!)
-        Me.NoStudentsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.NoStudentsLabel.Location = New System.Drawing.Point(92, 47)
-        Me.NoStudentsLabel.Name = "NoStudentsLabel"
-        Me.NoStudentsLabel.Size = New System.Drawing.Size(83, 91)
-        Me.NoStudentsLabel.TabIndex = 5
-        Me.NoStudentsLabel.Text = "0"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.Label14.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label14.Location = New System.Drawing.Point(90, 152)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(85, 22)
-        Me.Label14.TabIndex = 4
-        Me.Label14.Text = "Slots Left"
-        '
-        'SlotsLeftLabel
-        '
-        Me.SlotsLeftLabel.AutoSize = True
-        Me.SlotsLeftLabel.BackColor = System.Drawing.Color.Transparent
-        Me.SlotsLeftLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 60.0!)
-        Me.SlotsLeftLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.SlotsLeftLabel.Location = New System.Drawing.Point(92, 185)
-        Me.SlotsLeftLabel.Name = "SlotsLeftLabel"
-        Me.SlotsLeftLabel.Size = New System.Drawing.Size(83, 91)
-        Me.SlotsLeftLabel.TabIndex = 5
-        Me.SlotsLeftLabel.Text = "0"
-        '
-        'EnrollBtn
-        '
-        Me.EnrollBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.EnrollBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.EnrollBtn.Location = New System.Drawing.Point(61, 384)
-        Me.EnrollBtn.Name = "EnrollBtn"
-        Me.EnrollBtn.Size = New System.Drawing.Size(145, 64)
-        Me.EnrollBtn.TabIndex = 4
-        Me.EnrollBtn.Text = "Enroll"
-        Me.EnrollBtn.UseVisualStyleBackColor = True
-        '
         'Enrollment2Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.StudentsDTB)
         Me.Controls.Add(Me.SectionBox)
@@ -375,20 +376,20 @@ Partial Class Enrollment2Form
         Me.Controls.Add(Me.YearLevelBox)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.EnrolleeName)
-        Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "Enrollment2Form"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Enrollment2Form"
         CType(Me.StudentsDTB, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -401,6 +402,12 @@ Partial Class Enrollment2Form
     Friend WithEvents YearLevelBox As ComboBox
     Friend WithEvents Label10 As Label
     Friend WithEvents EnrolleeName As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label13 As Label
+    Friend WithEvents NoStudentsLabel As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents SlotsLeftLabel As Label
+    Friend WithEvents EnrollBtn As Button
     Friend WithEvents Sidebar As Panel
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
@@ -410,15 +417,9 @@ Partial Class Enrollment2Form
     Friend WithEvents SearchSBar As Label
     Friend WithEvents ClassListSBar As Label
     Friend WithEvents EnrollmentSBar As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents SearchPB As PictureBox
     Friend WithEvents AddStaffPB As PictureBox
     Friend WithEvents CListPB As PictureBox
     Friend WithEvents EnrollmentPB As PictureBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label13 As Label
-    Friend WithEvents NoStudentsLabel As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents SlotsLeftLabel As Label
-    Friend WithEvents EnrollBtn As Button
 End Class

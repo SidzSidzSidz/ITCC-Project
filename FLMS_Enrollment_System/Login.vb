@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginBtn.Click
-        Enrollment1Form.Show()
         Me.Hide()
+        Search.Show()
     End Sub
 End Class

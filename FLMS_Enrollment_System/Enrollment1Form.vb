@@ -7,4 +7,13 @@
         Enrollment2Form.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
+        Login.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub SearchSBar_Click(sender As Object, e As EventArgs) Handles SearchSBar.Click
+
+    End Sub
 End Class
