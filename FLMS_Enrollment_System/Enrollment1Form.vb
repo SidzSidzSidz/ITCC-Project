@@ -18,11 +18,11 @@
         Search.Show()
     End Sub
 
-    Private Sub EnrollmentSBar_Click(sender As Object, e As EventArgs) Handles EnrollmentSBar.Click, EnrollmentPB.Click
-        ' reload?
-        ' if 1: unfinished changes
-        ' if 2: unfinished changes
-    End Sub
+    'Private Sub EnrollmentSBar_Click(sender As Object, e As EventArgs) Handles EnrollmentSBar.Click, EnrollmentPB.Click
+    ' reload?
+    ' if 1: unfinished changes
+    ' if 2: unfinished changes
+    'End Sub
 
     Private Sub ClassListSBar_Click(sender As Object, e As EventArgs) Handles ClassListSBar.Click, CListPB.Click
         Me.Close()
