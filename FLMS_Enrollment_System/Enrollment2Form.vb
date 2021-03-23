@@ -36,6 +36,6 @@
 
     Private Sub LogoutBtn_Click_1(sender As Object, e As EventArgs) Handles LogoutBtn.Click
         Me.Close()
-        Login.Close()
+        Login.Show()
     End Sub
 End Class

@@ -36,7 +36,7 @@
     Private Sub LogoutBtn_Click(sender As Object, e As EventArgs) Handles LogoutBtn.Click
         ' TODO: check if textboxes are filled
         Me.Close()
-        Login.Close()
+        Login.Show()
     End Sub
 
     Private Sub EnrollmentSBar_Click(sender As Object, e As EventArgs) Handles EnrollmentSBar.Click
