@@ -1,6 +1,7 @@
 ﻿Public Class ClassList
-    Private Sub ClassList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    Private Sub ClassList_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Application.Exit()
     End Sub
 
     Private Sub EnrollmentSBar_Click(sender As Object, e As EventArgs) Handles EnrollmentSBar.Click, EnrollmentPB.Click
