@@ -19,9 +19,10 @@
 
     End Sub
 
-
     Private Sub StudentInfo_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
+    End Sub
+
     Private Sub LogoutBtn_Click(sender As Object, e As EventArgs) Handles LogoutBtn.Click
         Me.Close()
         Login.Show()
