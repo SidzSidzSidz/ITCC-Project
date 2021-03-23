@@ -1,10 +1,7 @@
 ﻿Public Class Search
-    Private Sub Search_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles LogoutBtn.Click
-        Me.Hide()
+        Me.Close()
         Login.Show()
 
     End Sub

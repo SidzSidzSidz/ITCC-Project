@@ -350,6 +350,7 @@ Partial Class Enrollment1Form
         '
         'MiddleNameTBox
         '
+        Me.MiddleNameTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.MiddleNameTBox.Location = New System.Drawing.Point(716, 109)
         Me.MiddleNameTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.MiddleNameTBox.Multiline = True
@@ -359,6 +360,7 @@ Partial Class Enrollment1Form
         '
         'FirstNameTBox
         '
+        Me.FirstNameTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.FirstNameTBox.Location = New System.Drawing.Point(488, 109)
         Me.FirstNameTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.FirstNameTBox.Multiline = True
@@ -368,6 +370,7 @@ Partial Class Enrollment1Form
         '
         'AddressTBox
         '
+        Me.AddressTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.AddressTBox.Location = New System.Drawing.Point(257, 263)
         Me.AddressTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AddressTBox.Multiline = True
@@ -377,6 +380,7 @@ Partial Class Enrollment1Form
         '
         'YearCompTBox
         '
+        Me.YearCompTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.YearCompTBox.Location = New System.Drawing.Point(716, 342)
         Me.YearCompTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.YearCompTBox.Multiline = True
@@ -386,6 +390,7 @@ Partial Class Enrollment1Form
         '
         'ParentTBox
         '
+        Me.ParentTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ParentTBox.Location = New System.Drawing.Point(716, 262)
         Me.ParentTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ParentTBox.Multiline = True
@@ -395,6 +400,7 @@ Partial Class Enrollment1Form
         '
         'LRNTBox
         '
+        Me.LRNTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.LRNTBox.Location = New System.Drawing.Point(488, 183)
         Me.LRNTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.LRNTBox.Multiline = True
@@ -404,6 +410,7 @@ Partial Class Enrollment1Form
         '
         'SuffixTBox
         '
+        Me.SuffixTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.SuffixTBox.Location = New System.Drawing.Point(257, 183)
         Me.SuffixTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.SuffixTBox.Multiline = True
@@ -413,6 +420,7 @@ Partial Class Enrollment1Form
         '
         'LastNameTBox
         '
+        Me.LastNameTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.LastNameTBox.Location = New System.Drawing.Point(257, 109)
         Me.LastNameTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.LastNameTBox.Multiline = True
@@ -422,6 +430,7 @@ Partial Class Enrollment1Form
         '
         'LastSchoolTBox
         '
+        Me.LastSchoolTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.LastSchoolTBox.Location = New System.Drawing.Point(257, 349)
         Me.LastSchoolTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.LastSchoolTBox.Multiline = True
