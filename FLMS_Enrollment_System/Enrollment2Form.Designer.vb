@@ -82,6 +82,8 @@ Partial Class Enrollment2Form
         '
         'SectionBox
         '
+        Me.SectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.SectionBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SectionBox.FormattingEnabled = True
         Me.SectionBox.Location = New System.Drawing.Point(620, 116)
         Me.SectionBox.Name = "SectionBox"
@@ -101,6 +103,8 @@ Partial Class Enrollment2Form
         '
         'YearLevelBox
         '
+        Me.YearLevelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.YearLevelBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.YearLevelBox.FormattingEnabled = True
         Me.YearLevelBox.Location = New System.Drawing.Point(306, 117)
         Me.YearLevelBox.Name = "YearLevelBox"
@@ -115,13 +119,14 @@ Partial Class Enrollment2Form
         Me.Label10.Location = New System.Drawing.Point(229, 117)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(70, 17)
-        Me.Label10.TabIndex = 9
+        Me.Label10.TabIndex = 1
         Me.Label10.Text = "Year level"
         '
         'EnrolleeName
         '
         Me.EnrolleeName.AutoSize = True
         Me.EnrolleeName.Font = New System.Drawing.Font("Impact", 40.0!)
+        Me.EnrolleeName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.EnrolleeName.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.EnrolleeName.Location = New System.Drawing.Point(221, 13)
         Me.EnrolleeName.Name = "EnrolleeName"

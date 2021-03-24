@@ -63,6 +63,8 @@ Partial Class ClassList
         '
         'ComboBox2
         '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(646, 84)
         Me.ComboBox2.Name = "ComboBox2"
@@ -71,6 +73,8 @@ Partial Class ClassList
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(357, 84)
         Me.ComboBox1.Name = "ComboBox1"
@@ -96,17 +100,18 @@ Partial Class ClassList
         Me.Label10.Location = New System.Drawing.Point(263, 85)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(91, 21)
-        Me.Label10.TabIndex = 11
+        Me.Label10.TabIndex = 2
         Me.Label10.Text = "Year Level"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Impact", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Impact", 40.0!)
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label9.Location = New System.Drawing.Point(259, 13)
+        Me.Label9.Location = New System.Drawing.Point(256, 13)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(175, 48)
+        Me.Label9.Size = New System.Drawing.Size(237, 66)
         Me.Label9.TabIndex = 10
         Me.Label9.Text = "Class List"
         '
@@ -116,7 +121,7 @@ Partial Class ClassList
         Me.Button2.Location = New System.Drawing.Point(860, 78)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(84, 31)
-        Me.Button2.TabIndex = 15
+        Me.Button2.TabIndex = 1
         Me.Button2.Text = "Select"
         Me.Button2.UseVisualStyleBackColor = True
         '
