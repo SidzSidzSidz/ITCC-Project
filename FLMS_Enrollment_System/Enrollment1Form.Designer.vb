@@ -85,11 +85,11 @@ Partial Class Enrollment1Form
         '
         'NextBtn
         '
-        Me.NextBtn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NextBtn.Location = New System.Drawing.Point(1030, 550)
-        Me.NextBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.NextBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
+        Me.NextBtn.Location = New System.Drawing.Point(994, 515)
+        Me.NextBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.NextBtn.Name = "NextBtn"
-        Me.NextBtn.Size = New System.Drawing.Size(110, 40)
+        Me.NextBtn.Size = New System.Drawing.Size(146, 63)
         Me.NextBtn.TabIndex = 41
         Me.NextBtn.Text = "Next"
         Me.NextBtn.UseVisualStyleBackColor = True
@@ -99,7 +99,7 @@ Partial Class Enrollment1Form
         Me.RCardBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.RCardBtn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RCardBtn.Location = New System.Drawing.Point(515, 549)
-        Me.RCardBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RCardBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.RCardBtn.Name = "RCardBtn"
         Me.RCardBtn.Size = New System.Drawing.Size(92, 29)
         Me.RCardBtn.TabIndex = 40
@@ -111,7 +111,7 @@ Partial Class Enrollment1Form
         Me.MoralBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MoralBtn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MoralBtn.Location = New System.Drawing.Point(391, 549)
-        Me.MoralBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MoralBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.MoralBtn.Name = "MoralBtn"
         Me.MoralBtn.Size = New System.Drawing.Size(92, 29)
         Me.MoralBtn.TabIndex = 39
@@ -123,7 +123,7 @@ Partial Class Enrollment1Form
         Me.NSOBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.NSOBtn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NSOBtn.Location = New System.Drawing.Point(267, 549)
-        Me.NSOBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.NSOBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.NSOBtn.Name = "NSOBtn"
         Me.NSOBtn.Size = New System.Drawing.Size(92, 29)
         Me.NSOBtn.TabIndex = 38
@@ -132,20 +132,24 @@ Partial Class Enrollment1Form
         '
         'YearsCompCoBox
         '
+        Me.YearsCompCoBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.YearsCompCoBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.YearsCompCoBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.YearsCompCoBox.FormattingEnabled = True
-        Me.YearsCompCoBox.Location = New System.Drawing.Point(577, 445)
-        Me.YearsCompCoBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.YearsCompCoBox.Location = New System.Drawing.Point(577, 442)
+        Me.YearsCompCoBox.Margin = New System.Windows.Forms.Padding(2)
         Me.YearsCompCoBox.Name = "YearsCompCoBox"
         Me.YearsCompCoBox.Size = New System.Drawing.Size(63, 24)
         Me.YearsCompCoBox.TabIndex = 36
         '
         'SexCoBox
         '
+        Me.SexCoBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.SexCoBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SexCoBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.SexCoBox.FormattingEnabled = True
-        Me.SexCoBox.Location = New System.Drawing.Point(655, 445)
-        Me.SexCoBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SexCoBox.Location = New System.Drawing.Point(662, 442)
+        Me.SexCoBox.Margin = New System.Windows.Forms.Padding(2)
         Me.SexCoBox.Name = "SexCoBox"
         Me.SexCoBox.Size = New System.Drawing.Size(63, 24)
         Me.SexCoBox.TabIndex = 35
@@ -188,7 +192,7 @@ Partial Class Enrollment1Form
         Me.F137Btn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.F137Btn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.F137Btn.Location = New System.Drawing.Point(639, 549)
-        Me.F137Btn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.F137Btn.Margin = New System.Windows.Forms.Padding(2)
         Me.F137Btn.Name = "F137Btn"
         Me.F137Btn.Size = New System.Drawing.Size(92, 29)
         Me.F137Btn.TabIndex = 37
@@ -197,11 +201,11 @@ Partial Class Enrollment1Form
         '
         'BirthdayDTP
         '
-        Me.BirthdayDTP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BirthdayDTP.Location = New System.Drawing.Point(863, 233)
-        Me.BirthdayDTP.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BirthdayDTP.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BirthdayDTP.Location = New System.Drawing.Point(863, 232)
+        Me.BirthdayDTP.Margin = New System.Windows.Forms.Padding(2)
         Me.BirthdayDTP.Name = "BirthdayDTP"
-        Me.BirthdayDTP.Size = New System.Drawing.Size(277, 26)
+        Me.BirthdayDTP.Size = New System.Drawing.Size(277, 27)
         Me.BirthdayDTP.TabIndex = 34
         '
         'Label8
@@ -252,12 +256,12 @@ Partial Class Enrollment1Form
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(651, 414)
+        Me.Label11.Location = New System.Drawing.Point(658, 414)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(134, 20)
+        Me.Label11.Size = New System.Drawing.Size(114, 20)
         Me.Label11.TabIndex = 25
-        Me.Label11.Text = "Years Completed"
+        Me.Label11.Text = "Yrs Completed"
         '
         'Label15
         '
@@ -340,6 +344,7 @@ Partial Class Enrollment1Form
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Impact", 40.0!)
+        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.Label16.Location = New System.Drawing.Point(255, 13)
         Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label16.Name = "Label16"
@@ -362,7 +367,7 @@ Partial Class Enrollment1Form
         '
         Me.MiddleNameTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.MiddleNameTBox.Location = New System.Drawing.Point(752, 130)
-        Me.MiddleNameTBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MiddleNameTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.MiddleNameTBox.Name = "MiddleNameTBox"
         Me.MiddleNameTBox.Size = New System.Drawing.Size(217, 26)
         Me.MiddleNameTBox.TabIndex = 11
@@ -371,7 +376,7 @@ Partial Class Enrollment1Form
         '
         Me.FirstNameTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.FirstNameTBox.Location = New System.Drawing.Point(508, 130)
-        Me.FirstNameTBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FirstNameTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.FirstNameTBox.Name = "FirstNameTBox"
         Me.FirstNameTBox.Size = New System.Drawing.Size(217, 26)
         Me.FirstNameTBox.TabIndex = 8
@@ -380,7 +385,7 @@ Partial Class Enrollment1Form
         '
         Me.AddressTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.AddressTBox.Location = New System.Drawing.Point(266, 327)
-        Me.AddressTBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.AddressTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.AddressTBox.Name = "AddressTBox"
         Me.AddressTBox.Size = New System.Drawing.Size(523, 26)
         Me.AddressTBox.TabIndex = 9
@@ -389,7 +394,7 @@ Partial Class Enrollment1Form
         '
         Me.YearCompTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.YearCompTBox.Location = New System.Drawing.Point(815, 445)
-        Me.YearCompTBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.YearCompTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.YearCompTBox.Name = "YearCompTBox"
         Me.YearCompTBox.Size = New System.Drawing.Size(325, 26)
         Me.YearCompTBox.TabIndex = 10
@@ -398,7 +403,7 @@ Partial Class Enrollment1Form
         '
         Me.ParentTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ParentTBox.Location = New System.Drawing.Point(815, 328)
-        Me.ParentTBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ParentTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ParentTBox.Name = "ParentTBox"
         Me.ParentTBox.Size = New System.Drawing.Size(325, 26)
         Me.ParentTBox.TabIndex = 15
@@ -407,7 +412,7 @@ Partial Class Enrollment1Form
         '
         Me.LRNTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.LRNTBox.Location = New System.Drawing.Point(563, 235)
-        Me.LRNTBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.LRNTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.LRNTBox.Name = "LRNTBox"
         Me.LRNTBox.Size = New System.Drawing.Size(277, 26)
         Me.LRNTBox.TabIndex = 12
@@ -416,7 +421,7 @@ Partial Class Enrollment1Form
         '
         Me.SuffixTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.SuffixTBox.Location = New System.Drawing.Point(266, 235)
-        Me.SuffixTBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SuffixTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.SuffixTBox.Name = "SuffixTBox"
         Me.SuffixTBox.Size = New System.Drawing.Size(277, 26)
         Me.SuffixTBox.TabIndex = 13
@@ -425,7 +430,7 @@ Partial Class Enrollment1Form
         '
         Me.LastNameTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.LastNameTBox.Location = New System.Drawing.Point(267, 130)
-        Me.LastNameTBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.LastNameTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.LastNameTBox.Name = "LastNameTBox"
         Me.LastNameTBox.Size = New System.Drawing.Size(217, 26)
         Me.LastNameTBox.TabIndex = 14
@@ -434,7 +439,7 @@ Partial Class Enrollment1Form
         '
         Me.LastSchoolTBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.LastSchoolTBox.Location = New System.Drawing.Point(266, 442)
-        Me.LastSchoolTBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.LastSchoolTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.LastSchoolTBox.Name = "LastSchoolTBox"
         Me.LastSchoolTBox.Size = New System.Drawing.Size(277, 26)
         Me.LastSchoolTBox.TabIndex = 16
@@ -492,7 +497,9 @@ Partial Class Enrollment1Form
         '
         'LogoutBtn
         '
+        Me.LogoutBtn.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LogoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LogoutBtn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogoutBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LogoutBtn.Location = New System.Drawing.Point(46, 607)
@@ -500,7 +507,7 @@ Partial Class Enrollment1Form
         Me.LogoutBtn.Size = New System.Drawing.Size(105, 44)
         Me.LogoutBtn.TabIndex = 4
         Me.LogoutBtn.Text = "Log Out"
-        Me.LogoutBtn.UseVisualStyleBackColor = True
+        Me.LogoutBtn.UseVisualStyleBackColor = False
         '
         'AddStaffSBar
         '
@@ -616,7 +623,7 @@ Partial Class Enrollment1Form
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(763, 549)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(92, 29)
         Me.Button1.TabIndex = 37

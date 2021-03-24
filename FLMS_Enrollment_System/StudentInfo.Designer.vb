@@ -61,8 +61,9 @@ Partial Class StudentInfo
         '
         Me.Search_Label.AutoSize = True
         Me.Search_Label.Font = New System.Drawing.Font("Impact", 40.0!)
+        Me.Search_Label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.Search_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Search_Label.Location = New System.Drawing.Point(252, 13)
+        Me.Search_Label.Location = New System.Drawing.Point(244, 13)
         Me.Search_Label.Name = "Search_Label"
         Me.Search_Label.Size = New System.Drawing.Size(185, 66)
         Me.Search_Label.TabIndex = 29

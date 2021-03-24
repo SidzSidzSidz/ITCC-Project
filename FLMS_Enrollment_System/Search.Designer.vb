@@ -23,10 +23,6 @@ Partial Class Search
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Search))
-        Me.Search_btn = New System.Windows.Forms.Button()
-        Me.LRN_text = New System.Windows.Forms.TextBox()
-        Me.LRN_Label = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Sidebar = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -42,6 +38,10 @@ Partial Class Search
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.LRN_Label = New System.Windows.Forms.Label()
+        Me.LRN_text = New System.Windows.Forms.TextBox()
+        Me.Search_btn = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,46 +52,6 @@ Partial Class Search
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Search_btn
-        '
-        Me.Search_btn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Search_btn.Location = New System.Drawing.Point(488, 368)
-        Me.Search_btn.Name = "Search_btn"
-        Me.Search_btn.Size = New System.Drawing.Size(92, 42)
-        Me.Search_btn.TabIndex = 12
-        Me.Search_btn.Text = "Search"
-        Me.Search_btn.UseVisualStyleBackColor = True
-        '
-        'LRN_text
-        '
-        Me.LRN_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LRN_text.Location = New System.Drawing.Point(250, 303)
-        Me.LRN_text.Name = "LRN_text"
-        Me.LRN_text.Size = New System.Drawing.Size(569, 38)
-        Me.LRN_text.TabIndex = 11
-        '
-        'LRN_Label
-        '
-        Me.LRN_Label.AutoSize = True
-        Me.LRN_Label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LRN_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LRN_Label.Location = New System.Drawing.Point(464, 247)
-        Me.LRN_Label.Name = "LRN_Label"
-        Me.LRN_Label.Size = New System.Drawing.Size(136, 33)
-        Me.LRN_Label.TabIndex = 10
-        Me.LRN_Label.Text = "Enter LRN"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Impact", 40.0!)
-        Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label9.Location = New System.Drawing.Point(37, 35)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(367, 66)
-        Me.Label9.TabIndex = 9
-        Me.Label9.Text = "Search Student"
         '
         'Sidebar
         '
@@ -277,6 +237,47 @@ Partial Class Search
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
+        'LRN_Label
+        '
+        Me.LRN_Label.AutoSize = True
+        Me.LRN_Label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LRN_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LRN_Label.Location = New System.Drawing.Point(464, 247)
+        Me.LRN_Label.Name = "LRN_Label"
+        Me.LRN_Label.Size = New System.Drawing.Size(136, 33)
+        Me.LRN_Label.TabIndex = 10
+        Me.LRN_Label.Text = "Enter LRN"
+        '
+        'LRN_text
+        '
+        Me.LRN_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LRN_text.Location = New System.Drawing.Point(250, 303)
+        Me.LRN_text.Name = "LRN_text"
+        Me.LRN_text.Size = New System.Drawing.Size(569, 38)
+        Me.LRN_text.TabIndex = 11
+        '
+        'Search_btn
+        '
+        Me.Search_btn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Search_btn.Location = New System.Drawing.Point(488, 368)
+        Me.Search_btn.Name = "Search_btn"
+        Me.Search_btn.Size = New System.Drawing.Size(92, 42)
+        Me.Search_btn.TabIndex = 12
+        Me.Search_btn.Text = "Search"
+        Me.Search_btn.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Impact", 40.0!)
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label9.Location = New System.Drawing.Point(30, 13)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(367, 66)
+        Me.Label9.TabIndex = 9
+        Me.Label9.Text = "Search Student"
+        '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.Label9)
@@ -314,11 +315,6 @@ Partial Class Search
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Search_btn As Button
-    Friend WithEvents LRN_text As TextBox
-    Friend WithEvents LRN_Label As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Sidebar As Panel
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
@@ -334,5 +330,9 @@ Partial Class Search
     Friend WithEvents CListPB As PictureBox
     Friend WithEvents EnrollmentPB As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents LRN_Label As Label
+    Friend WithEvents LRN_text As TextBox
+    Friend WithEvents Search_btn As Button
+    Friend WithEvents Label9 As Label
     Friend WithEvents Panel1 As Panel
 End Class

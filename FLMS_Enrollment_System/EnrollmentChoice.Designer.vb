@@ -28,7 +28,7 @@ Partial Class EnrollmentChoice
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(59, 68)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(142, 84)
@@ -38,7 +38,7 @@ Partial Class EnrollmentChoice
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(237, 68)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(142, 84)
