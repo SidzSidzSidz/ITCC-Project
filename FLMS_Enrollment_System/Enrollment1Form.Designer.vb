@@ -339,11 +339,11 @@ Partial Class Enrollment1Form
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Impact", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(259, 26)
+        Me.Label16.Font = New System.Drawing.Font("Impact", 40.0!)
+        Me.Label16.Location = New System.Drawing.Point(255, 13)
         Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(349, 48)
+        Me.Label16.Size = New System.Drawing.Size(473, 66)
         Me.Label16.TabIndex = 19
         Me.Label16.Text = "Student Information"
         '
