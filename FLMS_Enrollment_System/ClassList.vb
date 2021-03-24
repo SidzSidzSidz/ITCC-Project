@@ -5,8 +5,7 @@
     End Sub
 
     Private Sub EnrollmentSBar_Click(sender As Object, e As EventArgs) Handles EnrollmentSBar.Click, EnrollmentPB.Click
-        Me.Hide()
-        Enrollment1Form.Show()
+        EnrollmentChoice.Show()
     End Sub
 
     Private Sub SearchSBar_Click(sender As Object, e As EventArgs) Handles SearchSBar.Click, SearchPB.Click

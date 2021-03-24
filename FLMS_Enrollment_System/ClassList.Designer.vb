@@ -80,39 +80,39 @@ Partial Class ClassList
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label11.Location = New System.Drawing.Point(577, 85)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(63, 20)
+        Me.Label11.Size = New System.Drawing.Size(68, 21)
         Me.Label11.TabIndex = 12
         Me.Label11.Text = "Section"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label10.Location = New System.Drawing.Point(263, 85)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(84, 20)
+        Me.Label10.Size = New System.Drawing.Size(91, 21)
         Me.Label10.TabIndex = 11
         Me.Label10.Text = "Year Level"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!)
+        Me.Label9.Font = New System.Drawing.Font("Impact", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label9.Location = New System.Drawing.Point(229, 27)
+        Me.Label9.Location = New System.Drawing.Point(259, 13)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(165, 39)
+        Me.Label9.Size = New System.Drawing.Size(175, 48)
         Me.Label9.TabIndex = 10
         Me.Label9.Text = "Class List"
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.0!)
         Me.Button2.Location = New System.Drawing.Point(860, 78)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(84, 31)
@@ -186,11 +186,11 @@ Partial Class ClassList
         '
         Me.AddStaffSBar.AutoSize = True
         Me.AddStaffSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AddStaffSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.AddStaffSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddStaffSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.AddStaffSBar.Location = New System.Drawing.Point(72, 467)
         Me.AddStaffSBar.Name = "AddStaffSBar"
-        Me.AddStaffSBar.Size = New System.Drawing.Size(93, 25)
+        Me.AddStaffSBar.Size = New System.Drawing.Size(98, 23)
         Me.AddStaffSBar.TabIndex = 3
         Me.AddStaffSBar.Text = "Add Staff"
         '
@@ -198,11 +198,11 @@ Partial Class ClassList
         '
         Me.SearchSBar.AutoSize = True
         Me.SearchSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.SearchSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.SearchSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SearchSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.SearchSBar.Location = New System.Drawing.Point(72, 397)
         Me.SearchSBar.Name = "SearchSBar"
-        Me.SearchSBar.Size = New System.Drawing.Size(75, 25)
+        Me.SearchSBar.Size = New System.Drawing.Size(77, 23)
         Me.SearchSBar.TabIndex = 3
         Me.SearchSBar.Text = "Search"
         '
@@ -210,11 +210,11 @@ Partial Class ClassList
         '
         Me.ClassListSBar.AutoSize = True
         Me.ClassListSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ClassListSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.ClassListSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClassListSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.ClassListSBar.Location = New System.Drawing.Point(72, 327)
         Me.ClassListSBar.Name = "ClassListSBar"
-        Me.ClassListSBar.Size = New System.Drawing.Size(97, 25)
+        Me.ClassListSBar.Size = New System.Drawing.Size(97, 23)
         Me.ClassListSBar.TabIndex = 3
         Me.ClassListSBar.Text = "Class List"
         '
@@ -222,11 +222,11 @@ Partial Class ClassList
         '
         Me.EnrollmentSBar.AutoSize = True
         Me.EnrollmentSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.EnrollmentSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.EnrollmentSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EnrollmentSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.EnrollmentSBar.Location = New System.Drawing.Point(72, 257)
         Me.EnrollmentSBar.Name = "EnrollmentSBar"
-        Me.EnrollmentSBar.Size = New System.Drawing.Size(104, 25)
+        Me.EnrollmentSBar.Size = New System.Drawing.Size(111, 23)
         Me.EnrollmentSBar.TabIndex = 3
         Me.EnrollmentSBar.Text = "Enrollment"
         '
@@ -295,6 +295,7 @@ Partial Class ClassList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.DataGridView1)
@@ -305,6 +306,7 @@ Partial Class ClassList
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button2)
         Me.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "ClassList"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ClassList"

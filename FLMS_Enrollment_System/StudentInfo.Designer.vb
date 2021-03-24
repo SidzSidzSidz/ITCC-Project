@@ -60,18 +60,19 @@ Partial Class StudentInfo
         'Search_Label
         '
         Me.Search_Label.AutoSize = True
-        Me.Search_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!)
+        Me.Search_Label.Font = New System.Drawing.Font("Impact", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Search_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Search_Label.Location = New System.Drawing.Point(216, 23)
+        Me.Search_Label.Location = New System.Drawing.Point(252, 13)
         Me.Search_Label.Name = "Search_Label"
-        Me.Search_Label.Size = New System.Drawing.Size(125, 39)
+        Me.Search_Label.Size = New System.Drawing.Size(136, 48)
         Me.Search_Label.TabIndex = 29
         Me.Search_Label.Text = "Search"
         '
         'Student_PictureBox
         '
         Me.Student_PictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Student_PictureBox.Location = New System.Drawing.Point(796, 99)
+        Me.Student_PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Student_PictureBox.Location = New System.Drawing.Point(793, 99)
         Me.Student_PictureBox.Name = "Student_PictureBox"
         Me.Student_PictureBox.Size = New System.Drawing.Size(282, 282)
         Me.Student_PictureBox.TabIndex = 28
@@ -79,7 +80,7 @@ Partial Class StudentInfo
         '
         'Save_btn
         '
-        Me.Save_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.Save_btn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Save_btn.Location = New System.Drawing.Point(485, 505)
         Me.Save_btn.Name = "Save_btn"
         Me.Save_btn.Size = New System.Drawing.Size(94, 35)
@@ -89,7 +90,7 @@ Partial Class StudentInfo
         '
         'Edit_btn
         '
-        Me.Edit_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.Edit_btn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Edit_btn.Location = New System.Drawing.Point(382, 505)
         Me.Edit_btn.Name = "Edit_btn"
         Me.Edit_btn.Size = New System.Drawing.Size(94, 35)
@@ -154,11 +155,11 @@ Partial Class StudentInfo
         'Student_Info_Text
         '
         Me.Student_Info_Text.AutoSize = True
-        Me.Student_Info_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
+        Me.Student_Info_Text.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Student_Info_Text.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Student_Info_Text.Location = New System.Drawing.Point(358, 373)
+        Me.Student_Info_Text.Location = New System.Drawing.Point(349, 368)
         Me.Student_Info_Text.Name = "Student_Info_Text"
-        Me.Student_Info_Text.Size = New System.Drawing.Size(251, 31)
+        Me.Student_Info_Text.Size = New System.Drawing.Size(274, 33)
         Me.Student_Info_Text.TabIndex = 19
         Me.Student_Info_Text.Text = "Student Information"
         '
@@ -215,7 +216,7 @@ Partial Class StudentInfo
         '
         'LogoutBtn
         '
-        Me.LogoutBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.LogoutBtn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogoutBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LogoutBtn.Location = New System.Drawing.Point(46, 607)
         Me.LogoutBtn.Name = "LogoutBtn"
@@ -228,11 +229,11 @@ Partial Class StudentInfo
         '
         Me.AddStaffSBar.AutoSize = True
         Me.AddStaffSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AddStaffSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.AddStaffSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddStaffSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.AddStaffSBar.Location = New System.Drawing.Point(72, 467)
         Me.AddStaffSBar.Name = "AddStaffSBar"
-        Me.AddStaffSBar.Size = New System.Drawing.Size(93, 25)
+        Me.AddStaffSBar.Size = New System.Drawing.Size(98, 23)
         Me.AddStaffSBar.TabIndex = 3
         Me.AddStaffSBar.Text = "Add Staff"
         '
@@ -240,11 +241,11 @@ Partial Class StudentInfo
         '
         Me.SearchSBar.AutoSize = True
         Me.SearchSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.SearchSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.SearchSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SearchSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.SearchSBar.Location = New System.Drawing.Point(72, 397)
         Me.SearchSBar.Name = "SearchSBar"
-        Me.SearchSBar.Size = New System.Drawing.Size(75, 25)
+        Me.SearchSBar.Size = New System.Drawing.Size(77, 23)
         Me.SearchSBar.TabIndex = 3
         Me.SearchSBar.Text = "Search"
         '
@@ -252,11 +253,11 @@ Partial Class StudentInfo
         '
         Me.ClassListSBar.AutoSize = True
         Me.ClassListSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ClassListSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.ClassListSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClassListSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.ClassListSBar.Location = New System.Drawing.Point(72, 327)
         Me.ClassListSBar.Name = "ClassListSBar"
-        Me.ClassListSBar.Size = New System.Drawing.Size(97, 25)
+        Me.ClassListSBar.Size = New System.Drawing.Size(97, 23)
         Me.ClassListSBar.TabIndex = 3
         Me.ClassListSBar.Text = "Class List"
         '
@@ -264,11 +265,11 @@ Partial Class StudentInfo
         '
         Me.EnrollmentSBar.AutoSize = True
         Me.EnrollmentSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.EnrollmentSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.EnrollmentSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EnrollmentSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.EnrollmentSBar.Location = New System.Drawing.Point(72, 257)
         Me.EnrollmentSBar.Name = "EnrollmentSBar"
-        Me.EnrollmentSBar.Size = New System.Drawing.Size(104, 25)
+        Me.EnrollmentSBar.Size = New System.Drawing.Size(111, 23)
         Me.EnrollmentSBar.TabIndex = 3
         Me.EnrollmentSBar.Text = "Enrollment"
         '
@@ -337,6 +338,7 @@ Partial Class StudentInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.Search_Label)
@@ -350,6 +352,7 @@ Partial Class StudentInfo
         Me.Controls.Add(Me.FirstName_Text)
         Me.Controls.Add(Me.LastName_Text)
         Me.Controls.Add(Me.Student_Info_Text)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "StudentInfo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "StudentInfo"

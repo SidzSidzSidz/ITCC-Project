@@ -6,14 +6,9 @@
 
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles EnrollmentSBar.Click
-        Me.Hide()
-        Enrollment1Form.Show()
-    End Sub
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles EnrollmentSBar.Click, EnrollmentPB.Click
 
-    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles EnrollmentPB.Click
-        Me.Hide()
-        Enrollment1Form.Show()
+        EnrollmentChoice.Show()
     End Sub
 
     Private Sub ClassListSBar_Click(sender As Object, e As EventArgs) Handles ClassListSBar.Click

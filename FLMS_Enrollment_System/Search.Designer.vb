@@ -42,6 +42,7 @@ Partial Class Search
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,12 +50,13 @@ Partial Class Search
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Search_btn
         '
-        Me.Search_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.Search_btn.Location = New System.Drawing.Point(714, 347)
+        Me.Search_btn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Search_btn.Location = New System.Drawing.Point(488, 368)
         Me.Search_btn.Name = "Search_btn"
         Me.Search_btn.Size = New System.Drawing.Size(92, 42)
         Me.Search_btn.TabIndex = 12
@@ -64,30 +66,30 @@ Partial Class Search
         'LRN_text
         '
         Me.LRN_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LRN_text.Location = New System.Drawing.Point(623, 299)
+        Me.LRN_text.Location = New System.Drawing.Point(250, 303)
         Me.LRN_text.Name = "LRN_text"
-        Me.LRN_text.Size = New System.Drawing.Size(275, 38)
+        Me.LRN_text.Size = New System.Drawing.Size(569, 38)
         Me.LRN_text.TabIndex = 11
         '
         'LRN_Label
         '
         Me.LRN_Label.AutoSize = True
-        Me.LRN_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
+        Me.LRN_Label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LRN_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LRN_Label.Location = New System.Drawing.Point(615, 266)
+        Me.LRN_Label.Location = New System.Drawing.Point(464, 247)
         Me.LRN_Label.Name = "LRN_Label"
-        Me.LRN_Label.Size = New System.Drawing.Size(141, 31)
+        Me.LRN_Label.Size = New System.Drawing.Size(136, 33)
         Me.LRN_Label.TabIndex = 10
         Me.LRN_Label.Text = "Enter LRN"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!)
+        Me.Label9.Font = New System.Drawing.Font("Impact", 40.0!)
         Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label9.Location = New System.Drawing.Point(227, 40)
+        Me.Label9.Location = New System.Drawing.Point(37, 35)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(251, 39)
+        Me.Label9.Size = New System.Drawing.Size(367, 66)
         Me.Label9.TabIndex = 9
         Me.Label9.Text = "Search Student"
         '
@@ -144,7 +146,7 @@ Partial Class Search
         '
         'LogoutBtn
         '
-        Me.LogoutBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.LogoutBtn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogoutBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LogoutBtn.Location = New System.Drawing.Point(46, 607)
         Me.LogoutBtn.Name = "LogoutBtn"
@@ -157,11 +159,11 @@ Partial Class Search
         '
         Me.AddStaffSBar.AutoSize = True
         Me.AddStaffSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AddStaffSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.AddStaffSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddStaffSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.AddStaffSBar.Location = New System.Drawing.Point(72, 467)
         Me.AddStaffSBar.Name = "AddStaffSBar"
-        Me.AddStaffSBar.Size = New System.Drawing.Size(93, 25)
+        Me.AddStaffSBar.Size = New System.Drawing.Size(98, 23)
         Me.AddStaffSBar.TabIndex = 3
         Me.AddStaffSBar.Text = "Add Staff"
         '
@@ -169,11 +171,11 @@ Partial Class Search
         '
         Me.SearchSBar.AutoSize = True
         Me.SearchSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.SearchSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.SearchSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SearchSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.SearchSBar.Location = New System.Drawing.Point(72, 397)
         Me.SearchSBar.Name = "SearchSBar"
-        Me.SearchSBar.Size = New System.Drawing.Size(75, 25)
+        Me.SearchSBar.Size = New System.Drawing.Size(77, 23)
         Me.SearchSBar.TabIndex = 3
         Me.SearchSBar.Text = "Search"
         '
@@ -181,11 +183,11 @@ Partial Class Search
         '
         Me.ClassListSBar.AutoSize = True
         Me.ClassListSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ClassListSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.ClassListSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClassListSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.ClassListSBar.Location = New System.Drawing.Point(72, 327)
         Me.ClassListSBar.Name = "ClassListSBar"
-        Me.ClassListSBar.Size = New System.Drawing.Size(97, 25)
+        Me.ClassListSBar.Size = New System.Drawing.Size(97, 23)
         Me.ClassListSBar.TabIndex = 3
         Me.ClassListSBar.Text = "Class List"
         '
@@ -193,11 +195,11 @@ Partial Class Search
         '
         Me.EnrollmentSBar.AutoSize = True
         Me.EnrollmentSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.EnrollmentSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.EnrollmentSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EnrollmentSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.EnrollmentSBar.Location = New System.Drawing.Point(72, 257)
         Me.EnrollmentSBar.Name = "EnrollmentSBar"
-        Me.EnrollmentSBar.Size = New System.Drawing.Size(104, 25)
+        Me.EnrollmentSBar.Size = New System.Drawing.Size(111, 23)
         Me.EnrollmentSBar.TabIndex = 3
         Me.EnrollmentSBar.Text = "Enrollment"
         '
@@ -275,17 +277,27 @@ Partial Class Search
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.Search_btn)
+        Me.Panel1.Controls.Add(Me.LRN_text)
+        Me.Panel1.Controls.Add(Me.LRN_Label)
+        Me.Panel1.Location = New System.Drawing.Point(196, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1069, 681)
+        Me.Panel1.TabIndex = 13
+        '
         'Search
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 681)
-        Me.Controls.Add(Me.Search_btn)
-        Me.Controls.Add(Me.LRN_text)
-        Me.Controls.Add(Me.LRN_Label)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Search"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Search"
@@ -297,8 +309,9 @@ Partial Class Search
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -321,4 +334,5 @@ Partial Class Search
     Friend WithEvents CListPB As PictureBox
     Friend WithEvents EnrollmentPB As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Panel1 As Panel
 End Class

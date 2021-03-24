@@ -91,7 +91,7 @@ Partial Class Enrollment2Form
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label11.Location = New System.Drawing.Point(559, 118)
         Me.Label11.Name = "Label11"
@@ -110,22 +110,22 @@ Partial Class Enrollment2Form
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label10.Location = New System.Drawing.Point(229, 117)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(71, 17)
+        Me.Label10.Size = New System.Drawing.Size(70, 17)
         Me.Label10.TabIndex = 9
         Me.Label10.Text = "Year level"
         '
         'EnrolleeName
         '
         Me.EnrolleeName.AutoSize = True
-        Me.EnrolleeName.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!)
+        Me.EnrolleeName.Font = New System.Drawing.Font("Impact", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EnrolleeName.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.EnrolleeName.Location = New System.Drawing.Point(225, 42)
         Me.EnrolleeName.Name = "EnrolleeName"
-        Me.EnrolleeName.Size = New System.Drawing.Size(287, 39)
+        Me.EnrolleeName.Size = New System.Drawing.Size(295, 48)
         Me.EnrolleeName.TabIndex = 10
         Me.EnrolleeName.Text = "Name Of Enrollee"
         '
@@ -192,7 +192,7 @@ Partial Class Enrollment2Form
         'EnrollBtn
         '
         Me.EnrollBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.EnrollBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.EnrollBtn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EnrollBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.EnrollBtn.Location = New System.Drawing.Point(61, 384)
         Me.EnrollBtn.Name = "EnrollBtn"
@@ -255,7 +255,7 @@ Partial Class Enrollment2Form
         'LogoutBtn
         '
         Me.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LogoutBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.LogoutBtn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogoutBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LogoutBtn.Location = New System.Drawing.Point(46, 607)
         Me.LogoutBtn.Name = "LogoutBtn"
@@ -268,11 +268,11 @@ Partial Class Enrollment2Form
         '
         Me.AddStaffSBar.AutoSize = True
         Me.AddStaffSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AddStaffSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.AddStaffSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddStaffSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.AddStaffSBar.Location = New System.Drawing.Point(72, 467)
         Me.AddStaffSBar.Name = "AddStaffSBar"
-        Me.AddStaffSBar.Size = New System.Drawing.Size(93, 25)
+        Me.AddStaffSBar.Size = New System.Drawing.Size(98, 23)
         Me.AddStaffSBar.TabIndex = 3
         Me.AddStaffSBar.Text = "Add Staff"
         '
@@ -280,11 +280,11 @@ Partial Class Enrollment2Form
         '
         Me.SearchSBar.AutoSize = True
         Me.SearchSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.SearchSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.SearchSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SearchSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.SearchSBar.Location = New System.Drawing.Point(72, 397)
         Me.SearchSBar.Name = "SearchSBar"
-        Me.SearchSBar.Size = New System.Drawing.Size(75, 25)
+        Me.SearchSBar.Size = New System.Drawing.Size(77, 23)
         Me.SearchSBar.TabIndex = 3
         Me.SearchSBar.Text = "Search"
         '
@@ -292,11 +292,11 @@ Partial Class Enrollment2Form
         '
         Me.ClassListSBar.AutoSize = True
         Me.ClassListSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ClassListSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.ClassListSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClassListSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.ClassListSBar.Location = New System.Drawing.Point(72, 327)
         Me.ClassListSBar.Name = "ClassListSBar"
-        Me.ClassListSBar.Size = New System.Drawing.Size(97, 25)
+        Me.ClassListSBar.Size = New System.Drawing.Size(97, 23)
         Me.ClassListSBar.TabIndex = 3
         Me.ClassListSBar.Text = "Class List"
         '
@@ -304,11 +304,11 @@ Partial Class Enrollment2Form
         '
         Me.EnrollmentSBar.AutoSize = True
         Me.EnrollmentSBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.EnrollmentSBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.EnrollmentSBar.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EnrollmentSBar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.EnrollmentSBar.Location = New System.Drawing.Point(72, 257)
         Me.EnrollmentSBar.Name = "EnrollmentSBar"
-        Me.EnrollmentSBar.Size = New System.Drawing.Size(104, 25)
+        Me.EnrollmentSBar.Size = New System.Drawing.Size(111, 23)
         Me.EnrollmentSBar.TabIndex = 3
         Me.EnrollmentSBar.Text = "Enrollment"
         '
@@ -377,6 +377,7 @@ Partial Class Enrollment2Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.Label12)
@@ -387,6 +388,7 @@ Partial Class Enrollment2Form
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.EnrolleeName)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Enrollment2Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Enrollment2Form"

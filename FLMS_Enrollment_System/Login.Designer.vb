@@ -34,20 +34,24 @@ Partial Class Login
         '
         'LoginBtn
         '
-        Me.LoginBtn.Location = New System.Drawing.Point(830, 348)
+        Me.LoginBtn.BackColor = System.Drawing.Color.Transparent
+        Me.LoginBtn.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoginBtn.ForeColor = System.Drawing.Color.Black
+        Me.LoginBtn.Location = New System.Drawing.Point(831, 362)
         Me.LoginBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.LoginBtn.Name = "LoginBtn"
         Me.LoginBtn.Size = New System.Drawing.Size(176, 47)
         Me.LoginBtn.TabIndex = 12
         Me.LoginBtn.Text = "Login"
-        Me.LoginBtn.UseVisualStyleBackColor = True
+        Me.LoginBtn.UseVisualStyleBackColor = False
         '
         'LoginPasswordTextBox1
         '
         Me.LoginPasswordTextBox1.BackColor = System.Drawing.Color.White
+        Me.LoginPasswordTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LoginPasswordTextBox1.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!)
         Me.LoginPasswordTextBox1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.LoginPasswordTextBox1.Location = New System.Drawing.Point(784, 278)
+        Me.LoginPasswordTextBox1.Location = New System.Drawing.Point(785, 292)
         Me.LoginPasswordTextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.LoginPasswordTextBox1.Name = "LoginPasswordTextBox1"
         Me.LoginPasswordTextBox1.Size = New System.Drawing.Size(260, 34)
@@ -57,9 +61,10 @@ Partial Class Login
         'LoginUserTextBox
         '
         Me.LoginUserTextBox.BackColor = System.Drawing.Color.White
+        Me.LoginUserTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LoginUserTextBox.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!)
         Me.LoginUserTextBox.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.LoginUserTextBox.Location = New System.Drawing.Point(784, 215)
+        Me.LoginUserTextBox.Location = New System.Drawing.Point(785, 229)
         Me.LoginUserTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.LoginUserTextBox.Name = "LoginUserTextBox"
         Me.LoginUserTextBox.Size = New System.Drawing.Size(260, 34)
@@ -69,24 +74,28 @@ Partial Class Login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!)
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Impact", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(230, 430)
+        Me.Label2.Location = New System.Drawing.Point(248, 422)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(302, 39)
+        Me.Label2.Size = New System.Drawing.Size(271, 41)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Enrollment System"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Impact", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label1.Location = New System.Drawing.Point(152, 373)
+        Me.Label1.Location = New System.Drawing.Point(157, 368)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(471, 39)
+        Me.Label1.Size = New System.Drawing.Size(472, 41)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Father Leoni Memorial School"
+        Me.Label1.Text = "Father Leoni Memorial School Inc."
         '
         'PictureBox1
         '
@@ -102,6 +111,7 @@ Partial Class Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.LoginBtn)
         Me.Controls.Add(Me.LoginPasswordTextBox1)
@@ -109,6 +119,7 @@ Partial Class Login
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FLMS Enrollment System"
