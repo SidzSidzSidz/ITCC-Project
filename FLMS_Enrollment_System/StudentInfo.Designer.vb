@@ -60,11 +60,11 @@ Partial Class StudentInfo
         'Search_Label
         '
         Me.Search_Label.AutoSize = True
-        Me.Search_Label.Font = New System.Drawing.Font("Impact", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Search_Label.Font = New System.Drawing.Font("Impact", 40.0!)
         Me.Search_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Search_Label.Location = New System.Drawing.Point(252, 13)
         Me.Search_Label.Name = "Search_Label"
-        Me.Search_Label.Size = New System.Drawing.Size(136, 48)
+        Me.Search_Label.Size = New System.Drawing.Size(185, 66)
         Me.Search_Label.TabIndex = 29
         Me.Search_Label.Text = "Search"
         '

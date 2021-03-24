@@ -121,11 +121,11 @@ Partial Class Enrollment2Form
         'EnrolleeName
         '
         Me.EnrolleeName.AutoSize = True
-        Me.EnrolleeName.Font = New System.Drawing.Font("Impact", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EnrolleeName.Font = New System.Drawing.Font("Impact", 40.0!)
         Me.EnrolleeName.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.EnrolleeName.Location = New System.Drawing.Point(225, 42)
+        Me.EnrolleeName.Location = New System.Drawing.Point(221, 13)
         Me.EnrolleeName.Name = "EnrolleeName"
-        Me.EnrolleeName.Size = New System.Drawing.Size(295, 48)
+        Me.EnrolleeName.Size = New System.Drawing.Size(403, 66)
         Me.EnrolleeName.TabIndex = 10
         Me.EnrolleeName.Text = "Name Of Enrollee"
         '
