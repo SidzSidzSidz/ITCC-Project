@@ -29,4 +29,10 @@
     Private Sub Search_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
     End Sub
+
+    Private Sub AddStaffSBar_Click(sender As Object, e As EventArgs) Handles AddStaffSBar.Click, AddStaffPB.Click
+        Me.Hide()
+        AddStaff.Show()
+    End Sub
+
 End Class

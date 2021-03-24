@@ -1,7 +1,4 @@
 ﻿Public Class Enrollment1Form
-    Private Sub Enrollment1Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub NextBtn_Click(sender As Object, e As EventArgs) Handles NextBtn.Click
         Enrollment2Form.Show()
@@ -30,7 +27,8 @@
     End Sub
 
     Private Sub AddStaffPB_Click(sender As Object, e As EventArgs) Handles AddStaffPB.Click, AddStaffSBar.Click
-        ' form not yet available
+        Me.Hide()
+        AddStaff.Show()
     End Sub
 
     Private Sub LogoutBtn_Click(sender As Object, e As EventArgs) Handles LogoutBtn.Click
