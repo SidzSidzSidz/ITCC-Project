@@ -14,7 +14,8 @@
     End Sub
 
     Private Sub AddStaffPB_Click(sender As Object, e As EventArgs) Handles AddStaffPB.Click, AddStaffSBar.Click
-        'add staff
+        Me.Hide()
+        AddStaff.Show()
     End Sub
 
     Private Sub LogoutBtn_Click(sender As Object, e As EventArgs) Handles LogoutBtn.Click

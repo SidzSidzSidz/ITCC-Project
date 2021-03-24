@@ -31,7 +31,8 @@
     End Sub
 
     Private Sub AddStaffPB_Click(sender As Object, e As EventArgs) Handles AddStaffPB.Click, AddStaffSBar.Click
-        ' form is missing
+        Me.Hide()
+        AddStaff.Show()
     End Sub
 
     Private Sub LogoutBtn_Click_1(sender As Object, e As EventArgs) Handles LogoutBtn.Click
