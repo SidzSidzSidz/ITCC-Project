@@ -24,8 +24,8 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.LoginBtn = New System.Windows.Forms.Button()
-        Me.LoginPasswordTextBox1 = New System.Windows.Forms.TextBox()
-        Me.LoginUserTextBox = New System.Windows.Forms.TextBox()
+        Me.PasswordTBox = New System.Windows.Forms.TextBox()
+        Me.UserTbox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -45,8 +45,20 @@ Partial Class Login
         Me.LoginBtn.Text = "Login"
         Me.LoginBtn.UseVisualStyleBackColor = False
         '
-        'LoginPasswordTextBox1
+        'PasswordTBox
         '
+<<<<<<< HEAD
+        Me.PasswordTBox.BackColor = System.Drawing.Color.White
+        Me.PasswordTBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PasswordTBox.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!)
+        Me.PasswordTBox.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.PasswordTBox.Location = New System.Drawing.Point(785, 292)
+        Me.PasswordTBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.PasswordTBox.Name = "PasswordTBox"
+        Me.PasswordTBox.Size = New System.Drawing.Size(260, 34)
+        Me.PasswordTBox.TabIndex = 13
+        Me.PasswordTBox.Text = "Password"
+=======
         Me.LoginPasswordTextBox1.BackColor = System.Drawing.Color.White
         Me.LoginPasswordTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LoginPasswordTextBox1.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!)
@@ -58,9 +70,22 @@ Partial Class Login
         Me.LoginPasswordTextBox1.Size = New System.Drawing.Size(260, 34)
         Me.LoginPasswordTextBox1.TabIndex = 13
         Me.LoginPasswordTextBox1.Text = "Password"
+>>>>>>> 84111eb8c48945239de0b16b8e1532eacbd5f51f
         '
-        'LoginUserTextBox
+        'UserTbox
         '
+<<<<<<< HEAD
+        Me.UserTbox.BackColor = System.Drawing.Color.White
+        Me.UserTbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.UserTbox.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!)
+        Me.UserTbox.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.UserTbox.Location = New System.Drawing.Point(785, 229)
+        Me.UserTbox.Margin = New System.Windows.Forms.Padding(2)
+        Me.UserTbox.Name = "UserTbox"
+        Me.UserTbox.Size = New System.Drawing.Size(260, 34)
+        Me.UserTbox.TabIndex = 12
+        Me.UserTbox.Text = "Username"
+=======
         Me.LoginUserTextBox.BackColor = System.Drawing.Color.White
         Me.LoginUserTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LoginUserTextBox.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!)
@@ -71,6 +96,7 @@ Partial Class Login
         Me.LoginUserTextBox.Size = New System.Drawing.Size(260, 34)
         Me.LoginUserTextBox.TabIndex = 12
         Me.LoginUserTextBox.Text = "Username"
+>>>>>>> 84111eb8c48945239de0b16b8e1532eacbd5f51f
         '
         'Label2
         '
@@ -115,8 +141,8 @@ Partial Class Login
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.LoginBtn)
-        Me.Controls.Add(Me.LoginPasswordTextBox1)
-        Me.Controls.Add(Me.LoginUserTextBox)
+        Me.Controls.Add(Me.PasswordTBox)
+        Me.Controls.Add(Me.UserTbox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
@@ -131,8 +157,8 @@ Partial Class Login
     End Sub
 
     Friend WithEvents LoginBtn As Button
-    Friend WithEvents LoginPasswordTextBox1 As TextBox
-    Friend WithEvents LoginUserTextBox As TextBox
+    Friend WithEvents PasswordTBox As TextBox
+    Friend WithEvents UserTbox As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
