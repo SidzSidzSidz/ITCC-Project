@@ -22,4 +22,8 @@
         Me.Hide()
         Login.Show()
     End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ClassList_DGV.CellContentClick
+
+    End Sub
 End Class

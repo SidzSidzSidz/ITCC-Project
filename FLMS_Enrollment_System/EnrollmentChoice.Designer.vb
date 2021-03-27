@@ -22,29 +22,29 @@ Partial Class EnrollmentChoice
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.NewStudent_btn = New System.Windows.Forms.Button()
+        Me.OldStudent_btn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button1
+        'NewStudent_btn
         '
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(59, 68)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(142, 84)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "New Student"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.NewStudent_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NewStudent_btn.Location = New System.Drawing.Point(59, 68)
+        Me.NewStudent_btn.Name = "NewStudent_btn"
+        Me.NewStudent_btn.Size = New System.Drawing.Size(142, 84)
+        Me.NewStudent_btn.TabIndex = 0
+        Me.NewStudent_btn.Text = "New Student"
+        Me.NewStudent_btn.UseVisualStyleBackColor = True
         '
-        'Button2
+        'OldStudent_btn
         '
-        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(237, 68)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(142, 84)
-        Me.Button2.TabIndex = 0
-        Me.Button2.Text = "Old Student"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.OldStudent_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OldStudent_btn.Location = New System.Drawing.Point(237, 68)
+        Me.OldStudent_btn.Name = "OldStudent_btn"
+        Me.OldStudent_btn.Size = New System.Drawing.Size(142, 84)
+        Me.OldStudent_btn.TabIndex = 0
+        Me.OldStudent_btn.Text = "Old Student"
+        Me.OldStudent_btn.UseVisualStyleBackColor = True
         '
         'EnrollmentChoice
         '
@@ -52,8 +52,8 @@ Partial Class EnrollmentChoice
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(438, 220)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.OldStudent_btn)
+        Me.Controls.Add(Me.NewStudent_btn)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "EnrollmentChoice"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -62,6 +62,6 @@ Partial Class EnrollmentChoice
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents NewStudent_btn As Button
+    Friend WithEvents OldStudent_btn As Button
 End Class

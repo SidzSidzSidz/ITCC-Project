@@ -22,28 +22,28 @@ Partial Class OldEnrollment
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.LRN_TBox = New System.Windows.Forms.TextBox()
+        Me.Enter_btn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'LRN_TBox
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(87, 91)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(264, 26)
-        Me.TextBox1.TabIndex = 0
+        Me.LRN_TBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.LRN_TBox.Location = New System.Drawing.Point(87, 91)
+        Me.LRN_TBox.Name = "LRN_TBox"
+        Me.LRN_TBox.Size = New System.Drawing.Size(264, 26)
+        Me.LRN_TBox.TabIndex = 0
         '
-        'Button1
+        'Enter_btn
         '
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.Button1.Location = New System.Drawing.Point(167, 138)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(104, 42)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Enter"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Enter_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
+        Me.Enter_btn.Location = New System.Drawing.Point(167, 138)
+        Me.Enter_btn.Name = "Enter_btn"
+        Me.Enter_btn.Size = New System.Drawing.Size(104, 42)
+        Me.Enter_btn.TabIndex = 1
+        Me.Enter_btn.Text = "Enter"
+        Me.Enter_btn.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -62,8 +62,8 @@ Partial Class OldEnrollment
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(438, 220)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Enter_btn)
+        Me.Controls.Add(Me.LRN_TBox)
         Me.Name = "OldEnrollment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "OldEnrollment"
@@ -72,7 +72,7 @@ Partial Class OldEnrollment
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents LRN_TBox As TextBox
+    Friend WithEvents Enter_btn As Button
     Friend WithEvents Label1 As Label
 End Class

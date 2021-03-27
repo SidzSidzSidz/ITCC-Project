@@ -23,7 +23,7 @@ Partial Class ClassList
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ClassList))
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ClassList_DGV = New System.Windows.Forms.DataGridView()
         Me.SectionCBox = New System.Windows.Forms.ComboBox()
         Me.YLCBox = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -44,7 +44,7 @@ Partial Class ClassList
         Me.AddStaffPB = New System.Windows.Forms.PictureBox()
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClassList_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,60 +53,33 @@ Partial Class ClassList
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'ClassList_DGV
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(267, 131)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(956, 519)
-        Me.DataGridView1.TabIndex = 16
+        Me.ClassList_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ClassList_DGV.Location = New System.Drawing.Point(267, 131)
+        Me.ClassList_DGV.Name = "ClassList_DGV"
+        Me.ClassList_DGV.Size = New System.Drawing.Size(956, 519)
+        Me.ClassList_DGV.TabIndex = 16
         '
-<<<<<<< Updated upstream
-        'ComboBox2
-        '
-=======
         'SectionCBox
         '
-<<<<<<< HEAD
+        Me.SectionCBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.SectionCBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SectionCBox.FormattingEnabled = True
         Me.SectionCBox.Location = New System.Drawing.Point(646, 84)
         Me.SectionCBox.Name = "SectionCBox"
         Me.SectionCBox.Size = New System.Drawing.Size(179, 21)
         Me.SectionCBox.TabIndex = 14
-=======
->>>>>>> Stashed changes
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(646, 84)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(179, 21)
-        Me.ComboBox2.TabIndex = 14
-<<<<<<< Updated upstream
-        '
-        'ComboBox1
-        '
-=======
->>>>>>> 84111eb8c48945239de0b16b8e1532eacbd5f51f
         '
         'YLCBox
         '
-<<<<<<< HEAD
+        Me.YLCBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.YLCBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.YLCBox.FormattingEnabled = True
         Me.YLCBox.Location = New System.Drawing.Point(357, 84)
         Me.YLCBox.Name = "YLCBox"
         Me.YLCBox.Size = New System.Drawing.Size(179, 21)
         Me.YLCBox.TabIndex = 13
-=======
->>>>>>> Stashed changes
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(357, 84)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(179, 21)
-        Me.ComboBox1.TabIndex = 13
->>>>>>> 84111eb8c48945239de0b16b8e1532eacbd5f51f
         '
         'Label11
         '
@@ -144,7 +117,6 @@ Partial Class ClassList
         '
         'SelectBtn
         '
-<<<<<<< HEAD
         Me.SelectBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
         Me.SelectBtn.Location = New System.Drawing.Point(860, 78)
         Me.SelectBtn.Name = "SelectBtn"
@@ -152,15 +124,6 @@ Partial Class ClassList
         Me.SelectBtn.TabIndex = 15
         Me.SelectBtn.Text = "Select"
         Me.SelectBtn.UseVisualStyleBackColor = True
-=======
-        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.Button2.Location = New System.Drawing.Point(860, 78)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(84, 31)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Select"
-        Me.Button2.UseVisualStyleBackColor = True
->>>>>>> 84111eb8c48945239de0b16b8e1532eacbd5f51f
         '
         'Sidebar
         '
@@ -340,7 +303,7 @@ Partial Class ClassList
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.Sidebar)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.ClassList_DGV)
         Me.Controls.Add(Me.SectionCBox)
         Me.Controls.Add(Me.YLCBox)
         Me.Controls.Add(Me.Label11)
@@ -352,7 +315,7 @@ Partial Class ClassList
         Me.Name = "ClassList"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ClassList"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClassList_DGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -365,7 +328,7 @@ Partial Class ClassList
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ClassList_DGV As DataGridView
     Friend WithEvents SectionCBox As ComboBox
     Friend WithEvents YLCBox As ComboBox
     Friend WithEvents Label11 As Label
