@@ -37,10 +37,6 @@
         Login.Show()
     End Sub
 
-    Private Sub EnrollmentSBar_Click(sender As Object, e As EventArgs) Handles EnrollmentSBar.Click
-
-    End Sub
-
     Private Sub Enrollment1Form_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
     End Sub

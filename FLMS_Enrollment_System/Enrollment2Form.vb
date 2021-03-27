@@ -1,8 +1,11 @@
 ﻿Public Class Enrollment2Form
     Private Sub EnrollBtn_Click(sender As Object, e As EventArgs) Handles EnrollBtn.Click
-        Enrollment1Form.Close()
-        Me.Close()
+
+        Enrollment1Form.Dispose()
+        ' replace previous statement
+        Me.Dispose()
         Enrollment1Form.Show()
+
     End Sub
 
     Private Sub Enrollment2Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -10,8 +13,9 @@
     End Sub
 
     Private Sub LogoutBtn_Click(sender As Object, e As EventArgs)
+        Enrollment1Form.Dispose()
         Login.Show()
-        Me.Hide()
+        Me.Dispose()
     End Sub
 
     Private Sub EnrollmentSBar_Click(sender As Object, e As EventArgs) Handles EnrollmentSBar.Click, EnrollmentPB.Click
@@ -21,22 +25,26 @@
     End Sub
 
     Private Sub CListPB_Click(sender As Object, e As EventArgs) Handles CListPB.Click, ClassListSBar.Click
-        Me.Hide()
+        Enrollment1Form.Dispose()
+        Me.Dispose()
         ClassList.Show()
     End Sub
 
     Private Sub SearchPB_Click(sender As Object, e As EventArgs) Handles SearchPB.Click, SearchSBar.Click
-        Me.Hide()
+        Enrollment1Form.Dispose()
+        Me.Dispose()
         Search.Show()
     End Sub
 
     Private Sub AddStaffPB_Click(sender As Object, e As EventArgs) Handles AddStaffPB.Click, AddStaffSBar.Click
-        Me.Hide()
+        Enrollment1Form.Dispose()
+        Me.Dispose()
         AddStaff.Show()
     End Sub
 
     Private Sub LogoutBtn_Click_1(sender As Object, e As EventArgs) Handles LogoutBtn.Click
-        Me.Hide()
+        Enrollment1Form.Dispose()
+        Me.Dispose()
         Login.Show()
     End Sub
 
