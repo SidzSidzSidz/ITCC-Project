@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Enrollment1Form
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Enrollment1Form
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Enrollment1Form))
         Me.NextBtn = New System.Windows.Forms.Button()
@@ -85,8 +85,6 @@ Partial Class Enrollment1Form
         '
         'NextBtn
         '
-        Me.NextBtn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NextBtn.Location = New System.Drawing.Point(1030, 550)
         Me.NextBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
         Me.NextBtn.Location = New System.Drawing.Point(994, 515)
         Me.NextBtn.Margin = New System.Windows.Forms.Padding(2)
@@ -99,11 +97,11 @@ Partial Class Enrollment1Form
         'RCardBtn
         '
         Me.RCardBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.RCardBtn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RCardBtn.Font = New System.Drawing.Font("Century Gothic", 11.0!)
         Me.RCardBtn.Location = New System.Drawing.Point(515, 549)
         Me.RCardBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.RCardBtn.Name = "RCardBtn"
-        Me.RCardBtn.Size = New System.Drawing.Size(92, 29)
+        Me.RCardBtn.Size = New System.Drawing.Size(107, 39)
         Me.RCardBtn.TabIndex = 40
         Me.RCardBtn.Text = "Add File"
         Me.RCardBtn.UseVisualStyleBackColor = True
@@ -111,11 +109,11 @@ Partial Class Enrollment1Form
         'MoralBtn
         '
         Me.MoralBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.MoralBtn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MoralBtn.Font = New System.Drawing.Font("Century Gothic", 11.0!)
         Me.MoralBtn.Location = New System.Drawing.Point(391, 549)
         Me.MoralBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.MoralBtn.Name = "MoralBtn"
-        Me.MoralBtn.Size = New System.Drawing.Size(92, 29)
+        Me.MoralBtn.Size = New System.Drawing.Size(107, 39)
         Me.MoralBtn.TabIndex = 39
         Me.MoralBtn.Text = "Add File"
         Me.MoralBtn.UseVisualStyleBackColor = True
@@ -123,11 +121,11 @@ Partial Class Enrollment1Form
         'NSOBtn
         '
         Me.NSOBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.NSOBtn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NSOBtn.Font = New System.Drawing.Font("Century Gothic", 11.0!)
         Me.NSOBtn.Location = New System.Drawing.Point(267, 549)
         Me.NSOBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.NSOBtn.Name = "NSOBtn"
-        Me.NSOBtn.Size = New System.Drawing.Size(92, 29)
+        Me.NSOBtn.Size = New System.Drawing.Size(107, 39)
         Me.NSOBtn.TabIndex = 38
         Me.NSOBtn.Text = "Add File"
         Me.NSOBtn.UseVisualStyleBackColor = True
@@ -138,8 +136,6 @@ Partial Class Enrollment1Form
         Me.YearsCompCoBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.YearsCompCoBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.YearsCompCoBox.FormattingEnabled = True
-        Me.YearsCompCoBox.Location = New System.Drawing.Point(577, 442)
-        Me.YearsCompCoBox.Location = New System.Drawing.Point(655, 442)
         Me.YearsCompCoBox.Location = New System.Drawing.Point(577, 442)
         Me.YearsCompCoBox.Margin = New System.Windows.Forms.Padding(2)
         Me.YearsCompCoBox.Name = "YearsCompCoBox"
@@ -152,8 +148,6 @@ Partial Class Enrollment1Form
         Me.SexCoBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SexCoBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.SexCoBox.FormattingEnabled = True
-        Me.SexCoBox.Location = New System.Drawing.Point(662, 442)
-        Me.SexCoBox.Location = New System.Drawing.Point(577, 442)
         Me.SexCoBox.Location = New System.Drawing.Point(662, 442)
         Me.SexCoBox.Margin = New System.Windows.Forms.Padding(2)
         Me.SexCoBox.Name = "SexCoBox"
@@ -196,21 +190,17 @@ Partial Class Enrollment1Form
         'F137Btn
         '
         Me.F137Btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.F137Btn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.F137Btn.Font = New System.Drawing.Font("Century Gothic", 11.0!)
         Me.F137Btn.Location = New System.Drawing.Point(639, 549)
         Me.F137Btn.Margin = New System.Windows.Forms.Padding(2)
         Me.F137Btn.Name = "F137Btn"
-        Me.F137Btn.Size = New System.Drawing.Size(92, 29)
+        Me.F137Btn.Size = New System.Drawing.Size(107, 39)
         Me.F137Btn.TabIndex = 37
         Me.F137Btn.Text = "Add File"
         Me.F137Btn.UseVisualStyleBackColor = True
         '
         'BirthdayDTP
         '
-        Me.BirthdayDTP.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BirthdayDTP.Location = New System.Drawing.Point(863, 232)
-        Me.BirthdayDTP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BirthdayDTP.Location = New System.Drawing.Point(863, 233)
         Me.BirthdayDTP.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BirthdayDTP.Location = New System.Drawing.Point(863, 232)
         Me.BirthdayDTP.Margin = New System.Windows.Forms.Padding(2)
@@ -631,11 +621,11 @@ Partial Class Enrollment1Form
         'PictureBtn
         '
         Me.PictureBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBtn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PictureBtn.Font = New System.Drawing.Font("Century Gothic", 11.0!)
         Me.PictureBtn.Location = New System.Drawing.Point(763, 549)
         Me.PictureBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBtn.Name = "PictureBtn"
-        Me.PictureBtn.Size = New System.Drawing.Size(92, 29)
+        Me.PictureBtn.Size = New System.Drawing.Size(107, 39)
         Me.PictureBtn.TabIndex = 37
         Me.PictureBtn.Text = "Add File"
         Me.PictureBtn.UseVisualStyleBackColor = True
