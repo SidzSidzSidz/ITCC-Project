@@ -36,7 +36,6 @@ C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\De
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\Debug\FLMS_Enrollment_System.exe
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\Debug\FLMS_Enrollment_System.pdb
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\Debug\FLMS_Enrollment_System.xml
-C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.vbprojAssemblyReference.cache
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.ClassList.resources
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Enrollment1Form.resources
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Enrollment2Form.resources

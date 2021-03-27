@@ -47,7 +47,6 @@ Partial Class Login
         '
         'PasswordTBox
         '
-<<<<<<< HEAD
         Me.PasswordTBox.BackColor = System.Drawing.Color.White
         Me.PasswordTBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PasswordTBox.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!)
@@ -58,23 +57,9 @@ Partial Class Login
         Me.PasswordTBox.Size = New System.Drawing.Size(260, 34)
         Me.PasswordTBox.TabIndex = 13
         Me.PasswordTBox.Text = "Password"
-=======
-        Me.LoginPasswordTextBox1.BackColor = System.Drawing.Color.White
-        Me.LoginPasswordTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LoginPasswordTextBox1.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!)
-        Me.LoginPasswordTextBox1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.LoginPasswordTextBox1.Location = New System.Drawing.Point(781, 328)
-        Me.LoginPasswordTextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.LoginPasswordTextBox1.Name = "LoginPasswordTextBox1"
-        Me.LoginPasswordTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.LoginPasswordTextBox1.Size = New System.Drawing.Size(260, 34)
-        Me.LoginPasswordTextBox1.TabIndex = 13
-        Me.LoginPasswordTextBox1.Text = "Password"
->>>>>>> 84111eb8c48945239de0b16b8e1532eacbd5f51f
         '
         'UserTbox
         '
-<<<<<<< HEAD
         Me.UserTbox.BackColor = System.Drawing.Color.White
         Me.UserTbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.UserTbox.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!)
@@ -85,18 +70,6 @@ Partial Class Login
         Me.UserTbox.Size = New System.Drawing.Size(260, 34)
         Me.UserTbox.TabIndex = 12
         Me.UserTbox.Text = "Username"
-=======
-        Me.LoginUserTextBox.BackColor = System.Drawing.Color.White
-        Me.LoginUserTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LoginUserTextBox.Font = New System.Drawing.Font("Microsoft YaHei", 15.0!)
-        Me.LoginUserTextBox.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.LoginUserTextBox.Location = New System.Drawing.Point(781, 265)
-        Me.LoginUserTextBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.LoginUserTextBox.Name = "LoginUserTextBox"
-        Me.LoginUserTextBox.Size = New System.Drawing.Size(260, 34)
-        Me.LoginUserTextBox.TabIndex = 12
-        Me.LoginUserTextBox.Text = "Username"
->>>>>>> 84111eb8c48945239de0b16b8e1532eacbd5f51f
         '
         'Label2
         '

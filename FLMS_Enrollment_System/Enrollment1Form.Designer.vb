@@ -85,18 +85,10 @@ Partial Class Enrollment1Form
         '
         'NextBtn
         '
-<<<<<<< Updated upstream
-        Me.NextBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.NextBtn.Location = New System.Drawing.Point(994, 515)
-=======
-<<<<<<< HEAD
         Me.NextBtn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NextBtn.Location = New System.Drawing.Point(1030, 550)
-=======
         Me.NextBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
         Me.NextBtn.Location = New System.Drawing.Point(994, 515)
->>>>>>> 84111eb8c48945239de0b16b8e1532eacbd5f51f
->>>>>>> Stashed changes
         Me.NextBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.NextBtn.Name = "NextBtn"
         Me.NextBtn.Size = New System.Drawing.Size(146, 63)
@@ -146,15 +138,9 @@ Partial Class Enrollment1Form
         Me.YearsCompCoBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.YearsCompCoBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.YearsCompCoBox.FormattingEnabled = True
-<<<<<<< Updated upstream
         Me.YearsCompCoBox.Location = New System.Drawing.Point(577, 442)
-=======
-<<<<<<< HEAD
         Me.YearsCompCoBox.Location = New System.Drawing.Point(655, 442)
-=======
         Me.YearsCompCoBox.Location = New System.Drawing.Point(577, 442)
->>>>>>> 84111eb8c48945239de0b16b8e1532eacbd5f51f
->>>>>>> Stashed changes
         Me.YearsCompCoBox.Margin = New System.Windows.Forms.Padding(2)
         Me.YearsCompCoBox.Name = "YearsCompCoBox"
         Me.YearsCompCoBox.Size = New System.Drawing.Size(63, 24)
@@ -166,15 +152,9 @@ Partial Class Enrollment1Form
         Me.SexCoBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SexCoBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.SexCoBox.FormattingEnabled = True
-<<<<<<< Updated upstream
         Me.SexCoBox.Location = New System.Drawing.Point(662, 442)
-=======
-<<<<<<< HEAD
         Me.SexCoBox.Location = New System.Drawing.Point(577, 442)
-=======
         Me.SexCoBox.Location = New System.Drawing.Point(662, 442)
->>>>>>> 84111eb8c48945239de0b16b8e1532eacbd5f51f
->>>>>>> Stashed changes
         Me.SexCoBox.Margin = New System.Windows.Forms.Padding(2)
         Me.SexCoBox.Name = "SexCoBox"
         Me.SexCoBox.Size = New System.Drawing.Size(63, 24)
@@ -227,18 +207,12 @@ Partial Class Enrollment1Form
         '
         'BirthdayDTP
         '
-<<<<<<< Updated upstream
         Me.BirthdayDTP.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BirthdayDTP.Location = New System.Drawing.Point(863, 232)
-=======
-<<<<<<< HEAD
         Me.BirthdayDTP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.BirthdayDTP.Location = New System.Drawing.Point(863, 233)
-=======
         Me.BirthdayDTP.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BirthdayDTP.Location = New System.Drawing.Point(863, 232)
->>>>>>> 84111eb8c48945239de0b16b8e1532eacbd5f51f
->>>>>>> Stashed changes
         Me.BirthdayDTP.Margin = New System.Windows.Forms.Padding(2)
         Me.BirthdayDTP.Name = "BirthdayDTP"
         Me.BirthdayDTP.Size = New System.Drawing.Size(277, 27)
@@ -656,7 +630,6 @@ Partial Class Enrollment1Form
         '
         'PictureBtn
         '
-<<<<<<< HEAD
         Me.PictureBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBtn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PictureBtn.Location = New System.Drawing.Point(763, 549)
@@ -666,17 +639,6 @@ Partial Class Enrollment1Form
         Me.PictureBtn.TabIndex = 37
         Me.PictureBtn.Text = "Add File"
         Me.PictureBtn.UseVisualStyleBackColor = True
-=======
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(763, 549)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(92, 29)
-        Me.Button1.TabIndex = 37
-        Me.Button1.Text = "Add File"
-        Me.Button1.UseVisualStyleBackColor = True
->>>>>>> 84111eb8c48945239de0b16b8e1532eacbd5f51f
         '
         'Label20
         '
