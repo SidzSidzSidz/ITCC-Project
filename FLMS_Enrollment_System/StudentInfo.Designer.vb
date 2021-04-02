@@ -35,8 +35,11 @@ Partial Class StudentInfo
         Me.LastName_Text = New System.Windows.Forms.TextBox()
         Me.Student_Info_Text = New System.Windows.Forms.Label()
         Me.Sidebar = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.NewClass_Label = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.NewClass_PB = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LogoutBtn = New System.Windows.Forms.Button()
         Me.AddStaffSBar = New System.Windows.Forms.Label()
@@ -48,8 +51,10 @@ Partial Class StudentInfo
         Me.AddStaffPB = New System.Windows.Forms.PictureBox()
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
+        Me.Suffix = New System.Windows.Forms.TextBox()
         CType(Me.Student_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
+        CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -82,7 +87,7 @@ Partial Class StudentInfo
         'Save_btn
         '
         Me.Save_btn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Save_btn.Location = New System.Drawing.Point(485, 505)
+        Me.Save_btn.Location = New System.Drawing.Point(487, 580)
         Me.Save_btn.Name = "Save_btn"
         Me.Save_btn.Size = New System.Drawing.Size(94, 35)
         Me.Save_btn.TabIndex = 27
@@ -92,7 +97,7 @@ Partial Class StudentInfo
         'Edit_btn
         '
         Me.Edit_btn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Edit_btn.Location = New System.Drawing.Point(382, 505)
+        Me.Edit_btn.Location = New System.Drawing.Point(384, 580)
         Me.Edit_btn.Name = "Edit_btn"
         Me.Edit_btn.Size = New System.Drawing.Size(94, 35)
         Me.Edit_btn.TabIndex = 26
@@ -102,7 +107,7 @@ Partial Class StudentInfo
         'Section_Text
         '
         Me.Section_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Section_Text.Location = New System.Drawing.Point(330, 453)
+        Me.Section_Text.Location = New System.Drawing.Point(332, 528)
         Me.Section_Text.Name = "Section_Text"
         Me.Section_Text.Size = New System.Drawing.Size(306, 30)
         Me.Section_Text.TabIndex = 25
@@ -111,7 +116,7 @@ Partial Class StudentInfo
         'LRN_Text
         '
         Me.LRN_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.LRN_Text.Location = New System.Drawing.Point(330, 408)
+        Me.LRN_Text.Location = New System.Drawing.Point(332, 483)
         Me.LRN_Text.Name = "LRN_Text"
         Me.LRN_Text.Size = New System.Drawing.Size(306, 30)
         Me.LRN_Text.TabIndex = 24
@@ -120,16 +125,17 @@ Partial Class StudentInfo
         'Address_Text
         '
         Me.Address_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Address_Text.Location = New System.Drawing.Point(330, 278)
+        Me.Address_Text.Location = New System.Drawing.Point(332, 307)
+        Me.Address_Text.Multiline = True
         Me.Address_Text.Name = "Address_Text"
-        Me.Address_Text.Size = New System.Drawing.Size(306, 30)
+        Me.Address_Text.Size = New System.Drawing.Size(306, 113)
         Me.Address_Text.TabIndex = 23
         Me.Address_Text.Text = "Address"
         '
         'MiddleName_Text
         '
         Me.MiddleName_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.MiddleName_Text.Location = New System.Drawing.Point(330, 231)
+        Me.MiddleName_Text.Location = New System.Drawing.Point(332, 260)
         Me.MiddleName_Text.Name = "MiddleName_Text"
         Me.MiddleName_Text.Size = New System.Drawing.Size(306, 30)
         Me.MiddleName_Text.TabIndex = 22
@@ -138,7 +144,7 @@ Partial Class StudentInfo
         'FirstName_Text
         '
         Me.FirstName_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.FirstName_Text.Location = New System.Drawing.Point(330, 181)
+        Me.FirstName_Text.Location = New System.Drawing.Point(332, 166)
         Me.FirstName_Text.Name = "FirstName_Text"
         Me.FirstName_Text.Size = New System.Drawing.Size(306, 30)
         Me.FirstName_Text.TabIndex = 21
@@ -147,7 +153,7 @@ Partial Class StudentInfo
         'LastName_Text
         '
         Me.LastName_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.LastName_Text.Location = New System.Drawing.Point(330, 130)
+        Me.LastName_Text.Location = New System.Drawing.Point(332, 121)
         Me.LastName_Text.Name = "LastName_Text"
         Me.LastName_Text.Size = New System.Drawing.Size(306, 30)
         Me.LastName_Text.TabIndex = 20
@@ -158,7 +164,7 @@ Partial Class StudentInfo
         Me.Student_Info_Text.AutoSize = True
         Me.Student_Info_Text.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Student_Info_Text.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Student_Info_Text.Location = New System.Drawing.Point(349, 368)
+        Me.Student_Info_Text.Location = New System.Drawing.Point(351, 443)
         Me.Student_Info_Text.Name = "Student_Info_Text"
         Me.Student_Info_Text.Size = New System.Drawing.Size(274, 33)
         Me.Student_Info_Text.TabIndex = 19
@@ -167,8 +173,11 @@ Partial Class StudentInfo
         'Sidebar
         '
         Me.Sidebar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Sidebar.Controls.Add(Me.Label1)
         Me.Sidebar.Controls.Add(Me.Label8)
+        Me.Sidebar.Controls.Add(Me.NewClass_Label)
         Me.Sidebar.Controls.Add(Me.Label7)
+        Me.Sidebar.Controls.Add(Me.NewClass_PB)
         Me.Sidebar.Controls.Add(Me.Label6)
         Me.Sidebar.Controls.Add(Me.LogoutBtn)
         Me.Sidebar.Controls.Add(Me.AddStaffSBar)
@@ -185,6 +194,16 @@ Partial Class StudentInfo
         Me.Sidebar.Size = New System.Drawing.Size(196, 692)
         Me.Sidebar.TabIndex = 30
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label1.Location = New System.Drawing.Point(18, 509)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(166, 13)
+        Me.Label1.TabIndex = 34
+        Me.Label1.Text = "-----------------------------------------------------"
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -195,6 +214,18 @@ Partial Class StudentInfo
         Me.Label8.TabIndex = 5
         Me.Label8.Text = "-----------------------------------------------------"
         '
+        'NewClass_Label
+        '
+        Me.NewClass_Label.AutoSize = True
+        Me.NewClass_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.NewClass_Label.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NewClass_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.NewClass_Label.Location = New System.Drawing.Point(72, 538)
+        Me.NewClass_Label.Name = "NewClass_Label"
+        Me.NewClass_Label.Size = New System.Drawing.Size(112, 23)
+        Me.NewClass_Label.TabIndex = 33
+        Me.NewClass_Label.Text = "New Class"
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -204,6 +235,18 @@ Partial Class StudentInfo
         Me.Label7.Size = New System.Drawing.Size(166, 13)
         Me.Label7.TabIndex = 5
         Me.Label7.Text = "-----------------------------------------------------"
+        '
+        'NewClass_PB
+        '
+        Me.NewClass_PB.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.NewClass_PB.Image = CType(resources.GetObject("NewClass_PB.Image"), System.Drawing.Image)
+        Me.NewClass_PB.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.NewClass_PB.Location = New System.Drawing.Point(21, 528)
+        Me.NewClass_PB.Name = "NewClass_PB"
+        Me.NewClass_PB.Size = New System.Drawing.Size(45, 45)
+        Me.NewClass_PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.NewClass_PB.TabIndex = 32
+        Me.NewClass_PB.TabStop = False
         '
         'Label6
         '
@@ -335,12 +378,22 @@ Partial Class StudentInfo
         Me.EnrollmentPB.TabIndex = 2
         Me.EnrollmentPB.TabStop = False
         '
+        'Suffix
+        '
+        Me.Suffix.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.Suffix.Location = New System.Drawing.Point(332, 213)
+        Me.Suffix.Name = "Suffix"
+        Me.Suffix.Size = New System.Drawing.Size(306, 30)
+        Me.Suffix.TabIndex = 31
+        Me.Suffix.Text = "Suffix"
+        '
         'StudentInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.Suffix)
         Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.Search_Label)
         Me.Controls.Add(Me.Student_PictureBox)
@@ -360,6 +413,7 @@ Partial Class StudentInfo
         CType(Me.Student_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
+        CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
@@ -395,4 +449,8 @@ Partial Class StudentInfo
     Friend WithEvents AddStaffPB As PictureBox
     Friend WithEvents CListPB As PictureBox
     Friend WithEvents EnrollmentPB As PictureBox
+    Friend WithEvents Suffix As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents NewClass_Label As Label
+    Friend WithEvents NewClass_PB As PictureBox
 End Class

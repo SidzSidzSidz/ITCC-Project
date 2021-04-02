@@ -28,4 +28,9 @@
         Me.Hide()
         Login.Show()
     End Sub
+
+    Private Sub NewClass_Click(sender As Object, e As EventArgs) Handles NewClass_PB.Click, NewClass_Label.Click
+        Me.Hide()
+        NewSection.Show()
+    End Sub
 End Class

@@ -37,7 +37,10 @@ Partial Class Enrollment2Form
         Me.SlotsLeftLabel = New System.Windows.Forms.Label()
         Me.EnrollBtn = New System.Windows.Forms.Button()
         Me.Sidebar = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.NewClass_Label = New System.Windows.Forms.Label()
+        Me.NewClass_PB = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LogoutBtn = New System.Windows.Forms.Button()
@@ -53,6 +56,7 @@ Partial Class Enrollment2Form
         CType(Me.StudentsDTB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Sidebar.SuspendLayout()
+        CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,7 +89,7 @@ Partial Class Enrollment2Form
         Me.SectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.SectionBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SectionBox.FormattingEnabled = True
-        Me.SectionBox.Location = New System.Drawing.Point(620, 116)
+        Me.SectionBox.Location = New System.Drawing.Point(631, 117)
         Me.SectionBox.Name = "SectionBox"
         Me.SectionBox.Size = New System.Drawing.Size(177, 21)
         Me.SectionBox.TabIndex = 11
@@ -93,11 +97,11 @@ Partial Class Enrollment2Form
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label11.Location = New System.Drawing.Point(559, 118)
+        Me.Label11.Location = New System.Drawing.Point(562, 119)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(55, 17)
+        Me.Label11.Size = New System.Drawing.Size(63, 20)
         Me.Label11.TabIndex = 8
         Me.Label11.Text = "Section"
         '
@@ -106,7 +110,7 @@ Partial Class Enrollment2Form
         Me.YearLevelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.YearLevelBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.YearLevelBox.FormattingEnabled = True
-        Me.YearLevelBox.Location = New System.Drawing.Point(306, 117)
+        Me.YearLevelBox.Location = New System.Drawing.Point(317, 118)
         Me.YearLevelBox.Name = "YearLevelBox"
         Me.YearLevelBox.Size = New System.Drawing.Size(177, 21)
         Me.YearLevelBox.TabIndex = 12
@@ -114,11 +118,11 @@ Partial Class Enrollment2Form
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label10.Location = New System.Drawing.Point(229, 117)
+        Me.Label10.Location = New System.Drawing.Point(232, 118)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(70, 17)
+        Me.Label10.Size = New System.Drawing.Size(81, 20)
         Me.Label10.TabIndex = 1
         Me.Label10.Text = "Year level"
         '
@@ -128,7 +132,7 @@ Partial Class Enrollment2Form
         Me.EnrolleeName.Font = New System.Drawing.Font("Impact", 40.0!)
         Me.EnrolleeName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.EnrolleeName.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.EnrolleeName.Location = New System.Drawing.Point(221, 13)
+        Me.EnrolleeName.Location = New System.Drawing.Point(221, 28)
         Me.EnrolleeName.Name = "EnrolleeName"
         Me.EnrolleeName.Size = New System.Drawing.Size(403, 66)
         Me.EnrolleeName.TabIndex = 10
@@ -209,7 +213,10 @@ Partial Class Enrollment2Form
         'Sidebar
         '
         Me.Sidebar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Sidebar.Controls.Add(Me.Label1)
         Me.Sidebar.Controls.Add(Me.Label8)
+        Me.Sidebar.Controls.Add(Me.NewClass_Label)
+        Me.Sidebar.Controls.Add(Me.NewClass_PB)
         Me.Sidebar.Controls.Add(Me.Label7)
         Me.Sidebar.Controls.Add(Me.Label6)
         Me.Sidebar.Controls.Add(Me.LogoutBtn)
@@ -227,6 +234,16 @@ Partial Class Enrollment2Form
         Me.Sidebar.Size = New System.Drawing.Size(196, 692)
         Me.Sidebar.TabIndex = 16
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label1.Location = New System.Drawing.Point(16, 511)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(166, 13)
+        Me.Label1.TabIndex = 19
+        Me.Label1.Text = "-----------------------------------------------------"
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -236,6 +253,30 @@ Partial Class Enrollment2Form
         Me.Label8.Size = New System.Drawing.Size(166, 13)
         Me.Label8.TabIndex = 5
         Me.Label8.Text = "-----------------------------------------------------"
+        '
+        'NewClass_Label
+        '
+        Me.NewClass_Label.AutoSize = True
+        Me.NewClass_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.NewClass_Label.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NewClass_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.NewClass_Label.Location = New System.Drawing.Point(70, 540)
+        Me.NewClass_Label.Name = "NewClass_Label"
+        Me.NewClass_Label.Size = New System.Drawing.Size(112, 23)
+        Me.NewClass_Label.TabIndex = 18
+        Me.NewClass_Label.Text = "New Class"
+        '
+        'NewClass_PB
+        '
+        Me.NewClass_PB.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.NewClass_PB.Image = CType(resources.GetObject("NewClass_PB.Image"), System.Drawing.Image)
+        Me.NewClass_PB.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.NewClass_PB.Location = New System.Drawing.Point(19, 530)
+        Me.NewClass_PB.Name = "NewClass_PB"
+        Me.NewClass_PB.Size = New System.Drawing.Size(45, 45)
+        Me.NewClass_PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.NewClass_PB.TabIndex = 17
+        Me.NewClass_PB.TabStop = False
         '
         'Label7
         '
@@ -402,6 +443,7 @@ Partial Class Enrollment2Form
         Me.Panel1.PerformLayout()
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
+        CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
@@ -439,4 +481,7 @@ Partial Class Enrollment2Form
     Friend WithEvents AddStaffPB As PictureBox
     Friend WithEvents CListPB As PictureBox
     Friend WithEvents EnrollmentPB As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents NewClass_Label As Label
+    Friend WithEvents NewClass_PB As PictureBox
 End Class

@@ -1,5 +1,4 @@
-﻿Public Class ClassList
-
+﻿Public Class NewSection
     Private Sub ClassList_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
     End Sub
@@ -23,12 +22,4 @@
         Login.Show()
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ClassList_DGV.CellContentClick
-
-    End Sub
-
-    Private Sub NewClass_Click(sender As Object, e As EventArgs) Handles NewClass_PB.Click, NewClass_Label.Click
-        Me.Hide()
-        NewSection.Show()
-    End Sub
 End Class
