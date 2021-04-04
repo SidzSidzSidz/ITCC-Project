@@ -31,8 +31,11 @@ Partial Class ClassList
         Me.Label9 = New System.Windows.Forms.Label()
         Me.SelectBtn = New System.Windows.Forms.Button()
         Me.Sidebar = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.NewClass_Label = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.NewClass_PB = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LogoutBtn = New System.Windows.Forms.Button()
         Me.AddStaffSBar = New System.Windows.Forms.Label()
@@ -46,6 +49,7 @@ Partial Class ClassList
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
         CType(Me.ClassList_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
+        CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -128,8 +132,11 @@ Partial Class ClassList
         'Sidebar
         '
         Me.Sidebar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Sidebar.Controls.Add(Me.Label1)
         Me.Sidebar.Controls.Add(Me.Label8)
+        Me.Sidebar.Controls.Add(Me.NewClass_Label)
         Me.Sidebar.Controls.Add(Me.Label7)
+        Me.Sidebar.Controls.Add(Me.NewClass_PB)
         Me.Sidebar.Controls.Add(Me.Label6)
         Me.Sidebar.Controls.Add(Me.LogoutBtn)
         Me.Sidebar.Controls.Add(Me.AddStaffSBar)
@@ -146,6 +153,16 @@ Partial Class ClassList
         Me.Sidebar.Size = New System.Drawing.Size(196, 692)
         Me.Sidebar.TabIndex = 17
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label1.Location = New System.Drawing.Point(16, 509)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(166, 13)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "-----------------------------------------------------"
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -156,6 +173,18 @@ Partial Class ClassList
         Me.Label8.TabIndex = 5
         Me.Label8.Text = "-----------------------------------------------------"
         '
+        'NewClass_Label
+        '
+        Me.NewClass_Label.AutoSize = True
+        Me.NewClass_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.NewClass_Label.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NewClass_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.NewClass_Label.Location = New System.Drawing.Point(70, 538)
+        Me.NewClass_Label.Name = "NewClass_Label"
+        Me.NewClass_Label.Size = New System.Drawing.Size(112, 23)
+        Me.NewClass_Label.TabIndex = 19
+        Me.NewClass_Label.Text = "New Class"
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -165,6 +194,18 @@ Partial Class ClassList
         Me.Label7.Size = New System.Drawing.Size(166, 13)
         Me.Label7.TabIndex = 5
         Me.Label7.Text = "-----------------------------------------------------"
+        '
+        'NewClass_PB
+        '
+        Me.NewClass_PB.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.NewClass_PB.Image = CType(resources.GetObject("NewClass_PB.Image"), System.Drawing.Image)
+        Me.NewClass_PB.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.NewClass_PB.Location = New System.Drawing.Point(19, 528)
+        Me.NewClass_PB.Name = "NewClass_PB"
+        Me.NewClass_PB.Size = New System.Drawing.Size(45, 45)
+        Me.NewClass_PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.NewClass_PB.TabIndex = 18
+        Me.NewClass_PB.TabStop = False
         '
         'Label6
         '
@@ -318,6 +359,7 @@ Partial Class ClassList
         CType(Me.ClassList_DGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
+        CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
@@ -349,4 +391,7 @@ Partial Class ClassList
     Friend WithEvents AddStaffPB As PictureBox
     Friend WithEvents CListPB As PictureBox
     Friend WithEvents EnrollmentPB As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents NewClass_Label As Label
+    Friend WithEvents NewClass_PB As PictureBox
 End Class
