@@ -22,4 +22,21 @@
         Login.Show()
     End Sub
 
+    Private Sub SectionsBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.SectionsBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+
+    End Sub
+
+    Private Sub NewSection_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DatabaseDataSet.Sections' table. You can move, or remove it, as needed.
+        Me.SectionsTableAdapter.Fill(Me.DatabaseDataSet.Sections)
+
+    End Sub
+
+    Private Sub Add_btn_Click(sender As Object, e As EventArgs) Handles Add_btn.Click
+        SectionsTableAdapter.SectionFn(YearLevelComboBox.Text, SectionTextBox.Text, MaxStudentsTextBox.Text, SYTextBox.Text)
+    End Sub
+
 End Class

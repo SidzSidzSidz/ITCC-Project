@@ -22,12 +22,9 @@ Partial Class AddStaff
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddStaff))
         Me.Username_Label = New System.Windows.Forms.Label()
-        Me.Password_Text = New System.Windows.Forms.TextBox()
-        Me.Username_Text = New System.Windows.Forms.TextBox()
-        Me.LastName_Text = New System.Windows.Forms.TextBox()
-        Me.FirstName_Text = New System.Windows.Forms.TextBox()
         Me.Password_Label = New System.Windows.Forms.Label()
         Me.AddStaff_Label = New System.Windows.Forms.Label()
         Me.FirstName_Label = New System.Windows.Forms.Label()
@@ -50,6 +47,14 @@ Partial Class AddStaff
         Me.AddStaffPB = New System.Windows.Forms.PictureBox()
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
+        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
+        Me.StaffBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StaffTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.StaffTableAdapter()
+        Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
+        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
+        Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
+        Me.LastNameTextBox = New System.Windows.Forms.TextBox()
+        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.Sidebar.SuspendLayout()
         CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,55 +62,25 @@ Partial Class AddStaff
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Username_Label
         '
         Me.Username_Label.AutoSize = True
         Me.Username_Label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Username_Label.Location = New System.Drawing.Point(475, 292)
+        Me.Username_Label.Location = New System.Drawing.Point(475, 324)
         Me.Username_Label.Name = "Username_Label"
         Me.Username_Label.Size = New System.Drawing.Size(146, 33)
         Me.Username_Label.TabIndex = 22
         Me.Username_Label.Text = "Username"
         '
-        'Password_Text
-        '
-        Me.Password_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.Password_Text.Location = New System.Drawing.Point(631, 349)
-        Me.Password_Text.Name = "Password_Text"
-        Me.Password_Text.Size = New System.Drawing.Size(276, 32)
-        Me.Password_Text.TabIndex = 27
-        '
-        'Username_Text
-        '
-        Me.Username_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.Username_Text.Location = New System.Drawing.Point(631, 293)
-        Me.Username_Text.Name = "Username_Text"
-        Me.Username_Text.Size = New System.Drawing.Size(276, 32)
-        Me.Username_Text.TabIndex = 26
-        '
-        'LastName_Text
-        '
-        Me.LastName_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.LastName_Text.Location = New System.Drawing.Point(631, 240)
-        Me.LastName_Text.Name = "LastName_Text"
-        Me.LastName_Text.Size = New System.Drawing.Size(276, 32)
-        Me.LastName_Text.TabIndex = 25
-        '
-        'FirstName_Text
-        '
-        Me.FirstName_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.FirstName_Text.Location = New System.Drawing.Point(631, 185)
-        Me.FirstName_Text.Name = "FirstName_Text"
-        Me.FirstName_Text.Size = New System.Drawing.Size(276, 32)
-        Me.FirstName_Text.TabIndex = 24
-        '
         'Password_Label
         '
         Me.Password_Label.AutoSize = True
         Me.Password_Label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Password_Label.Location = New System.Drawing.Point(483, 348)
+        Me.Password_Label.Location = New System.Drawing.Point(483, 387)
         Me.Password_Label.Name = "Password_Label"
         Me.Password_Label.Size = New System.Drawing.Size(138, 33)
         Me.Password_Label.TabIndex = 23
@@ -125,7 +100,7 @@ Partial Class AddStaff
         '
         Me.FirstName_Label.AutoSize = True
         Me.FirstName_Label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FirstName_Label.Location = New System.Drawing.Point(470, 185)
+        Me.FirstName_Label.Location = New System.Drawing.Point(470, 204)
         Me.FirstName_Label.Name = "FirstName_Label"
         Me.FirstName_Label.Size = New System.Drawing.Size(151, 33)
         Me.FirstName_Label.TabIndex = 20
@@ -134,7 +109,7 @@ Partial Class AddStaff
         'AddStaff_btn
         '
         Me.AddStaff_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.AddStaff_btn.Location = New System.Drawing.Point(716, 404)
+        Me.AddStaff_btn.Location = New System.Drawing.Point(738, 457)
         Me.AddStaff_btn.Name = "AddStaff_btn"
         Me.AddStaff_btn.Size = New System.Drawing.Size(106, 40)
         Me.AddStaff_btn.TabIndex = 28
@@ -145,7 +120,7 @@ Partial Class AddStaff
         '
         Me.LastName_Label.AutoSize = True
         Me.LastName_Label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LastName_Label.Location = New System.Drawing.Point(467, 239)
+        Me.LastName_Label.Location = New System.Drawing.Point(467, 266)
         Me.LastName_Label.Name = "LastName_Label"
         Me.LastName_Label.Size = New System.Drawing.Size(154, 33)
         Me.LastName_Label.TabIndex = 21
@@ -360,18 +335,76 @@ Partial Class AddStaff
         Me.EnrollmentPB.TabIndex = 2
         Me.EnrollmentPB.TabStop = False
         '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'StaffBindingSource
+        '
+        Me.StaffBindingSource.DataMember = "Staff"
+        Me.StaffBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'StaffTableAdapter
+        '
+        Me.StaffTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
+        Me.TableAdapterManager.SectionsTableAdapter = Nothing
+        Me.TableAdapterManager.StaffTableAdapter = Me.StaffTableAdapter
+        Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'UsernameTextBox
+        '
+        Me.UsernameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StaffBindingSource, "Username", True))
+        Me.UsernameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.UsernameTextBox.Location = New System.Drawing.Point(631, 323)
+        Me.UsernameTextBox.Name = "UsernameTextBox"
+        Me.UsernameTextBox.Size = New System.Drawing.Size(370, 32)
+        Me.UsernameTextBox.TabIndex = 45
+        '
+        'FirstNameTextBox
+        '
+        Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StaffBindingSource, "FirstName", True))
+        Me.FirstNameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.FirstNameTextBox.Location = New System.Drawing.Point(631, 205)
+        Me.FirstNameTextBox.Name = "FirstNameTextBox"
+        Me.FirstNameTextBox.Size = New System.Drawing.Size(370, 32)
+        Me.FirstNameTextBox.TabIndex = 46
+        '
+        'LastNameTextBox
+        '
+        Me.LastNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StaffBindingSource, "LastName", True))
+        Me.LastNameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.LastNameTextBox.Location = New System.Drawing.Point(631, 267)
+        Me.LastNameTextBox.Name = "LastNameTextBox"
+        Me.LastNameTextBox.Size = New System.Drawing.Size(370, 32)
+        Me.LastNameTextBox.TabIndex = 47
+        '
+        'PasswordTextBox
+        '
+        Me.PasswordTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StaffBindingSource, "Password", True))
+        Me.PasswordTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(631, 388)
+        Me.PasswordTextBox.Name = "PasswordTextBox"
+        Me.PasswordTextBox.Size = New System.Drawing.Size(370, 32)
+        Me.PasswordTextBox.TabIndex = 48
+        '
         'AddStaff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.ClientSize = New System.Drawing.Size(1264, 712)
+        Me.Controls.Add(Me.PasswordTextBox)
+        Me.Controls.Add(Me.LastNameTextBox)
+        Me.Controls.Add(Me.FirstNameTextBox)
+        Me.Controls.Add(Me.UsernameTextBox)
         Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.Username_Label)
-        Me.Controls.Add(Me.Password_Text)
-        Me.Controls.Add(Me.Username_Text)
-        Me.Controls.Add(Me.LastName_Text)
-        Me.Controls.Add(Me.FirstName_Text)
         Me.Controls.Add(Me.Password_Label)
         Me.Controls.Add(Me.AddStaff_Label)
         Me.Controls.Add(Me.FirstName_Label)
@@ -389,16 +422,14 @@ Partial Class AddStaff
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Username_Label As Label
-    Friend WithEvents Password_Text As TextBox
-    Friend WithEvents Username_Text As TextBox
-    Friend WithEvents LastName_Text As TextBox
-    Friend WithEvents FirstName_Text As TextBox
     Friend WithEvents Password_Label As Label
     Friend WithEvents AddStaff_Label As Label
     Friend WithEvents FirstName_Label As Label
@@ -421,4 +452,12 @@ Partial Class AddStaff
     Friend WithEvents Label1 As Label
     Friend WithEvents NewClass_Label As Label
     Friend WithEvents NewClass_PB As PictureBox
+    Friend WithEvents DatabaseDataSet As DatabaseDataSet
+    Friend WithEvents StaffBindingSource As BindingSource
+    Friend WithEvents StaffTableAdapter As DatabaseDataSetTableAdapters.StaffTableAdapter
+    Friend WithEvents TableAdapterManager As DatabaseDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents UsernameTextBox As TextBox
+    Friend WithEvents FirstNameTextBox As TextBox
+    Friend WithEvents LastNameTextBox As TextBox
+    Friend WithEvents PasswordTextBox As TextBox
 End Class

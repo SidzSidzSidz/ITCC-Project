@@ -22,6 +22,7 @@ Partial Class NewSection
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NewSection))
         Me.Sidebar = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -40,16 +41,20 @@ Partial Class NewSection
         Me.AddStaffPB = New System.Windows.Forms.PictureBox()
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
-        Me.AcademicYear_Text = New System.Windows.Forms.TextBox()
         Me.Search_Label = New System.Windows.Forms.Label()
         Me.Add_btn = New System.Windows.Forms.Button()
         Me.AY_Level = New System.Windows.Forms.Label()
         Me.GL_Label = New System.Windows.Forms.Label()
         Me.Section_Label = New System.Windows.Forms.Label()
-        Me.SectionName_Text = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.YearLevelComboBox = New System.Windows.Forms.ComboBox()
+        Me.SectionTextBox = New System.Windows.Forms.TextBox()
+        Me.MaxStudentsTextBox = New System.Windows.Forms.TextBox()
+        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
+        Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
+        Me.SYTextBox = New System.Windows.Forms.TextBox()
+        Me.SectionsTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.SectionsTableAdapter()
+        Me.SectionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,6 +62,8 @@ Partial Class NewSection
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Sidebar
@@ -267,14 +274,6 @@ Partial Class NewSection
         Me.EnrollmentPB.TabIndex = 2
         Me.EnrollmentPB.TabStop = False
         '
-        'AcademicYear_Text
-        '
-        Me.AcademicYear_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AcademicYear_Text.Location = New System.Drawing.Point(516, 248)
-        Me.AcademicYear_Text.Name = "AcademicYear_Text"
-        Me.AcademicYear_Text.Size = New System.Drawing.Size(253, 26)
-        Me.AcademicYear_Text.TabIndex = 33
-        '
         'Search_Label
         '
         Me.Search_Label.AutoSize = True
@@ -290,7 +289,7 @@ Partial Class NewSection
         'Add_btn
         '
         Me.Add_btn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Add_btn.Location = New System.Drawing.Point(487, 453)
+        Me.Add_btn.Location = New System.Drawing.Point(667, 490)
         Me.Add_btn.Name = "Add_btn"
         Me.Add_btn.Size = New System.Drawing.Size(141, 40)
         Me.Add_btn.TabIndex = 40
@@ -301,7 +300,7 @@ Partial Class NewSection
         '
         Me.AY_Level.AutoSize = True
         Me.AY_Level.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AY_Level.Location = New System.Drawing.Point(334, 252)
+        Me.AY_Level.Location = New System.Drawing.Point(449, 226)
         Me.AY_Level.Name = "AY_Level"
         Me.AY_Level.Size = New System.Drawing.Size(154, 22)
         Me.AY_Level.TabIndex = 45
@@ -311,7 +310,7 @@ Partial Class NewSection
         '
         Me.GL_Label.AutoSize = True
         Me.GL_Label.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GL_Label.Location = New System.Drawing.Point(334, 296)
+        Me.GL_Label.Location = New System.Drawing.Point(449, 285)
         Me.GL_Label.Name = "GL_Label"
         Me.GL_Label.Size = New System.Drawing.Size(119, 22)
         Me.GL_Label.TabIndex = 46
@@ -321,47 +320,79 @@ Partial Class NewSection
         '
         Me.Section_Label.AutoSize = True
         Me.Section_Label.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Section_Label.Location = New System.Drawing.Point(334, 340)
+        Me.Section_Label.Location = New System.Drawing.Point(449, 346)
         Me.Section_Label.Name = "Section_Label"
         Me.Section_Label.Size = New System.Drawing.Size(136, 22)
         Me.Section_Label.TabIndex = 47
         Me.Section_Label.Text = "Section name"
         '
-        'SectionName_Text
-        '
-        Me.SectionName_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SectionName_Text.Location = New System.Drawing.Point(516, 336)
-        Me.SectionName_Text.Name = "SectionName_Text"
-        Me.SectionName_Text.Size = New System.Drawing.Size(253, 26)
-        Me.SectionName_Text.TabIndex = 48
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"})
-        Me.ComboBox1.Location = New System.Drawing.Point(516, 290)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(253, 26)
-        Me.ComboBox1.TabIndex = 49
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(516, 378)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(253, 26)
-        Me.TextBox1.TabIndex = 51
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(334, 382)
+        Me.Label2.Location = New System.Drawing.Point(449, 406)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(171, 22)
         Me.Label2.TabIndex = 50
         Me.Label2.Text = "Student capacity"
+        '
+        'YearLevelComboBox
+        '
+        Me.YearLevelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.YearLevelComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.YearLevelComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.YearLevelComboBox.FormattingEnabled = True
+        Me.YearLevelComboBox.Items.AddRange(New Object() {"Sample"})
+        Me.YearLevelComboBox.Location = New System.Drawing.Point(631, 280)
+        Me.YearLevelComboBox.Name = "YearLevelComboBox"
+        Me.YearLevelComboBox.Size = New System.Drawing.Size(372, 33)
+        Me.YearLevelComboBox.TabIndex = 54
+        '
+        'SectionTextBox
+        '
+        Me.SectionTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.SectionTextBox.Location = New System.Drawing.Point(631, 341)
+        Me.SectionTextBox.Name = "SectionTextBox"
+        Me.SectionTextBox.Size = New System.Drawing.Size(372, 32)
+        Me.SectionTextBox.TabIndex = 55
+        '
+        'MaxStudentsTextBox
+        '
+        Me.MaxStudentsTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.MaxStudentsTextBox.Location = New System.Drawing.Point(631, 401)
+        Me.MaxStudentsTextBox.Name = "MaxStudentsTextBox"
+        Me.MaxStudentsTextBox.Size = New System.Drawing.Size(372, 32)
+        Me.MaxStudentsTextBox.TabIndex = 56
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
+        Me.TableAdapterManager.SectionsTableAdapter = Me.SectionsTableAdapter
+        Me.TableAdapterManager.StaffTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'SYTextBox
+        '
+        Me.SYTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.SYTextBox.Location = New System.Drawing.Point(631, 221)
+        Me.SYTextBox.Name = "SYTextBox"
+        Me.SYTextBox.Size = New System.Drawing.Size(372, 32)
+        Me.SYTextBox.TabIndex = 53
+        '
+        'SectionsTableAdapter
+        '
+        Me.SectionsTableAdapter.ClearBeforeFill = True
+        '
+        'SectionsBindingSource
+        '
+        Me.SectionsBindingSource.DataMember = "Sections"
+        Me.SectionsBindingSource.DataSource = Me.DatabaseDataSet
         '
         'NewSection
         '
@@ -369,15 +400,15 @@ Partial Class NewSection
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 681)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.MaxStudentsTextBox)
+        Me.Controls.Add(Me.SectionTextBox)
+        Me.Controls.Add(Me.YearLevelComboBox)
+        Me.Controls.Add(Me.SYTextBox)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.SectionName_Text)
         Me.Controls.Add(Me.Section_Label)
         Me.Controls.Add(Me.GL_Label)
         Me.Controls.Add(Me.AY_Level)
         Me.Controls.Add(Me.Sidebar)
-        Me.Controls.Add(Me.AcademicYear_Text)
         Me.Controls.Add(Me.Search_Label)
         Me.Controls.Add(Me.Add_btn)
         Me.Name = "NewSection"
@@ -391,6 +422,8 @@ Partial Class NewSection
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -409,17 +442,21 @@ Partial Class NewSection
     Friend WithEvents AddStaffPB As PictureBox
     Friend WithEvents CListPB As PictureBox
     Friend WithEvents EnrollmentPB As PictureBox
-    Friend WithEvents AcademicYear_Text As TextBox
     Friend WithEvents Search_Label As Label
     Friend WithEvents Add_btn As Button
     Friend WithEvents AY_Level As Label
     Friend WithEvents Section_Label As Label
-    Friend WithEvents SectionName_Text As TextBox
     Friend WithEvents GL_Label As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents AddSection_Label As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents DatabaseDataSet As DatabaseDataSet
+    Friend WithEvents TableAdapterManager As DatabaseDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents YearLevelComboBox As ComboBox
+    Friend WithEvents SectionTextBox As TextBox
+    Friend WithEvents MaxStudentsTextBox As TextBox
+    Friend WithEvents SYTextBox As TextBox
+    Friend WithEvents SectionsTableAdapter As DatabaseDataSetTableAdapters.SectionsTableAdapter
+    Friend WithEvents SectionsBindingSource As BindingSource
 End Class

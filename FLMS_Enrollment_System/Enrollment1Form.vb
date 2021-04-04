@@ -1,6 +1,8 @@
 ﻿Public Class Enrollment1Form
 
     Private Sub NextBtn_Click(sender As Object, e As EventArgs) Handles NextBtn.Click
+        'EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, NsoPictureBox., )
+
         Enrollment2Form.Show()
         Me.Hide()
     End Sub
@@ -44,5 +46,18 @@
     Private Sub NewClass_Click(sender As Object, e As EventArgs) Handles NewClass_PB.Click, NewClass_Label.Click
         Me.Hide()
         NewSection.Show()
+    End Sub
+
+    Private Sub EnrollmentBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.EnrollmentBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+
+    End Sub
+
+    Private Sub Enrollment1Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DatabaseDataSet.Enrollment' table. You can move, or remove it, as needed.
+        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
+
     End Sub
 End Class
