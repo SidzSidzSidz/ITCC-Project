@@ -59,8 +59,9 @@ Partial Class Enrollment1Form
         Me.AddStaffPB = New System.Windows.Forms.PictureBox()
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
-        Me.Student_PictureBox = New System.Windows.Forms.PictureBox()
         Me.LrnTextBox = New System.Windows.Forms.TextBox()
+        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.LnameTextBox = New System.Windows.Forms.TextBox()
         Me.FnameTextBox = New System.Windows.Forms.TextBox()
         Me.MnameTextBox = New System.Windows.Forms.TextBox()
@@ -72,13 +73,12 @@ Partial Class Enrollment1Form
         Me.SexComboBox = New System.Windows.Forms.ComboBox()
         Me.YrcTextBox = New System.Windows.Forms.TextBox()
         Me.YrscTextBox = New System.Windows.Forms.TextBox()
+        Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         Me.NsoPictureBox = New System.Windows.Forms.PictureBox()
         Me.GmPictureBox = New System.Windows.Forms.PictureBox()
         Me.RcPictureBox = New System.Windows.Forms.PictureBox()
         Me.F137PictureBox = New System.Windows.Forms.PictureBox()
-        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
-        Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
+        Me.PicPictureBox = New System.Windows.Forms.PictureBox()
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.Sidebar.SuspendLayout()
         CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,13 +87,13 @@ Partial Class Enrollment1Form
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Student_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NextBtn
@@ -506,17 +506,6 @@ Partial Class Enrollment1Form
         Me.EnrollmentPB.TabIndex = 2
         Me.EnrollmentPB.TabStop = False
         '
-        'Student_PictureBox
-        '
-        Me.Student_PictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Student_PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Student_PictureBox.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Student_PictureBox.Location = New System.Drawing.Point(994, 59)
-        Me.Student_PictureBox.Name = "Student_PictureBox"
-        Me.Student_PictureBox.Size = New System.Drawing.Size(146, 129)
-        Me.Student_PictureBox.TabIndex = 43
-        Me.Student_PictureBox.TabStop = False
-        '
         'LrnTextBox
         '
         Me.LrnTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "lrn", True))
@@ -525,6 +514,16 @@ Partial Class Enrollment1Form
         Me.LrnTextBox.Name = "LrnTextBox"
         Me.LrnTextBox.Size = New System.Drawing.Size(277, 26)
         Me.LrnTextBox.TabIndex = 45
+        '
+        'EnrollmentBindingSource
+        '
+        Me.EnrollmentBindingSource.DataMember = "Enrollment"
+        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'LnameTextBox
         '
@@ -629,6 +628,10 @@ Partial Class Enrollment1Form
         Me.YrscTextBox.Size = New System.Drawing.Size(129, 26)
         Me.YrscTextBox.TabIndex = 56
         '
+        'EnrollmentTableAdapter
+        '
+        Me.EnrollmentTableAdapter.ClearBeforeFill = True
+        '
         'NsoPictureBox
         '
         Me.NsoPictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder
@@ -638,7 +641,8 @@ Partial Class Enrollment1Form
         Me.NsoPictureBox.Location = New System.Drawing.Point(266, 550)
         Me.NsoPictureBox.Name = "NsoPictureBox"
         Me.NsoPictureBox.Size = New System.Drawing.Size(108, 101)
-        Me.NsoPictureBox.TabIndex = 57
+        Me.NsoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.NsoPictureBox.TabIndex = 61
         Me.NsoPictureBox.TabStop = False
         '
         'GmPictureBox
@@ -650,7 +654,8 @@ Partial Class Enrollment1Form
         Me.GmPictureBox.Location = New System.Drawing.Point(449, 549)
         Me.GmPictureBox.Name = "GmPictureBox"
         Me.GmPictureBox.Size = New System.Drawing.Size(107, 102)
-        Me.GmPictureBox.TabIndex = 58
+        Me.GmPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GmPictureBox.TabIndex = 62
         Me.GmPictureBox.TabStop = False
         '
         'RcPictureBox
@@ -659,10 +664,11 @@ Partial Class Enrollment1Form
         Me.RcPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RcPictureBox.Cursor = System.Windows.Forms.Cursors.Hand
         Me.RcPictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EnrollmentBindingSource, "rc", True))
-        Me.RcPictureBox.Location = New System.Drawing.Point(631, 550)
+        Me.RcPictureBox.Location = New System.Drawing.Point(633, 549)
         Me.RcPictureBox.Name = "RcPictureBox"
-        Me.RcPictureBox.Size = New System.Drawing.Size(107, 101)
-        Me.RcPictureBox.TabIndex = 59
+        Me.RcPictureBox.Size = New System.Drawing.Size(107, 102)
+        Me.RcPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.RcPictureBox.TabIndex = 63
         Me.RcPictureBox.TabStop = False
         '
         'F137PictureBox
@@ -671,30 +677,33 @@ Partial Class Enrollment1Form
         Me.F137PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.F137PictureBox.Cursor = System.Windows.Forms.Cursors.Hand
         Me.F137PictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EnrollmentBindingSource, "f137", True))
-        Me.F137PictureBox.Location = New System.Drawing.Point(813, 550)
+        Me.F137PictureBox.Location = New System.Drawing.Point(816, 549)
         Me.F137PictureBox.Name = "F137PictureBox"
-        Me.F137PictureBox.Size = New System.Drawing.Size(107, 101)
-        Me.F137PictureBox.TabIndex = 60
+        Me.F137PictureBox.Size = New System.Drawing.Size(107, 102)
+        Me.F137PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.F137PictureBox.TabIndex = 64
         Me.F137PictureBox.TabStop = False
         '
-        'EnrollmentBindingSource
+        'PicPictureBox
         '
-        Me.EnrollmentBindingSource.DataMember = "Enrollment"
-        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet
-        '
-        'DatabaseDataSet
-        '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EnrollmentTableAdapter
-        '
-        Me.EnrollmentTableAdapter.ClearBeforeFill = True
+        Me.PicPictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.PicPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PicPictureBox.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PicPictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EnrollmentBindingSource, "pic", True))
+        Me.PicPictureBox.Location = New System.Drawing.Point(994, 59)
+        Me.PicPictureBox.Name = "PicPictureBox"
+        Me.PicPictureBox.Size = New System.Drawing.Size(146, 129)
+        Me.PicPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicPictureBox.TabIndex = 65
+        Me.PicPictureBox.TabStop = False
         '
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.EnrollmentTableAdapter = Me.EnrollmentTableAdapter
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
+        Me.TableAdapterManager.SectionsTableAdapter = Nothing
+        Me.TableAdapterManager.StaffTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Enrollment1Form
@@ -703,6 +712,10 @@ Partial Class Enrollment1Form
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.F137PictureBox)
+        Me.Controls.Add(Me.RcPictureBox)
+        Me.Controls.Add(Me.GmPictureBox)
+        Me.Controls.Add(Me.NsoPictureBox)
         Me.Controls.Add(Me.YrscTextBox)
         Me.Controls.Add(Me.SexComboBox)
         Me.Controls.Add(Me.LsaTextBox)
@@ -734,11 +747,7 @@ Partial Class Enrollment1Form
         Me.Controls.Add(Me.LrnTextBox)
         Me.Controls.Add(Me.DobDateTimePicker)
         Me.Controls.Add(Me.YrcTextBox)
-        Me.Controls.Add(Me.NsoPictureBox)
-        Me.Controls.Add(Me.GmPictureBox)
-        Me.Controls.Add(Me.RcPictureBox)
-        Me.Controls.Add(Me.F137PictureBox)
-        Me.Controls.Add(Me.Student_PictureBox)
+        Me.Controls.Add(Me.PicPictureBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Enrollment1Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -751,13 +760,13 @@ Partial Class Enrollment1Form
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Student_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -795,7 +804,6 @@ Partial Class Enrollment1Form
     Friend WithEvents AddStaffPB As PictureBox
     Friend WithEvents CListPB As PictureBox
     Friend WithEvents EnrollmentPB As PictureBox
-    Friend WithEvents Student_PictureBox As PictureBox
     Friend WithEvents Label21 As Label
     Friend WithEvents NewClass_Label As Label
     Friend WithEvents NewClass_PB As PictureBox
@@ -819,4 +827,5 @@ Partial Class Enrollment1Form
     Friend WithEvents GmPictureBox As PictureBox
     Friend WithEvents RcPictureBox As PictureBox
     Friend WithEvents F137PictureBox As PictureBox
+    Friend WithEvents PicPictureBox As PictureBox
 End Class

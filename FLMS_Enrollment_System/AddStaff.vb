@@ -37,8 +37,27 @@
     End Sub
 
     Private Sub AddStaff_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DatabaseDataSet.Enrollment' table. You can move, or remove it, as needed.
+        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
         'TODO: This line of code loads data into the 'DatabaseDataSet.Staff' table. You can move, or remove it, as needed.
         Me.StaffTableAdapter.Fill(Me.DatabaseDataSet.Staff)
+        Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+    End Sub
 
+    Private Sub AddStaff_btn_Click(sender As Object, e As EventArgs) Handles AddStaff_btn.Click
+        Try
+            StaffTableAdapter.StaffFn(UsernameTextBox.Text, FirstNameTextBox.Text, LastNameTextBox.Text, PasswordTextBox.Text)
+            Me.Validate()
+            Me.StaffBindingSource.EndEdit()
+            Me.StaffTableAdapter.Update(Me.DatabaseDataSet.Staff)
+            UsernameTextBox.Text = ""
+            FirstNameTextBox.Text = ""
+            LastNameTextBox.Text = ""
+            PasswordTextBox.Text = ""
+            MsgBox("Staff User Created")
+
+        Catch
+            MsgBox("erar")
+        End Try
     End Sub
 End Class

@@ -1,7 +1,15 @@
-﻿Public Class Enrollment1Form
+﻿Imports System.IO
+
+Public Class Enrollment1Form
+    Private Function ConvertImageToByte(ByVal img As Image)
+        Using mStream As New MemoryStream()
+            img.Save(mStream, img.RawFormat)
+            Return mStream.ToArray()
+        End Using
+    End Function
 
     Private Sub NextBtn_Click(sender As Object, e As EventArgs) Handles NextBtn.Click
-        'EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, NsoPictureBox., )
+        EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image))
 
         Enrollment2Form.Show()
         Me.Hide()
@@ -23,12 +31,12 @@
     ' if 2: unfinished changes
     'End Sub
 
-    Private Sub ClassListSBar_Click(sender As Object, e As EventArgs) Handles ClassListSBar.Click, CListPB.Click
+    Private Sub ClassListSBar_Click(sender As Object, e As EventArgs) Handles CListPB.Click, ClassListSBar.Click
         Me.Hide()
         ClassList.Show()
     End Sub
 
-    Private Sub AddStaffPB_Click(sender As Object, e As EventArgs) Handles AddStaffPB.Click, AddStaffSBar.Click
+    Private Sub AddStaffPB_Click(sender As Object, e As EventArgs) Handles AddStaffSBar.Click, AddStaffPB.Click
         Me.Hide()
         AddStaff.Show()
     End Sub
@@ -59,5 +67,131 @@
         'TODO: This line of code loads data into the 'DatabaseDataSet.Enrollment' table. You can move, or remove it, as needed.
         Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
 
+    End Sub
+
+    Private Sub NsoPictureBox_Click(sender As Object, e As EventArgs) Handles NsoPictureBox.Click
+        Dim OFD As FileDialog = New OpenFileDialog()
+        Dim imgpath
+        OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+
+        If OFD.ShowDialog() = DialogResult.OK Then
+            imgpath = OFD.FileName
+            NsoPictureBox.ImageLocation = imgpath
+
+        End If
+
+        OFD = Nothing
+        Try
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString())
+        End Try
+    End Sub
+
+    Private Sub GmPictureBox_Click(sender As Object, e As EventArgs) Handles GmPictureBox.Click
+        Dim OFD As FileDialog = New OpenFileDialog()
+        Dim imgpath
+        OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+
+        If OFD.ShowDialog() = DialogResult.OK Then
+            imgpath = OFD.FileName
+            GmPictureBox.ImageLocation = imgpath
+
+        End If
+
+        OFD = Nothing
+        Try
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString())
+        End Try
+    End Sub
+
+    Private Sub F137PictureBox_Click(sender As Object, e As EventArgs)
+        Dim OFD As FileDialog = New OpenFileDialog()
+        Dim imgpath
+        OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+
+        If OFD.ShowDialog() = DialogResult.OK Then
+            imgpath = OFD.FileName
+            F137PictureBox.ImageLocation = imgpath
+
+        End If
+
+        OFD = Nothing
+        Try
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString())
+        End Try
+    End Sub
+
+    Private Sub RcPictureBox_Click(sender As Object, e As EventArgs)
+        Dim OFD As FileDialog = New OpenFileDialog()
+        Dim imgpath
+        OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+
+        If OFD.ShowDialog() = DialogResult.OK Then
+            imgpath = OFD.FileName
+            RcPictureBox.ImageLocation = imgpath
+
+        End If
+
+        OFD = Nothing
+        Try
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString())
+        End Try
+    End Sub
+
+    Private Sub RcPictureBox_Click_1(sender As Object, e As EventArgs) Handles RcPictureBox.Click
+        Dim OFD As FileDialog = New OpenFileDialog()
+        Dim imgpath
+        OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+
+        If OFD.ShowDialog() = DialogResult.OK Then
+            imgpath = OFD.FileName
+            RcPictureBox.ImageLocation = imgpath
+
+        End If
+
+        OFD = Nothing
+        Try
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString())
+        End Try
+    End Sub
+
+    Private Sub F137PictureBox_Click_1(sender As Object, e As EventArgs) Handles F137PictureBox.Click
+        Dim OFD As FileDialog = New OpenFileDialog()
+        Dim imgpath
+        OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+
+        If OFD.ShowDialog() = DialogResult.OK Then
+            imgpath = OFD.FileName
+            F137PictureBox.ImageLocation = imgpath
+
+        End If
+
+        OFD = Nothing
+        Try
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString())
+        End Try
+    End Sub
+
+    Private Sub PicPictureBox_Click_1(sender As Object, e As EventArgs) Handles PicPictureBox.Click
+        Dim OFD As FileDialog = New OpenFileDialog()
+        Dim imgpath
+        OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+
+        If OFD.ShowDialog() = DialogResult.OK Then
+            imgpath = OFD.FileName
+            PicPictureBox.ImageLocation = imgpath
+
+        End If
+
+        OFD = Nothing
+        Try
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString())
+        End Try
     End Sub
 End Class
