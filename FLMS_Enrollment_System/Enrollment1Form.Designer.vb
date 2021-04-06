@@ -751,7 +751,7 @@ Partial Class Enrollment1Form
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Enrollment1Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form2"
+        Me.Text = "FLMS Enrollment System"
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
         CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).EndInit()

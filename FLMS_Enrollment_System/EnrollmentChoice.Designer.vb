@@ -57,7 +57,7 @@ Partial Class EnrollmentChoice
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "EnrollmentChoice"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "EnrollmentChoice"
+        Me.Text = "FLMS Enrollment System"
         Me.ResumeLayout(False)
 
     End Sub

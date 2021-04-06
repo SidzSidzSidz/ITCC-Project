@@ -52,8 +52,8 @@ Partial Class NewSection
         Me.MaxStudentsTextBox = New System.Windows.Forms.TextBox()
         Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
-        Me.SYTextBox = New System.Windows.Forms.TextBox()
         Me.SectionsTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.SectionsTableAdapter()
+        Me.SYTextBox = New System.Windows.Forms.TextBox()
         Me.SectionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -377,6 +377,10 @@ Partial Class NewSection
         Me.TableAdapterManager.StaffTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'SectionsTableAdapter
+        '
+        Me.SectionsTableAdapter.ClearBeforeFill = True
+        '
         'SYTextBox
         '
         Me.SYTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
@@ -384,10 +388,6 @@ Partial Class NewSection
         Me.SYTextBox.Name = "SYTextBox"
         Me.SYTextBox.Size = New System.Drawing.Size(372, 32)
         Me.SYTextBox.TabIndex = 53
-        '
-        'SectionsTableAdapter
-        '
-        Me.SectionsTableAdapter.ClearBeforeFill = True
         '
         'SectionsBindingSource
         '
@@ -413,7 +413,7 @@ Partial Class NewSection
         Me.Controls.Add(Me.Add_btn)
         Me.Name = "NewSection"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "NewSection"
+        Me.Text = "FLMS Enrollment System"
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

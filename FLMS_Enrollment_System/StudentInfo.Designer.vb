@@ -409,7 +409,7 @@ Partial Class StudentInfo
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "StudentInfo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "StudentInfo"
+        Me.Text = "FLMS Enrollment System"
         CType(Me.Student_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()

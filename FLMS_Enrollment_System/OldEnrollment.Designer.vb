@@ -66,7 +66,7 @@ Partial Class OldEnrollment
         Me.Controls.Add(Me.LRN_TBox)
         Me.Name = "OldEnrollment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "OldEnrollment"
+        Me.Text = "FLMS Enrollment System"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

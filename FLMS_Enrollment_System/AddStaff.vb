@@ -29,7 +29,7 @@
         NewSection.Show()
     End Sub
 
-    Private Sub StaffBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) 
+    Private Sub StaffBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.StaffBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
@@ -47,15 +47,8 @@
     Private Sub AddStaff_btn_Click(sender As Object, e As EventArgs) Handles AddStaff_btn.Click
         Try
             StaffTableAdapter.StaffFn(UsernameTextBox.Text, FirstNameTextBox.Text, LastNameTextBox.Text, PasswordTextBox.Text)
-            Me.Validate()
-            Me.StaffBindingSource.EndEdit()
-            Me.StaffTableAdapter.Update(Me.DatabaseDataSet.Staff)
-            UsernameTextBox.Text = ""
-            FirstNameTextBox.Text = ""
-            LastNameTextBox.Text = ""
-            PasswordTextBox.Text = ""
-            MsgBox("Staff User Created")
-
+            Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+            MsgBox("Update successful")
         Catch
             MsgBox("erar")
         End Try
