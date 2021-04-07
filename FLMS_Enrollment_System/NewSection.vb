@@ -32,11 +32,25 @@
     Private Sub NewSection_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'DatabaseDataSet.Sections' table. You can move, or remove it, as needed.
         Me.SectionsTableAdapter.Fill(Me.DatabaseDataSet.Sections)
+        Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
 
+        SYTextBox.Text = ""
+        YearLevelComboBox.Text = ""
+        SectionTextBox.Text = ""
+        MaxStudentsTextBox.Text = ""
     End Sub
 
     Private Sub Add_btn_Click(sender As Object, e As EventArgs) Handles Add_btn.Click
-        SectionsTableAdapter.SectionFn(YearLevelComboBox.Text, SectionTextBox.Text, MaxStudentsTextBox.Text, SYTextBox.Text)
+        Dim PrimaryKey = SYTextBox.Text + " " + YearLevelComboBox.Text + " " + SectionTextBox.Text
+
+        SectionsTableAdapter.SectionFn(SYTextBox.Text, SectionTextBox.Text, MaxStudentsTextBox.Text, YearLevelComboBox.Text, PrimaryKey)
+        Me.SectionsTableAdapter.Update(DatabaseDataSet.Sections)
+        Me.SectionsTableAdapter.Fill(Me.DatabaseDataSet.Sections)
+        MsgBox("Section Created")
     End Sub
 
+    Private Sub ClassListSBar_Click(sender As Object, e As EventArgs) Handles ClassListSBar.Click, CListPB.Click
+        Me.Hide()
+        ClassList.Show()
+    End Sub
 End Class
