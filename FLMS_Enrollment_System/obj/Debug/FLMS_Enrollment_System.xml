@@ -32,12 +32,12 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:FLMS_Enrollment_System.DatabaseDataSet.SectionsDataTable">
+<member name="T:FLMS_Enrollment_System.DatabaseDataSet.StaffDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:FLMS_Enrollment_System.DatabaseDataSet.StaffDataTable">
+<member name="T:FLMS_Enrollment_System.DatabaseDataSet.SectionsDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -47,12 +47,12 @@ Represents the strongly named DataTable class.
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:FLMS_Enrollment_System.DatabaseDataSet.SectionsRow">
+<member name="T:FLMS_Enrollment_System.DatabaseDataSet.StaffRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:FLMS_Enrollment_System.DatabaseDataSet.StaffRow">
+<member name="T:FLMS_Enrollment_System.DatabaseDataSet.SectionsRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -62,12 +62,12 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
-<member name="T:FLMS_Enrollment_System.DatabaseDataSet.SectionsRowChangeEvent">
+<member name="T:FLMS_Enrollment_System.DatabaseDataSet.StaffRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:FLMS_Enrollment_System.DatabaseDataSet.StaffRowChangeEvent">
+<member name="T:FLMS_Enrollment_System.DatabaseDataSet.SectionsRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
@@ -77,12 +77,12 @@ Row event argument class
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:FLMS_Enrollment_System.DatabaseDataSetTableAdapters.SectionsTableAdapter">
+<member name="T:FLMS_Enrollment_System.DatabaseDataSetTableAdapters.StaffTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:FLMS_Enrollment_System.DatabaseDataSetTableAdapters.StaffTableAdapter">
+<member name="T:FLMS_Enrollment_System.DatabaseDataSetTableAdapters.SectionsTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

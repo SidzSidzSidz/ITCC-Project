@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class NewSection
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class NewSection
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NewSection))
@@ -47,14 +47,14 @@ Partial Class NewSection
         Me.GL_Label = New System.Windows.Forms.Label()
         Me.Section_Label = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.YearLevelComboBox = New System.Windows.Forms.ComboBox()
         Me.SectionTextBox = New System.Windows.Forms.TextBox()
         Me.MaxStudentsTextBox = New System.Windows.Forms.TextBox()
+        Me.SYTextBox = New System.Windows.Forms.TextBox()
+        Me.YearLevelComboBox = New System.Windows.Forms.ComboBox()
+        Me.SectionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.SectionsTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.SectionsTableAdapter()
-        Me.SYTextBox = New System.Windows.Forms.TextBox()
-        Me.SectionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,8 +62,8 @@ Partial Class NewSection
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Sidebar
@@ -336,18 +336,6 @@ Partial Class NewSection
         Me.Label2.TabIndex = 50
         Me.Label2.Text = "Student capacity"
         '
-        'YearLevelComboBox
-        '
-        Me.YearLevelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.YearLevelComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.YearLevelComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.YearLevelComboBox.FormattingEnabled = True
-        Me.YearLevelComboBox.Items.AddRange(New Object() {"Sample"})
-        Me.YearLevelComboBox.Location = New System.Drawing.Point(631, 280)
-        Me.YearLevelComboBox.Name = "YearLevelComboBox"
-        Me.YearLevelComboBox.Size = New System.Drawing.Size(372, 33)
-        Me.YearLevelComboBox.TabIndex = 54
-        '
         'SectionTextBox
         '
         Me.SectionTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
@@ -364,23 +352,6 @@ Partial Class NewSection
         Me.MaxStudentsTextBox.Size = New System.Drawing.Size(372, 32)
         Me.MaxStudentsTextBox.TabIndex = 56
         '
-        'DatabaseDataSet
-        '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
-        Me.TableAdapterManager.SectionsTableAdapter = Me.SectionsTableAdapter
-        Me.TableAdapterManager.StaffTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'SectionsTableAdapter
-        '
-        Me.SectionsTableAdapter.ClearBeforeFill = True
-        '
         'SYTextBox
         '
         Me.SYTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
@@ -389,10 +360,41 @@ Partial Class NewSection
         Me.SYTextBox.Size = New System.Drawing.Size(372, 32)
         Me.SYTextBox.TabIndex = 53
         '
+        'YearLevelComboBox
+        '
+        Me.YearLevelComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SectionsBindingSource, "YearLevel", True))
+        Me.YearLevelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.YearLevelComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.YearLevelComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.YearLevelComboBox.FormattingEnabled = True
+        Me.YearLevelComboBox.Items.AddRange(New Object() {"Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"})
+        Me.YearLevelComboBox.Location = New System.Drawing.Point(631, 279)
+        Me.YearLevelComboBox.Name = "YearLevelComboBox"
+        Me.YearLevelComboBox.Size = New System.Drawing.Size(372, 33)
+        Me.YearLevelComboBox.TabIndex = 57
+        '
         'SectionsBindingSource
         '
         Me.SectionsBindingSource.DataMember = "Sections"
         Me.SectionsBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
+        Me.TableAdapterManager.SectionsTableAdapter = Nothing
+        Me.TableAdapterManager.StaffTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'SectionsTableAdapter
+        '
+        Me.SectionsTableAdapter.ClearBeforeFill = True
         '
         'NewSection
         '
@@ -400,9 +402,9 @@ Partial Class NewSection
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.YearLevelComboBox)
         Me.Controls.Add(Me.MaxStudentsTextBox)
         Me.Controls.Add(Me.SectionTextBox)
-        Me.Controls.Add(Me.YearLevelComboBox)
         Me.Controls.Add(Me.SYTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Section_Label)
@@ -422,8 +424,8 @@ Partial Class NewSection
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -453,10 +455,10 @@ Partial Class NewSection
     Friend WithEvents Label2 As Label
     Friend WithEvents DatabaseDataSet As DatabaseDataSet
     Friend WithEvents TableAdapterManager As DatabaseDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents YearLevelComboBox As ComboBox
     Friend WithEvents SectionTextBox As TextBox
     Friend WithEvents MaxStudentsTextBox As TextBox
     Friend WithEvents SYTextBox As TextBox
-    Friend WithEvents SectionsTableAdapter As DatabaseDataSetTableAdapters.SectionsTableAdapter
     Friend WithEvents SectionsBindingSource As BindingSource
+    Friend WithEvents YearLevelComboBox As ComboBox
+    Friend WithEvents SectionsTableAdapter As DatabaseDataSetTableAdapters.SectionsTableAdapter
 End Class
