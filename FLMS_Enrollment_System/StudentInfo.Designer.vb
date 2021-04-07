@@ -52,6 +52,7 @@ Partial Class StudentInfo
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
         Me.Suffix = New System.Windows.Forms.TextBox()
+        Me.EnrollmentTableAdapter1 = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         CType(Me.Student_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
         CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -387,6 +388,10 @@ Partial Class StudentInfo
         Me.Suffix.TabIndex = 31
         Me.Suffix.Text = "Suffix"
         '
+        'EnrollmentTableAdapter1
+        '
+        Me.EnrollmentTableAdapter1.ClearBeforeFill = True
+        '
         'StudentInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -453,4 +458,5 @@ Partial Class StudentInfo
     Friend WithEvents Label1 As Label
     Friend WithEvents NewClass_Label As Label
     Friend WithEvents NewClass_PB As PictureBox
+    Friend WithEvents EnrollmentTableAdapter1 As DatabaseDataSetTableAdapters.EnrollmentTableAdapter
 End Class

@@ -10,6 +10,8 @@ Public Class Enrollment1Form
 
     Private Sub NextBtn_Click(sender As Object, e As EventArgs) Handles NextBtn.Click
         EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image))
+        Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
 
         Enrollment2Form.Show()
         Me.Hide()
@@ -98,7 +100,6 @@ Public Class Enrollment1Form
 
         End If
 
-        OFD = Nothing
         Try
         Catch ex As Exception
             MsgBox(ex.Message.ToString())
@@ -116,7 +117,6 @@ Public Class Enrollment1Form
 
         End If
 
-        OFD = Nothing
         Try
         Catch ex As Exception
             MsgBox(ex.Message.ToString())
@@ -134,7 +134,6 @@ Public Class Enrollment1Form
 
         End If
 
-        OFD = Nothing
         Try
         Catch ex As Exception
             MsgBox(ex.Message.ToString())
@@ -152,7 +151,6 @@ Public Class Enrollment1Form
 
         End If
 
-        OFD = Nothing
         Try
         Catch ex As Exception
             MsgBox(ex.Message.ToString())
@@ -170,7 +168,6 @@ Public Class Enrollment1Form
 
         End If
 
-        OFD = Nothing
         Try
         Catch ex As Exception
             MsgBox(ex.Message.ToString())
@@ -188,7 +185,6 @@ Public Class Enrollment1Form
 
         End If
 
-        OFD = Nothing
         Try
         Catch ex As Exception
             MsgBox(ex.Message.ToString())

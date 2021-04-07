@@ -22,8 +22,12 @@
     End Sub
 
     Private Sub Search_btn_Click(sender As Object, e As EventArgs) Handles Search_btn.Click
-        Me.Hide()
-        StudentInfo.Show()
+        If Me.EnrollmentTableAdapter1.SearchStudent(LRN_text.Text) = 1 Then
+            Me.Hide()
+            StudentInfo.Show()
+        Else
+            MsgBox("LRN not found.")
+        End If
     End Sub
 
     Private Sub Search_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
@@ -39,4 +43,8 @@
         Me.Hide()
         NewSection.Show()
     End Sub
+
+    Public Function GetLRN()
+        Return LRN_text.Text
+    End Function
 End Class

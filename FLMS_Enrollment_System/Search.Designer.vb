@@ -46,6 +46,7 @@ Partial Class Search
         Me.Search_btn = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.EnrollmentTableAdapter1 = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         Me.Sidebar.SuspendLayout()
         CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -330,6 +331,10 @@ Partial Class Search
         Me.Panel1.Size = New System.Drawing.Size(1069, 681)
         Me.Panel1.TabIndex = 13
         '
+        'EnrollmentTableAdapter1
+        '
+        Me.EnrollmentTableAdapter1.ClearBeforeFill = True
+        '
         'Search
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -380,4 +385,5 @@ Partial Class Search
     Friend WithEvents Label1 As Label
     Friend WithEvents NewClass_Label As Label
     Friend WithEvents NewClass_PB As PictureBox
+    Friend WithEvents EnrollmentTableAdapter1 As DatabaseDataSetTableAdapters.EnrollmentTableAdapter
 End Class
