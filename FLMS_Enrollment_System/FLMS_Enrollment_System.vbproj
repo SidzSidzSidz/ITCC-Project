@@ -99,6 +99,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseDataSet.vb">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Enrollment2Form.Designer.vb">
       <DependentUpon>Enrollment2Form.vb</DependentUpon>
     </Compile>

@@ -44,10 +44,10 @@
         Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
 
         'Sets textboxes to blank
-        FirstNameTextBox.Text = " "
-        LastNameTextBox.Text = " "
-        UsernameTextBox.Text = " "
-        PasswordTextBox.Text = " "
+        FirstNameTextBox.Text = ""
+        LastNameTextBox.Text = ""
+        UsernameTextBox.Text = ""
+        PasswordTextBox.Text = ""
     End Sub
 
     Private Sub AddStaff_btn_Click(sender As Object, e As EventArgs) Handles AddStaff_btn.Click
