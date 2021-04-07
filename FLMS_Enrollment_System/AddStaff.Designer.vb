@@ -48,16 +48,11 @@ Partial Class AddStaff
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
         Me.UsernameTextBox = New System.Windows.Forms.TextBox()
+        Me.StaffBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.LastNameTextBox = New System.Windows.Forms.TextBox()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
-        Me.StaffDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.StaffBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.StaffTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.StaffTableAdapter()
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -69,7 +64,6 @@ Partial Class AddStaff
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.StaffDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -353,6 +347,16 @@ Partial Class AddStaff
         Me.UsernameTextBox.Size = New System.Drawing.Size(370, 32)
         Me.UsernameTextBox.TabIndex = 45
         '
+        'StaffBindingSource
+        '
+        Me.StaffBindingSource.DataMember = "Staff"
+        Me.StaffBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StaffBindingSource, "FirstName", True))
@@ -380,51 +384,6 @@ Partial Class AddStaff
         Me.PasswordTextBox.Size = New System.Drawing.Size(370, 32)
         Me.PasswordTextBox.TabIndex = 48
         '
-        'StaffDataGridView
-        '
-        Me.StaffDataGridView.AutoGenerateColumns = False
-        Me.StaffDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.StaffDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
-        Me.StaffDataGridView.DataSource = Me.StaffBindingSource
-        Me.StaffDataGridView.Location = New System.Drawing.Point(531, 31)
-        Me.StaffDataGridView.Name = "StaffDataGridView"
-        Me.StaffDataGridView.Size = New System.Drawing.Size(443, 131)
-        Me.StaffDataGridView.TabIndex = 48
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Username"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Username"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "FirstName"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "FirstName"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "LastName"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "LastName"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Password"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Password"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'StaffBindingSource
-        '
-        Me.StaffBindingSource.DataMember = "Staff"
-        Me.StaffBindingSource.DataSource = Me.DatabaseDataSet
-        '
-        'DatabaseDataSet
-        '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'StaffTableAdapter
         '
         Me.StaffTableAdapter.ClearBeforeFill = True
@@ -451,8 +410,7 @@ Partial Class AddStaff
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(1264, 712)
-        Me.Controls.Add(Me.StaffDataGridView)
+        Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.PasswordTextBox)
         Me.Controls.Add(Me.LastNameTextBox)
         Me.Controls.Add(Me.FirstNameTextBox)
@@ -476,7 +434,6 @@ Partial Class AddStaff
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.StaffDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -518,9 +475,4 @@ Partial Class AddStaff
     Friend WithEvents PasswordTextBox As TextBox
     Friend WithEvents EnrollmentBindingSource As BindingSource
     Friend WithEvents EnrollmentTableAdapter As DatabaseDataSetTableAdapters.EnrollmentTableAdapter
-    Friend WithEvents StaffDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
 End Class

@@ -1,6 +1,6 @@
 ﻿Public Class Login
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginBtn.Click
-        If StaffTableAdapter.CheckStaff(UserTbox.Text, PasswordTBox.Text) = 1 Then
+        If StaffTableAdapter.CheckStaffFn(UserTbox.Text, PasswordTBox.Text) = 1 Then
             Me.Hide()
             Search.Show()
         Else

@@ -61,6 +61,7 @@ Partial Class Login
         Me.PasswordTBox.Location = New System.Drawing.Point(785, 292)
         Me.PasswordTBox.Margin = New System.Windows.Forms.Padding(2)
         Me.PasswordTBox.Name = "PasswordTBox"
+        Me.PasswordTBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.PasswordTBox.Size = New System.Drawing.Size(260, 34)
         Me.PasswordTBox.TabIndex = 13
         Me.PasswordTBox.Text = "Password"

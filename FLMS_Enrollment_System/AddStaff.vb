@@ -42,15 +42,22 @@
         'TODO: This line of code loads data into the 'DatabaseDataSet.Staff' table. You can move, or remove it, as needed.
         Me.StaffTableAdapter.Fill(Me.DatabaseDataSet.Staff)
         Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+
+        'Sets textboxes to blank
+        FirstNameTextBox.Text = " "
+        LastNameTextBox.Text = " "
+        UsernameTextBox.Text = " "
+        PasswordTextBox.Text = " "
     End Sub
 
     Private Sub AddStaff_btn_Click(sender As Object, e As EventArgs) Handles AddStaff_btn.Click
         Try
             StaffTableAdapter.StaffFn(UsernameTextBox.Text, FirstNameTextBox.Text, LastNameTextBox.Text, PasswordTextBox.Text)
             Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
-            MsgBox("Update successful")
+            Me.StaffTableAdapter.Fill(Me.DatabaseDataSet.Staff)
+            MsgBox("Staff Added")
         Catch
-            MsgBox("erar")
+            MsgBox("Username Already Taken")
         End Try
     End Sub
 End Class
