@@ -43,7 +43,7 @@
     Private Sub Add_btn_Click(sender As Object, e As EventArgs) Handles Add_btn.Click
         Dim PrimaryKey = SYTextBox.Text + " " + YearLevelComboBox.Text + " " + SectionTextBox.Text
 
-        SectionsTableAdapter.SectionFn(SYTextBox.Text, SectionTextBox.Text, MaxStudentsTextBox.Text, YearLevelComboBox.Text, PrimaryKey)
+        SectionsTableAdapter.SectionFn(YearLevelComboBox.Text, SectionTextBox.Text, MaxStudentsTextBox.Text, SYTextBox.Text, PrimaryKey)
         Me.SectionsTableAdapter.Update(DatabaseDataSet.Sections)
         Me.SectionsTableAdapter.Fill(Me.DatabaseDataSet.Sections)
         MsgBox("Section Created")
