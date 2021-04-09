@@ -388,7 +388,6 @@ Partial Class NewSection
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
-        Me.TableAdapterManager.SectionsTableAdapter = Nothing
         Me.TableAdapterManager.StaffTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
@@ -401,7 +400,7 @@ Partial Class NewSection
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.ClientSize = New System.Drawing.Size(1264, 712)
         Me.Controls.Add(Me.YearLevelComboBox)
         Me.Controls.Add(Me.MaxStudentsTextBox)
         Me.Controls.Add(Me.SectionTextBox)
