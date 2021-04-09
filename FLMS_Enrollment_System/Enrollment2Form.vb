@@ -8,10 +8,6 @@
 
     End Sub
 
-    Private Sub Enrollment2Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub LogoutBtn_Click(sender As Object, e As EventArgs)
         Enrollment1Form.Hide()
         Login.Show()

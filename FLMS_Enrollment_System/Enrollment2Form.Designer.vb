@@ -53,6 +53,8 @@ Partial Class Enrollment2Form
         Me.AddStaffPB = New System.Windows.Forms.PictureBox()
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         CType(Me.StudentsDTB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Sidebar.SuspendLayout()
@@ -89,7 +91,7 @@ Partial Class Enrollment2Form
         Me.SectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.SectionBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SectionBox.FormattingEnabled = True
-        Me.SectionBox.Location = New System.Drawing.Point(631, 117)
+        Me.SectionBox.Location = New System.Drawing.Point(618, 118)
         Me.SectionBox.Name = "SectionBox"
         Me.SectionBox.Size = New System.Drawing.Size(177, 21)
         Me.SectionBox.TabIndex = 11
@@ -99,7 +101,7 @@ Partial Class Enrollment2Form
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label11.Location = New System.Drawing.Point(562, 119)
+        Me.Label11.Location = New System.Drawing.Point(549, 118)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(63, 20)
         Me.Label11.TabIndex = 8
@@ -110,7 +112,7 @@ Partial Class Enrollment2Form
         Me.YearLevelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.YearLevelBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.YearLevelBox.FormattingEnabled = True
-        Me.YearLevelBox.Location = New System.Drawing.Point(317, 118)
+        Me.YearLevelBox.Location = New System.Drawing.Point(319, 118)
         Me.YearLevelBox.Name = "YearLevelBox"
         Me.YearLevelBox.Size = New System.Drawing.Size(177, 21)
         Me.YearLevelBox.TabIndex = 12
@@ -419,6 +421,27 @@ Partial Class Enrollment2Form
         Me.EnrollmentPB.TabIndex = 2
         Me.EnrollmentPB.TabStop = False
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label2.Location = New System.Drawing.Point(866, 117)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(31, 20)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "S.Y."
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(903, 117)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(177, 21)
+        Me.ComboBox1.TabIndex = 11
+        '
         'Enrollment2Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -428,6 +451,8 @@ Partial Class Enrollment2Form
         Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.StudentsDTB)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.SectionBox)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.YearLevelBox)
@@ -484,4 +509,6 @@ Partial Class Enrollment2Form
     Friend WithEvents Label1 As Label
     Friend WithEvents NewClass_Label As Label
     Friend WithEvents NewClass_PB As PictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

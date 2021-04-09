@@ -47,6 +47,8 @@ Partial Class ClassList
         Me.AddStaffPB = New System.Windows.Forms.PictureBox()
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         CType(Me.ClassList_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
         CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -122,7 +124,7 @@ Partial Class ClassList
         'SelectBtn
         '
         Me.SelectBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.SelectBtn.Location = New System.Drawing.Point(860, 78)
+        Me.SelectBtn.Location = New System.Drawing.Point(1139, 76)
         Me.SelectBtn.Name = "SelectBtn"
         Me.SelectBtn.Size = New System.Drawing.Size(84, 31)
         Me.SelectBtn.TabIndex = 15
@@ -337,6 +339,27 @@ Partial Class ClassList
         Me.EnrollmentPB.TabIndex = 2
         Me.EnrollmentPB.TabStop = False
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label2.Location = New System.Drawing.Point(871, 84)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(37, 21)
+        Me.Label2.TabIndex = 12
+        Me.Label2.Text = "S.Y."
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(914, 84)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(179, 21)
+        Me.ComboBox1.TabIndex = 14
+        '
         'ClassList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -345,7 +368,9 @@ Partial Class ClassList
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.ClassList_DGV)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.SectionCBox)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.YLCBox)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
@@ -394,4 +419,6 @@ Partial Class ClassList
     Friend WithEvents Label1 As Label
     Friend WithEvents NewClass_Label As Label
     Friend WithEvents NewClass_PB As PictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
