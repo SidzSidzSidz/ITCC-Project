@@ -38,4 +38,8 @@
         lrn = Search.GetLRN
         EnrollmentTableAdapter1.Fill(EnrollmentTableAdapter1.GetNewStudent(lrn))
     End Sub
+
+    Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
+
+    End Sub
 End Class
