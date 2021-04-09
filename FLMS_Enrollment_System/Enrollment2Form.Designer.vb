@@ -112,6 +112,7 @@ Partial Class Enrollment2Form
         Me.YearLevelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.YearLevelBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.YearLevelBox.FormattingEnabled = True
+        Me.YearLevelBox.Items.AddRange(New Object() {"Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"})
         Me.YearLevelBox.Location = New System.Drawing.Point(319, 118)
         Me.YearLevelBox.Name = "YearLevelBox"
         Me.YearLevelBox.Size = New System.Drawing.Size(177, 21)
