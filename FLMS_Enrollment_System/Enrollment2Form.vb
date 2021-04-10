@@ -52,4 +52,8 @@
         Me.Hide()
         NewSection.Show()
     End Sub
+
+    Private Sub Enrollment2Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SectionsTableAdapter1.Fill(Me.DatabaseDataSet1.Sections)
+    End Sub
 End Class

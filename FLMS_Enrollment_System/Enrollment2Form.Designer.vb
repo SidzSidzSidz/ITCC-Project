@@ -55,6 +55,8 @@ Partial Class Enrollment2Form
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.SectionsTableAdapter1 = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.SectionsTableAdapter()
+        Me.DatabaseDataSet1 = New FLMS_Enrollment_System.DatabaseDataSet()
         CType(Me.StudentsDTB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Sidebar.SuspendLayout()
@@ -64,6 +66,7 @@ Partial Class Enrollment2Form
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label12
@@ -88,20 +91,23 @@ Partial Class Enrollment2Form
         '
         'SectionBox
         '
+        Me.SectionBox.DataSource = Me.DatabaseDataSet1
+        Me.SectionBox.DisplayMember = "Sections.Section"
         Me.SectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.SectionBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SectionBox.FormattingEnabled = True
-        Me.SectionBox.Location = New System.Drawing.Point(618, 118)
+        Me.SectionBox.Location = New System.Drawing.Point(883, 118)
         Me.SectionBox.Name = "SectionBox"
         Me.SectionBox.Size = New System.Drawing.Size(177, 21)
         Me.SectionBox.TabIndex = 11
+        Me.SectionBox.ValueMember = "Sections.Section"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label11.Location = New System.Drawing.Point(549, 118)
+        Me.Label11.Location = New System.Drawing.Point(814, 118)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(63, 20)
         Me.Label11.TabIndex = 8
@@ -112,7 +118,8 @@ Partial Class Enrollment2Form
         Me.YearLevelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.YearLevelBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.YearLevelBox.FormattingEnabled = True
-        Me.YearLevelBox.Location = New System.Drawing.Point(319, 118)
+        Me.YearLevelBox.Items.AddRange(New Object() {"Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"})
+        Me.YearLevelBox.Location = New System.Drawing.Point(584, 118)
         Me.YearLevelBox.Name = "YearLevelBox"
         Me.YearLevelBox.Size = New System.Drawing.Size(177, 21)
         Me.YearLevelBox.TabIndex = 12
@@ -122,7 +129,7 @@ Partial Class Enrollment2Form
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label10.Location = New System.Drawing.Point(232, 118)
+        Me.Label10.Location = New System.Drawing.Point(497, 118)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(81, 20)
         Me.Label10.TabIndex = 1
@@ -426,7 +433,7 @@ Partial Class Enrollment2Form
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(866, 117)
+        Me.Label2.Location = New System.Drawing.Point(232, 119)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(31, 20)
         Me.Label2.TabIndex = 8
@@ -434,13 +441,26 @@ Partial Class Enrollment2Form
         '
         'ComboBox1
         '
+        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.DatabaseDataSet1, "Sections.SY", True))
+        Me.ComboBox1.DataSource = Me.DatabaseDataSet1
+        Me.ComboBox1.DisplayMember = "Sections.SY"
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(903, 117)
+        Me.ComboBox1.Location = New System.Drawing.Point(269, 119)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(177, 21)
         Me.ComboBox1.TabIndex = 11
+        Me.ComboBox1.ValueMember = "Sections.SY"
+        '
+        'SectionsTableAdapter1
+        '
+        Me.SectionsTableAdapter1.ClearBeforeFill = True
+        '
+        'DatabaseDataSet1
+        '
+        Me.DatabaseDataSet1.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Enrollment2Form
         '
@@ -474,6 +494,7 @@ Partial Class Enrollment2Form
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -511,4 +532,6 @@ Partial Class Enrollment2Form
     Friend WithEvents NewClass_PB As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents SectionsTableAdapter1 As DatabaseDataSetTableAdapters.SectionsTableAdapter
+    Friend WithEvents DatabaseDataSet1 As DatabaseDataSet
 End Class

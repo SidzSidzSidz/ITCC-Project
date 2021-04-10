@@ -8,6 +8,7 @@
         Search.Hide()
         ClassList.Hide()
         StudentInfo.Hide()
+        NewSection.Hide()
         Enrollment1Form.Show()
     End Sub
 
@@ -16,6 +17,7 @@
         Search.Hide()
         ClassList.Hide()
         StudentInfo.Hide()
+        NewSection.Hide()
         OldEnrollment.Show()
         'fetch lrn
     End Sub

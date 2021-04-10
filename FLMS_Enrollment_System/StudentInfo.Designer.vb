@@ -22,18 +22,8 @@ Partial Class StudentInfo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StudentInfo))
-        Me.Search_Label = New System.Windows.Forms.Label()
-        Me.Student_PictureBox = New System.Windows.Forms.PictureBox()
-        Me.Save_btn = New System.Windows.Forms.Button()
-        Me.Edit_btn = New System.Windows.Forms.Button()
-        Me.Section_Text = New System.Windows.Forms.TextBox()
-        Me.LRN_Text = New System.Windows.Forms.TextBox()
-        Me.Address_Text = New System.Windows.Forms.TextBox()
-        Me.MiddleName_Text = New System.Windows.Forms.TextBox()
-        Me.FirstName_Text = New System.Windows.Forms.TextBox()
-        Me.LastName_Text = New System.Windows.Forms.TextBox()
-        Me.Student_Info_Text = New System.Windows.Forms.Label()
         Me.Sidebar = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -51,9 +41,46 @@ Partial Class StudentInfo
         Me.AddStaffPB = New System.Windows.Forms.PictureBox()
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
-        Me.Suffix = New System.Windows.Forms.TextBox()
+        Me.F137PictureBox = New System.Windows.Forms.PictureBox()
+        Me.RcPictureBox = New System.Windows.Forms.PictureBox()
+        Me.GmPictureBox = New System.Windows.Forms.PictureBox()
+        Me.NsoPictureBox = New System.Windows.Forms.PictureBox()
+        Me.YrscTextBox = New System.Windows.Forms.TextBox()
+        Me.SexComboBox = New System.Windows.Forms.ComboBox()
+        Me.LsaTextBox = New System.Windows.Forms.TextBox()
+        Me.AddressTextBox = New System.Windows.Forms.TextBox()
+        Me.GuardianTextBox = New System.Windows.Forms.TextBox()
+        Me.MnameTextBox = New System.Windows.Forms.TextBox()
+        Me.FnameTextBox = New System.Windows.Forms.TextBox()
+        Me.LnameTextBox = New System.Windows.Forms.TextBox()
+        Me.SuffixTextBox = New System.Windows.Forms.TextBox()
+        Me.LrnTextBox = New System.Windows.Forms.TextBox()
+        Me.DobDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.YrcTextBox = New System.Windows.Forms.TextBox()
+        Me.PicPictureBox = New System.Windows.Forms.PictureBox()
+        Me.NextBtn = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.EnrollmentTableAdapter1 = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
-        CType(Me.Student_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
+        Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         Me.Sidebar.SuspendLayout()
         CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,115 +88,14 @@ Partial Class StudentInfo
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Search_Label
-        '
-        Me.Search_Label.AutoSize = True
-        Me.Search_Label.Font = New System.Drawing.Font("Impact", 40.0!)
-        Me.Search_Label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
-        Me.Search_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Search_Label.Location = New System.Drawing.Point(244, 13)
-        Me.Search_Label.Name = "Search_Label"
-        Me.Search_Label.Size = New System.Drawing.Size(185, 66)
-        Me.Search_Label.TabIndex = 29
-        Me.Search_Label.Text = "Search"
-        '
-        'Student_PictureBox
-        '
-        Me.Student_PictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Student_PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Student_PictureBox.Location = New System.Drawing.Point(793, 99)
-        Me.Student_PictureBox.Name = "Student_PictureBox"
-        Me.Student_PictureBox.Size = New System.Drawing.Size(282, 282)
-        Me.Student_PictureBox.TabIndex = 28
-        Me.Student_PictureBox.TabStop = False
-        '
-        'Save_btn
-        '
-        Me.Save_btn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Save_btn.Location = New System.Drawing.Point(487, 580)
-        Me.Save_btn.Name = "Save_btn"
-        Me.Save_btn.Size = New System.Drawing.Size(94, 35)
-        Me.Save_btn.TabIndex = 27
-        Me.Save_btn.Text = "Save"
-        Me.Save_btn.UseVisualStyleBackColor = True
-        '
-        'Edit_btn
-        '
-        Me.Edit_btn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Edit_btn.Location = New System.Drawing.Point(384, 580)
-        Me.Edit_btn.Name = "Edit_btn"
-        Me.Edit_btn.Size = New System.Drawing.Size(94, 35)
-        Me.Edit_btn.TabIndex = 26
-        Me.Edit_btn.Text = "Edit "
-        Me.Edit_btn.UseVisualStyleBackColor = True
-        '
-        'Section_Text
-        '
-        Me.Section_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Section_Text.Location = New System.Drawing.Point(332, 528)
-        Me.Section_Text.Name = "Section_Text"
-        Me.Section_Text.Size = New System.Drawing.Size(306, 30)
-        Me.Section_Text.TabIndex = 25
-        Me.Section_Text.Text = "Section"
-        '
-        'LRN_Text
-        '
-        Me.LRN_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.LRN_Text.Location = New System.Drawing.Point(332, 483)
-        Me.LRN_Text.Name = "LRN_Text"
-        Me.LRN_Text.Size = New System.Drawing.Size(306, 30)
-        Me.LRN_Text.TabIndex = 24
-        Me.LRN_Text.Text = "LRN"
-        '
-        'Address_Text
-        '
-        Me.Address_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Address_Text.Location = New System.Drawing.Point(332, 307)
-        Me.Address_Text.Multiline = True
-        Me.Address_Text.Name = "Address_Text"
-        Me.Address_Text.Size = New System.Drawing.Size(306, 113)
-        Me.Address_Text.TabIndex = 23
-        Me.Address_Text.Text = "Address"
-        '
-        'MiddleName_Text
-        '
-        Me.MiddleName_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.MiddleName_Text.Location = New System.Drawing.Point(332, 260)
-        Me.MiddleName_Text.Name = "MiddleName_Text"
-        Me.MiddleName_Text.Size = New System.Drawing.Size(306, 30)
-        Me.MiddleName_Text.TabIndex = 22
-        Me.MiddleName_Text.Text = "Middle Name"
-        '
-        'FirstName_Text
-        '
-        Me.FirstName_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.FirstName_Text.Location = New System.Drawing.Point(332, 166)
-        Me.FirstName_Text.Name = "FirstName_Text"
-        Me.FirstName_Text.Size = New System.Drawing.Size(306, 30)
-        Me.FirstName_Text.TabIndex = 21
-        Me.FirstName_Text.Text = "First Name"
-        '
-        'LastName_Text
-        '
-        Me.LastName_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.LastName_Text.Location = New System.Drawing.Point(332, 121)
-        Me.LastName_Text.Name = "LastName_Text"
-        Me.LastName_Text.Size = New System.Drawing.Size(306, 30)
-        Me.LastName_Text.TabIndex = 20
-        Me.LastName_Text.Text = "Last Name"
-        '
-        'Student_Info_Text
-        '
-        Me.Student_Info_Text.AutoSize = True
-        Me.Student_Info_Text.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Student_Info_Text.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Student_Info_Text.Location = New System.Drawing.Point(351, 443)
-        Me.Student_Info_Text.Name = "Student_Info_Text"
-        Me.Student_Info_Text.Size = New System.Drawing.Size(274, 33)
-        Me.Student_Info_Text.TabIndex = 19
-        Me.Student_Info_Text.Text = "Student Information"
         '
         'Sidebar
         '
@@ -379,18 +305,411 @@ Partial Class StudentInfo
         Me.EnrollmentPB.TabIndex = 2
         Me.EnrollmentPB.TabStop = False
         '
-        'Suffix
+        'F137PictureBox
         '
-        Me.Suffix.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Suffix.Location = New System.Drawing.Point(332, 213)
-        Me.Suffix.Name = "Suffix"
-        Me.Suffix.Size = New System.Drawing.Size(306, 30)
-        Me.Suffix.TabIndex = 31
-        Me.Suffix.Text = "Suffix"
+        Me.F137PictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.F137PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.F137PictureBox.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.F137PictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EnrollmentBindingSource, "f137", True))
+        Me.F137PictureBox.Location = New System.Drawing.Point(817, 549)
+        Me.F137PictureBox.Name = "F137PictureBox"
+        Me.F137PictureBox.Size = New System.Drawing.Size(107, 102)
+        Me.F137PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.F137PictureBox.TabIndex = 100
+        Me.F137PictureBox.TabStop = False
+        '
+        'RcPictureBox
+        '
+        Me.RcPictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.RcPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RcPictureBox.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.RcPictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EnrollmentBindingSource, "rc", True))
+        Me.RcPictureBox.Location = New System.Drawing.Point(634, 549)
+        Me.RcPictureBox.Name = "RcPictureBox"
+        Me.RcPictureBox.Size = New System.Drawing.Size(107, 102)
+        Me.RcPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.RcPictureBox.TabIndex = 99
+        Me.RcPictureBox.TabStop = False
+        '
+        'GmPictureBox
+        '
+        Me.GmPictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.GmPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GmPictureBox.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.GmPictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EnrollmentBindingSource, "gm", True))
+        Me.GmPictureBox.Location = New System.Drawing.Point(450, 549)
+        Me.GmPictureBox.Name = "GmPictureBox"
+        Me.GmPictureBox.Size = New System.Drawing.Size(107, 102)
+        Me.GmPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GmPictureBox.TabIndex = 98
+        Me.GmPictureBox.TabStop = False
+        '
+        'NsoPictureBox
+        '
+        Me.NsoPictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.NsoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.NsoPictureBox.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.NsoPictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EnrollmentBindingSource, "nso", True))
+        Me.NsoPictureBox.Location = New System.Drawing.Point(267, 550)
+        Me.NsoPictureBox.Name = "NsoPictureBox"
+        Me.NsoPictureBox.Size = New System.Drawing.Size(108, 101)
+        Me.NsoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.NsoPictureBox.TabIndex = 97
+        Me.NsoPictureBox.TabStop = False
+        '
+        'YrscTextBox
+        '
+        Me.YrscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "yrsc", True))
+        Me.YrscTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.YrscTextBox.Location = New System.Drawing.Point(725, 438)
+        Me.YrscTextBox.Name = "YrscTextBox"
+        Me.YrscTextBox.Size = New System.Drawing.Size(129, 26)
+        Me.YrscTextBox.TabIndex = 96
+        '
+        'SexComboBox
+        '
+        Me.SexComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "sex", True))
+        Me.SexComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.SexComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.SexComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.SexComboBox.FormattingEnabled = True
+        Me.SexComboBox.Items.AddRange(New Object() {"Male", "Female"})
+        Me.SexComboBox.Location = New System.Drawing.Point(578, 435)
+        Me.SexComboBox.Name = "SexComboBox"
+        Me.SexComboBox.Size = New System.Drawing.Size(127, 28)
+        Me.SexComboBox.TabIndex = 94
+        '
+        'LsaTextBox
+        '
+        Me.LsaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "lsa", True))
+        Me.LsaTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.LsaTextBox.Location = New System.Drawing.Point(267, 438)
+        Me.LsaTextBox.Name = "LsaTextBox"
+        Me.LsaTextBox.Size = New System.Drawing.Size(277, 26)
+        Me.LsaTextBox.TabIndex = 93
+        '
+        'AddressTextBox
+        '
+        Me.AddressTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "address", True))
+        Me.AddressTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.AddressTextBox.Location = New System.Drawing.Point(269, 327)
+        Me.AddressTextBox.Name = "AddressTextBox"
+        Me.AddressTextBox.Size = New System.Drawing.Size(523, 26)
+        Me.AddressTextBox.TabIndex = 92
+        '
+        'GuardianTextBox
+        '
+        Me.GuardianTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "guardian", True))
+        Me.GuardianTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.GuardianTextBox.Location = New System.Drawing.Point(816, 327)
+        Me.GuardianTextBox.Name = "GuardianTextBox"
+        Me.GuardianTextBox.Size = New System.Drawing.Size(325, 26)
+        Me.GuardianTextBox.TabIndex = 91
+        '
+        'MnameTextBox
+        '
+        Me.MnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "mname", True))
+        Me.MnameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.MnameTextBox.Location = New System.Drawing.Point(754, 130)
+        Me.MnameTextBox.Name = "MnameTextBox"
+        Me.MnameTextBox.Size = New System.Drawing.Size(217, 26)
+        Me.MnameTextBox.TabIndex = 88
+        '
+        'FnameTextBox
+        '
+        Me.FnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "fname", True))
+        Me.FnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.EnrollmentBindingSource, "fname", True))
+        Me.FnameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.FnameTextBox.Location = New System.Drawing.Point(510, 130)
+        Me.FnameTextBox.Name = "FnameTextBox"
+        Me.FnameTextBox.Size = New System.Drawing.Size(216, 26)
+        Me.FnameTextBox.TabIndex = 87
+        '
+        'LnameTextBox
+        '
+        Me.LnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "lname", True))
+        Me.LnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.EnrollmentBindingSource, "lname", True))
+        Me.LnameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.LnameTextBox.Location = New System.Drawing.Point(267, 130)
+        Me.LnameTextBox.Name = "LnameTextBox"
+        Me.LnameTextBox.Size = New System.Drawing.Size(220, 26)
+        Me.LnameTextBox.TabIndex = 86
+        '
+        'SuffixTextBox
+        '
+        Me.SuffixTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "suffix", True))
+        Me.SuffixTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.SuffixTextBox.Location = New System.Drawing.Point(267, 235)
+        Me.SuffixTextBox.Name = "SuffixTextBox"
+        Me.SuffixTextBox.Size = New System.Drawing.Size(277, 26)
+        Me.SuffixTextBox.TabIndex = 89
+        '
+        'LrnTextBox
+        '
+        Me.LrnTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "lrn", True))
+        Me.LrnTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.LrnTextBox.Location = New System.Drawing.Point(564, 235)
+        Me.LrnTextBox.Name = "LrnTextBox"
+        Me.LrnTextBox.ReadOnly = True
+        Me.LrnTextBox.Size = New System.Drawing.Size(277, 26)
+        Me.LrnTextBox.TabIndex = 85
+        '
+        'DobDateTimePicker
+        '
+        Me.DobDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.EnrollmentBindingSource, "dob", True))
+        Me.DobDateTimePicker.Font = New System.Drawing.Font("Century Gothic", 12.0!)
+        Me.DobDateTimePicker.Location = New System.Drawing.Point(864, 234)
+        Me.DobDateTimePicker.Name = "DobDateTimePicker"
+        Me.DobDateTimePicker.Size = New System.Drawing.Size(277, 27)
+        Me.DobDateTimePicker.TabIndex = 90
+        '
+        'YrcTextBox
+        '
+        Me.YrcTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "yrc", True))
+        Me.YrcTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.YrcTextBox.Location = New System.Drawing.Point(878, 438)
+        Me.YrcTextBox.Name = "YrcTextBox"
+        Me.YrcTextBox.Size = New System.Drawing.Size(263, 26)
+        Me.YrcTextBox.TabIndex = 95
+        '
+        'PicPictureBox
+        '
+        Me.PicPictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.PicPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PicPictureBox.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PicPictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EnrollmentBindingSource, "pic", True))
+        Me.PicPictureBox.Location = New System.Drawing.Point(995, 59)
+        Me.PicPictureBox.Name = "PicPictureBox"
+        Me.PicPictureBox.Size = New System.Drawing.Size(146, 129)
+        Me.PicPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicPictureBox.TabIndex = 101
+        Me.PicPictureBox.TabStop = False
+        '
+        'NextBtn
+        '
+        Me.NextBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
+        Me.NextBtn.Location = New System.Drawing.Point(995, 549)
+        Me.NextBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.NextBtn.Name = "NextBtn"
+        Me.NextBtn.Size = New System.Drawing.Size(146, 63)
+        Me.NextBtn.TabIndex = 83
+        Me.NextBtn.Text = "Save"
+        Me.NextBtn.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(874, 413)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(128, 20)
+        Me.Label10.TabIndex = 75
+        Me.Label10.Text = "Year Completed"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(574, 414)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(33, 20)
+        Me.Label12.TabIndex = 78
+        Me.Label12.Text = "Sex"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(812, 527)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(72, 20)
+        Me.Label25.TabIndex = 77
+        Me.Label25.Text = "Form 137"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(813, 305)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(133, 20)
+        Me.Label11.TabIndex = 82
+        Me.Label11.Text = "Parent/Guardian"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(860, 211)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(99, 20)
+        Me.Label13.TabIndex = 79
+        Me.Label13.Text = "Date of Birth"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(750, 108)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(108, 20)
+        Me.Label14.TabIndex = 80
+        Me.Label14.Text = "Middle Name"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(561, 214)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(36, 20)
+        Me.Label15.TabIndex = 81
+        Me.Label15.Text = "LRN"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(721, 413)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(114, 20)
+        Me.Label16.TabIndex = 74
+        Me.Label16.Text = "Yrs Completed"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(630, 527)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(99, 20)
+        Me.Label20.TabIndex = 76
+        Me.Label20.Text = "Report Card"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(446, 527)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(99, 20)
+        Me.Label22.TabIndex = 73
+        Me.Label22.Text = "Good Moral"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(264, 527)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(40, 20)
+        Me.Label23.TabIndex = 66
+        Me.Label23.Text = "NSO"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(264, 414)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(144, 20)
+        Me.Label24.TabIndex = 72
+        Me.Label24.Text = "Last School Attend"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(264, 305)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(67, 20)
+        Me.Label26.TabIndex = 71
+        Me.Label26.Text = "Address"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(264, 214)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(45, 20)
+        Me.Label27.TabIndex = 70
+        Me.Label27.Text = "Suffix"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(506, 108)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(83, 20)
+        Me.Label28.TabIndex = 69
+        Me.Label28.Text = "First Name"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Impact", 40.0!)
+        Me.Label29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.Label29.Location = New System.Drawing.Point(256, 13)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(382, 66)
+        Me.Label29.TabIndex = 68
+        Me.Label29.Text = "Edit Information"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(265, 108)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(85, 20)
+        Me.Label30.TabIndex = 67
+        Me.Label30.Text = "Last Name"
+        '
+        'EnrollmentBindingSource
+        '
+        Me.EnrollmentBindingSource.DataMember = "Enrollment"
+        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'EnrollmentTableAdapter1
         '
         Me.EnrollmentTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
+        Me.TableAdapterManager.SectionsTableAdapter = Nothing
+        Me.TableAdapterManager.StaffTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'EnrollmentTableAdapter
+        '
+        Me.EnrollmentTableAdapter.ClearBeforeFill = True
         '
         'StudentInfo
         '
@@ -398,24 +717,46 @@ Partial Class StudentInfo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 681)
-        Me.Controls.Add(Me.Suffix)
+        Me.Controls.Add(Me.F137PictureBox)
+        Me.Controls.Add(Me.RcPictureBox)
+        Me.Controls.Add(Me.GmPictureBox)
+        Me.Controls.Add(Me.NsoPictureBox)
+        Me.Controls.Add(Me.YrscTextBox)
+        Me.Controls.Add(Me.SexComboBox)
+        Me.Controls.Add(Me.LsaTextBox)
+        Me.Controls.Add(Me.AddressTextBox)
+        Me.Controls.Add(Me.GuardianTextBox)
+        Me.Controls.Add(Me.MnameTextBox)
+        Me.Controls.Add(Me.FnameTextBox)
+        Me.Controls.Add(Me.LnameTextBox)
+        Me.Controls.Add(Me.SuffixTextBox)
+        Me.Controls.Add(Me.LrnTextBox)
+        Me.Controls.Add(Me.DobDateTimePicker)
+        Me.Controls.Add(Me.YrcTextBox)
+        Me.Controls.Add(Me.PicPictureBox)
+        Me.Controls.Add(Me.NextBtn)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label25)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.Label26)
+        Me.Controls.Add(Me.Label27)
+        Me.Controls.Add(Me.Label28)
+        Me.Controls.Add(Me.Label29)
+        Me.Controls.Add(Me.Label30)
         Me.Controls.Add(Me.Sidebar)
-        Me.Controls.Add(Me.Search_Label)
-        Me.Controls.Add(Me.Student_PictureBox)
-        Me.Controls.Add(Me.Save_btn)
-        Me.Controls.Add(Me.Edit_btn)
-        Me.Controls.Add(Me.Section_Text)
-        Me.Controls.Add(Me.LRN_Text)
-        Me.Controls.Add(Me.Address_Text)
-        Me.Controls.Add(Me.MiddleName_Text)
-        Me.Controls.Add(Me.FirstName_Text)
-        Me.Controls.Add(Me.LastName_Text)
-        Me.Controls.Add(Me.Student_Info_Text)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "StudentInfo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FLMS Enrollment System"
-        CType(Me.Student_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
         CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).EndInit()
@@ -424,22 +765,17 @@ Partial Class StudentInfo
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Search_Label As Label
-    Friend WithEvents Student_PictureBox As PictureBox
-    Friend WithEvents Save_btn As Button
-    Friend WithEvents Edit_btn As Button
-    Friend WithEvents Section_Text As TextBox
-    Friend WithEvents LRN_Text As TextBox
-    Friend WithEvents Address_Text As TextBox
-    Friend WithEvents MiddleName_Text As TextBox
-    Friend WithEvents FirstName_Text As TextBox
-    Friend WithEvents LastName_Text As TextBox
-    Friend WithEvents Student_Info_Text As Label
     Friend WithEvents Sidebar As Panel
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
@@ -454,9 +790,47 @@ Partial Class StudentInfo
     Friend WithEvents AddStaffPB As PictureBox
     Friend WithEvents CListPB As PictureBox
     Friend WithEvents EnrollmentPB As PictureBox
-    Friend WithEvents Suffix As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents NewClass_Label As Label
     Friend WithEvents NewClass_PB As PictureBox
     Friend WithEvents EnrollmentTableAdapter1 As DatabaseDataSetTableAdapters.EnrollmentTableAdapter
+    Friend WithEvents F137PictureBox As PictureBox
+    Friend WithEvents EnrollmentBindingSource As BindingSource
+    Friend WithEvents DatabaseDataSet As DatabaseDataSet
+    Friend WithEvents RcPictureBox As PictureBox
+    Friend WithEvents GmPictureBox As PictureBox
+    Friend WithEvents NsoPictureBox As PictureBox
+    Friend WithEvents YrscTextBox As TextBox
+    Friend WithEvents SexComboBox As ComboBox
+    Friend WithEvents LsaTextBox As TextBox
+    Friend WithEvents AddressTextBox As TextBox
+    Friend WithEvents GuardianTextBox As TextBox
+    Friend WithEvents MnameTextBox As TextBox
+    Friend WithEvents FnameTextBox As TextBox
+    Friend WithEvents LnameTextBox As TextBox
+    Friend WithEvents SuffixTextBox As TextBox
+    Friend WithEvents LrnTextBox As TextBox
+    Friend WithEvents DobDateTimePicker As DateTimePicker
+    Friend WithEvents YrcTextBox As TextBox
+    Friend WithEvents PicPictureBox As PictureBox
+    Friend WithEvents TableAdapterManager As DatabaseDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents NextBtn As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents EnrollmentTableAdapter As DatabaseDataSetTableAdapters.EnrollmentTableAdapter
 End Class
