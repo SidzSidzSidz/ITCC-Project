@@ -42,6 +42,8 @@ Partial Class StudentInfo
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
         Me.F137PictureBox = New System.Windows.Forms.PictureBox()
+        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.RcPictureBox = New System.Windows.Forms.PictureBox()
         Me.GmPictureBox = New System.Windows.Forms.PictureBox()
         Me.NsoPictureBox = New System.Windows.Forms.PictureBox()
@@ -76,9 +78,6 @@ Partial Class StudentInfo
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
-        Me.EnrollmentTableAdapter1 = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         Me.Sidebar.SuspendLayout()
@@ -89,12 +88,12 @@ Partial Class StudentInfo
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Sidebar
@@ -317,6 +316,16 @@ Partial Class StudentInfo
         Me.F137PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.F137PictureBox.TabIndex = 100
         Me.F137PictureBox.TabStop = False
+        '
+        'EnrollmentBindingSource
+        '
+        Me.EnrollmentBindingSource.DataMember = "Enrollment"
+        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'RcPictureBox
         '
@@ -684,20 +693,6 @@ Partial Class StudentInfo
         Me.Label30.TabIndex = 67
         Me.Label30.Text = "Last Name"
         '
-        'EnrollmentBindingSource
-        '
-        Me.EnrollmentBindingSource.DataMember = "Enrollment"
-        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet
-        '
-        'DatabaseDataSet
-        '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EnrollmentTableAdapter1
-        '
-        Me.EnrollmentTableAdapter1.ClearBeforeFill = True
-        '
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
@@ -766,12 +761,12 @@ Partial Class StudentInfo
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -793,7 +788,6 @@ Partial Class StudentInfo
     Friend WithEvents Label1 As Label
     Friend WithEvents NewClass_Label As Label
     Friend WithEvents NewClass_PB As PictureBox
-    Friend WithEvents EnrollmentTableAdapter1 As DatabaseDataSetTableAdapters.EnrollmentTableAdapter
     Friend WithEvents F137PictureBox As PictureBox
     Friend WithEvents EnrollmentBindingSource As BindingSource
     Friend WithEvents DatabaseDataSet As DatabaseDataSet

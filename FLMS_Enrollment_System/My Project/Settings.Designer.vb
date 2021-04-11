@@ -93,8 +93,9 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|Data Directory|\Database.mdf"& _ 
-            ";Integrated Security=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Docume"& _ 
+            "nts\GitHub\ITCC-Project\FLMS_Enrollment_System\Database.mdf;Integrated Security="& _ 
+            "True")>  _
         Public ReadOnly Property DatabaseConnectionString3() As String
             Get
                 Return CType(Me("DatabaseConnectionString3"),String)
@@ -104,11 +105,23 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;"& _ 
-            "Integrated Security=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Docume"& _ 
+            "nts\GitHub\ITCC-Project\FLMS_Enrollment_System\Database.mdf;Integrated Security="& _ 
+            "True")>  _
         Public ReadOnly Property DatabaseConnectionString4() As String
             Get
                 Return CType(Me("DatabaseConnectionString4"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;"& _ 
+            "Integrated Security=True")>  _
+        Public ReadOnly Property DatabaseConnectionString5() As String
+            Get
+                Return CType(Me("DatabaseConnectionString5"),String)
             End Get
         End Property
     End Class

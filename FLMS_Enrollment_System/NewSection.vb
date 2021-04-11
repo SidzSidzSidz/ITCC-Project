@@ -41,8 +41,9 @@
     End Sub
 
     Private Sub Add_btn_Click(sender As Object, e As EventArgs) Handles Add_btn.Click
-        Dim PrimaryKey = SYTextBox.Text + " " + YearLevelComboBox.Text + " " + SectionTextBox.Text
+
         Dim SY = SYTextBox.Text + "-" + TextBox1.Text
+        Dim PrimaryKey = SY + " " + YearLevelComboBox.Text + " " + SectionTextBox.Text
         SectionsTableAdapter.SectionFn(YearLevelComboBox.Text, SectionTextBox.Text, MaxStudentsTextBox.Text, SY, PrimaryKey)
         Me.SectionsTableAdapter.Update(DatabaseDataSet.Sections)
         Me.SectionsTableAdapter.Fill(Me.DatabaseDataSet.Sections)

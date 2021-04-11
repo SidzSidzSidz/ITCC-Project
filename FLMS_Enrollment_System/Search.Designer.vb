@@ -49,10 +49,10 @@ Partial Class Search
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Search1_Panel = New System.Windows.Forms.Panel()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatabaseDataSet1 = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.EditInfo_Panel = New System.Windows.Forms.Panel()
         Me.SYTextBox = New System.Windows.Forms.TextBox()
+        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.F137PictureBox = New System.Windows.Forms.PictureBox()
         Me.RcPictureBox = New System.Windows.Forms.PictureBox()
         Me.GmPictureBox = New System.Windows.Forms.PictureBox()
@@ -89,8 +89,8 @@ Partial Class Search
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
+        Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         Me.Sidebar.SuspendLayout()
         CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,9 +101,9 @@ Partial Class Search
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Search1_Panel.SuspendLayout()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EditInfo_Panel.SuspendLayout()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -397,8 +397,6 @@ Partial Class Search
         '
         'ComboBox1
         '
-        Me.ComboBox1.DataSource = Me.EnrollmentBindingSource
-        Me.ComboBox1.DisplayMember = "sy"
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.25!)
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(248, 290)
@@ -406,11 +404,6 @@ Partial Class Search
         Me.ComboBox1.Size = New System.Drawing.Size(569, 37)
         Me.ComboBox1.TabIndex = 13
         Me.ComboBox1.ValueMember = "sy"
-        '
-        'EnrollmentBindingSource
-        '
-        Me.EnrollmentBindingSource.DataMember = "Enrollment"
-        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet1
         '
         'DatabaseDataSet1
         '
@@ -469,6 +462,11 @@ Partial Class Search
         Me.SYTextBox.Name = "SYTextBox"
         Me.SYTextBox.Size = New System.Drawing.Size(146, 26)
         Me.SYTextBox.TabIndex = 137
+        '
+        'EnrollmentBindingSource
+        '
+        Me.EnrollmentBindingSource.DataMember = "Enrollment"
+        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet1
         '
         'F137PictureBox
         '
@@ -858,17 +856,18 @@ Partial Class Search
         Me.Label30.TabIndex = 103
         Me.Label30.Text = "Last Name"
         '
-        'EnrollmentTableAdapter
-        '
-        Me.EnrollmentTableAdapter.ClearBeforeFill = True
-        '
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.EnrollmentTableAdapter = Me.EnrollmentTableAdapter
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
         Me.TableAdapterManager.SectionsTableAdapter = Nothing
         Me.TableAdapterManager.StaffTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'EnrollmentTableAdapter
+        '
+        Me.EnrollmentTableAdapter.ClearBeforeFill = True
         '
         'Search
         '
@@ -895,10 +894,10 @@ Partial Class Search
         Me.Panel1.ResumeLayout(False)
         Me.Search1_Panel.ResumeLayout(False)
         Me.Search1_Panel.PerformLayout()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EditInfo_Panel.ResumeLayout(False)
         Me.EditInfo_Panel.PerformLayout()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
@@ -969,9 +968,9 @@ Partial Class Search
     Friend WithEvents Label30 As Label
     Friend WithEvents DatabaseDataSet1 As DatabaseDataSet
     Friend WithEvents EnrollmentBindingSource As BindingSource
-    Friend WithEvents EnrollmentTableAdapter As DatabaseDataSetTableAdapters.EnrollmentTableAdapter
     Friend WithEvents TableAdapterManager As DatabaseDataSetTableAdapters.TableAdapterManager
     Friend WithEvents SYTextBox As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents EnrollmentTableAdapter As DatabaseDataSetTableAdapters.EnrollmentTableAdapter
 End Class

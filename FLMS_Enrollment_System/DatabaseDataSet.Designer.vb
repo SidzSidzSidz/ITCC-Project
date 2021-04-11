@@ -1017,6 +1017,8 @@ Partial Public Class DatabaseDataSet
         
         Private columnsy As Global.System.Data.DataColumn
         
+        Private columngradelevel As Global.System.Data.DataColumn
+        
         Private columnsection As Global.System.Data.DataColumn
         
         Private columnlrn_sy As Global.System.Data.DataColumn
@@ -1202,6 +1204,14 @@ Partial Public Class DatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property gradelevelColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columngradelevel
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property sectionColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnsection
@@ -1272,10 +1282,11 @@ Partial Public Class DatabaseDataSet
                     ByVal f137() As Byte,  _
                     ByVal pic() As Byte,  _
                     ByVal sy As String,  _
+                    ByVal gradelevel As String,  _
                     ByVal section As String,  _
                     ByVal lrn_sy As String) As EnrollmentRow
             Dim rowEnrollmentRow As EnrollmentRow = CType(Me.NewRow,EnrollmentRow)
-            Dim columnValuesArray() As Object = New Object() {lrn, lname, mname, fname, suffix, dob, address, guardian, lsa, sex, yrc, yrsc, nso, gm, rc, f137, pic, sy, section, lrn_sy}
+            Dim columnValuesArray() As Object = New Object() {lrn, lname, mname, fname, suffix, dob, address, guardian, lsa, sex, yrc, yrsc, nso, gm, rc, f137, pic, sy, gradelevel, section, lrn_sy}
             rowEnrollmentRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowEnrollmentRow)
             Return rowEnrollmentRow
@@ -1322,6 +1333,7 @@ Partial Public Class DatabaseDataSet
             Me.columnf137 = MyBase.Columns("f137")
             Me.columnpic = MyBase.Columns("pic")
             Me.columnsy = MyBase.Columns("sy")
+            Me.columngradelevel = MyBase.Columns("gradelevel")
             Me.columnsection = MyBase.Columns("section")
             Me.columnlrn_sy = MyBase.Columns("lrn_sy")
         End Sub
@@ -1365,6 +1377,8 @@ Partial Public Class DatabaseDataSet
             MyBase.Columns.Add(Me.columnpic)
             Me.columnsy = New Global.System.Data.DataColumn("sy", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnsy)
+            Me.columngradelevel = New Global.System.Data.DataColumn("gradelevel", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columngradelevel)
             Me.columnsection = New Global.System.Data.DataColumn("section", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnsection)
             Me.columnlrn_sy = New Global.System.Data.DataColumn("lrn_sy", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -1386,6 +1400,7 @@ Partial Public Class DatabaseDataSet
             Me.columnsex.MaxLength = 6
             Me.columnyrsc.MaxLength = 50
             Me.columnsy.MaxLength = 50
+            Me.columngradelevel.MaxLength = 50
             Me.columnsection.MaxLength = 50
             Me.columnlrn_sy.AllowDBNull = false
             Me.columnlrn_sy.Unique = true
@@ -1913,6 +1928,21 @@ Partial Public Class DatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property gradelevel() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableEnrollment.gradelevelColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'gradelevel' in table 'Enrollment' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableEnrollment.gradelevelColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property section() As String
             Get
                 Try 
@@ -2079,6 +2109,18 @@ Partial Public Class DatabaseDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetsyNull()
             Me(Me.tableEnrollment.syColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsgradelevelNull() As Boolean
+            Return Me.IsNull(Me.tableEnrollment.gradelevelColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetgradelevelNull()
+            Me(Me.tableEnrollment.gradelevelColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2880,10 +2922,8 @@ Namespace DatabaseDataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT YearLevel, Section, MaxStudents, SY, SYLevelSection FROM dbo.Sections wher"& _ 
-                "e yearlevel = @yearlevel"
+            Me._commandCollection(1).CommandText = "SELECT  SY where sy =@sy"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Sections"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"DISTINCT "
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@yearlevel", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "YearLevel", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "SELECT        YearLevel, Section, MaxStudents, SY, SYLevelSection"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM          "& _ 
@@ -2931,13 +2971,8 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByYearLevel(ByVal dataTable As DatabaseDataSet.SectionsDataTable, ByVal yearlevel As String) As Integer
+        Public Overloads Overridable Function FillByYearLevel(ByVal dataTable As DatabaseDataSet.SectionsDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (yearlevel Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("yearlevel")
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(yearlevel,String)
-            End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -2949,13 +2984,8 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetByYearLevel(ByVal yearlevel As String) As DatabaseDataSet.SectionsDataTable
+        Public Overloads Overridable Function GetByYearLevel() As DatabaseDataSet.SectionsDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (yearlevel Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("yearlevel")
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(yearlevel,String)
-            End If
             Dim dataTable As DatabaseDataSet.SectionsDataTable = New DatabaseDataSet.SectionsDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -3348,6 +3378,7 @@ Namespace DatabaseDataSetTableAdapters
             tableMapping.ColumnMappings.Add("f137", "f137")
             tableMapping.ColumnMappings.Add("pic", "pic")
             tableMapping.ColumnMappings.Add("sy", "sy")
+            tableMapping.ColumnMappings.Add("gradelevel", "gradelevel")
             tableMapping.ColumnMappings.Add("section", "section")
             tableMapping.ColumnMappings.Add("lrn_sy", "lrn_sy")
             Me._adapter.TableMappings.Add(tableMapping)
@@ -3362,8 +3393,9 @@ Namespace DatabaseDataSetTableAdapters
                 "([lsa] = @Original_lsa)) AND ([sex] = @Original_sex) AND ((@IsNull_yrc = 1 AND ["& _ 
                 "yrc] IS NULL) OR ([yrc] = @Original_yrc)) AND ((@IsNull_yrsc = 1 AND [yrsc] IS N"& _ 
                 "ULL) OR ([yrsc] = @Original_yrsc)) AND ((@IsNull_sy = 1 AND [sy] IS NULL) OR ([s"& _ 
-                "y] = @Original_sy)) AND ((@IsNull_section = 1 AND [section] IS NULL) OR ([sectio"& _ 
-                "n] = @Original_section)) AND ([lrn_sy] = @Original_lrn_sy))"
+                "y] = @Original_sy)) AND ((@IsNull_gradelevel = 1 AND [gradelevel] IS NULL) OR (["& _ 
+                "gradelevel] = @Original_gradelevel)) AND ((@IsNull_section = 1 AND [section] IS "& _ 
+                "NULL) OR ([section] = @Original_section)) AND ([lrn_sy] = @Original_lrn_sy))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_lrn", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_lname", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lname", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -3385,6 +3417,8 @@ Namespace DatabaseDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_yrsc", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "yrsc", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_sy", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "sy", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_sy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "sy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_gradelevel", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "gradelevel", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_gradelevel", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "gradelevel", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_section", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "section", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_section", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "section", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_lrn_sy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn_sy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -3392,11 +3426,11 @@ Namespace DatabaseDataSetTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Enrollment] ([lrn], [lname], [mname], [fname], [suffix], [dob]"& _ 
                 ", [address], [guardian], [lsa], [sex], [yrc], [yrsc], [nso], [gm], [rc], [f137],"& _ 
-                " [pic], [sy], [section], [lrn_sy]) VALUES (@lrn, @lname, @mname, @fname, @suffix"& _ 
-                ", @dob, @address, @guardian, @lsa, @sex, @yrc, @yrsc, @nso, @gm, @rc, @f137, @pi"& _ 
-                "c, @sy, @section, @lrn_sy);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT lrn, lname, mname, fname, suffix, dob, addre"& _ 
-                "ss, guardian, lsa, sex, yrc, yrsc, nso, gm, rc, f137, pic, sy, section, lrn_sy F"& _ 
-                "ROM Enrollment WHERE (lrn_sy = @lrn_sy)"
+                " [pic], [sy], [gradelevel], [section], [lrn_sy]) VALUES (@lrn, @lname, @mname, @"& _ 
+                "fname, @suffix, @dob, @address, @guardian, @lsa, @sex, @yrc, @yrsc, @nso, @gm, @"& _ 
+                "rc, @f137, @pic, @sy, @gradelevel, @section, @lrn_sy);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT lrn, lname, mname"& _ 
+                ", fname, suffix, dob, address, guardian, lsa, sex, yrc, yrsc, nso, gm, rc, f137,"& _ 
+                " pic, sy, gradelevel, section, lrn_sy FROM Enrollment WHERE (lrn_sy = @lrn_sy)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lname", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -3416,6 +3450,7 @@ Namespace DatabaseDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@f137", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "f137", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@pic", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "pic", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@sy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "sy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@gradelevel", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "gradelevel", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@section", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "section", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn_sy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn_sy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
@@ -3423,20 +3458,22 @@ Namespace DatabaseDataSetTableAdapters
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Enrollment] SET [lrn] = @lrn, [lname] = @lname, [mname] = @mname, ["& _ 
                 "fname] = @fname, [suffix] = @suffix, [dob] = @dob, [address] = @address, [guardi"& _ 
                 "an] = @guardian, [lsa] = @lsa, [sex] = @sex, [yrc] = @yrc, [yrsc] = @yrsc, [nso]"& _ 
-                " = @nso, [gm] = @gm, [rc] = @rc, [f137] = @f137, [pic] = @pic, [sy] = @sy, [sect"& _ 
-                "ion] = @section, [lrn_sy] = @lrn_sy WHERE (([lrn] = @Original_lrn) AND ([lname] "& _ 
-                "= @Original_lname) AND ((@IsNull_mname = 1 AND [mname] IS NULL) OR ([mname] = @O"& _ 
-                "riginal_mname)) AND ([fname] = @Original_fname) AND ((@IsNull_suffix = 1 AND [su"& _ 
-                "ffix] IS NULL) OR ([suffix] = @Original_suffix)) AND ([dob] = @Original_dob) AND"& _ 
-                " ([address] = @Original_address) AND ((@IsNull_guardian = 1 AND [guardian] IS NU"& _ 
-                "LL) OR ([guardian] = @Original_guardian)) AND ((@IsNull_lsa = 1 AND [lsa] IS NUL"& _ 
-                "L) OR ([lsa] = @Original_lsa)) AND ([sex] = @Original_sex) AND ((@IsNull_yrc = 1"& _ 
-                " AND [yrc] IS NULL) OR ([yrc] = @Original_yrc)) AND ((@IsNull_yrsc = 1 AND [yrsc"& _ 
-                "] IS NULL) OR ([yrsc] = @Original_yrsc)) AND ((@IsNull_sy = 1 AND [sy] IS NULL) "& _ 
-                "OR ([sy] = @Original_sy)) AND ((@IsNull_section = 1 AND [section] IS NULL) OR (["& _ 
-                "section] = @Original_section)) AND ([lrn_sy] = @Original_lrn_sy));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT lrn, "& _ 
-                "lname, mname, fname, suffix, dob, address, guardian, lsa, sex, yrc, yrsc, nso, g"& _ 
-                "m, rc, f137, pic, sy, section, lrn_sy FROM Enrollment WHERE (lrn_sy = @lrn_sy)"
+                " = @nso, [gm] = @gm, [rc] = @rc, [f137] = @f137, [pic] = @pic, [sy] = @sy, [grad"& _ 
+                "elevel] = @gradelevel, [section] = @section, [lrn_sy] = @lrn_sy WHERE (([lrn] = "& _ 
+                "@Original_lrn) AND ([lname] = @Original_lname) AND ((@IsNull_mname = 1 AND [mnam"& _ 
+                "e] IS NULL) OR ([mname] = @Original_mname)) AND ([fname] = @Original_fname) AND "& _ 
+                "((@IsNull_suffix = 1 AND [suffix] IS NULL) OR ([suffix] = @Original_suffix)) AND"& _ 
+                " ([dob] = @Original_dob) AND ([address] = @Original_address) AND ((@IsNull_guard"& _ 
+                "ian = 1 AND [guardian] IS NULL) OR ([guardian] = @Original_guardian)) AND ((@IsN"& _ 
+                "ull_lsa = 1 AND [lsa] IS NULL) OR ([lsa] = @Original_lsa)) AND ([sex] = @Origina"& _ 
+                "l_sex) AND ((@IsNull_yrc = 1 AND [yrc] IS NULL) OR ([yrc] = @Original_yrc)) AND "& _ 
+                "((@IsNull_yrsc = 1 AND [yrsc] IS NULL) OR ([yrsc] = @Original_yrsc)) AND ((@IsNu"& _ 
+                "ll_sy = 1 AND [sy] IS NULL) OR ([sy] = @Original_sy)) AND ((@IsNull_gradelevel ="& _ 
+                " 1 AND [gradelevel] IS NULL) OR ([gradelevel] = @Original_gradelevel)) AND ((@Is"& _ 
+                "Null_section = 1 AND [section] IS NULL) OR ([section] = @Original_section)) AND "& _ 
+                "([lrn_sy] = @Original_lrn_sy));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT lrn, lname, mname, fname, suffix, dob, a"& _ 
+                "ddress, guardian, lsa, sex, yrc, yrsc, nso, gm, rc, f137, pic, sy, gradelevel, s"& _ 
+                "ection, lrn_sy FROM Enrollment WHERE (lrn_sy = @lrn_sy)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lname", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -3456,6 +3493,7 @@ Namespace DatabaseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@f137", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "f137", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@pic", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "pic", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@sy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "sy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@gradelevel", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "gradelevel", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@section", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "section", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn_sy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn_sy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_lrn", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -3478,6 +3516,8 @@ Namespace DatabaseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_yrsc", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "yrsc", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_sy", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "sy", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_sy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "sy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_gradelevel", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "gradelevel", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_gradelevel", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "gradelevel", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_section", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "section", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_section", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "section", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_lrn_sy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn_sy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -3487,7 +3527,7 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.FLMS_Enrollment_System.My.MySettings.Default.DatabaseConnectionString4
+            Me._connection.ConnectionString = Global.FLMS_Enrollment_System.My.MySettings.Default.DatabaseConnectionString5
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3497,15 +3537,16 @@ Namespace DatabaseDataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT lrn, lname, mname, fname, suffix, dob, address, guardian, lsa, sex, yrc, y"& _ 
-                "rsc, nso, gm, rc, f137, pic, sy, section, lrn_sy FROM dbo.Enrollment"
+                "rsc, nso, gm, rc, f137, pic, sy, gradelevel, section, lrn_sy FROM dbo.Enrollment"& _ 
+                ""
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "INSERT INTO [dbo].[Enrollment] ([lrn], [lname], [mname], [fname], [suffix], [dob]"& _ 
                 ", [address], [guardian], [lsa], [sex], [yrc], [yrsc], [nso], [gm], [rc], [f137],"& _ 
-                " [pic], [sy], [section], [lrn_sy]) VALUES (@lrn, @lname, @mname, @fname, @suffix"& _ 
-                ", @dob, @address, @guardian, @lsa, @sex, @yrc, @yrsc, @nso, @gm, @rc, @f137, @pi"& _ 
-                "c, @sy, @section, @lrn_sy);"
+                " [pic], [sy], [gradelevel], [section], [lrn_sy]) VALUES (@lrn, @lname, @mname, @"& _ 
+                "fname, @suffix, @dob, @address, @guardian, @lsa, @sex, @yrc, @yrsc, @nso, @gm, @"& _ 
+                "rc, @f137, @pic, @sy, @gradelevel, @section, @lrn_sy);"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lname", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "lname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -3525,28 +3566,30 @@ Namespace DatabaseDataSetTableAdapters
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@f137", Global.System.Data.SqlDbType.Image, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, "f137", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@pic", Global.System.Data.SqlDbType.Image, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, "pic", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@sy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "sy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@gradelevel", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "gradelevel", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@section", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "section", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn_sy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn_sy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "SELECT lrn, lname, mname, fname, suffix, dob, address, guardian, lsa, sex, yrc, y"& _ 
-                "rsc, nso, gm, rc, f137, pic, sy, section, lrn_sy FROM dbo.Enrollment where lrn_s"& _ 
-                "y = @lrn_sy and section = @section"
+                "rsc, nso, gm, rc, f137, pic, sy, gradelevel, section, lrn_sy FROM dbo.Enrollment"& _ 
+                " where (sy = @sy) and (section = @section) and (gradelevel = @gradelevel)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn_sy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn_sy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@sy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "sy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@section", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "section", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@gradelevel", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "gradelevel", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
             Me._commandCollection(3).CommandText = "SELECT lrn, lname, mname, fname, suffix, dob, address, guardian, lsa, sex, yrc, y"& _ 
-                "rsc, nso, gm, rc, f137, pic, sy, section, lrn_sy FROM dbo.Enrollment where lrn_s"& _ 
-                "y = @lrn_sy"
+                "rsc, nso, gm, rc, f137, pic, sy, section, lrn_sy FROM Enrollment WHERE (lrn_sy ="& _ 
+                " @lrn_sy)"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn_sy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn_sy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "SELECT COUNT(*) FROM Enrollment where lrn = @lrn"
+            Me._commandCollection(4).CommandText = "SELECT COUNT(*) FROM Enrollment where lrn_sy = @lrn_sy"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn_sy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn_sy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(5).Connection = Me.Connection
             Me._commandCollection(5).CommandText = "UPDATE [dbo].[Enrollment] SET [lrn] = @lrn, [lname] = @lname, [mname] = @mname, ["& _ 
@@ -3565,7 +3608,7 @@ Namespace DatabaseDataSetTableAdapters
                 "OR ([sy] = @Original_sy)) AND ((@IsNull_section = 1 AND [section] IS NULL) OR (["& _ 
                 "section] = @Original_section)) AND ([lrn_sy] = @Original_lrn_sy));"
             Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lname", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "lname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mname", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "mname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fname", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "fname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -3585,7 +3628,7 @@ Namespace DatabaseDataSetTableAdapters
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@sy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "sy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@section", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "section", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn_sy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn_sy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_lrn", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_lrn", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_lname", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "lname", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_mname", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "mname", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_mname", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "mname", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -3638,17 +3681,22 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBySection(ByVal dataTable As DatabaseDataSet.EnrollmentDataTable, ByVal lrn_sy As String, ByVal section As String) As Integer
+        Public Overloads Overridable Function FillBySection(ByVal dataTable As DatabaseDataSet.EnrollmentDataTable, ByVal sy As String, ByVal section As String, ByVal gradelevel As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
-            If (lrn_sy Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("lrn_sy")
+            If (sy Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(lrn_sy,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(sy,String)
             End If
             If (section Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(section,String)
+            End If
+            If (gradelevel Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(gradelevel,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -3661,17 +3709,22 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetBySection(ByVal lrn_sy As String, ByVal section As String) As DatabaseDataSet.EnrollmentDataTable
+        Public Overloads Overridable Function GetDataBySection(ByVal sy As String, ByVal section As String, ByVal gradelevel As String) As DatabaseDataSet.EnrollmentDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
-            If (lrn_sy Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("lrn_sy")
+            If (sy Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(lrn_sy,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(sy,String)
             End If
             If (section Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(section,String)
+            End If
+            If (gradelevel Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(gradelevel,String)
             End If
             Dim dataTable As DatabaseDataSet.EnrollmentDataTable = New DatabaseDataSet.EnrollmentDataTable()
             Me.Adapter.Fill(dataTable)
@@ -3744,7 +3797,23 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_lrn As Integer, ByVal Original_lname As String, ByVal Original_mname As String, ByVal Original_fname As String, ByVal Original_suffix As String, ByVal Original_dob As Date, ByVal Original_address As String, ByVal Original_guardian As String, ByVal Original_lsa As String, ByVal Original_sex As String, ByVal Original_yrc As Global.System.Nullable(Of Integer), ByVal Original_yrsc As String, ByVal Original_sy As String, ByVal Original_section As String, ByVal Original_lrn_sy As String) As Integer
+        Public Overloads Overridable Function Delete( _
+                    ByVal Original_lrn As Integer,  _
+                    ByVal Original_lname As String,  _
+                    ByVal Original_mname As String,  _
+                    ByVal Original_fname As String,  _
+                    ByVal Original_suffix As String,  _
+                    ByVal Original_dob As Date,  _
+                    ByVal Original_address As String,  _
+                    ByVal Original_guardian As String,  _
+                    ByVal Original_lsa As String,  _
+                    ByVal Original_sex As String,  _
+                    ByVal Original_yrc As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_yrsc As String,  _
+                    ByVal Original_sy As String,  _
+                    ByVal Original_gradelevel As String,  _
+                    ByVal Original_section As String,  _
+                    ByVal Original_lrn_sy As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_lrn,Integer)
             If (Original_lname Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_lname")
@@ -3816,17 +3885,24 @@ Namespace DatabaseDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(18).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(19).Value = CType(Original_sy,String)
             End If
-            If (Original_section Is Nothing) Then
+            If (Original_gradelevel Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(20).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(Original_section,String)
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(Original_gradelevel,String)
+            End If
+            If (Original_section Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(23).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(Original_section,String)
             End If
             If (Original_lrn_sy Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_lrn_sy")
             Else
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_lrn_sy,String)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_lrn_sy,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3866,6 +3942,7 @@ Namespace DatabaseDataSetTableAdapters
                     ByVal f137() As Byte,  _
                     ByVal pic() As Byte,  _
                     ByVal sy As String,  _
+                    ByVal gradelevel As String,  _
                     ByVal section As String,  _
                     ByVal lrn_sy As String) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(lrn,Integer)
@@ -3950,15 +4027,20 @@ Namespace DatabaseDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(17).Value = CType(sy,String)
             End If
-            If (section Is Nothing) Then
+            If (gradelevel Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(18).Value = CType(section,String)
+                Me.Adapter.InsertCommand.Parameters(18).Value = CType(gradelevel,String)
+            End If
+            If (section Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(19).Value = CType(section,String)
             End If
             If (lrn_sy Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("lrn_sy")
             Else
-                Me.Adapter.InsertCommand.Parameters(19).Value = CType(lrn_sy,String)
+                Me.Adapter.InsertCommand.Parameters(20).Value = CType(lrn_sy,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3998,6 +4080,7 @@ Namespace DatabaseDataSetTableAdapters
                     ByVal f137() As Byte,  _
                     ByVal pic() As Byte,  _
                     ByVal sy As String,  _
+                    ByVal gradelevel As String,  _
                     ByVal section As String,  _
                     ByVal lrn_sy As String,  _
                     ByVal Original_lrn As Integer,  _
@@ -4013,6 +4096,7 @@ Namespace DatabaseDataSetTableAdapters
                     ByVal Original_yrc As Global.System.Nullable(Of Integer),  _
                     ByVal Original_yrsc As String,  _
                     ByVal Original_sy As String,  _
+                    ByVal Original_gradelevel As String,  _
                     ByVal Original_section As String,  _
                     ByVal Original_lrn_sy As String) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(lrn,Integer)
@@ -4097,98 +4181,110 @@ Namespace DatabaseDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(17).Value = CType(sy,String)
             End If
-            If (section Is Nothing) Then
+            If (gradelevel Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(section,String)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(gradelevel,String)
+            End If
+            If (section Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(section,String)
             End If
             If (lrn_sy Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("lrn_sy")
             Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(lrn_sy,String)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(lrn_sy,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_lrn,Integer)
+            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_lrn,Integer)
             If (Original_lname Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_lname")
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_lname,String)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_lname,String)
             End If
             If (Original_mname Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_mname,String)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_mname,String)
             End If
             If (Original_fname Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_fname")
             Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_fname,String)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_fname,String)
             End If
             If (Original_suffix Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_suffix,String)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_suffix,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_dob,Date)
+            Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_dob,Date)
             If (Original_address Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_address")
             Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_address,String)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_address,String)
             End If
             If (Original_guardian Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_guardian,String)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_guardian,String)
             End If
             If (Original_lsa Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_lsa,String)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_lsa,String)
             End If
             If (Original_sex Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_sex")
             Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_sex,String)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_sex,String)
             End If
             If (Original_yrc.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_yrc.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_yrc.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
             End If
             If (Original_yrsc Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_yrsc,String)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_yrsc,String)
             End If
             If (Original_sy Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(Original_sy,String)
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_sy,String)
+            End If
+            If (Original_gradelevel Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_gradelevel,String)
             End If
             If (Original_section Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(41).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(Original_section,String)
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_section,String)
             End If
             If (Original_lrn_sy Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_lrn_sy")
             Else
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_lrn_sy,String)
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(Original_lrn_sy,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -4228,6 +4324,7 @@ Namespace DatabaseDataSetTableAdapters
                     ByVal f137() As Byte,  _
                     ByVal pic() As Byte,  _
                     ByVal sy As String,  _
+                    ByVal gradelevel As String,  _
                     ByVal section As String,  _
                     ByVal Original_lrn As Integer,  _
                     ByVal Original_lname As String,  _
@@ -4242,9 +4339,10 @@ Namespace DatabaseDataSetTableAdapters
                     ByVal Original_yrc As Global.System.Nullable(Of Integer),  _
                     ByVal Original_yrsc As String,  _
                     ByVal Original_sy As String,  _
+                    ByVal Original_gradelevel As String,  _
                     ByVal Original_section As String,  _
                     ByVal Original_lrn_sy As String) As Integer
-            Return Me.Update(lrn, lname, mname, fname, suffix, dob, address, guardian, lsa, sex, yrc, yrsc, nso, gm, rc, f137, pic, sy, section, Original_lrn_sy, Original_lrn, Original_lname, Original_mname, Original_fname, Original_suffix, Original_dob, Original_address, Original_guardian, Original_lsa, Original_sex, Original_yrc, Original_yrsc, Original_sy, Original_section, Original_lrn_sy)
+            Return Me.Update(lrn, lname, mname, fname, suffix, dob, address, guardian, lsa, sex, yrc, yrsc, nso, gm, rc, f137, pic, sy, gradelevel, section, Original_lrn_sy, Original_lrn, Original_lname, Original_mname, Original_fname, Original_suffix, Original_dob, Original_address, Original_guardian, Original_lsa, Original_sex, Original_yrc, Original_yrsc, Original_sy, Original_gradelevel, Original_section, Original_lrn_sy)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4270,6 +4368,7 @@ Namespace DatabaseDataSetTableAdapters
                     ByVal f137() As Byte,  _
                     ByVal pic() As Byte,  _
                     ByVal sy As String,  _
+                    ByVal gradelevel As String,  _
                     ByVal section As String,  _
                     ByVal lrn_sy As String) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
@@ -4359,15 +4458,20 @@ Namespace DatabaseDataSetTableAdapters
             Else
                 command.Parameters(17).Value = CType(sy,String)
             End If
-            If (section Is Nothing) Then
+            If (gradelevel Is Nothing) Then
                 command.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(18).Value = CType(section,String)
+                command.Parameters(18).Value = CType(gradelevel,String)
+            End If
+            If (section Is Nothing) Then
+                command.Parameters(19).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(19).Value = CType(section,String)
             End If
             If (lrn_sy Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("lrn_sy")
             Else
-                command.Parameters(19).Value = CType(lrn_sy,String)
+                command.Parameters(20).Value = CType(lrn_sy,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -4388,9 +4492,13 @@ Namespace DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function SearchStudent(ByVal lrn As Integer) As Object
+        Public Overloads Overridable Function SearchStudent(ByVal lrn_sy As String) As Object
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
-            command.Parameters(0).Value = CType(lrn,Integer)
+            If (lrn_sy Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("lrn_sy")
+            Else
+                command.Parameters(0).Value = CType(lrn_sy,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -4417,7 +4525,7 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
         Public Overloads Overridable Function UpdateEnrollment( _
-                    ByVal lrn As Integer,  _
+                    ByVal lrn As String,  _
                     ByVal lname As String,  _
                     ByVal mname As String,  _
                     ByVal fname As String,  _
@@ -4437,7 +4545,7 @@ Namespace DatabaseDataSetTableAdapters
                     ByVal sy As String,  _
                     ByVal section As String,  _
                     ByVal lrn_sy As String,  _
-                    ByVal Original_lrn As Integer,  _
+                    ByVal Original_lrn As String,  _
                     ByVal Original_lname As String,  _
                     ByVal IsNull_mname As Global.System.Nullable(Of Integer),  _
                     ByVal Original_mname As String,  _
@@ -4461,7 +4569,11 @@ Namespace DatabaseDataSetTableAdapters
                     ByVal Original_section As String,  _
                     ByVal Original_lrn_sy As String) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(5)
-            command.Parameters(0).Value = CType(lrn,Integer)
+            If (lrn Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("lrn")
+            Else
+                command.Parameters(0).Value = CType(lrn,String)
+            End If
             If (lname Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("lname")
             Else
@@ -4557,7 +4669,11 @@ Namespace DatabaseDataSetTableAdapters
             Else
                 command.Parameters(19).Value = CType(lrn_sy,String)
             End If
-            command.Parameters(20).Value = CType(Original_lrn,Integer)
+            If (Original_lrn Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_lrn")
+            Else
+                command.Parameters(20).Value = CType(Original_lrn,String)
+            End If
             If (Original_lname Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_lname")
             Else

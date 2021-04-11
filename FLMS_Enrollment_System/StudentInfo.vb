@@ -38,7 +38,7 @@ Public Class StudentInfo
     Private Sub StudentInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lrn = ""
         lrn = Search.GetLRN
-        EnrollmentTableAdapter1.FillSearchedStudent(DatabaseDataSet.Enrollment, lrn)
+        EnrollmentTableAdapter.FillSearchedStudent(DatabaseDataSet.Enrollment, lrn)
 
 
         ' clear 

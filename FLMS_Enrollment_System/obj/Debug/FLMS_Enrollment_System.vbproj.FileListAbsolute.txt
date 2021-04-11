@@ -22,7 +22,6 @@ C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.vbprojAssemblyReference.cache
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.ClassList.resources
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Enrollment1Form.resources
-C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Enrollment2Form.resources
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Login.resources
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Resources.resources
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Search.resources

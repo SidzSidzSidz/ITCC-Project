@@ -102,12 +102,6 @@
     <Compile Include="DatabaseDataSet.vb">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Enrollment2Form.Designer.vb">
-      <DependentUpon>Enrollment2Form.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Enrollment2Form.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="EnrollmentChoice.Designer.vb">
       <DependentUpon>EnrollmentChoice.vb</DependentUpon>
     </Compile>
@@ -180,9 +174,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Enrollment1Form.resx">
       <DependentUpon>Enrollment1Form.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Enrollment2Form.resx">
-      <DependentUpon>Enrollment2Form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EnrollmentChoice.resx">
       <DependentUpon>EnrollmentChoice.vb</DependentUpon>

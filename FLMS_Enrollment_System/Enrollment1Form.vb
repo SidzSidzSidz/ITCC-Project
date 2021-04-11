@@ -9,14 +9,15 @@ Public Class Enrollment1Form
     End Function
 
     Private Sub NextBtn_Click(sender As Object, e As EventArgs) Handles NextBtn.Click
-        Dim section = ""
-        Dim lrn_sy = LrnTextBox.Text + SYTextBox.Text
-        EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image), SYTextBox.Text, section, lrn_sy)
-        Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
-        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
+        Panel2.BringToFront()
+        EnrolleeName.Text = LnameTextBox.Text + " " + FnameTextBox.Text + " " + MnameTextBox.Text
+        'Dim section = ""
+        'Dim lrn_sy = LrnTextBox.Text + SYTextBox.Text
+        'EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image), SYTextBox.Text, section, lrn_sy)
+        'Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+        'Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
 
-        Enrollment2Form.Show()
-        Me.Hide()
+        Panel2.Show()
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs)
@@ -68,8 +69,14 @@ Public Class Enrollment1Form
     End Sub
 
     Private Sub Enrollment1Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DatabaseDataSet.Enrollment1' table. You can move, or remove it, as needed.
+        'Me.Enrollment1TableAdapter.Fill(Me.DatabaseDataSet.Enrollment1)
+        'TODO: This line of code loads data into the 'DatabaseDataSet.Sections' table. You can move, or remove it, as needed.
+        'Me.SectionsTableAdapter.Fill(Me.DatabaseDataSet.Sections)
+        'TODO: This line of code loads data into the 'DatabaseDataSet.Sections' table. You can move, or remove it, as needed.
+        'Me.SectionsTableAdapter.Fill(Me.DatabaseDataSet.Sections)
         'TODO: This line of code loads data into the 'DatabaseDataSet.Enrollment' table. You can move, or remove it, as needed.
-        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
+        'Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
 
     End Sub
 
@@ -191,5 +198,84 @@ Public Class Enrollment1Form
         Catch ex As Exception
             MsgBox(ex.Message.ToString())
         End Try
+    End Sub
+
+    Private Sub YearLevelBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles YearLevelBox.SelectedIndexChanged
+        'grade 7
+        If YearLevelBox.SelectedIndex = 0 Then
+            SectionBox.Items.Clear()
+            SectionBox.Items.Add("A")
+            SectionBox.Items.Add("B")
+            SectionBox.Items.Add("C")
+
+            'grade 8
+        ElseIf YearLevelBox.SelectedIndex = 1 Then
+            SectionBox.Items.Clear()
+            SectionBox.Items.Add("D")
+            SectionBox.Items.Add("E")
+            SectionBox.Items.Add("F")
+
+            'grade 9
+        ElseIf YearLevelBox.SelectedIndex = 2 Then
+            SectionBox.Items.Clear()
+            SectionBox.Items.Add("G")
+            SectionBox.Items.Add("H")
+            SectionBox.Items.Add("I")
+
+            'grade 10
+        ElseIf YearLevelBox.SelectedIndex = 3 Then
+            SectionBox.Items.Clear()
+            SectionBox.Items.Add("J")
+            SectionBox.Items.Add("K")
+            SectionBox.Items.Add("L")
+
+            'grade 11
+        ElseIf YearLevelBox.SelectedIndex = 4 Then
+            SectionBox.Items.Clear()
+            SectionBox.Items.Add("M")
+            SectionBox.Items.Add("N")
+            SectionBox.Items.Add("O")
+
+            'grade 12
+        ElseIf YearLevelBox.SelectedIndex = 5 Then
+            SectionBox.Items.Clear()
+            SectionBox.Items.Add("Q")
+            SectionBox.Items.Add("R")
+            SectionBox.Items.Add("S")
+        End If
+    End Sub
+
+    Private Sub EnrollBtn_Click(sender As Object, e As EventArgs) Handles EnrollBtn.Click
+        Dim section = SectionBox.Text
+        Dim lrn_sy = LrnTextBox.Text + ComboBox1.Text
+        EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image), ComboBox1.Text, YearLevelBox.Text, section, lrn_sy)
+        Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
+
+        clearboxes()
+        Panel2.SendToBack()
+        MsgBox("Student Enrolled")
+    End Sub
+
+    Public Sub clearboxes()
+        LnameTextBox.Text = ""
+        FnameTextBox.Text = ""
+        MnameTextBox.Text = ""
+        PicPictureBox.Image = Nothing
+        SuffixTextBox.Text = ""
+        LrnTextBox.Text = ""
+        AddressTextBox.Text = ""
+        GuardianTextBox.Text = ""
+        LsaTextBox.Text = ""
+        SexComboBox.Text = ""
+        YrscTextBox.Text = ""
+        YrcTextBox.Text = ""
+        NsoPictureBox.Image = Nothing
+        GmPictureBox.Image = Nothing
+        RcPictureBox.Image = Nothing
+        F137PictureBox.Image = Nothing
+        ComboBox1.Text = ""
+        YearLevelBox.Text = ""
+        SectionBox.Text = ""
     End Sub
 End Class

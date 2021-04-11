@@ -391,9 +391,10 @@ Partial Class AddStaff
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
         Me.TableAdapterManager.SectionsTableAdapter = Nothing
-        Me.TableAdapterManager.StaffTableAdapter = Me.StaffTableAdapter
+        Me.TableAdapterManager.StaffTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'EnrollmentBindingSource

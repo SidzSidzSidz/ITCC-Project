@@ -164,4 +164,13 @@ Public Class Search
         Search1_Panel.Show()
 
     End Sub
+
+    Private Sub Search_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DatabaseDataSet1.Enrollment1' table. You can move, or remove it, as needed.
+        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet1.Enrollment)
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
+    End Sub
 End Class
