@@ -55,6 +55,8 @@ Partial Class NewSection
         Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.SectionsTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.SectionsTableAdapter()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -357,7 +359,7 @@ Partial Class NewSection
         Me.SYTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
         Me.SYTextBox.Location = New System.Drawing.Point(631, 221)
         Me.SYTextBox.Name = "SYTextBox"
-        Me.SYTextBox.Size = New System.Drawing.Size(372, 32)
+        Me.SYTextBox.Size = New System.Drawing.Size(177, 32)
         Me.SYTextBox.TabIndex = 53
         '
         'YearLevelComboBox
@@ -388,6 +390,7 @@ Partial Class NewSection
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
+        Me.TableAdapterManager.SectionsTableAdapter = Nothing
         Me.TableAdapterManager.StaffTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
@@ -395,19 +398,39 @@ Partial Class NewSection
         '
         Me.SectionsTableAdapter.ClearBeforeFill = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.TextBox1.Location = New System.Drawing.Point(826, 221)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(177, 32)
+        Me.TextBox1.TabIndex = 53
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(809, 226)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(16, 22)
+        Me.Label3.TabIndex = 45
+        Me.Label3.Text = "-"
+        '
         'NewSection
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(1264, 712)
+        Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.YearLevelComboBox)
         Me.Controls.Add(Me.MaxStudentsTextBox)
         Me.Controls.Add(Me.SectionTextBox)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.SYTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Section_Label)
         Me.Controls.Add(Me.GL_Label)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.AY_Level)
         Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.Search_Label)
@@ -460,4 +483,6 @@ Partial Class NewSection
     Friend WithEvents SectionsBindingSource As BindingSource
     Friend WithEvents YearLevelComboBox As ComboBox
     Friend WithEvents SectionsTableAdapter As DatabaseDataSetTableAdapters.SectionsTableAdapter
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label3 As Label
 End Class

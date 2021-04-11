@@ -23,12 +23,24 @@
         Login.Show()
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ClassList_DGV.CellContentClick
-
-    End Sub
 
     Private Sub NewClass_Click(sender As Object, e As EventArgs) Handles NewClass_PB.Click, NewClass_Label.Click
         Me.Hide()
         NewSection.Show()
+    End Sub
+
+    Private Sub SectionsBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.SectionsBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+
+    End Sub
+
+    Private Sub ClassList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DatabaseDataSet.Enrollment' table. You can move, or remove it, as needed.
+        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
+        'TODO: This line of code loads data into the 'DatabaseDataSet.Sections' table. You can move, or remove it, as needed.
+        Me.SectionsTableAdapter.Fill(Me.DatabaseDataSet.Sections)
+
     End Sub
 End Class

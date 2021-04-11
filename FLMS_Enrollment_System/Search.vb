@@ -26,10 +26,11 @@ Public Class Search
     End Sub
 
     Private Sub Search_btn_Click(sender As Object, e As EventArgs) Handles Search_btn.Click
-        If Me.EnrollmentTableAdapter1.SearchStudent(LRN_text.Text) = 1 Then
+        Dim Search = LRN_text.Text + ComboBox1.Text
+        If Me.EnrollmentTableAdapter.SearchStudent(LRN_text.Text) = 1 Then
             Search1_Panel.SendToBack()
             EditInfo_Panel.BringToFront()
-            EnrollmentTableAdapter1.FillSearchedStudent(DatabaseDataSet1.Enrollment, LRN_text.Text)
+            EnrollmentTableAdapter.FillSearchedStudent(DatabaseDataSet1.Enrollment, Search)
         Else
             MsgBox("LRN not found.")
         End If
@@ -139,7 +140,9 @@ Public Class Search
     End Sub
 
     Private Sub NextBtn_Click(sender As Object, e As EventArgs) Handles NextBtn.Click
-        EnrollmentTableAdapter1.UpdateEnrollment(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image))
+        Dim section = ""
+        Dim lrn_sy = LrnTextBox.Text + SYTextBox.Text
+        'EnrollmentTableAdapter.UpdateEnrollment(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image), SYTextBox.Text, section, lrn_sy)
 
         MsgBox("Changes saved.")
     End Sub

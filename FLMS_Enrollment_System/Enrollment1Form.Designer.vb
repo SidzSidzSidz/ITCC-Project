@@ -60,6 +60,8 @@ Partial Class Enrollment1Form
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
         Me.LrnTextBox = New System.Windows.Forms.TextBox()
+        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.LnameTextBox = New System.Windows.Forms.TextBox()
         Me.FnameTextBox = New System.Windows.Forms.TextBox()
         Me.MnameTextBox = New System.Windows.Forms.TextBox()
@@ -76,10 +78,27 @@ Partial Class Enrollment1Form
         Me.RcPictureBox = New System.Windows.Forms.PictureBox()
         Me.F137PictureBox = New System.Windows.Forms.PictureBox()
         Me.PicPictureBox = New System.Windows.Forms.PictureBox()
-        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
-        Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
+        Me.SYTextBox = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
+        Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.StudentsDTB = New System.Windows.Forms.DataGridView()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.SectionBox = New System.Windows.Forms.ComboBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.YearLevelBox = New System.Windows.Forms.ComboBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.EnrolleeName = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.NoStudentsLabel = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.SlotsLeftLabel = New System.Windows.Forms.Label()
+        Me.EnrollBtn = New System.Windows.Forms.Button()
         Me.Sidebar.SuspendLayout()
         CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,19 +106,23 @@ Partial Class Enrollment1Form
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        CType(Me.StudentsDTB, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'NextBtn
         '
         Me.NextBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.NextBtn.Location = New System.Drawing.Point(994, 549)
+        Me.NextBtn.Location = New System.Drawing.Point(827, 577)
         Me.NextBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.NextBtn.Name = "NextBtn"
         Me.NextBtn.Size = New System.Drawing.Size(146, 63)
@@ -111,7 +134,7 @@ Partial Class Enrollment1Form
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(873, 413)
+        Me.Label9.Location = New System.Drawing.Point(706, 431)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(128, 20)
@@ -122,7 +145,7 @@ Partial Class Enrollment1Form
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(573, 414)
+        Me.Label12.Location = New System.Drawing.Point(406, 432)
         Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(33, 20)
@@ -133,7 +156,7 @@ Partial Class Enrollment1Form
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(811, 527)
+        Me.Label25.Location = New System.Drawing.Point(644, 545)
         Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(72, 20)
@@ -144,7 +167,7 @@ Partial Class Enrollment1Form
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(812, 305)
+        Me.Label8.Location = New System.Drawing.Point(645, 323)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(133, 20)
@@ -155,7 +178,7 @@ Partial Class Enrollment1Form
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(859, 211)
+        Me.Label7.Location = New System.Drawing.Point(522, 230)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(99, 20)
@@ -166,7 +189,7 @@ Partial Class Enrollment1Form
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(749, 108)
+        Me.Label3.Location = New System.Drawing.Point(582, 126)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(108, 20)
@@ -177,7 +200,7 @@ Partial Class Enrollment1Form
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(560, 214)
+        Me.Label5.Location = New System.Drawing.Point(229, 232)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(36, 20)
@@ -188,7 +211,7 @@ Partial Class Enrollment1Form
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(720, 413)
+        Me.Label11.Location = New System.Drawing.Point(553, 431)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(114, 20)
@@ -199,7 +222,7 @@ Partial Class Enrollment1Form
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(629, 527)
+        Me.Label15.Location = New System.Drawing.Point(462, 545)
         Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(99, 20)
@@ -210,7 +233,7 @@ Partial Class Enrollment1Form
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(445, 527)
+        Me.Label14.Location = New System.Drawing.Point(278, 545)
         Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(99, 20)
@@ -221,7 +244,7 @@ Partial Class Enrollment1Form
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(263, 527)
+        Me.Label13.Location = New System.Drawing.Point(96, 545)
         Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(40, 20)
@@ -232,7 +255,7 @@ Partial Class Enrollment1Form
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(263, 414)
+        Me.Label10.Location = New System.Drawing.Point(96, 432)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(144, 20)
@@ -243,7 +266,7 @@ Partial Class Enrollment1Form
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(263, 305)
+        Me.Label6.Location = New System.Drawing.Point(96, 323)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 20)
@@ -254,7 +277,7 @@ Partial Class Enrollment1Form
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(263, 214)
+        Me.Label4.Location = New System.Drawing.Point(96, 232)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(45, 20)
@@ -265,7 +288,7 @@ Partial Class Enrollment1Form
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(505, 108)
+        Me.Label2.Location = New System.Drawing.Point(338, 126)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(83, 20)
@@ -277,7 +300,7 @@ Partial Class Enrollment1Form
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Impact", 40.0!)
         Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
-        Me.Label16.Location = New System.Drawing.Point(255, 13)
+        Me.Label16.Location = New System.Drawing.Point(88, 31)
         Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(473, 66)
@@ -288,7 +311,7 @@ Partial Class Enrollment1Form
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(264, 108)
+        Me.Label1.Location = New System.Drawing.Point(97, 126)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(85, 20)
@@ -510,16 +533,26 @@ Partial Class Enrollment1Form
         '
         Me.LrnTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "lrn", True))
         Me.LrnTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LrnTextBox.Location = New System.Drawing.Point(563, 235)
+        Me.LrnTextBox.Location = New System.Drawing.Point(232, 253)
         Me.LrnTextBox.Name = "LrnTextBox"
         Me.LrnTextBox.Size = New System.Drawing.Size(277, 26)
         Me.LrnTextBox.TabIndex = 45
+        '
+        'EnrollmentBindingSource
+        '
+        Me.EnrollmentBindingSource.DataMember = "Enrollment"
+        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'LnameTextBox
         '
         Me.LnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "lname", True))
         Me.LnameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LnameTextBox.Location = New System.Drawing.Point(266, 130)
+        Me.LnameTextBox.Location = New System.Drawing.Point(99, 148)
         Me.LnameTextBox.Name = "LnameTextBox"
         Me.LnameTextBox.Size = New System.Drawing.Size(220, 26)
         Me.LnameTextBox.TabIndex = 46
@@ -528,7 +561,7 @@ Partial Class Enrollment1Form
         '
         Me.FnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "fname", True))
         Me.FnameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.FnameTextBox.Location = New System.Drawing.Point(509, 130)
+        Me.FnameTextBox.Location = New System.Drawing.Point(342, 148)
         Me.FnameTextBox.Name = "FnameTextBox"
         Me.FnameTextBox.Size = New System.Drawing.Size(216, 26)
         Me.FnameTextBox.TabIndex = 47
@@ -537,7 +570,7 @@ Partial Class Enrollment1Form
         '
         Me.MnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "mname", True))
         Me.MnameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.MnameTextBox.Location = New System.Drawing.Point(753, 130)
+        Me.MnameTextBox.Location = New System.Drawing.Point(586, 148)
         Me.MnameTextBox.Name = "MnameTextBox"
         Me.MnameTextBox.Size = New System.Drawing.Size(217, 26)
         Me.MnameTextBox.TabIndex = 48
@@ -546,16 +579,16 @@ Partial Class Enrollment1Form
         '
         Me.SuffixTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "suffix", True))
         Me.SuffixTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.SuffixTextBox.Location = New System.Drawing.Point(266, 235)
+        Me.SuffixTextBox.Location = New System.Drawing.Point(99, 253)
         Me.SuffixTextBox.Name = "SuffixTextBox"
-        Me.SuffixTextBox.Size = New System.Drawing.Size(277, 26)
+        Me.SuffixTextBox.Size = New System.Drawing.Size(108, 26)
         Me.SuffixTextBox.TabIndex = 49
         '
         'DobDateTimePicker
         '
         Me.DobDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.EnrollmentBindingSource, "dob", True))
         Me.DobDateTimePicker.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.DobDateTimePicker.Location = New System.Drawing.Point(863, 234)
+        Me.DobDateTimePicker.Location = New System.Drawing.Point(526, 253)
         Me.DobDateTimePicker.Name = "DobDateTimePicker"
         Me.DobDateTimePicker.Size = New System.Drawing.Size(277, 27)
         Me.DobDateTimePicker.TabIndex = 50
@@ -564,7 +597,7 @@ Partial Class Enrollment1Form
         '
         Me.GuardianTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "guardian", True))
         Me.GuardianTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.GuardianTextBox.Location = New System.Drawing.Point(815, 327)
+        Me.GuardianTextBox.Location = New System.Drawing.Point(648, 345)
         Me.GuardianTextBox.Name = "GuardianTextBox"
         Me.GuardianTextBox.Size = New System.Drawing.Size(325, 26)
         Me.GuardianTextBox.TabIndex = 51
@@ -573,7 +606,7 @@ Partial Class Enrollment1Form
         '
         Me.AddressTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "address", True))
         Me.AddressTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.AddressTextBox.Location = New System.Drawing.Point(268, 327)
+        Me.AddressTextBox.Location = New System.Drawing.Point(101, 345)
         Me.AddressTextBox.Name = "AddressTextBox"
         Me.AddressTextBox.Size = New System.Drawing.Size(523, 26)
         Me.AddressTextBox.TabIndex = 52
@@ -582,7 +615,7 @@ Partial Class Enrollment1Form
         '
         Me.LsaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "lsa", True))
         Me.LsaTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LsaTextBox.Location = New System.Drawing.Point(266, 438)
+        Me.LsaTextBox.Location = New System.Drawing.Point(99, 456)
         Me.LsaTextBox.Name = "LsaTextBox"
         Me.LsaTextBox.Size = New System.Drawing.Size(277, 26)
         Me.LsaTextBox.TabIndex = 53
@@ -595,7 +628,7 @@ Partial Class Enrollment1Form
         Me.SexComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.SexComboBox.FormattingEnabled = True
         Me.SexComboBox.Items.AddRange(New Object() {"Male", "Female"})
-        Me.SexComboBox.Location = New System.Drawing.Point(577, 435)
+        Me.SexComboBox.Location = New System.Drawing.Point(410, 453)
         Me.SexComboBox.Name = "SexComboBox"
         Me.SexComboBox.Size = New System.Drawing.Size(127, 28)
         Me.SexComboBox.TabIndex = 54
@@ -604,7 +637,7 @@ Partial Class Enrollment1Form
         '
         Me.YrcTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "yrc", True))
         Me.YrcTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.YrcTextBox.Location = New System.Drawing.Point(877, 438)
+        Me.YrcTextBox.Location = New System.Drawing.Point(710, 456)
         Me.YrcTextBox.Name = "YrcTextBox"
         Me.YrcTextBox.Size = New System.Drawing.Size(263, 26)
         Me.YrcTextBox.TabIndex = 55
@@ -613,7 +646,7 @@ Partial Class Enrollment1Form
         '
         Me.YrscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "yrsc", True))
         Me.YrscTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.YrscTextBox.Location = New System.Drawing.Point(724, 438)
+        Me.YrscTextBox.Location = New System.Drawing.Point(557, 456)
         Me.YrscTextBox.Name = "YrscTextBox"
         Me.YrscTextBox.Size = New System.Drawing.Size(129, 26)
         Me.YrscTextBox.TabIndex = 56
@@ -624,7 +657,7 @@ Partial Class Enrollment1Form
         Me.NsoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.NsoPictureBox.Cursor = System.Windows.Forms.Cursors.Hand
         Me.NsoPictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EnrollmentBindingSource, "nso", True))
-        Me.NsoPictureBox.Location = New System.Drawing.Point(266, 550)
+        Me.NsoPictureBox.Location = New System.Drawing.Point(99, 568)
         Me.NsoPictureBox.Name = "NsoPictureBox"
         Me.NsoPictureBox.Size = New System.Drawing.Size(108, 101)
         Me.NsoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -637,7 +670,7 @@ Partial Class Enrollment1Form
         Me.GmPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.GmPictureBox.Cursor = System.Windows.Forms.Cursors.Hand
         Me.GmPictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EnrollmentBindingSource, "gm", True))
-        Me.GmPictureBox.Location = New System.Drawing.Point(449, 549)
+        Me.GmPictureBox.Location = New System.Drawing.Point(282, 567)
         Me.GmPictureBox.Name = "GmPictureBox"
         Me.GmPictureBox.Size = New System.Drawing.Size(107, 102)
         Me.GmPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -650,7 +683,7 @@ Partial Class Enrollment1Form
         Me.RcPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RcPictureBox.Cursor = System.Windows.Forms.Cursors.Hand
         Me.RcPictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EnrollmentBindingSource, "rc", True))
-        Me.RcPictureBox.Location = New System.Drawing.Point(633, 549)
+        Me.RcPictureBox.Location = New System.Drawing.Point(466, 567)
         Me.RcPictureBox.Name = "RcPictureBox"
         Me.RcPictureBox.Size = New System.Drawing.Size(107, 102)
         Me.RcPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -663,7 +696,7 @@ Partial Class Enrollment1Form
         Me.F137PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.F137PictureBox.Cursor = System.Windows.Forms.Cursors.Hand
         Me.F137PictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EnrollmentBindingSource, "f137", True))
-        Me.F137PictureBox.Location = New System.Drawing.Point(816, 549)
+        Me.F137PictureBox.Location = New System.Drawing.Point(649, 567)
         Me.F137PictureBox.Name = "F137PictureBox"
         Me.F137PictureBox.Size = New System.Drawing.Size(107, 102)
         Me.F137PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -676,26 +709,32 @@ Partial Class Enrollment1Form
         Me.PicPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PicPictureBox.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PicPictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EnrollmentBindingSource, "pic", True))
-        Me.PicPictureBox.Location = New System.Drawing.Point(994, 59)
+        Me.PicPictureBox.Location = New System.Drawing.Point(827, 77)
         Me.PicPictureBox.Name = "PicPictureBox"
         Me.PicPictureBox.Size = New System.Drawing.Size(146, 129)
         Me.PicPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicPictureBox.TabIndex = 65
         Me.PicPictureBox.TabStop = False
         '
-        'EnrollmentBindingSource
+        'SYTextBox
         '
-        Me.EnrollmentBindingSource.DataMember = "Enrollment"
-        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet
+        Me.SYTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "lrn", True))
+        Me.SYTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.SYTextBox.Location = New System.Drawing.Point(827, 253)
+        Me.SYTextBox.Name = "SYTextBox"
+        Me.SYTextBox.Size = New System.Drawing.Size(146, 26)
+        Me.SYTextBox.TabIndex = 66
         '
-        'DatabaseDataSet
+        'Label20
         '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EnrollmentTableAdapter
-        '
-        Me.EnrollmentTableAdapter.ClearBeforeFill = True
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(823, 230)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(94, 20)
+        Me.Label20.TabIndex = 30
+        Me.Label20.Text = "School Year"
         '
         'TableAdapterManager
         '
@@ -706,48 +745,252 @@ Partial Class Enrollment1Form
         Me.TableAdapterManager.StaffTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'EnrollmentTableAdapter
+        '
+        Me.EnrollmentTableAdapter.ClearBeforeFill = True
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.SYTextBox)
+        Me.Panel1.Controls.Add(Me.NextBtn)
+        Me.Panel1.Controls.Add(Me.Label13)
+        Me.Panel1.Controls.Add(Me.F137PictureBox)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.Label14)
+        Me.Panel1.Controls.Add(Me.RcPictureBox)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.Label15)
+        Me.Panel1.Controls.Add(Me.GmPictureBox)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Controls.Add(Me.NsoPictureBox)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.YrscTextBox)
+        Me.Panel1.Controls.Add(Me.Label16)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.SexComboBox)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.LsaTextBox)
+        Me.Panel1.Controls.Add(Me.LrnTextBox)
+        Me.Panel1.Controls.Add(Me.Label20)
+        Me.Panel1.Controls.Add(Me.AddressTextBox)
+        Me.Panel1.Controls.Add(Me.DobDateTimePicker)
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.GuardianTextBox)
+        Me.Panel1.Controls.Add(Me.YrcTextBox)
+        Me.Panel1.Controls.Add(Me.Label25)
+        Me.Panel1.Controls.Add(Me.SuffixTextBox)
+        Me.Panel1.Controls.Add(Me.PicPictureBox)
+        Me.Panel1.Controls.Add(Me.Label12)
+        Me.Panel1.Controls.Add(Me.MnameTextBox)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.LnameTextBox)
+        Me.Panel1.Controls.Add(Me.FnameTextBox)
+        Me.Panel1.Location = New System.Drawing.Point(194, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1070, 680)
+        Me.Panel1.TabIndex = 67
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.Label22)
+        Me.Panel2.Controls.Add(Me.Label24)
+        Me.Panel2.Controls.Add(Me.Panel3)
+        Me.Panel2.Controls.Add(Me.StudentsDTB)
+        Me.Panel2.Controls.Add(Me.EnrolleeName)
+        Me.Panel2.Controls.Add(Me.ComboBox1)
+        Me.Panel2.Controls.Add(Me.Label26)
+        Me.Panel2.Controls.Add(Me.YearLevelBox)
+        Me.Panel2.Controls.Add(Me.Label23)
+        Me.Panel2.Controls.Add(Me.SectionBox)
+        Me.Panel2.Location = New System.Drawing.Point(195, -1)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1067, 680)
+        Me.Panel2.TabIndex = 67
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.BackColor = System.Drawing.Color.Transparent
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.Label22.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label22.Location = New System.Drawing.Point(59, 178)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(295, 22)
+        Me.Label22.TabIndex = 24
+        Me.Label22.Text = "List of Students based on Database"
+        '
+        'StudentsDTB
+        '
+        Me.StudentsDTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.StudentsDTB.Location = New System.Drawing.Point(26, 159)
+        Me.StudentsDTB.Name = "StudentsDTB"
+        Me.StudentsDTB.Size = New System.Drawing.Size(747, 495)
+        Me.StudentsDTB.TabIndex = 23
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DisplayMember = "Sections.SY"
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(63, 122)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(177, 21)
+        Me.ComboBox1.TabIndex = 20
+        Me.ComboBox1.ValueMember = "Sections.SY"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label23.Location = New System.Drawing.Point(26, 122)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(31, 20)
+        Me.Label23.TabIndex = 17
+        Me.Label23.Text = "S.Y."
+        '
+        'SectionBox
+        '
+        Me.SectionBox.DisplayMember = "Sections.Section"
+        Me.SectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.SectionBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.SectionBox.FormattingEnabled = True
+        Me.SectionBox.Location = New System.Drawing.Point(677, 121)
+        Me.SectionBox.Name = "SectionBox"
+        Me.SectionBox.Size = New System.Drawing.Size(177, 21)
+        Me.SectionBox.TabIndex = 21
+        Me.SectionBox.ValueMember = "Sections.Section"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label24.Location = New System.Drawing.Point(608, 121)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(63, 20)
+        Me.Label24.TabIndex = 18
+        Me.Label24.Text = "Section"
+        '
+        'YearLevelBox
+        '
+        Me.YearLevelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.YearLevelBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.YearLevelBox.FormattingEnabled = True
+        Me.YearLevelBox.Items.AddRange(New Object() {"Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"})
+        Me.YearLevelBox.Location = New System.Drawing.Point(378, 121)
+        Me.YearLevelBox.Name = "YearLevelBox"
+        Me.YearLevelBox.Size = New System.Drawing.Size(177, 21)
+        Me.YearLevelBox.TabIndex = 22
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label26.Location = New System.Drawing.Point(291, 121)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(81, 20)
+        Me.Label26.TabIndex = 16
+        Me.Label26.Text = "Year level"
+        '
+        'EnrolleeName
+        '
+        Me.EnrolleeName.AutoSize = True
+        Me.EnrolleeName.Font = New System.Drawing.Font("Impact", 40.0!)
+        Me.EnrolleeName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.EnrolleeName.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.EnrolleeName.Location = New System.Drawing.Point(15, 31)
+        Me.EnrolleeName.Name = "EnrolleeName"
+        Me.EnrolleeName.Size = New System.Drawing.Size(403, 66)
+        Me.EnrolleeName.TabIndex = 19
+        Me.EnrolleeName.Text = "Name Of Enrollee"
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.Label27)
+        Me.Panel3.Controls.Add(Me.NoStudentsLabel)
+        Me.Panel3.Controls.Add(Me.Label28)
+        Me.Panel3.Controls.Add(Me.SlotsLeftLabel)
+        Me.Panel3.Controls.Add(Me.EnrollBtn)
+        Me.Panel3.Location = New System.Drawing.Point(779, 159)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(267, 495)
+        Me.Panel3.TabIndex = 25
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.BackColor = System.Drawing.Color.Transparent
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.Label27.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label27.Location = New System.Drawing.Point(49, 23)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(169, 22)
+        Me.Label27.TabIndex = 4
+        Me.Label27.Text = "Number of Students"
+        '
+        'NoStudentsLabel
+        '
+        Me.NoStudentsLabel.AutoSize = True
+        Me.NoStudentsLabel.BackColor = System.Drawing.Color.Transparent
+        Me.NoStudentsLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 60.0!)
+        Me.NoStudentsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.NoStudentsLabel.Location = New System.Drawing.Point(92, 47)
+        Me.NoStudentsLabel.Name = "NoStudentsLabel"
+        Me.NoStudentsLabel.Size = New System.Drawing.Size(83, 91)
+        Me.NoStudentsLabel.TabIndex = 5
+        Me.NoStudentsLabel.Text = "0"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.BackColor = System.Drawing.Color.Transparent
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.Label28.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label28.Location = New System.Drawing.Point(90, 152)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(85, 22)
+        Me.Label28.TabIndex = 4
+        Me.Label28.Text = "Slots Left"
+        '
+        'SlotsLeftLabel
+        '
+        Me.SlotsLeftLabel.AutoSize = True
+        Me.SlotsLeftLabel.BackColor = System.Drawing.Color.Transparent
+        Me.SlotsLeftLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 60.0!)
+        Me.SlotsLeftLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.SlotsLeftLabel.Location = New System.Drawing.Point(92, 185)
+        Me.SlotsLeftLabel.Name = "SlotsLeftLabel"
+        Me.SlotsLeftLabel.Size = New System.Drawing.Size(83, 91)
+        Me.SlotsLeftLabel.TabIndex = 5
+        Me.SlotsLeftLabel.Text = "0"
+        '
+        'EnrollBtn
+        '
+        Me.EnrollBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.EnrollBtn.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EnrollBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.EnrollBtn.Location = New System.Drawing.Point(61, 384)
+        Me.EnrollBtn.Name = "EnrollBtn"
+        Me.EnrollBtn.Size = New System.Drawing.Size(145, 64)
+        Me.EnrollBtn.TabIndex = 4
+        Me.EnrollBtn.Text = "Enroll"
+        Me.EnrollBtn.UseVisualStyleBackColor = True
+        '
         'Enrollment1Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 681)
-        Me.Controls.Add(Me.F137PictureBox)
-        Me.Controls.Add(Me.RcPictureBox)
-        Me.Controls.Add(Me.GmPictureBox)
-        Me.Controls.Add(Me.NsoPictureBox)
-        Me.Controls.Add(Me.YrscTextBox)
-        Me.Controls.Add(Me.SexComboBox)
-        Me.Controls.Add(Me.LsaTextBox)
-        Me.Controls.Add(Me.AddressTextBox)
-        Me.Controls.Add(Me.GuardianTextBox)
-        Me.Controls.Add(Me.SuffixTextBox)
-        Me.Controls.Add(Me.MnameTextBox)
-        Me.Controls.Add(Me.FnameTextBox)
-        Me.Controls.Add(Me.LnameTextBox)
         Me.Controls.Add(Me.Sidebar)
-        Me.Controls.Add(Me.NextBtn)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.LrnTextBox)
-        Me.Controls.Add(Me.DobDateTimePicker)
-        Me.Controls.Add(Me.YrcTextBox)
-        Me.Controls.Add(Me.PicPictureBox)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Enrollment1Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -760,15 +1003,21 @@ Partial Class Enrollment1Form
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.StudentsDTB, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -809,7 +1058,6 @@ Partial Class Enrollment1Form
     Friend WithEvents NewClass_PB As PictureBox
     Friend WithEvents DatabaseDataSet As DatabaseDataSet
     Friend WithEvents EnrollmentBindingSource As BindingSource
-    Friend WithEvents EnrollmentTableAdapter As DatabaseDataSetTableAdapters.EnrollmentTableAdapter
     Friend WithEvents TableAdapterManager As DatabaseDataSetTableAdapters.TableAdapterManager
     Friend WithEvents LrnTextBox As TextBox
     Friend WithEvents LnameTextBox As TextBox
@@ -828,4 +1076,24 @@ Partial Class Enrollment1Form
     Friend WithEvents RcPictureBox As PictureBox
     Friend WithEvents F137PictureBox As PictureBox
     Friend WithEvents PicPictureBox As PictureBox
+    Friend WithEvents SYTextBox As TextBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents EnrollmentTableAdapter As DatabaseDataSetTableAdapters.EnrollmentTableAdapter
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label27 As Label
+    Friend WithEvents NoStudentsLabel As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents SlotsLeftLabel As Label
+    Friend WithEvents EnrollBtn As Button
+    Friend WithEvents StudentsDTB As DataGridView
+    Friend WithEvents EnrolleeName As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label26 As Label
+    Friend WithEvents YearLevelBox As ComboBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents SectionBox As ComboBox
 End Class

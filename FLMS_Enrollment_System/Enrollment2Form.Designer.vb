@@ -26,6 +26,7 @@ Partial Class Enrollment2Form
         Me.Label12 = New System.Windows.Forms.Label()
         Me.StudentsDTB = New System.Windows.Forms.DataGridView()
         Me.SectionBox = New System.Windows.Forms.ComboBox()
+        Me.DatabaseDataSet1 = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.YearLevelBox = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -56,8 +57,8 @@ Partial Class Enrollment2Form
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SectionsTableAdapter1 = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.SectionsTableAdapter()
-        Me.DatabaseDataSet1 = New FLMS_Enrollment_System.DatabaseDataSet()
         CType(Me.StudentsDTB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Sidebar.SuspendLayout()
         CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,7 +67,6 @@ Partial Class Enrollment2Form
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label12
@@ -101,6 +101,11 @@ Partial Class Enrollment2Form
         Me.SectionBox.Size = New System.Drawing.Size(177, 21)
         Me.SectionBox.TabIndex = 11
         Me.SectionBox.ValueMember = "Sections.Section"
+        '
+        'DatabaseDataSet1
+        '
+        Me.DatabaseDataSet1.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label11
         '
@@ -457,11 +462,6 @@ Partial Class Enrollment2Form
         '
         Me.SectionsTableAdapter1.ClearBeforeFill = True
         '
-        'DatabaseDataSet1
-        '
-        Me.DatabaseDataSet1.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Enrollment2Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -484,6 +484,7 @@ Partial Class Enrollment2Form
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FLMS Enrollment System"
         CType(Me.StudentsDTB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Sidebar.ResumeLayout(False)
@@ -494,7 +495,6 @@ Partial Class Enrollment2Form
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
