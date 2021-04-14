@@ -137,8 +137,8 @@ Public Class Search
     Private Sub NextBtn_Click(sender As Object, e As EventArgs) Handles NextBtn.Click
         'updates student based on lrn
         EnrollmentTableAdapter.UpdateEnrollment(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image))
-        Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet1)
-        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet1.Enrollment)
+        'Me.EnrollmentTableAdapter.Update(Me.DatabaseDataSet1.Enrollment)
+        'Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet1.Enrollment)
         MsgBox("Changes saved.")
     End Sub
 
@@ -168,4 +168,6 @@ Public Class Search
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
+
+
 End Class

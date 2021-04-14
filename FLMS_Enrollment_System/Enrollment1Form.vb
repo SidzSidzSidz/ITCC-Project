@@ -284,7 +284,10 @@ Public Class Enrollment1Form
     End Sub
 
     Private Sub UpdateButton_Click(sender As Object, e As EventArgs) Handles UpdateButton.Click
+        'update current student info
         EnrollmentTableAdapter.UpdateOld(ComboBox1.Text, YearLevelBox.Text, SectionBox.Text, OldEnrollment.LRN_TBox.Text)
+
+
         Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
         Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
         MsgBox("Student Enrolled")

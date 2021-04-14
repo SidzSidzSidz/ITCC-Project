@@ -4834,10 +4834,11 @@ Namespace DatabaseDataSetTableAdapters
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(7) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(7).Connection = Me.Connection
-            Me._commandCollection(7).CommandText = "UPDATE [dbo].[Enrollment] SET [lrn] = @lrn, [lname] = @lname, [mname] = @mname, ["& _ 
-                "fname] = @fname, [suffix] = @suffix, [dob] = @dob, [address] = @address, [guardi"& _ 
-                "an] = @guardian, [lsa] = @lsa, [sex] = @sex, [yrc] = @yrc, [yrsc] = @yrsc, [nso]"& _ 
-                " = @nso, [gm] = @gm, [rc] = @rc, [f137] = @f137, [pic] = @pic WHERE lrn = @lrn"
+            Me._commandCollection(7).CommandText = "UPDATE       Enrollment"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                lrn = @lrn, lname = @lname, mname = @"& _ 
+                "mname, fname = @fname, suffix = @suffix, dob = @dob, address = @address, guardia"& _ 
+                "n = @guardian, lsa = @lsa, sex = @sex, yrc = @yrc, yrsc = @yrsc, nso = @nso, gm "& _ 
+                "= @gm, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         rc = @rc, f137 = @f137, pic = @pic"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     "& _ 
+                "   (lrn = @lrn)"
             Me._commandCollection(7).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(7).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lrn", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "lrn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(7).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lname", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "lname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))

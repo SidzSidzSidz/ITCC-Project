@@ -25,9 +25,6 @@ Partial Class ClassList
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ClassList))
         Me.ClassList_DGV = New System.Windows.Forms.DataGridView()
-        Me.Sections1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
-        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SectionCBox = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -58,9 +55,6 @@ Partial Class ClassList
         Me.GradelevelToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.GradelevelToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
         Me.FillBySectionToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.SectionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
-        Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         Me.FillBySectionToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.SyToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.SyToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
@@ -69,7 +63,6 @@ Partial Class ClassList
         Me.GradelevelToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.GradelevelToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         Me.FillBySectionToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.Sections1TableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.Sections1TableAdapter()
         Me.FillBySectionToolStrip2 = New System.Windows.Forms.ToolStrip()
         Me.SyToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.SyToolStripTextBox2 = New System.Windows.Forms.ToolStripTextBox()
@@ -86,18 +79,23 @@ Partial Class ClassList
         Me.YearlevelToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.YearlevelToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         Me.FillBySectionToolStripButton3 = New System.Windows.Forms.ToolStripButton()
-        Me.LrnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SuffixDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GradelevelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
+        Me.Sections1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SectionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
+        Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
+        Me.Sections1TableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.Sections1TableAdapter()
+        Me.LrnSyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.YearLevelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SectionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SYDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LRNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MiddleNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.ClassList_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Sections1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -105,10 +103,13 @@ Partial Class ClassList
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FillBySectionToolStrip.SuspendLayout()
-        CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FillBySectionToolStrip1.SuspendLayout()
         Me.FillBySectionToolStrip2.SuspendLayout()
         Me.FillBySectionToolStrip3.SuspendLayout()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Sections1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ClassList_DGV
@@ -120,28 +121,13 @@ Partial Class ClassList
         Me.ClassList_DGV.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClassList_DGV.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.ClassList_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ClassList_DGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LrnDataGridViewTextBoxColumn, Me.LnameDataGridViewTextBoxColumn, Me.MnameDataGridViewTextBoxColumn, Me.FnameDataGridViewTextBoxColumn, Me.SuffixDataGridViewTextBoxColumn, Me.SyDataGridViewTextBoxColumn, Me.GradelevelDataGridViewTextBoxColumn, Me.SectionDataGridViewTextBoxColumn})
-        Me.ClassList_DGV.DataSource = Me.EnrollmentBindingSource
+        Me.ClassList_DGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LrnSyDataGridViewTextBoxColumn, Me.YearLevelDataGridViewTextBoxColumn, Me.SectionDataGridViewTextBoxColumn, Me.SYDataGridViewTextBoxColumn, Me.LRNDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.MiddleNameDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn})
+        Me.ClassList_DGV.DataSource = Me.Sections1BindingSource
         Me.ClassList_DGV.Location = New System.Drawing.Point(267, 131)
         Me.ClassList_DGV.Name = "ClassList_DGV"
         Me.ClassList_DGV.ReadOnly = True
         Me.ClassList_DGV.Size = New System.Drawing.Size(956, 519)
         Me.ClassList_DGV.TabIndex = 16
-        '
-        'Sections1BindingSource
-        '
-        Me.Sections1BindingSource.DataMember = "Sections1"
-        Me.Sections1BindingSource.DataSource = Me.DatabaseDataSet
-        '
-        'DatabaseDataSet
-        '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EnrollmentBindingSource
-        '
-        Me.EnrollmentBindingSource.DataMember = "Enrollment"
-        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet
         '
         'SectionCBox
         '
@@ -454,23 +440,6 @@ Partial Class ClassList
         Me.FillBySectionToolStripButton.Size = New System.Drawing.Size(78, 22)
         Me.FillBySectionToolStripButton.Text = "FillBySection"
         '
-        'SectionsBindingSource
-        '
-        Me.SectionsBindingSource.DataMember = "Sections"
-        Me.SectionsBindingSource.DataSource = Me.DatabaseDataSet
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
-        Me.TableAdapterManager.Sections1TableAdapter = Nothing
-        Me.TableAdapterManager.StaffTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'EnrollmentTableAdapter
-        '
-        Me.EnrollmentTableAdapter.ClearBeforeFill = True
-        '
         'FillBySectionToolStrip1
         '
         Me.FillBySectionToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SyToolStripLabel1, Me.SyToolStripTextBox1, Me.SectionToolStripLabel1, Me.SectionToolStripTextBox1, Me.GradelevelToolStripLabel1, Me.GradelevelToolStripTextBox1, Me.FillBySectionToolStripButton1})
@@ -523,10 +492,6 @@ Partial Class ClassList
         Me.FillBySectionToolStripButton1.Name = "FillBySectionToolStripButton1"
         Me.FillBySectionToolStripButton1.Size = New System.Drawing.Size(78, 22)
         Me.FillBySectionToolStripButton1.Text = "FillBySection"
-        '
-        'Sections1TableAdapter
-        '
-        Me.Sections1TableAdapter.ClearBeforeFill = True
         '
         'FillBySectionToolStrip2
         '
@@ -634,61 +599,106 @@ Partial Class ClassList
         Me.FillBySectionToolStripButton3.Size = New System.Drawing.Size(78, 22)
         Me.FillBySectionToolStripButton3.Text = "FillBySection"
         '
-        'LrnDataGridViewTextBoxColumn
+        'EnrollmentBindingSource
         '
-        Me.LrnDataGridViewTextBoxColumn.DataPropertyName = "lrn"
-        Me.LrnDataGridViewTextBoxColumn.HeaderText = "lrn"
-        Me.LrnDataGridViewTextBoxColumn.Name = "LrnDataGridViewTextBoxColumn"
-        Me.LrnDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EnrollmentBindingSource.DataMember = "Enrollment"
+        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet
         '
-        'LnameDataGridViewTextBoxColumn
+        'DatabaseDataSet
         '
-        Me.LnameDataGridViewTextBoxColumn.DataPropertyName = "lname"
-        Me.LnameDataGridViewTextBoxColumn.HeaderText = "lname"
-        Me.LnameDataGridViewTextBoxColumn.Name = "LnameDataGridViewTextBoxColumn"
-        Me.LnameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'MnameDataGridViewTextBoxColumn
+        'Sections1BindingSource
         '
-        Me.MnameDataGridViewTextBoxColumn.DataPropertyName = "mname"
-        Me.MnameDataGridViewTextBoxColumn.HeaderText = "mname"
-        Me.MnameDataGridViewTextBoxColumn.Name = "MnameDataGridViewTextBoxColumn"
-        Me.MnameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Sections1BindingSource.DataMember = "Sections1"
+        Me.Sections1BindingSource.DataSource = Me.DatabaseDataSet
         '
-        'FnameDataGridViewTextBoxColumn
+        'SectionsBindingSource
         '
-        Me.FnameDataGridViewTextBoxColumn.DataPropertyName = "fname"
-        Me.FnameDataGridViewTextBoxColumn.HeaderText = "fname"
-        Me.FnameDataGridViewTextBoxColumn.Name = "FnameDataGridViewTextBoxColumn"
-        Me.FnameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SectionsBindingSource.DataMember = "Sections"
+        Me.SectionsBindingSource.DataSource = Me.DatabaseDataSet
         '
-        'SuffixDataGridViewTextBoxColumn
+        'TableAdapterManager
         '
-        Me.SuffixDataGridViewTextBoxColumn.DataPropertyName = "suffix"
-        Me.SuffixDataGridViewTextBoxColumn.HeaderText = "suffix"
-        Me.SuffixDataGridViewTextBoxColumn.Name = "SuffixDataGridViewTextBoxColumn"
-        Me.SuffixDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
+        Me.TableAdapterManager.Sections1TableAdapter = Nothing
+        Me.TableAdapterManager.SectionsTableAdapter = Nothing
+        Me.TableAdapterManager.StaffTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'SyDataGridViewTextBoxColumn
+        'EnrollmentTableAdapter
         '
-        Me.SyDataGridViewTextBoxColumn.DataPropertyName = "sy"
-        Me.SyDataGridViewTextBoxColumn.HeaderText = "sy"
-        Me.SyDataGridViewTextBoxColumn.Name = "SyDataGridViewTextBoxColumn"
-        Me.SyDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EnrollmentTableAdapter.ClearBeforeFill = True
         '
-        'GradelevelDataGridViewTextBoxColumn
+        'Sections1TableAdapter
         '
-        Me.GradelevelDataGridViewTextBoxColumn.DataPropertyName = "gradelevel"
-        Me.GradelevelDataGridViewTextBoxColumn.HeaderText = "gradelevel"
-        Me.GradelevelDataGridViewTextBoxColumn.Name = "GradelevelDataGridViewTextBoxColumn"
-        Me.GradelevelDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Sections1TableAdapter.ClearBeforeFill = True
+        '
+        'LrnSyDataGridViewTextBoxColumn
+        '
+        Me.LrnSyDataGridViewTextBoxColumn.DataPropertyName = "LrnSy"
+        Me.LrnSyDataGridViewTextBoxColumn.HeaderText = "LrnSy"
+        Me.LrnSyDataGridViewTextBoxColumn.Name = "LrnSyDataGridViewTextBoxColumn"
+        Me.LrnSyDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'YearLevelDataGridViewTextBoxColumn
+        '
+        Me.YearLevelDataGridViewTextBoxColumn.DataPropertyName = "YearLevel"
+        Me.YearLevelDataGridViewTextBoxColumn.HeaderText = "YearLevel"
+        Me.YearLevelDataGridViewTextBoxColumn.Name = "YearLevelDataGridViewTextBoxColumn"
+        Me.YearLevelDataGridViewTextBoxColumn.ReadOnly = True
         '
         'SectionDataGridViewTextBoxColumn
         '
-        Me.SectionDataGridViewTextBoxColumn.DataPropertyName = "section"
-        Me.SectionDataGridViewTextBoxColumn.HeaderText = "section"
+        Me.SectionDataGridViewTextBoxColumn.DataPropertyName = "Section"
+        Me.SectionDataGridViewTextBoxColumn.HeaderText = "Section"
         Me.SectionDataGridViewTextBoxColumn.Name = "SectionDataGridViewTextBoxColumn"
         Me.SectionDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SYDataGridViewTextBoxColumn
+        '
+        Me.SYDataGridViewTextBoxColumn.DataPropertyName = "SY"
+        Me.SYDataGridViewTextBoxColumn.HeaderText = "SY"
+        Me.SYDataGridViewTextBoxColumn.Name = "SYDataGridViewTextBoxColumn"
+        Me.SYDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'LRNDataGridViewTextBoxColumn
+        '
+        Me.LRNDataGridViewTextBoxColumn.DataPropertyName = "LRN"
+        Me.LRNDataGridViewTextBoxColumn.HeaderText = "LRN"
+        Me.LRNDataGridViewTextBoxColumn.Name = "LRNDataGridViewTextBoxColumn"
+        Me.LRNDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'LastNameDataGridViewTextBoxColumn
+        '
+        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName"
+        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "LastName"
+        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
+        Me.LastNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FirstNameDataGridViewTextBoxColumn
+        '
+        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MiddleNameDataGridViewTextBoxColumn
+        '
+        Me.MiddleNameDataGridViewTextBoxColumn.DataPropertyName = "MiddleName"
+        Me.MiddleNameDataGridViewTextBoxColumn.HeaderText = "MiddleName"
+        Me.MiddleNameDataGridViewTextBoxColumn.Name = "MiddleNameDataGridViewTextBoxColumn"
+        Me.MiddleNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SexDataGridViewTextBoxColumn
+        '
+        Me.SexDataGridViewTextBoxColumn.DataPropertyName = "Sex"
+        Me.SexDataGridViewTextBoxColumn.HeaderText = "Sex"
+        Me.SexDataGridViewTextBoxColumn.Name = "SexDataGridViewTextBoxColumn"
+        Me.SexDataGridViewTextBoxColumn.ReadOnly = True
         '
         'ClassList
         '
@@ -716,9 +726,6 @@ Partial Class ClassList
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FLMS Enrollment System"
         CType(Me.ClassList_DGV, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Sections1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -728,13 +735,16 @@ Partial Class ClassList
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FillBySectionToolStrip.ResumeLayout(False)
         Me.FillBySectionToolStrip.PerformLayout()
-        CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FillBySectionToolStrip1.ResumeLayout(False)
         Me.FillBySectionToolStrip1.PerformLayout()
         Me.FillBySectionToolStrip2.ResumeLayout(False)
         Me.FillBySectionToolStrip2.PerformLayout()
         Me.FillBySectionToolStrip3.ResumeLayout(False)
         Me.FillBySectionToolStrip3.PerformLayout()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Sections1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -802,12 +812,13 @@ Partial Class ClassList
     Friend WithEvents YearlevelToolStripLabel1 As ToolStripLabel
     Friend WithEvents YearlevelToolStripTextBox1 As ToolStripTextBox
     Friend WithEvents FillBySectionToolStripButton3 As ToolStripButton
-    Friend WithEvents LrnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents LnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents MnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SuffixDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents GradelevelDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LrnSyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents YearLevelDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SectionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SYDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LRNDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LastNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MiddleNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SexDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

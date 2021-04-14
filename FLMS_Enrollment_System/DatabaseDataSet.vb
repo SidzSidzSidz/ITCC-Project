@@ -6,3 +6,9 @@
 
     End Class
 End Class
+
+Namespace DatabaseDataSetTableAdapters
+
+    Partial Public Class EnrollmentTableAdapter
+    End Class
+End Namespace
