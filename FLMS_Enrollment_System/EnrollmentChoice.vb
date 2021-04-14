@@ -7,9 +7,7 @@
         Me.Hide()
         Search.Hide()
         ClassList.Hide()
-        StudentInfo.Hide()
-        NewSection.Hide()
-
+        Enrollment1Form.EnrollBtn.BringToFront()
         Enrollment1Form.clearboxes()
         Enrollment1Form.Panel1.BringToFront()
         Enrollment1Form.Show()
@@ -19,8 +17,6 @@
         Me.Hide()
         Search.Hide()
         ClassList.Hide()
-        StudentInfo.Hide()
-        NewSection.Hide()
         Enrollment1Form.Panel2.BringToFront()
         OldEnrollment.Show()
         'fetch lrn

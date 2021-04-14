@@ -25,10 +25,7 @@ Partial Class Search
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Search))
         Me.Sidebar = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.NewClass_Label = New System.Windows.Forms.Label()
-        Me.NewClass_PB = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LogoutBtn = New System.Windows.Forms.Button()
@@ -47,13 +44,10 @@ Partial Class Search
         Me.Search_btn = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Search1_Panel = New System.Windows.Forms.Panel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DatabaseDataSet1 = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.EditInfo_Panel = New System.Windows.Forms.Panel()
-        Me.SYTextBox = New System.Windows.Forms.TextBox()
-        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.F137PictureBox = New System.Windows.Forms.PictureBox()
+        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet1 = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.RcPictureBox = New System.Windows.Forms.PictureBox()
         Me.GmPictureBox = New System.Windows.Forms.PictureBox()
         Me.NsoPictureBox = New System.Windows.Forms.PictureBox()
@@ -77,7 +71,6 @@ Partial Class Search
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -89,10 +82,10 @@ Partial Class Search
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
+        Me.Search1_Panel = New System.Windows.Forms.Panel()
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         Me.Sidebar.SuspendLayout()
-        CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -100,24 +93,21 @@ Partial Class Search
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.Search1_Panel.SuspendLayout()
-        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EditInfo_Panel.SuspendLayout()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Search1_Panel.SuspendLayout()
         Me.SuspendLayout()
         '
         'Sidebar
         '
         Me.Sidebar.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Sidebar.Controls.Add(Me.Label1)
         Me.Sidebar.Controls.Add(Me.Label8)
-        Me.Sidebar.Controls.Add(Me.NewClass_Label)
-        Me.Sidebar.Controls.Add(Me.NewClass_PB)
         Me.Sidebar.Controls.Add(Me.Label7)
         Me.Sidebar.Controls.Add(Me.Label6)
         Me.Sidebar.Controls.Add(Me.LogoutBtn)
@@ -135,16 +125,6 @@ Partial Class Search
         Me.Sidebar.Size = New System.Drawing.Size(196, 692)
         Me.Sidebar.TabIndex = 8
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label1.Location = New System.Drawing.Point(16, 509)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(166, 13)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "-----------------------------------------------------"
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -154,30 +134,6 @@ Partial Class Search
         Me.Label8.Size = New System.Drawing.Size(166, 13)
         Me.Label8.TabIndex = 5
         Me.Label8.Text = "-----------------------------------------------------"
-        '
-        'NewClass_Label
-        '
-        Me.NewClass_Label.AutoSize = True
-        Me.NewClass_Label.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.NewClass_Label.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NewClass_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.NewClass_Label.Location = New System.Drawing.Point(70, 538)
-        Me.NewClass_Label.Name = "NewClass_Label"
-        Me.NewClass_Label.Size = New System.Drawing.Size(112, 23)
-        Me.NewClass_Label.TabIndex = 14
-        Me.NewClass_Label.Text = "New Class"
-        '
-        'NewClass_PB
-        '
-        Me.NewClass_PB.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.NewClass_PB.Image = CType(resources.GetObject("NewClass_PB.Image"), System.Drawing.Image)
-        Me.NewClass_PB.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.NewClass_PB.Location = New System.Drawing.Point(19, 528)
-        Me.NewClass_PB.Name = "NewClass_PB"
-        Me.NewClass_PB.Size = New System.Drawing.Size(45, 45)
-        Me.NewClass_PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.NewClass_PB.TabIndex = 13
-        Me.NewClass_PB.TabStop = False
         '
         'Label7
         '
@@ -337,7 +293,7 @@ Partial Class Search
         Me.LRN_Label.AutoSize = True
         Me.LRN_Label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LRN_Label.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LRN_Label.Location = New System.Drawing.Point(487, 234)
+        Me.LRN_Label.Location = New System.Drawing.Point(487, 296)
         Me.LRN_Label.Name = "LRN_Label"
         Me.LRN_Label.Size = New System.Drawing.Size(90, 33)
         Me.LRN_Label.TabIndex = 10
@@ -346,7 +302,7 @@ Partial Class Search
         'LRN_text
         '
         Me.LRN_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LRN_text.Location = New System.Drawing.Point(248, 341)
+        Me.LRN_text.Location = New System.Drawing.Point(248, 342)
         Me.LRN_text.Name = "LRN_text"
         Me.LRN_text.Size = New System.Drawing.Size(569, 38)
         Me.LRN_text.TabIndex = 11
@@ -376,43 +332,15 @@ Partial Class Search
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Search1_Panel)
         Me.Panel1.Controls.Add(Me.EditInfo_Panel)
+        Me.Panel1.Controls.Add(Me.Search1_Panel)
         Me.Panel1.Location = New System.Drawing.Point(196, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1069, 681)
         Me.Panel1.TabIndex = 13
         '
-        'Search1_Panel
-        '
-        Me.Search1_Panel.Controls.Add(Me.ComboBox1)
-        Me.Search1_Panel.Controls.Add(Me.Label9)
-        Me.Search1_Panel.Controls.Add(Me.Search_btn)
-        Me.Search1_Panel.Controls.Add(Me.LRN_text)
-        Me.Search1_Panel.Controls.Add(Me.LRN_Label)
-        Me.Search1_Panel.Location = New System.Drawing.Point(2, 2)
-        Me.Search1_Panel.Name = "Search1_Panel"
-        Me.Search1_Panel.Size = New System.Drawing.Size(1064, 676)
-        Me.Search1_Panel.TabIndex = 13
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.25!)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(248, 290)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(569, 37)
-        Me.ComboBox1.TabIndex = 13
-        Me.ComboBox1.ValueMember = "sy"
-        '
-        'DatabaseDataSet1
-        '
-        Me.DatabaseDataSet1.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'EditInfo_Panel
         '
-        Me.EditInfo_Panel.Controls.Add(Me.SYTextBox)
         Me.EditInfo_Panel.Controls.Add(Me.F137PictureBox)
         Me.EditInfo_Panel.Controls.Add(Me.RcPictureBox)
         Me.EditInfo_Panel.Controls.Add(Me.GmPictureBox)
@@ -437,7 +365,6 @@ Partial Class Search
         Me.EditInfo_Panel.Controls.Add(Me.Label11)
         Me.EditInfo_Panel.Controls.Add(Me.Label13)
         Me.EditInfo_Panel.Controls.Add(Me.Label14)
-        Me.EditInfo_Panel.Controls.Add(Me.Label2)
         Me.EditInfo_Panel.Controls.Add(Me.Label15)
         Me.EditInfo_Panel.Controls.Add(Me.Label16)
         Me.EditInfo_Panel.Controls.Add(Me.Label20)
@@ -449,24 +376,10 @@ Partial Class Search
         Me.EditInfo_Panel.Controls.Add(Me.Label28)
         Me.EditInfo_Panel.Controls.Add(Me.Label29)
         Me.EditInfo_Panel.Controls.Add(Me.Label30)
-        Me.EditInfo_Panel.Location = New System.Drawing.Point(0, 5)
+        Me.EditInfo_Panel.Location = New System.Drawing.Point(0, 0)
         Me.EditInfo_Panel.Name = "EditInfo_Panel"
-        Me.EditInfo_Panel.Size = New System.Drawing.Size(1066, 670)
+        Me.EditInfo_Panel.Size = New System.Drawing.Size(1069, 681)
         Me.EditInfo_Panel.TabIndex = 13
-        '
-        'SYTextBox
-        '
-        Me.SYTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "sy", True))
-        Me.SYTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.SYTextBox.Location = New System.Drawing.Point(830, 237)
-        Me.SYTextBox.Name = "SYTextBox"
-        Me.SYTextBox.Size = New System.Drawing.Size(146, 26)
-        Me.SYTextBox.TabIndex = 137
-        '
-        'EnrollmentBindingSource
-        '
-        Me.EnrollmentBindingSource.DataMember = "Enrollment"
-        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet1
         '
         'F137PictureBox
         '
@@ -480,6 +393,16 @@ Partial Class Search
         Me.F137PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.F137PictureBox.TabIndex = 135
         Me.F137PictureBox.TabStop = False
+        '
+        'EnrollmentBindingSource
+        '
+        Me.EnrollmentBindingSource.DataMember = "Enrollment"
+        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet1
+        '
+        'DatabaseDataSet1
+        '
+        Me.DatabaseDataSet1.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'RcPictureBox
         '
@@ -602,24 +525,23 @@ Partial Class Search
         Me.SuffixTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.SuffixTextBox.Location = New System.Drawing.Point(102, 238)
         Me.SuffixTextBox.Name = "SuffixTextBox"
-        Me.SuffixTextBox.Size = New System.Drawing.Size(108, 26)
+        Me.SuffixTextBox.Size = New System.Drawing.Size(220, 26)
         Me.SuffixTextBox.TabIndex = 124
         '
         'LrnTextBox
         '
         Me.LrnTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "lrn", True))
         Me.LrnTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LrnTextBox.Location = New System.Drawing.Point(230, 237)
+        Me.LrnTextBox.Location = New System.Drawing.Point(345, 238)
         Me.LrnTextBox.Name = "LrnTextBox"
-        Me.LrnTextBox.ReadOnly = True
-        Me.LrnTextBox.Size = New System.Drawing.Size(277, 26)
+        Me.LrnTextBox.Size = New System.Drawing.Size(325, 26)
         Me.LrnTextBox.TabIndex = 120
         '
         'DobDateTimePicker
         '
         Me.DobDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "dob", True))
         Me.DobDateTimePicker.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.DobDateTimePicker.Location = New System.Drawing.Point(530, 236)
+        Me.DobDateTimePicker.Location = New System.Drawing.Point(699, 238)
         Me.DobDateTimePicker.Name = "DobDateTimePicker"
         Me.DobDateTimePicker.Size = New System.Drawing.Size(277, 27)
         Me.DobDateTimePicker.TabIndex = 125
@@ -705,7 +627,7 @@ Partial Class Search
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(526, 213)
+        Me.Label13.Location = New System.Drawing.Point(695, 215)
         Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(99, 20)
@@ -723,22 +645,11 @@ Partial Class Search
         Me.Label14.TabIndex = 116
         Me.Label14.Text = "Middle Name"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(826, 213)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(94, 20)
-        Me.Label2.TabIndex = 117
-        Me.Label2.Text = "School Year"
-        '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(227, 216)
+        Me.Label15.Location = New System.Drawing.Point(342, 217)
         Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(36, 20)
@@ -856,11 +767,23 @@ Partial Class Search
         Me.Label30.TabIndex = 103
         Me.Label30.Text = "Last Name"
         '
+        'Search1_Panel
+        '
+        Me.Search1_Panel.Controls.Add(Me.Label9)
+        Me.Search1_Panel.Controls.Add(Me.Search_btn)
+        Me.Search1_Panel.Controls.Add(Me.LRN_text)
+        Me.Search1_Panel.Controls.Add(Me.LRN_Label)
+        Me.Search1_Panel.Location = New System.Drawing.Point(0, 0)
+        Me.Search1_Panel.Name = "Search1_Panel"
+        Me.Search1_Panel.Size = New System.Drawing.Size(1069, 681)
+        Me.Search1_Panel.TabIndex = 13
+        '
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
+        Me.TableAdapterManager.Sections1TableAdapter = Nothing
         Me.TableAdapterManager.SectionsTableAdapter = Nothing
         Me.TableAdapterManager.StaffTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -874,7 +797,7 @@ Partial Class Search
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(1265, 692)
+        Me.ClientSize = New System.Drawing.Size(1265, 681)
         Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
@@ -884,7 +807,6 @@ Partial Class Search
         Me.Text = "FLMS Enrollment System"
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
-        CType(Me.NewClass_PB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
@@ -892,17 +814,17 @@ Partial Class Search
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
-        Me.Search1_Panel.ResumeLayout(False)
-        Me.Search1_Panel.PerformLayout()
-        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EditInfo_Panel.ResumeLayout(False)
         Me.EditInfo_Panel.PerformLayout()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Search1_Panel.ResumeLayout(False)
+        Me.Search1_Panel.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -926,9 +848,6 @@ Partial Class Search
     Friend WithEvents Search_btn As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents NewClass_Label As Label
-    Friend WithEvents NewClass_PB As PictureBox
     Friend WithEvents EditInfo_Panel As Panel
     Friend WithEvents Search1_Panel As Panel
     Friend WithEvents F137PictureBox As PictureBox
@@ -969,8 +888,5 @@ Partial Class Search
     Friend WithEvents DatabaseDataSet1 As DatabaseDataSet
     Friend WithEvents EnrollmentBindingSource As BindingSource
     Friend WithEvents TableAdapterManager As DatabaseDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents SYTextBox As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents EnrollmentTableAdapter As DatabaseDataSetTableAdapters.EnrollmentTableAdapter
 End Class

@@ -24,11 +24,6 @@
         Application.Exit()
     End Sub
 
-    Private Sub NewClass_Click(sender As Object, e As EventArgs) Handles NewClass_PB.Click, NewClass_Label.Click
-        Me.Hide()
-        NewSection.Show()
-    End Sub
-
     Private Sub StaffBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.StaffBindingSource.EndEdit()

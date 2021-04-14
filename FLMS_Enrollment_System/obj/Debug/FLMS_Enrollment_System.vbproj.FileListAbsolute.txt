@@ -25,7 +25,6 @@ C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Login.resources
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Resources.resources
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Search.resources
-C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.StudentInfo.resources
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.vbproj.GenerateResource.cache
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.vbproj.CoreCompileInputs.cache
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.exe
@@ -52,7 +51,6 @@ C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\De
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.AddStaff.resources
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.OldEnrollment.resources
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.AddStaff.resources
-C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.NewSection.resources
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.OldEnrollment.resources
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\Debug\Database.mdf
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\Debug\Database_log.ldf

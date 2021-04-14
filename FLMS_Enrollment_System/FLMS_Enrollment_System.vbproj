@@ -143,12 +143,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="NewSection.Designer.vb">
-      <DependentUpon>NewSection.vb</DependentUpon>
-    </Compile>
-    <Compile Include="NewSection.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="OldEnrollment.Designer.vb">
       <DependentUpon>OldEnrollment.vb</DependentUpon>
     </Compile>
@@ -159,12 +153,6 @@
       <DependentUpon>Search.vb</DependentUpon>
     </Compile>
     <Compile Include="Search.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentInfo.Designer.vb">
-      <DependentUpon>StudentInfo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="StudentInfo.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -190,17 +178,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewSection.resx">
-      <DependentUpon>NewSection.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="OldEnrollment.resx">
       <DependentUpon>OldEnrollment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StudentInfo.resx">
-      <DependentUpon>StudentInfo.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

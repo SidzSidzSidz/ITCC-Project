@@ -56,11 +56,6 @@ Public Class Enrollment1Form
         Application.Exit()
     End Sub
 
-    Private Sub NewClass_Click(sender As Object, e As EventArgs) Handles NewClass_PB.Click, NewClass_Label.Click
-        Me.Hide()
-        NewSection.Show()
-    End Sub
-
     Private Sub EnrollmentBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.EnrollmentBindingSource.EndEdit()
@@ -69,6 +64,8 @@ Public Class Enrollment1Form
     End Sub
 
     Private Sub Enrollment1Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DatabaseDataSet.Sections1' table. You can move, or remove it, as needed.
+        Me.Sections1TableAdapter.Fill(Me.DatabaseDataSet.Sections1)
         'TODO: This line of code loads data into the 'DatabaseDataSet.Enrollment1' table. You can move, or remove it, as needed.
         'Me.Enrollment1TableAdapter.Fill(Me.DatabaseDataSet.Enrollment1)
         'TODO: This line of code loads data into the 'DatabaseDataSet.Sections' table. You can move, or remove it, as needed.
@@ -248,7 +245,10 @@ Public Class Enrollment1Form
     Private Sub EnrollBtn_Click(sender As Object, e As EventArgs) Handles EnrollBtn.Click
         Dim section = SectionBox.Text
         Dim lrn_sy = LrnTextBox.Text + ComboBox1.Text
-        EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image), ComboBox1.Text, YearLevelBox.Text, section, lrn_sy)
+        'if new student
+        EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image), ComboBox1.Text, YearLevelBox.Text, section)
+        'add to classlist
+        Sections1TableAdapter.SectionFn(lrn_sy, YearLevelBox.Text, section, ComboBox1.Text, LrnTextBox.Text, LnameTextBox.Text, FnameTextBox.Text, MnameTextBox.Text, SexComboBox.Text)
         Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
         Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
 
@@ -277,5 +277,16 @@ Public Class Enrollment1Form
         ComboBox1.Text = ""
         YearLevelBox.Text = ""
         SectionBox.Text = ""
+    End Sub
+
+    Private Sub SectionBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SectionBox.SelectedIndexChanged
+        Sections1TableAdapter.FillBySection(DatabaseDataSet.Sections1, ComboBox1.Text, SectionBox.Text, YearLevelBox.Text)
+    End Sub
+
+    Private Sub UpdateButton_Click(sender As Object, e As EventArgs) Handles UpdateButton.Click
+        EnrollmentTableAdapter.UpdateOld(ComboBox1.Text, YearLevelBox.Text, SectionBox.Text, OldEnrollment.LRN_TBox.Text)
+        Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
+        MsgBox("Student Enrolled")
     End Sub
 End Class

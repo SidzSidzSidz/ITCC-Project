@@ -26,7 +26,7 @@ Public Class Search
     End Sub
 
     Private Sub Search_btn_Click(sender As Object, e As EventArgs) Handles Search_btn.Click
-        Dim Search = LRN_text.Text + ComboBox1.Text
+        Dim Search = LRN_text.Text
         If Me.EnrollmentTableAdapter.SearchStudent(LRN_text.Text) = 1 Then
             Search1_Panel.SendToBack()
             EditInfo_Panel.BringToFront()
@@ -43,11 +43,6 @@ Public Class Search
     Private Sub AddStaffSBar_Click(sender As Object, e As EventArgs) Handles AddStaffSBar.Click, AddStaffPB.Click
         Me.Hide()
         AddStaff.Show()
-    End Sub
-
-    Private Sub NewClass_Click(sender As Object, e As EventArgs) Handles NewClass_PB.Click, NewClass_Label.Click
-        Me.Hide()
-        NewSection.Show()
     End Sub
 
     Public Function GetLRN()
@@ -140,10 +135,10 @@ Public Class Search
     End Sub
 
     Private Sub NextBtn_Click(sender As Object, e As EventArgs) Handles NextBtn.Click
-        Dim section = ""
-        Dim lrn_sy = LrnTextBox.Text + SYTextBox.Text
-        'EnrollmentTableAdapter.UpdateEnrollment(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image), SYTextBox.Text, section, lrn_sy)
-
+        'updates student based on lrn
+        EnrollmentTableAdapter.UpdateEnrollment(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image))
+        Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet1)
+        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet1.Enrollment)
         MsgBox("Changes saved.")
     End Sub
 
@@ -170,7 +165,7 @@ Public Class Search
         Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet1.Enrollment)
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class

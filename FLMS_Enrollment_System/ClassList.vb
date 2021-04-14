@@ -23,12 +23,6 @@
         Login.Show()
     End Sub
 
-
-    Private Sub NewClass_Click(sender As Object, e As EventArgs) Handles NewClass_PB.Click, NewClass_Label.Click
-        Me.Hide()
-        NewSection.Show()
-    End Sub
-
     Private Sub SectionsBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.SectionsBindingSource.EndEdit()
@@ -36,16 +30,12 @@
 
     End Sub
 
-    Private Sub ClassList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ClassList_Load(sender As Object, e As EventArgs) Handles MyBase.Load, MyBase.Shown
+        'TODO: This line of code loads data into the 'DatabaseDataSet.Sections1' table. You can move, or remove it, as needed.
+        Me.Sections1TableAdapter.Fill(Me.DatabaseDataSet.Sections1)
 
-        'TODO: This line of code loads data into the 'DatabaseDataSet.Enrollment1' table. You can move, or remove it, as needed.
-        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
-        'TODO: This line of code loads data into the 'DatabaseDataSet.Enrollment1' table. You can move, or remove it, as needed.
-        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
         'TODO: This line of code loads data into the 'DatabaseDataSet.Enrollment' table. You can move, or remove it, as needed.
         Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
-        'TODO: This line of code loads data into the 'DatabaseDataSet.Sections' table. You can move, or remove it, as needed.
-        Me.SectionsTableAdapter.Fill(Me.DatabaseDataSet.Sections)
 
     End Sub
 
@@ -95,57 +85,21 @@
     End Sub
 
     Private Sub SelectBtn_Click(sender As Object, e As EventArgs) Handles SelectBtn.Click
-        EnrollmentTableAdapter.FillBySection(DatabaseDataSet.Enrollment, ComboBox1.Text, SectionCBox.Text, ComboBox2.Text)
+        Sections1TableAdapter.FillBySection(DatabaseDataSet.Sections1, ComboBox1.Text, SectionCBox.Text, ComboBox2.Text)
     End Sub
 
-    Private Sub FillBySectionToolStripButton_Click(sender As Object, e As EventArgs)
+    Private Sub FillBySectionToolStripButton2_Click(sender As Object, e As EventArgs) Handles FillBySectionToolStripButton2.Click
         Try
-            Me.EnrollmentTableAdapter.FillBySection(Me.DatabaseDataSet.Enrollment, SyToolStripTextBox.Text, SectionToolStripTextBox.Text, GradelevelToolStripTextBox.Text)
+            Me.Sections1TableAdapter.FillBySection(Me.DatabaseDataSet.Sections1, SyToolStripTextBox2.Text, SectionToolStripTextBox2.Text, YearlevelToolStripTextBox.Text)
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
 
     End Sub
 
-    Private Sub FillBySectionToolStripButton_Click_1(sender As Object, e As EventArgs)
+    Private Sub FillBySectionToolStripButton3_Click(sender As Object, e As EventArgs) Handles FillBySectionToolStripButton3.Click
         Try
-            Me.EnrollmentTableAdapter.FillBySection(Me.DatabaseDataSet.Enrollment, SyToolStripTextBox.Text, SectionToolStripTextBox.Text, GradelevelToolStripTextBox.Text)
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
-
-    Private Sub FillBySectionToolStripButton1_Click(sender As Object, e As EventArgs)
-        Try
-            Me.EnrollmentTableAdapter.FillBySection(Me.DatabaseDataSet.Enrollment, SyToolStripTextBox.Text, SectionToolStripTextBox.Text, GradelevelToolStripTextBox.Text)
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
-
-    Private Sub FillBySectionToolStripButton_Click_2(sender As Object, e As EventArgs)
-        Try
-            Me.EnrollmentTableAdapter.FillBySection(Me.DatabaseDataSet.Enrollment, SyToolStripTextBox.Text, SectionToolStripTextBox.Text, GradelevelToolStripTextBox.Text)
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
-
-    Private Sub FillBySectionToolStripButton_Click_3(sender As Object, e As EventArgs) Handles FillBySectionToolStripButton.Click
-        Try
-            Me.EnrollmentTableAdapter.FillBySection(Me.DatabaseDataSet.Enrollment, SyToolStripTextBox.Text, SectionToolStripTextBox.Text, GradelevelToolStripTextBox.Text)
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
-
-    Private Sub FillBySectionToolStripButton1_Click_1(sender As Object, e As EventArgs) Handles FillBySectionToolStripButton1.Click
-        Try
-            Me.EnrollmentTableAdapter.FillBySection(Me.DatabaseDataSet.Enrollment, SyToolStripTextBox1.Text, SectionToolStripTextBox1.Text, GradelevelToolStripTextBox1.Text)
+            Me.Sections1TableAdapter.FillBySection(Me.DatabaseDataSet.Sections1, SyToolStripTextBox3.Text, SectionToolStripTextBox3.Text, YearlevelToolStripTextBox1.Text)
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try

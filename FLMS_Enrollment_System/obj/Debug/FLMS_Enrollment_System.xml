@@ -37,6 +37,11 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:FLMS_Enrollment_System.DatabaseDataSet.Sections1DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:FLMS_Enrollment_System.DatabaseDataSet.EnrollmentDataTable">
 <summary>
 Represents the strongly named DataTable class.
@@ -48,6 +53,11 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:FLMS_Enrollment_System.DatabaseDataSet.SectionsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FLMS_Enrollment_System.DatabaseDataSet.Sections1Row">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -67,6 +77,11 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:FLMS_Enrollment_System.DatabaseDataSet.Sections1RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:FLMS_Enrollment_System.DatabaseDataSet.EnrollmentRowChangeEvent">
 <summary>
 Row event argument class
@@ -78,6 +93,11 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:FLMS_Enrollment_System.DatabaseDataSetTableAdapters.SectionsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FLMS_Enrollment_System.DatabaseDataSetTableAdapters.Sections1TableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

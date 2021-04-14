@@ -22,9 +22,16 @@ Partial Class OldEnrollment
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.LRN_TBox = New System.Windows.Forms.TextBox()
         Me.Enter_btn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
+        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
+        Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LRN_TBox
@@ -55,18 +62,43 @@ Partial Class OldEnrollment
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Enter LRN"
         '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EnrollmentBindingSource
+        '
+        Me.EnrollmentBindingSource.DataMember = "Enrollment"
+        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'EnrollmentTableAdapter
+        '
+        Me.EnrollmentTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.EnrollmentTableAdapter = Me.EnrollmentTableAdapter
+        Me.TableAdapterManager.Sections1TableAdapter = Nothing
+        Me.TableAdapterManager.SectionsTableAdapter = Nothing
+        Me.TableAdapterManager.StaffTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'OldEnrollment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(438, 220)
+        Me.ClientSize = New System.Drawing.Size(438, 235)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Enter_btn)
         Me.Controls.Add(Me.LRN_TBox)
         Me.Name = "OldEnrollment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FLMS Enrollment System"
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -75,4 +107,8 @@ Partial Class OldEnrollment
     Friend WithEvents LRN_TBox As TextBox
     Friend WithEvents Enter_btn As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents DatabaseDataSet As DatabaseDataSet
+    Friend WithEvents EnrollmentBindingSource As BindingSource
+    Friend WithEvents EnrollmentTableAdapter As DatabaseDataSetTableAdapters.EnrollmentTableAdapter
+    Friend WithEvents TableAdapterManager As DatabaseDataSetTableAdapters.TableAdapterManager
 End Class
