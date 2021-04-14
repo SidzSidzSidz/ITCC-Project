@@ -49,6 +49,20 @@ Public Class Search
         Return LRN_text.Text
     End Function
 
+
+
+    Private Sub PicPictureBox_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PicPictureBox.MouseHover
+        'PictureBox3.Show()
+        'PictureBox3.BringToFront()
+        'PictureBox3.ClientSize = PicPictureBox.Image.Size
+        'PictureBox3.Image = CType(PicPictureBox.Image.Clone, Image)
+    End Sub
+
+    Private Sub PicPictureBox_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles PicPictureBox.MouseLeave
+        PictureBox3.Hide()
+    End Sub
+
+
     Private Sub PicPictureBox_Click(sender As Object, e As EventArgs) Handles PicPictureBox.Click
         Dim OFD As FileDialog = New OpenFileDialog()
         Dim imgpath
@@ -137,9 +151,13 @@ Public Class Search
     Private Sub NextBtn_Click(sender As Object, e As EventArgs) Handles NextBtn.Click
         'updates student based on lrn
         EnrollmentTableAdapter.UpdateEnrollment(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image))
+        Sections1TableAdapter1.UpdateStudentInfo(LrnTextBox.Text, LnameTextBox.Text, FnameTextBox.Text, MnameTextBox.Text, SexComboBox.Text, LrnTextBox.Text)
+
         'Me.EnrollmentTableAdapter.Update(Me.DatabaseDataSet1.Enrollment)
         'Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet1.Enrollment)
         MsgBox("Changes saved.")
+        Enrollment1Form.clearboxes()
+        Search1_Panel.BringToFront()
     End Sub
 
     Private Function ConvertImageToByte(ByVal img As Image)
@@ -165,9 +183,7 @@ Public Class Search
         Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet1.Enrollment)
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub PicPictureBox_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PicPictureBox.DragDrop
 
     End Sub
-
-
 End Class

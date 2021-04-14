@@ -284,12 +284,24 @@ Public Class Enrollment1Form
     End Sub
 
     Private Sub UpdateButton_Click(sender As Object, e As EventArgs) Handles UpdateButton.Click
-        'update current student info
-        EnrollmentTableAdapter.UpdateOld(ComboBox1.Text, YearLevelBox.Text, SectionBox.Text, OldEnrollment.LRN_TBox.Text)
+        Try
+            Dim section = SectionBox.Text
+            Dim lrn_sy = OldEnrollment.LRN_TBox.Text + ComboBox1.Text
+
+            EnrollmentTableAdapter.FillSearchedStudent(DatabaseDataSet.Enrollment, OldEnrollment.LRN_TBox.Text)
+
+            'update current student info
+            EnrollmentTableAdapter.UpdateOld(ComboBox1.Text, YearLevelBox.Text, SectionBox.Text, OldEnrollment.LRN_TBox.Text)
+
+            'add updated student to a class
+            Sections1TableAdapter.SectionFn(lrn_sy, YearLevelBox.Text, section, ComboBox1.Text, OldEnrollment.LRN_TBox.Text, LnameTextBox.Text, FnameTextBox.Text, MnameTextBox.Text, SexComboBox.Text)
+            Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+            Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
+            MsgBox("Student Enrolled")
+        Catch ex As Exception
+            MsgBox("ERROR: Cannot Enroll Student In The Same School Year Twice")
+        End Try
 
 
-        Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
-        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
-        MsgBox("Student Enrolled")
     End Sub
 End Class

@@ -17,6 +17,7 @@
         Me.Hide()
         Search.Hide()
         ClassList.Hide()
+        Enrollment1Form.UpdateButton.BringToFront()
         Enrollment1Form.Panel2.BringToFront()
         OldEnrollment.Show()
         'fetch lrn

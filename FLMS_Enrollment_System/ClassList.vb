@@ -31,6 +31,9 @@
     End Sub
 
     Private Sub ClassList_Load(sender As Object, e As EventArgs) Handles MyBase.Load, MyBase.Shown
+        'TODO: update datagrid table
+
+
         'TODO: This line of code loads data into the 'DatabaseDataSet.Sections1' table. You can move, or remove it, as needed.
         Me.Sections1TableAdapter.Fill(Me.DatabaseDataSet.Sections1)
 

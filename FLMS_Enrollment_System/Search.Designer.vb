@@ -82,9 +82,11 @@ Partial Class Search
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Search1_Panel = New System.Windows.Forms.Panel()
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
+        Me.Sections1TableAdapter1 = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.Sections1TableAdapter()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,6 +103,7 @@ Partial Class Search
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Search1_Panel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -332,8 +335,8 @@ Partial Class Search
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.EditInfo_Panel)
         Me.Panel1.Controls.Add(Me.Search1_Panel)
+        Me.Panel1.Controls.Add(Me.EditInfo_Panel)
         Me.Panel1.Location = New System.Drawing.Point(196, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1069, 681)
@@ -376,6 +379,7 @@ Partial Class Search
         Me.EditInfo_Panel.Controls.Add(Me.Label28)
         Me.EditInfo_Panel.Controls.Add(Me.Label29)
         Me.EditInfo_Panel.Controls.Add(Me.Label30)
+        Me.EditInfo_Panel.Controls.Add(Me.PictureBox3)
         Me.EditInfo_Panel.Location = New System.Drawing.Point(0, 0)
         Me.EditInfo_Panel.Name = "EditInfo_Panel"
         Me.EditInfo_Panel.Size = New System.Drawing.Size(1069, 681)
@@ -767,6 +771,15 @@ Partial Class Search
         Me.Label30.TabIndex = 103
         Me.Label30.Text = "Last Name"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(535, 681)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 137
+        Me.PictureBox3.TabStop = False
+        '
         'Search1_Panel
         '
         Me.Search1_Panel.Controls.Add(Me.Label9)
@@ -791,6 +804,10 @@ Partial Class Search
         'EnrollmentTableAdapter
         '
         Me.EnrollmentTableAdapter.ClearBeforeFill = True
+        '
+        'Sections1TableAdapter1
+        '
+        Me.Sections1TableAdapter1.ClearBeforeFill = True
         '
         'Search
         '
@@ -823,6 +840,7 @@ Partial Class Search
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Search1_Panel.ResumeLayout(False)
         Me.Search1_Panel.PerformLayout()
         Me.ResumeLayout(False)
@@ -889,4 +907,6 @@ Partial Class Search
     Friend WithEvents EnrollmentBindingSource As BindingSource
     Friend WithEvents TableAdapterManager As DatabaseDataSetTableAdapters.TableAdapterManager
     Friend WithEvents EnrollmentTableAdapter As DatabaseDataSetTableAdapters.EnrollmentTableAdapter
+    Friend WithEvents Sections1TableAdapter1 As DatabaseDataSetTableAdapters.Sections1TableAdapter
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

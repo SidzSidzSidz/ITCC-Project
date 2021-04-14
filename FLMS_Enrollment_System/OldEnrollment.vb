@@ -1,7 +1,8 @@
 ﻿Public Class OldEnrollment
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Enter_btn.Click
         Me.Hide()
-        Dim Name = EnrollmentTableAdapter.GetLName(LRN_TBox.Text) + " " + EnrollmentTableAdapter.GetFName(LRN_TBox.Text) + " " + EnrollmentTableAdapter.GetMName(LRN_TBox.Text)
+        Dim Name = EnrollmentTableAdapter.GetLName(LRN_TBox.Text) + ", " + EnrollmentTableAdapter.GetFName(LRN_TBox.Text) + " " + EnrollmentTableAdapter.GetMName(LRN_TBox.Text)
+        Enrollment1Form.EnrollmentTableAdapter.FillSearchedStudent(DatabaseDataSet.Enrollment, LRN_TBox.Text)
         Enrollment1Form.EnrolleeName.Text = Name
         Enrollment1Form.UpdateButton.BringToFront()
         Enrollment1Form.Panel2.BringToFront()
