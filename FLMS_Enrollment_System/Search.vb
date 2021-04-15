@@ -50,34 +50,41 @@ Public Class Search
     End Function
 
 
-
-    Private Sub PicPictureBox_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PicPictureBox.MouseHover
-        'PictureBox3.Show()
-        'PictureBox3.BringToFront()
-        'PictureBox3.ClientSize = PicPictureBox.Image.Size
-        'PictureBox3.Image = CType(PicPictureBox.Image.Clone, Image)
-    End Sub
-
-    Private Sub PicPictureBox_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles PicPictureBox.MouseLeave
-        PictureBox3.Hide()
-    End Sub
-
-
     Private Sub PicPictureBox_Click(sender As Object, e As EventArgs) Handles PicPictureBox.Click
-        Dim OFD As FileDialog = New OpenFileDialog()
-        Dim imgpath
-        OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+        Static hits As Integer
 
-        If OFD.ShowDialog() = DialogResult.OK Then
-            imgpath = OFD.FileName
-            PicPictureBox.ImageLocation = imgpath
+        hits += 1
+        'need twice to open picture box to save
+        If hits >= 2 Then
+            Try
+                hits = 0
+                Dim pic As Image
+                pic = PicPictureBox.Image
+                SaveFileDialog1.ShowDialog()
+                pic.Save(SaveFileDialog1.FileName + ".jpeg")
+
+            Catch ex As Exception
+
+            End Try
+
+        ElseIf hits = 1 Then
+            Dim OFD As FileDialog = New OpenFileDialog()
+            Dim imgpath
+            OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+
+            If OFD.ShowDialog() = DialogResult.OK Then
+                imgpath = OFD.FileName
+                PicPictureBox.ImageLocation = imgpath
+
+            End If
+
+            Try
+            Catch ex As Exception
+                MsgBox(ex.Message.ToString())
+            End Try
 
         End If
 
-        Try
-        Catch ex As Exception
-            MsgBox(ex.Message.ToString())
-        End Try
     End Sub
 
     Private Sub NsoPictureBox_Click(sender As Object, e As EventArgs) Handles NsoPictureBox.Click
@@ -153,6 +160,11 @@ Public Class Search
         EnrollmentTableAdapter.UpdateEnrollment(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image))
         Sections1TableAdapter1.UpdateStudentInfo(LrnTextBox.Text, LnameTextBox.Text, FnameTextBox.Text, MnameTextBox.Text, SexComboBox.Text, LrnTextBox.Text)
 
+        ClassList.Sections1TableAdapter.Fill(ClassList.DatabaseDataSet.Sections1)
+
+        'TODO: This line of code loads data into the 'DatabaseDataSet.Enrollment' table. You can move, or remove it, as needed.
+        ClassList.EnrollmentTableAdapter.Fill(ClassList.DatabaseDataSet.Enrollment)
+
         'Me.EnrollmentTableAdapter.Update(Me.DatabaseDataSet1.Enrollment)
         'Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet1.Enrollment)
         MsgBox("Changes saved.")
@@ -161,10 +173,14 @@ Public Class Search
     End Sub
 
     Private Function ConvertImageToByte(ByVal img As Image)
-        Using mStream As New MemoryStream()
-            img.Save(mStream, img.RawFormat)
-            Return mStream.ToArray()
-        End Using
+        If img Is Nothing Then
+
+        Else
+            Using mStream As New MemoryStream()
+                img.Save(mStream, img.RawFormat)
+                Return mStream.ToArray()
+            End Using
+        End If
     End Function
 
     Private Sub SearchSBar_Click(sender As Object, e As EventArgs) Handles SearchSBar.Click, SearchPB.Click
@@ -183,7 +199,4 @@ Public Class Search
         Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet1.Enrollment)
     End Sub
 
-    Private Sub PicPictureBox_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PicPictureBox.DragDrop
-
-    End Sub
 End Class

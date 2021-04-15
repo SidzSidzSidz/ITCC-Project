@@ -2,21 +2,20 @@
 
 Public Class Enrollment1Form
     Private Function ConvertImageToByte(ByVal img As Image)
-        Using mStream As New MemoryStream()
-            img.Save(mStream, img.RawFormat)
-            Return mStream.ToArray()
-        End Using
+        If img Is Nothing Then
+
+        Else
+            Using mStream As New MemoryStream()
+                img.Save(mStream, img.RawFormat)
+                Return mStream.ToArray()
+            End Using
+        End If
+
     End Function
 
     Private Sub NextBtn_Click(sender As Object, e As EventArgs) Handles NextBtn.Click
         Panel2.BringToFront()
         EnrolleeName.Text = LnameTextBox.Text + " " + FnameTextBox.Text + " " + MnameTextBox.Text
-        'Dim section = ""
-        'Dim lrn_sy = LrnTextBox.Text + SYTextBox.Text
-        'EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image), SYTextBox.Text, section, lrn_sy)
-        'Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
-        'Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
-
         Panel2.Show()
     End Sub
 
