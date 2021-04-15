@@ -1,13 +1,21 @@
 ﻿Public Class OldEnrollment
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Enter_btn.Click
-        Me.Hide()
-        Dim Name = EnrollmentTableAdapter.GetLName(LRN_TBox.Text) + ", " + EnrollmentTableAdapter.GetFName(LRN_TBox.Text) + " " + EnrollmentTableAdapter.GetMName(LRN_TBox.Text)
-        Enrollment1Form.EnrollmentTableAdapter.FillSearchedStudent(DatabaseDataSet.Enrollment, LRN_TBox.Text)
-        Enrollment1Form.EnrolleeName.Text = Name
-        Enrollment1Form.UpdateButton.BringToFront()
-        Enrollment1Form.Panel2.BringToFront()
-        Enrollment1Form.Show()
+        If Enrollment1Form.EnrollmentTableAdapter.FillSearchedStudent(DatabaseDataSet.Enrollment, LRN_TBox.Text) = 1 Then
+            Me.Hide()
+            Dim Name = EnrollmentTableAdapter.GetLName(LRN_TBox.Text) + ", " + EnrollmentTableAdapter.GetFName(LRN_TBox.Text) + " " + EnrollmentTableAdapter.GetMName(LRN_TBox.Text)
+            Enrollment1Form.EnrollmentTableAdapter.FillSearchedStudent(DatabaseDataSet.Enrollment, LRN_TBox.Text)
+            Enrollment1Form.EnrolleeName.Text = Name
+            Enrollment1Form.UpdateButton.BringToFront()
+            Enrollment1Form.Panel2.BringToFront()
+            Enrollment1Form.Show()
+
+        Else
+            MsgBox("LRN Not Found")
+        End If
+
+
     End Sub
+
 
     Private Sub EnrollmentBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()

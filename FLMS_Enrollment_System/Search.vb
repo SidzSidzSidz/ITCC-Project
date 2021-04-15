@@ -60,8 +60,17 @@ Public Class Search
                 hits = 0
                 Dim pic As Image
                 pic = PicPictureBox.Image
+                SaveFileDialog1.Filter = "JPEG (.jpeg) |*.jpeg"
+                SaveFileDialog1.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
                 SaveFileDialog1.ShowDialog()
-                pic.Save(SaveFileDialog1.FileName + ".jpeg")
+                Dim path = SaveFileDialog1.FileName + ".jpeg"
+                pic.Save(path)
+
+                If System.IO.File.Exists(path) = True Then
+                    Process.Start(path)
+                Else
+                    MsgBox("File not saved.")
+                End If
 
             Catch ex As Exception
 
@@ -88,71 +97,183 @@ Public Class Search
     End Sub
 
     Private Sub NsoPictureBox_Click(sender As Object, e As EventArgs) Handles NsoPictureBox.Click
-        Dim OFD As FileDialog = New OpenFileDialog()
-        Dim imgpath
-        OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+        Static hits As Integer
 
-        If OFD.ShowDialog() = DialogResult.OK Then
-            imgpath = OFD.FileName
-            PicPictureBox.ImageLocation = imgpath
+        hits += 1
+        'need twice to open picture box to save
+        If hits >= 2 Then
+            Try
+                hits = 0
+                Dim pic As Image
+                pic = NsoPictureBox.Image
+                SaveFileDialog1.Filter = "JPEG (.jpeg) |*.jpeg"
+                SaveFileDialog1.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+                SaveFileDialog1.ShowDialog()
+                Dim path = SaveFileDialog1.FileName + ".jpeg"
+                pic.Save(path)
+
+                If System.IO.File.Exists(path) = True Then
+                    Process.Start(path)
+                Else
+                    MsgBox("File not saved.")
+                End If
+
+            Catch ex As Exception
+
+            End Try
+
+        ElseIf hits = 1 Then
+            Dim OFD As FileDialog = New OpenFileDialog()
+            Dim imgpath
+            OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+
+            If OFD.ShowDialog() = DialogResult.OK Then
+                imgpath = OFD.FileName
+                NsoPictureBox.ImageLocation = imgpath
+
+            End If
+
+            Try
+            Catch ex As Exception
+                MsgBox(ex.Message.ToString())
+            End Try
 
         End If
-
-        Try
-        Catch ex As Exception
-            MsgBox(ex.Message.ToString())
-        End Try
     End Sub
 
     Private Sub GmPictureBox_Click(sender As Object, e As EventArgs) Handles GmPictureBox.Click
-        Dim OFD As FileDialog = New OpenFileDialog()
-        Dim imgpath
-        OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+        Static hits As Integer
 
-        If OFD.ShowDialog() = DialogResult.OK Then
-            imgpath = OFD.FileName
-            PicPictureBox.ImageLocation = imgpath
+        hits += 1
+        'need twice to open picture box to save
+        If hits >= 2 Then
+            Try
+                hits = 0
+                Dim pic As Image
+                pic = GmPictureBox.Image
+                SaveFileDialog1.Filter = "JPEG (.jpeg) |*.jpeg"
+                SaveFileDialog1.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+                SaveFileDialog1.ShowDialog()
+                Dim path = SaveFileDialog1.FileName + ".jpeg"
+                pic.Save(path)
+
+                If System.IO.File.Exists(path) = True Then
+                    Process.Start(path)
+                Else
+                    MsgBox("File not saved.")
+                End If
+
+            Catch ex As Exception
+
+            End Try
+
+        ElseIf hits = 1 Then
+            Dim OFD As FileDialog = New OpenFileDialog()
+            Dim imgpath
+            OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+
+            If OFD.ShowDialog() = DialogResult.OK Then
+                imgpath = OFD.FileName
+                GmPictureBox.ImageLocation = imgpath
+
+            End If
+
+            Try
+            Catch ex As Exception
+                MsgBox(ex.Message.ToString())
+            End Try
 
         End If
-
-        Try
-        Catch ex As Exception
-            MsgBox(ex.Message.ToString())
-        End Try
     End Sub
 
     Private Sub RcPictureBox_Click(sender As Object, e As EventArgs) Handles RcPictureBox.Click
-        Dim OFD As FileDialog = New OpenFileDialog()
-        Dim imgpath
-        OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+        Static hits As Integer
 
-        If OFD.ShowDialog() = DialogResult.OK Then
-            imgpath = OFD.FileName
-            PicPictureBox.ImageLocation = imgpath
+        hits += 1
+        'need twice to open picture box to save
+        If hits >= 2 Then
+            Try
+                hits = 0
+                Dim pic As Image
+                pic = RcPictureBox.Image
+                SaveFileDialog1.Filter = "JPEG (.jpeg) |*.jpeg"
+                SaveFileDialog1.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+                SaveFileDialog1.ShowDialog()
+                Dim path = SaveFileDialog1.FileName + ".jpeg"
+                pic.Save(path)
+
+                If System.IO.File.Exists(path) = True Then
+                    Process.Start(path)
+                Else
+                    MsgBox("File not saved.")
+                End If
+
+            Catch ex As Exception
+
+            End Try
+
+        ElseIf hits = 1 Then
+            Dim OFD As FileDialog = New OpenFileDialog()
+            Dim imgpath
+            OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+
+            If OFD.ShowDialog() = DialogResult.OK Then
+                imgpath = OFD.FileName
+                RcPictureBox.ImageLocation = imgpath
+
+            End If
+
+            Try
+            Catch ex As Exception
+                MsgBox(ex.Message.ToString())
+            End Try
 
         End If
-
-        Try
-        Catch ex As Exception
-            MsgBox(ex.Message.ToString())
-        End Try
     End Sub
 
     Private Sub F137PictureBox_Click(sender As Object, e As EventArgs) Handles F137PictureBox.Click
-        Dim OFD As FileDialog = New OpenFileDialog()
-        Dim imgpath
-        OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+        Static hits As Integer
 
-        If OFD.ShowDialog() = DialogResult.OK Then
-            imgpath = OFD.FileName
-            PicPictureBox.ImageLocation = imgpath
+        hits += 1
+        'need twice to open picture box to save
+        If hits >= 2 Then
+            Try
+                hits = 0
+                Dim pic As Image
+                pic = F137PictureBox.Image
+                SaveFileDialog1.Filter = "JPEG (.jpeg) |*.jpeg"
+                SaveFileDialog1.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+                SaveFileDialog1.ShowDialog()
+                Dim path = SaveFileDialog1.FileName + ".jpeg"
+                pic.Save(path)
+
+                If System.IO.File.Exists(path) = True Then
+                    Process.Start(path)
+                Else
+                    MsgBox("File not saved.")
+                End If
+
+            Catch ex As Exception
+
+            End Try
+
+        ElseIf hits = 1 Then
+            Dim OFD As FileDialog = New OpenFileDialog()
+            Dim imgpath
+            OFD.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+
+            If OFD.ShowDialog() = DialogResult.OK Then
+                imgpath = OFD.FileName
+                F137PictureBox.ImageLocation = imgpath
+
+            End If
+
+            Try
+            Catch ex As Exception
+                MsgBox(ex.Message.ToString())
+            End Try
 
         End If
-
-        Try
-        Catch ex As Exception
-            MsgBox(ex.Message.ToString())
-        End Try
     End Sub
 
     Private Sub NextBtn_Click(sender As Object, e As EventArgs) Handles NextBtn.Click

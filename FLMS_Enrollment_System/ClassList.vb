@@ -89,6 +89,7 @@
 
     Private Sub SelectBtn_Click(sender As Object, e As EventArgs) Handles SelectBtn.Click
         Sections1TableAdapter.FillBySection(DatabaseDataSet.Sections1, ComboBox1.Text, SectionCBox.Text, ComboBox2.Text)
+        ClassList_DGV.Visible = True
     End Sub
 
     Private Sub FillBySectionToolStripButton2_Click(sender As Object, e As EventArgs) Handles FillBySectionToolStripButton2.Click

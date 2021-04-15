@@ -15,8 +15,6 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles OldStudent_btn.Click
         Me.Hide()
-        Search.Hide()
-        ClassList.Hide()
         Enrollment1Form.UpdateButton.BringToFront()
         Enrollment1Form.Panel2.BringToFront()
         OldEnrollment.Show()

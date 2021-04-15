@@ -14,6 +14,10 @@ Public Class Enrollment1Form
     End Function
 
     Private Sub NextBtn_Click(sender As Object, e As EventArgs) Handles NextBtn.Click
+        ComboBox1.Text = Nothing
+        YearLevelBox.Text = Nothing
+        SectionBox.Text = Nothing
+
         Panel2.BringToFront()
         EnrolleeName.Text = LnameTextBox.Text + " " + FnameTextBox.Text + " " + MnameTextBox.Text
         Panel2.Show()
@@ -65,14 +69,6 @@ Public Class Enrollment1Form
     Private Sub Enrollment1Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'DatabaseDataSet.Sections1' table. You can move, or remove it, as needed.
         Me.Sections1TableAdapter.Fill(Me.DatabaseDataSet.Sections1)
-        'TODO: This line of code loads data into the 'DatabaseDataSet.Enrollment1' table. You can move, or remove it, as needed.
-        'Me.Enrollment1TableAdapter.Fill(Me.DatabaseDataSet.Enrollment1)
-        'TODO: This line of code loads data into the 'DatabaseDataSet.Sections' table. You can move, or remove it, as needed.
-        'Me.SectionsTableAdapter.Fill(Me.DatabaseDataSet.Sections)
-        'TODO: This line of code loads data into the 'DatabaseDataSet.Sections' table. You can move, or remove it, as needed.
-        'Me.SectionsTableAdapter.Fill(Me.DatabaseDataSet.Sections)
-        'TODO: This line of code loads data into the 'DatabaseDataSet.Enrollment' table. You can move, or remove it, as needed.
-        'Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
 
     End Sub
 
@@ -242,18 +238,30 @@ Public Class Enrollment1Form
     End Sub
 
     Private Sub EnrollBtn_Click(sender As Object, e As EventArgs) Handles EnrollBtn.Click
-        Dim section = SectionBox.Text
-        Dim lrn_sy = LrnTextBox.Text + ComboBox1.Text
-        'if new student
-        EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image), ComboBox1.Text, YearLevelBox.Text, section)
-        'add to classlist
-        Sections1TableAdapter.SectionFn(lrn_sy, YearLevelBox.Text, section, ComboBox1.Text, LrnTextBox.Text, LnameTextBox.Text, FnameTextBox.Text, MnameTextBox.Text, SexComboBox.Text)
-        Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
-        Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
 
-        clearboxes()
-        Panel2.SendToBack()
-        MsgBox("Student Enrolled")
+        Try
+            If SlotsLeftLabel.Text = "0" Then
+                MsgBox("Section Full")
+            Else
+                Dim section = SectionBox.Text
+                Dim lrn_sy = LrnTextBox.Text + ComboBox1.Text
+                'if new student
+                EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image), ComboBox1.Text, YearLevelBox.Text, section)
+                'add to classlist
+                Sections1TableAdapter.SectionFn(lrn_sy, YearLevelBox.Text, section, ComboBox1.Text, LrnTextBox.Text, LnameTextBox.Text, FnameTextBox.Text, MnameTextBox.Text, SexComboBox.Text)
+                Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+                Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
+
+                clearboxes()
+                Panel2.SendToBack()
+                MsgBox("Student Enrolled")
+            End If
+
+        Catch ex As Exception
+            MsgBox("Error In Input")
+            clearboxes()
+            Panel2.SendToBack()
+        End Try
     End Sub
 
     Public Sub clearboxes()
@@ -279,28 +287,39 @@ Public Class Enrollment1Form
     End Sub
 
     Private Sub SectionBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SectionBox.SelectedIndexChanged
+        StudentsDTB.Visible = True
         Sections1TableAdapter.FillBySection(DatabaseDataSet.Sections1, ComboBox1.Text, SectionBox.Text, YearLevelBox.Text)
+
+        Dim rowcount As Integer
+        rowcount = StudentsDTB.RowCount
+
+        NoStudentsLabel.Text = rowcount - 1
+        SlotsLeftLabel.Text = 40 - (rowcount - 1)
     End Sub
 
     Private Sub UpdateButton_Click(sender As Object, e As EventArgs) Handles UpdateButton.Click
         Try
-            Dim section = SectionBox.Text
-            Dim lrn_sy = OldEnrollment.LRN_TBox.Text + ComboBox1.Text
+            If SlotsLeftLabel.Text = "0" Then
+                MsgBox("Section Is Full")
+            Else
+                Dim section = SectionBox.Text
+                Dim lrn_sy = OldEnrollment.LRN_TBox.Text + ComboBox1.Text
 
-            EnrollmentTableAdapter.FillSearchedStudent(DatabaseDataSet.Enrollment, OldEnrollment.LRN_TBox.Text)
+                EnrollmentTableAdapter.FillSearchedStudent(DatabaseDataSet.Enrollment, OldEnrollment.LRN_TBox.Text)
 
-            'update current student info
-            EnrollmentTableAdapter.UpdateOld(ComboBox1.Text, YearLevelBox.Text, SectionBox.Text, OldEnrollment.LRN_TBox.Text)
+                'update current student info
+                EnrollmentTableAdapter.UpdateOld(ComboBox1.Text, YearLevelBox.Text, SectionBox.Text, OldEnrollment.LRN_TBox.Text)
 
-            'add updated student to a class
-            Sections1TableAdapter.SectionFn(lrn_sy, YearLevelBox.Text, section, ComboBox1.Text, OldEnrollment.LRN_TBox.Text, LnameTextBox.Text, FnameTextBox.Text, MnameTextBox.Text, SexComboBox.Text)
-            Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
-            Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
-            MsgBox("Student Enrolled")
+                'add updated student to a class
+                Sections1TableAdapter.SectionFn(lrn_sy, YearLevelBox.Text, section, ComboBox1.Text, OldEnrollment.LRN_TBox.Text, LnameTextBox.Text, FnameTextBox.Text, MnameTextBox.Text, SexComboBox.Text)
+                Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+                Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
+                MsgBox("Student Enrolled")
+            End If
+
         Catch ex As Exception
             MsgBox("ERROR: Cannot Enroll Student In The Same School Year Twice")
         End Try
-
 
     End Sub
 End Class

@@ -771,8 +771,8 @@ Partial Class Enrollment1Form
         Me.Panel3.Controls.Add(Me.NoStudentsLabel)
         Me.Panel3.Controls.Add(Me.Label28)
         Me.Panel3.Controls.Add(Me.SlotsLeftLabel)
-        Me.Panel3.Controls.Add(Me.UpdateButton)
         Me.Panel3.Controls.Add(Me.EnrollBtn)
+        Me.Panel3.Controls.Add(Me.UpdateButton)
         Me.Panel3.Location = New System.Drawing.Point(779, 159)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(267, 495)
@@ -863,6 +863,7 @@ Partial Class Enrollment1Form
         Me.StudentsDTB.Name = "StudentsDTB"
         Me.StudentsDTB.Size = New System.Drawing.Size(747, 495)
         Me.StudentsDTB.TabIndex = 23
+        Me.StudentsDTB.Visible = False
         '
         'LrnSyDataGridViewTextBoxColumn
         '
@@ -1017,8 +1018,8 @@ Partial Class Enrollment1Form
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 692)
         Me.Controls.Add(Me.Sidebar)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Enrollment1Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
