@@ -19,7 +19,7 @@ Public Class Enrollment1Form
         SectionBox.Text = Nothing
 
         Panel2.BringToFront()
-        EnrolleeName.Text = LnameTextBox.Text + " " + FnameTextBox.Text + " " + MnameTextBox.Text
+        EnrolleeName.Text = LnameTextBox.Text + ", " + FnameTextBox.Text + " " + MnameTextBox.Text
         Panel2.Show()
     End Sub
 

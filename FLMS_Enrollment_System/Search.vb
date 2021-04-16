@@ -289,6 +289,7 @@ Public Class Search
         'Me.EnrollmentTableAdapter.Update(Me.DatabaseDataSet1.Enrollment)
         'Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet1.Enrollment)
         MsgBox("Changes saved.")
+        LRN_text.Text = ""
         Enrollment1Form.clearboxes()
         Search1_Panel.BringToFront()
     End Sub

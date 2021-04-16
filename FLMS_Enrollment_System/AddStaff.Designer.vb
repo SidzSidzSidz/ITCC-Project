@@ -384,6 +384,7 @@ Partial Class AddStaff
         Me.Controls.Add(Me.AddStaff_btn)
         Me.Controls.Add(Me.LastName_Label)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AddStaff"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add Staff"

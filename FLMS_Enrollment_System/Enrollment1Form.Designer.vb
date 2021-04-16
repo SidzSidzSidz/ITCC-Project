@@ -84,18 +84,9 @@ Partial Class Enrollment1Form
         Me.NoStudentsLabel = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.SlotsLeftLabel = New System.Windows.Forms.Label()
-        Me.UpdateButton = New System.Windows.Forms.Button()
         Me.EnrollBtn = New System.Windows.Forms.Button()
+        Me.UpdateButton = New System.Windows.Forms.Button()
         Me.StudentsDTB = New System.Windows.Forms.DataGridView()
-        Me.LrnSyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.YearLevelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SectionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SYDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LRNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MiddleNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sections1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EnrolleeName = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -106,6 +97,11 @@ Partial Class Enrollment1Form
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         Me.Sections1TableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.Sections1TableAdapter()
+        Me.LRNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MiddleNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -507,7 +503,7 @@ Partial Class Enrollment1Form
         Me.LnameTextBox.Location = New System.Drawing.Point(99, 148)
         Me.LnameTextBox.Name = "LnameTextBox"
         Me.LnameTextBox.Size = New System.Drawing.Size(220, 26)
-        Me.LnameTextBox.TabIndex = 46
+        Me.LnameTextBox.TabIndex = 1
         '
         'EnrollmentBindingSource
         '
@@ -526,7 +522,7 @@ Partial Class Enrollment1Form
         Me.FnameTextBox.Location = New System.Drawing.Point(342, 148)
         Me.FnameTextBox.Name = "FnameTextBox"
         Me.FnameTextBox.Size = New System.Drawing.Size(216, 26)
-        Me.FnameTextBox.TabIndex = 47
+        Me.FnameTextBox.TabIndex = 2
         '
         'MnameTextBox
         '
@@ -535,7 +531,7 @@ Partial Class Enrollment1Form
         Me.MnameTextBox.Location = New System.Drawing.Point(586, 148)
         Me.MnameTextBox.Name = "MnameTextBox"
         Me.MnameTextBox.Size = New System.Drawing.Size(217, 26)
-        Me.MnameTextBox.TabIndex = 48
+        Me.MnameTextBox.TabIndex = 3
         '
         'SuffixTextBox
         '
@@ -544,7 +540,7 @@ Partial Class Enrollment1Form
         Me.SuffixTextBox.Location = New System.Drawing.Point(101, 252)
         Me.SuffixTextBox.Name = "SuffixTextBox"
         Me.SuffixTextBox.Size = New System.Drawing.Size(220, 26)
-        Me.SuffixTextBox.TabIndex = 49
+        Me.SuffixTextBox.TabIndex = 4
         '
         'DobDateTimePicker
         '
@@ -553,7 +549,7 @@ Partial Class Enrollment1Form
         Me.DobDateTimePicker.Location = New System.Drawing.Point(649, 252)
         Me.DobDateTimePicker.Name = "DobDateTimePicker"
         Me.DobDateTimePicker.Size = New System.Drawing.Size(306, 27)
-        Me.DobDateTimePicker.TabIndex = 50
+        Me.DobDateTimePicker.TabIndex = 6
         '
         'GuardianTextBox
         '
@@ -562,7 +558,7 @@ Partial Class Enrollment1Form
         Me.GuardianTextBox.Location = New System.Drawing.Point(648, 345)
         Me.GuardianTextBox.Name = "GuardianTextBox"
         Me.GuardianTextBox.Size = New System.Drawing.Size(325, 26)
-        Me.GuardianTextBox.TabIndex = 51
+        Me.GuardianTextBox.TabIndex = 8
         '
         'AddressTextBox
         '
@@ -571,7 +567,7 @@ Partial Class Enrollment1Form
         Me.AddressTextBox.Location = New System.Drawing.Point(101, 345)
         Me.AddressTextBox.Name = "AddressTextBox"
         Me.AddressTextBox.Size = New System.Drawing.Size(523, 26)
-        Me.AddressTextBox.TabIndex = 52
+        Me.AddressTextBox.TabIndex = 7
         '
         'LsaTextBox
         '
@@ -580,7 +576,7 @@ Partial Class Enrollment1Form
         Me.LsaTextBox.Location = New System.Drawing.Point(99, 456)
         Me.LsaTextBox.Name = "LsaTextBox"
         Me.LsaTextBox.Size = New System.Drawing.Size(277, 26)
-        Me.LsaTextBox.TabIndex = 53
+        Me.LsaTextBox.TabIndex = 9
         '
         'SexComboBox
         '
@@ -593,7 +589,7 @@ Partial Class Enrollment1Form
         Me.SexComboBox.Location = New System.Drawing.Point(410, 453)
         Me.SexComboBox.Name = "SexComboBox"
         Me.SexComboBox.Size = New System.Drawing.Size(127, 28)
-        Me.SexComboBox.TabIndex = 54
+        Me.SexComboBox.TabIndex = 10
         '
         'YrcTextBox
         '
@@ -602,7 +598,7 @@ Partial Class Enrollment1Form
         Me.YrcTextBox.Location = New System.Drawing.Point(710, 456)
         Me.YrcTextBox.Name = "YrcTextBox"
         Me.YrcTextBox.Size = New System.Drawing.Size(263, 26)
-        Me.YrcTextBox.TabIndex = 55
+        Me.YrcTextBox.TabIndex = 12
         '
         'YrscTextBox
         '
@@ -611,7 +607,7 @@ Partial Class Enrollment1Form
         Me.YrscTextBox.Location = New System.Drawing.Point(557, 456)
         Me.YrscTextBox.Name = "YrscTextBox"
         Me.YrscTextBox.Size = New System.Drawing.Size(129, 26)
-        Me.YrscTextBox.TabIndex = 56
+        Me.YrscTextBox.TabIndex = 11
         '
         'NsoPictureBox
         '
@@ -726,7 +722,7 @@ Partial Class Enrollment1Form
         Me.LrnTextBox.Location = New System.Drawing.Point(342, 252)
         Me.LrnTextBox.Name = "LrnTextBox"
         Me.LrnTextBox.Size = New System.Drawing.Size(282, 26)
-        Me.LrnTextBox.TabIndex = 66
+        Me.LrnTextBox.TabIndex = 5
         '
         'Panel2
         '
@@ -826,18 +822,6 @@ Partial Class Enrollment1Form
         Me.SlotsLeftLabel.TabIndex = 5
         Me.SlotsLeftLabel.Text = "0"
         '
-        'UpdateButton
-        '
-        Me.UpdateButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.UpdateButton.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UpdateButton.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.UpdateButton.Location = New System.Drawing.Point(61, 384)
-        Me.UpdateButton.Name = "UpdateButton"
-        Me.UpdateButton.Size = New System.Drawing.Size(145, 64)
-        Me.UpdateButton.TabIndex = 4
-        Me.UpdateButton.Text = "Enroll"
-        Me.UpdateButton.UseVisualStyleBackColor = True
-        '
         'EnrollBtn
         '
         Me.EnrollBtn.Cursor = System.Windows.Forms.Cursors.Hand
@@ -850,6 +834,18 @@ Partial Class Enrollment1Form
         Me.EnrollBtn.Text = "Enroll"
         Me.EnrollBtn.UseVisualStyleBackColor = True
         '
+        'UpdateButton
+        '
+        Me.UpdateButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.UpdateButton.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UpdateButton.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.UpdateButton.Location = New System.Drawing.Point(61, 384)
+        Me.UpdateButton.Name = "UpdateButton"
+        Me.UpdateButton.Size = New System.Drawing.Size(145, 64)
+        Me.UpdateButton.TabIndex = 4
+        Me.UpdateButton.Text = "Enroll"
+        Me.UpdateButton.UseVisualStyleBackColor = True
+        '
         'StudentsDTB
         '
         Me.StudentsDTB.AutoGenerateColumns = False
@@ -857,75 +853,13 @@ Partial Class Enrollment1Form
         Me.StudentsDTB.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.StudentsDTB.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.StudentsDTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.StudentsDTB.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LrnSyDataGridViewTextBoxColumn, Me.YearLevelDataGridViewTextBoxColumn, Me.SectionDataGridViewTextBoxColumn, Me.SYDataGridViewTextBoxColumn, Me.LRNDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.MiddleNameDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn})
+        Me.StudentsDTB.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LRNDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.MiddleNameDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn})
         Me.StudentsDTB.DataSource = Me.Sections1BindingSource
         Me.StudentsDTB.Location = New System.Drawing.Point(26, 159)
         Me.StudentsDTB.Name = "StudentsDTB"
         Me.StudentsDTB.Size = New System.Drawing.Size(747, 495)
         Me.StudentsDTB.TabIndex = 23
         Me.StudentsDTB.Visible = False
-        '
-        'LrnSyDataGridViewTextBoxColumn
-        '
-        Me.LrnSyDataGridViewTextBoxColumn.DataPropertyName = "LrnSy"
-        Me.LrnSyDataGridViewTextBoxColumn.HeaderText = "LrnSy"
-        Me.LrnSyDataGridViewTextBoxColumn.Name = "LrnSyDataGridViewTextBoxColumn"
-        Me.LrnSyDataGridViewTextBoxColumn.Visible = False
-        '
-        'YearLevelDataGridViewTextBoxColumn
-        '
-        Me.YearLevelDataGridViewTextBoxColumn.DataPropertyName = "YearLevel"
-        Me.YearLevelDataGridViewTextBoxColumn.HeaderText = "YearLevel"
-        Me.YearLevelDataGridViewTextBoxColumn.Name = "YearLevelDataGridViewTextBoxColumn"
-        Me.YearLevelDataGridViewTextBoxColumn.Visible = False
-        '
-        'SectionDataGridViewTextBoxColumn
-        '
-        Me.SectionDataGridViewTextBoxColumn.DataPropertyName = "Section"
-        Me.SectionDataGridViewTextBoxColumn.HeaderText = "Section"
-        Me.SectionDataGridViewTextBoxColumn.Name = "SectionDataGridViewTextBoxColumn"
-        Me.SectionDataGridViewTextBoxColumn.Visible = False
-        '
-        'SYDataGridViewTextBoxColumn
-        '
-        Me.SYDataGridViewTextBoxColumn.DataPropertyName = "SY"
-        Me.SYDataGridViewTextBoxColumn.HeaderText = "SY"
-        Me.SYDataGridViewTextBoxColumn.Name = "SYDataGridViewTextBoxColumn"
-        Me.SYDataGridViewTextBoxColumn.Visible = False
-        '
-        'LRNDataGridViewTextBoxColumn
-        '
-        Me.LRNDataGridViewTextBoxColumn.DataPropertyName = "LRN"
-        Me.LRNDataGridViewTextBoxColumn.HeaderText = "LRN"
-        Me.LRNDataGridViewTextBoxColumn.Name = "LRNDataGridViewTextBoxColumn"
-        '
-        'LastNameDataGridViewTextBoxColumn
-        '
-        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName"
-        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "Last Name"
-        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
-        Me.LastNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'FirstNameDataGridViewTextBoxColumn
-        '
-        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
-        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "First Name"
-        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
-        Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MiddleNameDataGridViewTextBoxColumn
-        '
-        Me.MiddleNameDataGridViewTextBoxColumn.DataPropertyName = "MiddleName"
-        Me.MiddleNameDataGridViewTextBoxColumn.HeaderText = "Middle Name"
-        Me.MiddleNameDataGridViewTextBoxColumn.Name = "MiddleNameDataGridViewTextBoxColumn"
-        Me.MiddleNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SexDataGridViewTextBoxColumn
-        '
-        Me.SexDataGridViewTextBoxColumn.DataPropertyName = "Sex"
-        Me.SexDataGridViewTextBoxColumn.HeaderText = "Sex"
-        Me.SexDataGridViewTextBoxColumn.Name = "SexDataGridViewTextBoxColumn"
-        Me.SexDataGridViewTextBoxColumn.ReadOnly = True
         '
         'Sections1BindingSource
         '
@@ -1011,6 +945,40 @@ Partial Class Enrollment1Form
         '
         Me.Sections1TableAdapter.ClearBeforeFill = True
         '
+        'LRNDataGridViewTextBoxColumn
+        '
+        Me.LRNDataGridViewTextBoxColumn.DataPropertyName = "LRN"
+        Me.LRNDataGridViewTextBoxColumn.HeaderText = "LRN"
+        Me.LRNDataGridViewTextBoxColumn.Name = "LRNDataGridViewTextBoxColumn"
+        '
+        'LastNameDataGridViewTextBoxColumn
+        '
+        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName"
+        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "Last Name"
+        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
+        Me.LastNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FirstNameDataGridViewTextBoxColumn
+        '
+        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "First Name"
+        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MiddleNameDataGridViewTextBoxColumn
+        '
+        Me.MiddleNameDataGridViewTextBoxColumn.DataPropertyName = "MiddleName"
+        Me.MiddleNameDataGridViewTextBoxColumn.HeaderText = "Middle Name"
+        Me.MiddleNameDataGridViewTextBoxColumn.Name = "MiddleNameDataGridViewTextBoxColumn"
+        Me.MiddleNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SexDataGridViewTextBoxColumn
+        '
+        Me.SexDataGridViewTextBoxColumn.DataPropertyName = "Sex"
+        Me.SexDataGridViewTextBoxColumn.HeaderText = "Sex"
+        Me.SexDataGridViewTextBoxColumn.Name = "SexDataGridViewTextBoxColumn"
+        Me.SexDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'Enrollment1Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1018,9 +986,10 @@ Partial Class Enrollment1Form
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 692)
         Me.Controls.Add(Me.Sidebar)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Enrollment1Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FLMS Enrollment System"
@@ -1124,10 +1093,6 @@ Partial Class Enrollment1Form
     Friend WithEvents UpdateButton As Button
     Friend WithEvents Sections1BindingSource As BindingSource
     Friend WithEvents Sections1TableAdapter As DatabaseDataSetTableAdapters.Sections1TableAdapter
-    Friend WithEvents LrnSyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents YearLevelDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SectionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SYDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LRNDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LastNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

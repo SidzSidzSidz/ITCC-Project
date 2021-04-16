@@ -22,6 +22,7 @@ Partial Class EnrollmentChoice
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EnrollmentChoice))
         Me.NewStudent_btn = New System.Windows.Forms.Button()
         Me.OldStudent_btn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -55,6 +56,7 @@ Partial Class EnrollmentChoice
         Me.Controls.Add(Me.OldStudent_btn)
         Me.Controls.Add(Me.NewStudent_btn)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "EnrollmentChoice"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FLMS Enrollment System"

@@ -23,6 +23,7 @@ Partial Class OldEnrollment
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(OldEnrollment))
         Me.LRN_TBox = New System.Windows.Forms.TextBox()
         Me.Enter_btn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -94,6 +95,7 @@ Partial Class OldEnrollment
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Enter_btn)
         Me.Controls.Add(Me.LRN_TBox)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "OldEnrollment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FLMS Enrollment System"
