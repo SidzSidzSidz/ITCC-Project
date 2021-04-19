@@ -25,6 +25,11 @@ Partial Class ClassList
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ClassList))
         Me.ClassList_DGV = New System.Windows.Forms.DataGridView()
+        Me.LRNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MiddleNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sections1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.SectionCBox = New System.Windows.Forms.ComboBox()
@@ -86,11 +91,21 @@ Partial Class ClassList
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         Me.Sections1TableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.Sections1TableAdapter()
-        Me.LRNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MiddleNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.SYBox = New System.Windows.Forms.ComboBox()
+        Me.AddStaff_Label = New System.Windows.Forms.Label()
+        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
+        Me.LastName_Label = New System.Windows.Forms.Label()
+        Me.AddStaff_btn = New System.Windows.Forms.Button()
+        Me.SectionsBox = New System.Windows.Forms.TextBox()
+        Me.FirstName_Label = New System.Windows.Forms.Label()
+        Me.Username_Label = New System.Windows.Forms.Label()
+        Me.Password_Label = New System.Windows.Forms.Label()
+        Me.ClassesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ClassesTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.ClassesTableAdapter()
+        Me.YearLevelBox = New System.Windows.Forms.ComboBox()
         CType(Me.ClassList_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Sections1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,6 +121,9 @@ Partial Class ClassList
         Me.FillBySectionToolStrip3.SuspendLayout()
         CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        CType(Me.ClassesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ClassList_DGV
@@ -119,12 +137,47 @@ Partial Class ClassList
         Me.ClassList_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ClassList_DGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LRNDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.MiddleNameDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn})
         Me.ClassList_DGV.DataSource = Me.Sections1BindingSource
-        Me.ClassList_DGV.Location = New System.Drawing.Point(267, 131)
+        Me.ClassList_DGV.Location = New System.Drawing.Point(65, 139)
         Me.ClassList_DGV.Name = "ClassList_DGV"
         Me.ClassList_DGV.ReadOnly = True
-        Me.ClassList_DGV.Size = New System.Drawing.Size(956, 519)
+        Me.ClassList_DGV.Size = New System.Drawing.Size(956, 501)
         Me.ClassList_DGV.TabIndex = 16
         Me.ClassList_DGV.Visible = False
+        '
+        'LRNDataGridViewTextBoxColumn
+        '
+        Me.LRNDataGridViewTextBoxColumn.DataPropertyName = "LRN"
+        Me.LRNDataGridViewTextBoxColumn.HeaderText = "LRN"
+        Me.LRNDataGridViewTextBoxColumn.Name = "LRNDataGridViewTextBoxColumn"
+        Me.LRNDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'LastNameDataGridViewTextBoxColumn
+        '
+        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName"
+        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "Last Name"
+        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
+        Me.LastNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FirstNameDataGridViewTextBoxColumn
+        '
+        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "First Name"
+        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MiddleNameDataGridViewTextBoxColumn
+        '
+        Me.MiddleNameDataGridViewTextBoxColumn.DataPropertyName = "MiddleName"
+        Me.MiddleNameDataGridViewTextBoxColumn.HeaderText = "Middle Name"
+        Me.MiddleNameDataGridViewTextBoxColumn.Name = "MiddleNameDataGridViewTextBoxColumn"
+        Me.MiddleNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SexDataGridViewTextBoxColumn
+        '
+        Me.SexDataGridViewTextBoxColumn.DataPropertyName = "Sex"
+        Me.SexDataGridViewTextBoxColumn.HeaderText = "Sex"
+        Me.SexDataGridViewTextBoxColumn.Name = "SexDataGridViewTextBoxColumn"
+        Me.SexDataGridViewTextBoxColumn.ReadOnly = True
         '
         'Sections1BindingSource
         '
@@ -141,7 +194,7 @@ Partial Class ClassList
         Me.SectionCBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.SectionCBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SectionCBox.FormattingEnabled = True
-        Me.SectionCBox.Location = New System.Drawing.Point(925, 84)
+        Me.SectionCBox.Location = New System.Drawing.Point(723, 92)
         Me.SectionCBox.Name = "SectionCBox"
         Me.SectionCBox.Size = New System.Drawing.Size(179, 21)
         Me.SectionCBox.TabIndex = 14
@@ -151,7 +204,7 @@ Partial Class ClassList
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label11.Location = New System.Drawing.Point(856, 85)
+        Me.Label11.Location = New System.Drawing.Point(654, 93)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(68, 21)
         Me.Label11.TabIndex = 12
@@ -163,7 +216,7 @@ Partial Class ClassList
         Me.Label9.Font = New System.Drawing.Font("Impact", 40.0!)
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label9.Location = New System.Drawing.Point(256, 13)
+        Me.Label9.Location = New System.Drawing.Point(54, 21)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(237, 66)
         Me.Label9.TabIndex = 10
@@ -172,7 +225,7 @@ Partial Class ClassList
         'SelectBtn
         '
         Me.SelectBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.SelectBtn.Location = New System.Drawing.Point(1139, 76)
+        Me.SelectBtn.Location = New System.Drawing.Point(937, 84)
         Me.SelectBtn.Name = "SelectBtn"
         Me.SelectBtn.Size = New System.Drawing.Size(84, 31)
         Me.SelectBtn.TabIndex = 15
@@ -356,7 +409,7 @@ Partial Class ClassList
         Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12", ""})
-        Me.ComboBox2.Location = New System.Drawing.Point(636, 84)
+        Me.ComboBox2.Location = New System.Drawing.Point(434, 92)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(179, 21)
         Me.ComboBox2.TabIndex = 19
@@ -366,7 +419,7 @@ Partial Class ClassList
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label3.Location = New System.Drawing.Point(542, 85)
+        Me.Label3.Location = New System.Drawing.Point(340, 93)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(91, 21)
         Me.Label3.TabIndex = 18
@@ -377,7 +430,7 @@ Partial Class ClassList
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(271, 85)
+        Me.Label2.Location = New System.Drawing.Point(69, 93)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(37, 21)
         Me.Label2.TabIndex = 12
@@ -389,7 +442,7 @@ Partial Class ClassList
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"2020-2021", "2021-2022", "2022-2023", "2023-2024", "2024-2025", "2026-2027", "2028-2029"})
-        Me.ComboBox1.Location = New System.Drawing.Point(314, 85)
+        Me.ComboBox1.Location = New System.Drawing.Point(112, 93)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(179, 21)
         Me.ComboBox1.TabIndex = 14
@@ -412,6 +465,7 @@ Partial Class ClassList
         '
         'SyToolStripTextBox
         '
+        Me.SyToolStripTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.SyToolStripTextBox.Name = "SyToolStripTextBox"
         Me.SyToolStripTextBox.Size = New System.Drawing.Size(100, 25)
         '
@@ -423,6 +477,7 @@ Partial Class ClassList
         '
         'SectionToolStripTextBox
         '
+        Me.SectionToolStripTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.SectionToolStripTextBox.Name = "SectionToolStripTextBox"
         Me.SectionToolStripTextBox.Size = New System.Drawing.Size(100, 25)
         '
@@ -434,6 +489,7 @@ Partial Class ClassList
         '
         'GradelevelToolStripTextBox
         '
+        Me.GradelevelToolStripTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GradelevelToolStripTextBox.Name = "GradelevelToolStripTextBox"
         Me.GradelevelToolStripTextBox.Size = New System.Drawing.Size(100, 25)
         '
@@ -462,6 +518,7 @@ Partial Class ClassList
         '
         'SyToolStripTextBox1
         '
+        Me.SyToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.SyToolStripTextBox1.Name = "SyToolStripTextBox1"
         Me.SyToolStripTextBox1.Size = New System.Drawing.Size(100, 25)
         '
@@ -473,6 +530,7 @@ Partial Class ClassList
         '
         'SectionToolStripTextBox1
         '
+        Me.SectionToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.SectionToolStripTextBox1.Name = "SectionToolStripTextBox1"
         Me.SectionToolStripTextBox1.Size = New System.Drawing.Size(100, 25)
         '
@@ -484,6 +542,7 @@ Partial Class ClassList
         '
         'GradelevelToolStripTextBox1
         '
+        Me.GradelevelToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GradelevelToolStripTextBox1.Name = "GradelevelToolStripTextBox1"
         Me.GradelevelToolStripTextBox1.Size = New System.Drawing.Size(100, 25)
         '
@@ -512,6 +571,7 @@ Partial Class ClassList
         '
         'SyToolStripTextBox2
         '
+        Me.SyToolStripTextBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.SyToolStripTextBox2.Name = "SyToolStripTextBox2"
         Me.SyToolStripTextBox2.Size = New System.Drawing.Size(100, 25)
         '
@@ -523,6 +583,7 @@ Partial Class ClassList
         '
         'SectionToolStripTextBox2
         '
+        Me.SectionToolStripTextBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.SectionToolStripTextBox2.Name = "SectionToolStripTextBox2"
         Me.SectionToolStripTextBox2.Size = New System.Drawing.Size(100, 25)
         '
@@ -534,6 +595,7 @@ Partial Class ClassList
         '
         'YearlevelToolStripTextBox
         '
+        Me.YearlevelToolStripTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.YearlevelToolStripTextBox.Name = "YearlevelToolStripTextBox"
         Me.YearlevelToolStripTextBox.Size = New System.Drawing.Size(100, 25)
         '
@@ -562,6 +624,7 @@ Partial Class ClassList
         '
         'SyToolStripTextBox3
         '
+        Me.SyToolStripTextBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.SyToolStripTextBox3.Name = "SyToolStripTextBox3"
         Me.SyToolStripTextBox3.Size = New System.Drawing.Size(100, 25)
         '
@@ -573,6 +636,7 @@ Partial Class ClassList
         '
         'SectionToolStripTextBox3
         '
+        Me.SectionToolStripTextBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.SectionToolStripTextBox3.Name = "SectionToolStripTextBox3"
         Me.SectionToolStripTextBox3.Size = New System.Drawing.Size(100, 25)
         '
@@ -584,6 +648,7 @@ Partial Class ClassList
         '
         'YearlevelToolStripTextBox1
         '
+        Me.YearlevelToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.YearlevelToolStripTextBox1.Name = "YearlevelToolStripTextBox1"
         Me.YearlevelToolStripTextBox1.Size = New System.Drawing.Size(100, 25)
         '
@@ -607,6 +672,7 @@ Partial Class ClassList
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ClassesTableAdapter = Nothing
         Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
         Me.TableAdapterManager.Sections1TableAdapter = Nothing
@@ -622,61 +688,170 @@ Partial Class ClassList
         '
         Me.Sections1TableAdapter.ClearBeforeFill = True
         '
-        'LRNDataGridViewTextBoxColumn
+        'Panel1
         '
-        Me.LRNDataGridViewTextBoxColumn.DataPropertyName = "LRN"
-        Me.LRNDataGridViewTextBoxColumn.HeaderText = "LRN"
-        Me.LRNDataGridViewTextBoxColumn.Name = "LRNDataGridViewTextBoxColumn"
-        Me.LRNDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Panel1.Controls.Add(Me.LinkLabel1)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.SelectBtn)
+        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.ComboBox2)
+        Me.Panel1.Controls.Add(Me.SectionCBox)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.ClassList_DGV)
+        Me.Panel1.Location = New System.Drawing.Point(195, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1069, 692)
+        Me.Panel1.TabIndex = 24
         '
-        'LastNameDataGridViewTextBoxColumn
+        'LinkLabel1
         '
-        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName"
-        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "Last Name"
-        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
-        Me.LastNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.Black
+        Me.LinkLabel1.Location = New System.Drawing.Point(910, 653)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(128, 21)
+        Me.LinkLabel1.TabIndex = 20
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Add New Class"
         '
-        'FirstNameDataGridViewTextBoxColumn
+        'Panel2
         '
-        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
-        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "First Name"
-        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
-        Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Panel2.Controls.Add(Me.YearLevelBox)
+        Me.Panel2.Controls.Add(Me.SYBox)
+        Me.Panel2.Controls.Add(Me.AddStaff_Label)
+        Me.Panel2.Controls.Add(Me.PasswordTextBox)
+        Me.Panel2.Controls.Add(Me.LastName_Label)
+        Me.Panel2.Controls.Add(Me.AddStaff_btn)
+        Me.Panel2.Controls.Add(Me.SectionsBox)
+        Me.Panel2.Controls.Add(Me.FirstName_Label)
+        Me.Panel2.Controls.Add(Me.Username_Label)
+        Me.Panel2.Controls.Add(Me.Password_Label)
+        Me.Panel2.Location = New System.Drawing.Point(195, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1069, 692)
+        Me.Panel2.TabIndex = 39
         '
-        'MiddleNameDataGridViewTextBoxColumn
+        'SYBox
         '
-        Me.MiddleNameDataGridViewTextBoxColumn.DataPropertyName = "MiddleName"
-        Me.MiddleNameDataGridViewTextBoxColumn.HeaderText = "Middle Name"
-        Me.MiddleNameDataGridViewTextBoxColumn.Name = "MiddleNameDataGridViewTextBoxColumn"
-        Me.MiddleNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SYBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.SYBox.FormattingEnabled = True
+        Me.SYBox.Items.AddRange(New Object() {"2010-2011", "2011-2012", "2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017", "2017-2018", "2018-2019", "2019-2020", "2020-2021", "2021-2022", "2022-2023", "2023-2024", "2024-2025", "2026-2027", "2028-2029", "2029-2030"})
+        Me.SYBox.Location = New System.Drawing.Point(449, 200)
+        Me.SYBox.Name = "SYBox"
+        Me.SYBox.Size = New System.Drawing.Size(370, 33)
+        Me.SYBox.TabIndex = 39
         '
-        'SexDataGridViewTextBoxColumn
+        'AddStaff_Label
         '
-        Me.SexDataGridViewTextBoxColumn.DataPropertyName = "Sex"
-        Me.SexDataGridViewTextBoxColumn.HeaderText = "Sex"
-        Me.SexDataGridViewTextBoxColumn.Name = "SexDataGridViewTextBoxColumn"
-        Me.SexDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AddStaff_Label.AutoSize = True
+        Me.AddStaff_Label.Font = New System.Drawing.Font("Impact", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddStaff_Label.Location = New System.Drawing.Point(18, 18)
+        Me.AddStaff_Label.Name = "AddStaff_Label"
+        Me.AddStaff_Label.Size = New System.Drawing.Size(241, 65)
+        Me.AddStaff_Label.TabIndex = 38
+        Me.AddStaff_Label.Text = "Add Class"
+        '
+        'PasswordTextBox
+        '
+        Me.PasswordTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(449, 382)
+        Me.PasswordTextBox.Name = "PasswordTextBox"
+        Me.PasswordTextBox.Size = New System.Drawing.Size(370, 32)
+        Me.PasswordTextBox.TabIndex = 32
+        '
+        'LastName_Label
+        '
+        Me.LastName_Label.AutoSize = True
+        Me.LastName_Label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LastName_Label.Location = New System.Drawing.Point(289, 257)
+        Me.LastName_Label.Name = "LastName_Label"
+        Me.LastName_Label.Size = New System.Drawing.Size(153, 33)
+        Me.LastName_Label.TabIndex = 34
+        Me.LastName_Label.Text = "Year Level"
+        '
+        'AddStaff_btn
+        '
+        Me.AddStaff_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
+        Me.AddStaff_btn.Location = New System.Drawing.Point(417, 457)
+        Me.AddStaff_btn.Name = "AddStaff_btn"
+        Me.AddStaff_btn.Size = New System.Drawing.Size(234, 40)
+        Me.AddStaff_btn.TabIndex = 37
+        Me.AddStaff_btn.Text = "Add New Class"
+        Me.AddStaff_btn.UseVisualStyleBackColor = True
+        '
+        'SectionsBox
+        '
+        Me.SectionsBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.SectionsBox.Location = New System.Drawing.Point(449, 322)
+        Me.SectionsBox.Name = "SectionsBox"
+        Me.SectionsBox.Size = New System.Drawing.Size(370, 32)
+        Me.SectionsBox.TabIndex = 31
+        '
+        'FirstName_Label
+        '
+        Me.FirstName_Label.AutoSize = True
+        Me.FirstName_Label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FirstName_Label.Location = New System.Drawing.Point(273, 200)
+        Me.FirstName_Label.Name = "FirstName_Label"
+        Me.FirstName_Label.Size = New System.Drawing.Size(170, 33)
+        Me.FirstName_Label.TabIndex = 33
+        Me.FirstName_Label.Text = "School Year"
+        '
+        'Username_Label
+        '
+        Me.Username_Label.AutoSize = True
+        Me.Username_Label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Username_Label.Location = New System.Drawing.Point(330, 322)
+        Me.Username_Label.Name = "Username_Label"
+        Me.Username_Label.Size = New System.Drawing.Size(113, 33)
+        Me.Username_Label.TabIndex = 35
+        Me.Username_Label.Text = "Section"
+        '
+        'Password_Label
+        '
+        Me.Password_Label.AutoSize = True
+        Me.Password_Label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Password_Label.Location = New System.Drawing.Point(253, 383)
+        Me.Password_Label.Name = "Password_Label"
+        Me.Password_Label.Size = New System.Drawing.Size(190, 33)
+        Me.Password_Label.TabIndex = 36
+        Me.Password_Label.Text = "Max Students"
+        '
+        'ClassesBindingSource
+        '
+        Me.ClassesBindingSource.DataMember = "Classes"
+        Me.ClassesBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'ClassesTableAdapter
+        '
+        Me.ClassesTableAdapter.ClearBeforeFill = True
+        '
+        'YearLevelBox
+        '
+        Me.YearLevelBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.YearLevelBox.FormattingEnabled = True
+        Me.YearLevelBox.Items.AddRange(New Object() {"Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"})
+        Me.YearLevelBox.Location = New System.Drawing.Point(449, 261)
+        Me.YearLevelBox.Name = "YearLevelBox"
+        Me.YearLevelBox.Size = New System.Drawing.Size(370, 33)
+        Me.YearLevelBox.TabIndex = 39
         '
         'ClassList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.ClientSize = New System.Drawing.Size(1264, 692)
         Me.Controls.Add(Me.FillBySectionToolStrip)
         Me.Controls.Add(Me.FillBySectionToolStrip1)
         Me.Controls.Add(Me.FillBySectionToolStrip2)
         Me.Controls.Add(Me.FillBySectionToolStrip3)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Sidebar)
-        Me.Controls.Add(Me.ClassList_DGV)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.SectionCBox)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.SelectBtn)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -703,6 +878,11 @@ Partial Class ClassList
         Me.FillBySectionToolStrip3.PerformLayout()
         CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.ClassesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -775,4 +955,19 @@ Partial Class ClassList
     Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MiddleNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SexDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents SYBox As ComboBox
+    Friend WithEvents AddStaff_Label As Label
+    Friend WithEvents PasswordTextBox As TextBox
+    Friend WithEvents LastName_Label As Label
+    Friend WithEvents AddStaff_btn As Button
+    Friend WithEvents SectionsBox As TextBox
+    Friend WithEvents FirstName_Label As Label
+    Friend WithEvents Username_Label As Label
+    Friend WithEvents Password_Label As Label
+    Friend WithEvents ClassesBindingSource As BindingSource
+    Friend WithEvents ClassesTableAdapter As DatabaseDataSetTableAdapters.ClassesTableAdapter
+    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents YearLevelBox As ComboBox
 End Class

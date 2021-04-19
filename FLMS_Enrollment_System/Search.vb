@@ -16,6 +16,7 @@ Public Class Search
     Private Sub ClassListSBar_Click(sender As Object, e As EventArgs) Handles ClassListSBar.Click
         Me.Hide()
         Search1_Panel.BringToFront()
+        ClassList.Panel1.BringToFront()
         ClassList.Show()
     End Sub
 

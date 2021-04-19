@@ -8,6 +8,7 @@
     Private Sub CListPB_Click(sender As Object, e As EventArgs) Handles CListPB.Click, ClassListSBar.Click
         Me.Hide()
         ClassList.Show()
+        ClassList.Panel1.BringToFront()
     End Sub
 
     Private Sub SearchSBar_Click(sender As Object, e As EventArgs) Handles SearchSBar.Click, SearchPB.Click

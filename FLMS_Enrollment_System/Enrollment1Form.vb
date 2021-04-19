@@ -42,6 +42,7 @@ Public Class Enrollment1Form
     Private Sub ClassListSBar_Click(sender As Object, e As EventArgs) Handles CListPB.Click, ClassListSBar.Click
         Me.Hide()
         ClassList.Show()
+        ClassList.Panel1.BringToFront()
     End Sub
 
     Private Sub AddStaffPB_Click(sender As Object, e As EventArgs) Handles AddStaffSBar.Click, AddStaffPB.Click
@@ -67,6 +68,8 @@ Public Class Enrollment1Form
     End Sub
 
     Private Sub Enrollment1Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DatabaseDataSet.Classes' table. You can move, or remove it, as needed.
+        Me.ClassesTableAdapter.Fill(Me.DatabaseDataSet.Classes)
         'TODO: This line of code loads data into the 'DatabaseDataSet.Sections1' table. You can move, or remove it, as needed.
         Me.Sections1TableAdapter.Fill(Me.DatabaseDataSet.Sections1)
 
@@ -193,48 +196,51 @@ Public Class Enrollment1Form
     End Sub
 
     Private Sub YearLevelBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles YearLevelBox.SelectedIndexChanged
-        'grade 7
-        If YearLevelBox.SelectedIndex = 0 Then
-            SectionBox.Items.Clear()
-            SectionBox.Items.Add("A")
-            SectionBox.Items.Add("B")
-            SectionBox.Items.Add("C")
+        'todo
+        MsgBox(ClassesTableAdapter.GetDataByClass(ComboBox1.Text, YearLevelBox.Text))
 
-            'grade 8
-        ElseIf YearLevelBox.SelectedIndex = 1 Then
-            SectionBox.Items.Clear()
-            SectionBox.Items.Add("D")
-            SectionBox.Items.Add("E")
-            SectionBox.Items.Add("F")
+        ''grade 7
+        'If YearLevelBox.SelectedIndex = 0 Then
+        '    SectionBox.Items.Clear()
+        '    SectionBox.Items.Add("A")
+        '    SectionBox.Items.Add("B")
+        '    SectionBox.Items.Add("C")
 
-            'grade 9
-        ElseIf YearLevelBox.SelectedIndex = 2 Then
-            SectionBox.Items.Clear()
-            SectionBox.Items.Add("G")
-            SectionBox.Items.Add("H")
-            SectionBox.Items.Add("I")
+        '    'grade 8
+        'ElseIf YearLevelBox.SelectedIndex = 1 Then
+        '    SectionBox.Items.Clear()
+        '    SectionBox.Items.Add("D")
+        '    SectionBox.Items.Add("E")
+        '    SectionBox.Items.Add("F")
 
-            'grade 10
-        ElseIf YearLevelBox.SelectedIndex = 3 Then
-            SectionBox.Items.Clear()
-            SectionBox.Items.Add("J")
-            SectionBox.Items.Add("K")
-            SectionBox.Items.Add("L")
+        '    'grade 9
+        'ElseIf YearLevelBox.SelectedIndex = 2 Then
+        '    SectionBox.Items.Clear()
+        '    SectionBox.Items.Add("G")
+        '    SectionBox.Items.Add("H")
+        '    SectionBox.Items.Add("I")
 
-            'grade 11
-        ElseIf YearLevelBox.SelectedIndex = 4 Then
-            SectionBox.Items.Clear()
-            SectionBox.Items.Add("M")
-            SectionBox.Items.Add("N")
-            SectionBox.Items.Add("O")
+        '    'grade 10
+        'ElseIf YearLevelBox.SelectedIndex = 3 Then
+        '    SectionBox.Items.Clear()
+        '    SectionBox.Items.Add("J")
+        '    SectionBox.Items.Add("K")
+        '    SectionBox.Items.Add("L")
 
-            'grade 12
-        ElseIf YearLevelBox.SelectedIndex = 5 Then
-            SectionBox.Items.Clear()
-            SectionBox.Items.Add("Q")
-            SectionBox.Items.Add("R")
-            SectionBox.Items.Add("S")
-        End If
+        '    'grade 11
+        'ElseIf YearLevelBox.SelectedIndex = 4 Then
+        '    SectionBox.Items.Clear()
+        '    SectionBox.Items.Add("M")
+        '    SectionBox.Items.Add("N")
+        '    SectionBox.Items.Add("O")
+
+        '    'grade 12
+        'ElseIf YearLevelBox.SelectedIndex = 5 Then
+        '    SectionBox.Items.Clear()
+        '    SectionBox.Items.Add("Q")
+        '    SectionBox.Items.Add("R")
+        '    SectionBox.Items.Add("S")
+        'End If
     End Sub
 
     Private Sub EnrollBtn_Click(sender As Object, e As EventArgs) Handles EnrollBtn.Click

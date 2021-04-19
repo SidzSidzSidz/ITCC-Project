@@ -304,7 +304,7 @@ Partial Class AddStaff
         Me.UsernameTextBox.Location = New System.Drawing.Point(631, 323)
         Me.UsernameTextBox.Name = "UsernameTextBox"
         Me.UsernameTextBox.Size = New System.Drawing.Size(370, 32)
-        Me.UsernameTextBox.TabIndex = 45
+        Me.UsernameTextBox.TabIndex = 3
         '
         'StaffBindingSource
         '
@@ -323,7 +323,7 @@ Partial Class AddStaff
         Me.FirstNameTextBox.Location = New System.Drawing.Point(631, 205)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
         Me.FirstNameTextBox.Size = New System.Drawing.Size(370, 32)
-        Me.FirstNameTextBox.TabIndex = 46
+        Me.FirstNameTextBox.TabIndex = 1
         '
         'LastNameTextBox
         '
@@ -332,7 +332,7 @@ Partial Class AddStaff
         Me.LastNameTextBox.Location = New System.Drawing.Point(631, 267)
         Me.LastNameTextBox.Name = "LastNameTextBox"
         Me.LastNameTextBox.Size = New System.Drawing.Size(370, 32)
-        Me.LastNameTextBox.TabIndex = 47
+        Me.LastNameTextBox.TabIndex = 2
         '
         'PasswordTextBox
         '
@@ -341,7 +341,7 @@ Partial Class AddStaff
         Me.PasswordTextBox.Location = New System.Drawing.Point(631, 388)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.Size = New System.Drawing.Size(370, 32)
-        Me.PasswordTextBox.TabIndex = 48
+        Me.PasswordTextBox.TabIndex = 4
         '
         'StaffTableAdapter
         '
@@ -350,6 +350,7 @@ Partial Class AddStaff
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ClassesTableAdapter = Nothing
         Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.EnrollmentTableAdapter = Nothing
         Me.TableAdapterManager.Sections1TableAdapter = Nothing
