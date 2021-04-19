@@ -8,6 +8,8 @@
 End Class
 
 Namespace DatabaseDataSetTableAdapters
+    Partial Public Class ClassesTableAdapter
+    End Class
 
     Partial Public Class EnrollmentTableAdapter
     End Class

@@ -14,18 +14,19 @@ Public Class Enrollment1Form
     End Function
 
     Private Sub NextBtn_Click(sender As Object, e As EventArgs) Handles NextBtn.Click
-        ComboBox1.Text = Nothing
-        YearLevelBox.Text = Nothing
-        SectionBox.Text = Nothing
+        If IsNumeric(YrscTextBox.Text) = True And IsNumeric(LrnTextBox.Text) = True Then
+            ComboBox1.Text = Nothing
+            YearLevelBox.Text = Nothing
+            SectionBox.Text = Nothing
 
-        Panel2.BringToFront()
-        EnrolleeName.Text = LnameTextBox.Text + ", " + FnameTextBox.Text + " " + MnameTextBox.Text
-        Panel2.Show()
-    End Sub
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs)
-        Login.Show()
-        Me.Hide()
+            Panel2.BringToFront()
+            EnrolleeName.Text = LnameTextBox.Text + ", " + FnameTextBox.Text + " " + MnameTextBox.Text
+            Panel2.Show()
+        ElseIf IsNumeric(YrscTextBox.Text) = False Then
+            MsgBox("Yrs Completed must be numeric.")
+        Else
+            MsgBox("LRN must be numeric.")
+        End If
     End Sub
 
     Private Sub SearchSBar_Click(sender As Object, e As EventArgs) Handles SearchSBar.Click, SearchPB.Click
@@ -197,7 +198,13 @@ Public Class Enrollment1Form
 
     Private Sub YearLevelBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles YearLevelBox.SelectedIndexChanged
         'todo
-        MsgBox(ClassesTableAdapter.GetDataByClass(ComboBox1.Text, YearLevelBox.Text))
+        SectionBox.Items.Clear()
+        Dim Ikawbahala As DataTable
+        Ikawbahala = ClassesTableAdapter.GetDataByClass(ComboBox1.Text, YearLevelBox.Text)
+
+        For Each row As DataRow In Ikawbahala.Rows
+            SectionBox.Items.Add(row("Name").ToString)
+        Next
 
         ''grade 7
         'If YearLevelBox.SelectedIndex = 0 Then
@@ -264,7 +271,7 @@ Public Class Enrollment1Form
             End If
 
         Catch ex As Exception
-            MsgBox("Error In Input")
+            MsgBox("Error In Input: " + ex.Message)
             clearboxes()
             Panel2.SendToBack()
         End Try
@@ -328,4 +335,5 @@ Public Class Enrollment1Form
         End Try
 
     End Sub
+
 End Class

@@ -320,6 +320,7 @@ Public Class Search
     Private Sub Search_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'DatabaseDataSet1.Enrollment1' table. You can move, or remove it, as needed.
         Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet1.Enrollment)
+        Search1_Panel.BringToFront()
     End Sub
 
 End Class

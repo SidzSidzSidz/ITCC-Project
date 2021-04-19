@@ -46,14 +46,13 @@
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
         'todo
+        SectionCBox.Items.Clear()
         Dim Ikawbahala As DataTable
-        Ikawbahala = ClassesTableAdapter.GetDataByClass(ComboBox1.Text, YearLevelBox.Text)
+        Ikawbahala = ClassesTableAdapter.GetDataByClass(ComboBox1.Text, ComboBox2.Text)
 
         For Each row As DataRow In Ikawbahala.Rows
-            MsgBox(row.ToString)
-            SectionCBox.Items.Add(Ikawbahala(row.ToString))
+            SectionCBox.Items.Add(row("Name").ToString)
         Next
-
 
         ''grade 7
         'If ComboBox2.SelectedIndex = 0 Then

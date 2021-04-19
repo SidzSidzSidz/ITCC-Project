@@ -57,6 +57,8 @@ Partial Class Enrollment1Form
         Me.CListPB = New System.Windows.Forms.PictureBox()
         Me.EnrollmentPB = New System.Windows.Forms.PictureBox()
         Me.LnameTextBox = New System.Windows.Forms.TextBox()
+        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.FnameTextBox = New System.Windows.Forms.TextBox()
         Me.MnameTextBox = New System.Windows.Forms.TextBox()
         Me.SuffixTextBox = New System.Windows.Forms.TextBox()
@@ -85,24 +87,22 @@ Partial Class Enrollment1Form
         Me.EnrollBtn = New System.Windows.Forms.Button()
         Me.UpdateButton = New System.Windows.Forms.Button()
         Me.StudentsDTB = New System.Windows.Forms.DataGridView()
-        Me.EnrolleeName = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.YearLevelBox = New System.Windows.Forms.ComboBox()
-        Me.Label23 = New System.Windows.Forms.Label()
         Me.LRNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MiddleNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sections1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
-        Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EnrolleeName = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.YearLevelBox = New System.Windows.Forms.ComboBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.ClassesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SectionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         Me.Sections1TableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.Sections1TableAdapter()
-        Me.ClassesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClassesTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.ClassesTableAdapter()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,6 +110,8 @@ Partial Class Enrollment1Form
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -120,10 +122,8 @@ Partial Class Enrollment1Form
         Me.Panel3.SuspendLayout()
         CType(Me.StudentsDTB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Sections1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClassesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NextBtn
@@ -508,6 +508,16 @@ Partial Class Enrollment1Form
         Me.LnameTextBox.Size = New System.Drawing.Size(220, 26)
         Me.LnameTextBox.TabIndex = 1
         '
+        'EnrollmentBindingSource
+        '
+        Me.EnrollmentBindingSource.DataMember = "Enrollment"
+        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'FnameTextBox
         '
         Me.FnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EnrollmentBindingSource, "fname", True))
@@ -854,63 +864,6 @@ Partial Class Enrollment1Form
         Me.StudentsDTB.TabIndex = 23
         Me.StudentsDTB.Visible = False
         '
-        'EnrolleeName
-        '
-        Me.EnrolleeName.AutoSize = True
-        Me.EnrolleeName.Font = New System.Drawing.Font("Impact", 40.0!)
-        Me.EnrolleeName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
-        Me.EnrolleeName.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.EnrolleeName.Location = New System.Drawing.Point(15, 31)
-        Me.EnrolleeName.Name = "EnrolleeName"
-        Me.EnrolleeName.Size = New System.Drawing.Size(403, 66)
-        Me.EnrolleeName.TabIndex = 19
-        Me.EnrolleeName.Text = "Name Of Enrollee"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"2010-2011", "2011-2012", "2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017", "2017-2018", "2018-2019", "2019-2020", "2020-2021", "2021-2022", "2022-2023", "2023-2024", "2024-2025", "2026-2027", "2028-2029", "2029-2030"})
-        Me.ComboBox1.Location = New System.Drawing.Point(63, 122)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(177, 21)
-        Me.ComboBox1.TabIndex = 20
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label26.Location = New System.Drawing.Point(291, 121)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(81, 20)
-        Me.Label26.TabIndex = 16
-        Me.Label26.Text = "Year level"
-        '
-        'YearLevelBox
-        '
-        Me.YearLevelBox.DataSource = Me.ClassesBindingSource
-        Me.YearLevelBox.DisplayMember = "YearLvl"
-        Me.YearLevelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.YearLevelBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.YearLevelBox.FormattingEnabled = True
-        Me.YearLevelBox.Location = New System.Drawing.Point(378, 121)
-        Me.YearLevelBox.Name = "YearLevelBox"
-        Me.YearLevelBox.Size = New System.Drawing.Size(177, 21)
-        Me.YearLevelBox.TabIndex = 22
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label23.Location = New System.Drawing.Point(26, 122)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(31, 20)
-        Me.Label23.TabIndex = 17
-        Me.Label23.Text = "S.Y."
-        '
         'LRNDataGridViewTextBoxColumn
         '
         Me.LRNDataGridViewTextBoxColumn.DataPropertyName = "LRN"
@@ -950,15 +903,66 @@ Partial Class Enrollment1Form
         Me.Sections1BindingSource.DataMember = "Sections1"
         Me.Sections1BindingSource.DataSource = Me.DatabaseDataSet
         '
-        'DatabaseDataSet
+        'EnrolleeName
         '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.EnrolleeName.AutoSize = True
+        Me.EnrolleeName.Font = New System.Drawing.Font("Impact", 40.0!)
+        Me.EnrolleeName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.EnrolleeName.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.EnrolleeName.Location = New System.Drawing.Point(15, 31)
+        Me.EnrolleeName.Name = "EnrolleeName"
+        Me.EnrolleeName.Size = New System.Drawing.Size(403, 66)
+        Me.EnrolleeName.TabIndex = 19
+        Me.EnrolleeName.Text = "Name Of Enrollee"
         '
-        'EnrollmentBindingSource
+        'ComboBox1
         '
-        Me.EnrollmentBindingSource.DataMember = "Enrollment"
-        Me.EnrollmentBindingSource.DataSource = Me.DatabaseDataSet
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"2010-2011", "2011-2012", "2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017", "2017-2018", "2018-2019", "2019-2020", "2020-2021", "2021-2022", "2022-2023", "2023-2024", "2024-2025", "2026-2027", "2028-2029", "2029-2030"})
+        Me.ComboBox1.Location = New System.Drawing.Point(63, 122)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(177, 21)
+        Me.ComboBox1.TabIndex = 20
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label26.Location = New System.Drawing.Point(291, 121)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(81, 20)
+        Me.Label26.TabIndex = 16
+        Me.Label26.Text = "Year level"
+        '
+        'YearLevelBox
+        '
+        Me.YearLevelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.YearLevelBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.YearLevelBox.FormattingEnabled = True
+        Me.YearLevelBox.Items.AddRange(New Object() {"Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"})
+        Me.YearLevelBox.Location = New System.Drawing.Point(378, 121)
+        Me.YearLevelBox.Name = "YearLevelBox"
+        Me.YearLevelBox.Size = New System.Drawing.Size(177, 21)
+        Me.YearLevelBox.TabIndex = 22
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label23.Location = New System.Drawing.Point(26, 122)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(31, 20)
+        Me.Label23.TabIndex = 17
+        Me.Label23.Text = "S.Y."
+        '
+        'ClassesBindingSource
+        '
+        Me.ClassesBindingSource.DataMember = "Classes"
+        Me.ClassesBindingSource.DataSource = Me.DatabaseDataSet
         '
         'SectionsBindingSource
         '
@@ -984,11 +988,6 @@ Partial Class Enrollment1Form
         '
         Me.Sections1TableAdapter.ClearBeforeFill = True
         '
-        'ClassesBindingSource
-        '
-        Me.ClassesBindingSource.DataMember = "Classes"
-        Me.ClassesBindingSource.DataSource = Me.DatabaseDataSet
-        '
         'ClassesTableAdapter
         '
         Me.ClassesTableAdapter.ClearBeforeFill = True
@@ -1000,8 +999,8 @@ Partial Class Enrollment1Form
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1264, 692)
         Me.Controls.Add(Me.Sidebar)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Enrollment1Form"
@@ -1014,6 +1013,8 @@ Partial Class Enrollment1Form
         CType(Me.AddStaffPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CListPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RcPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1027,10 +1028,8 @@ Partial Class Enrollment1Form
         Me.Panel3.PerformLayout()
         CType(Me.StudentsDTB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Sections1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClassesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

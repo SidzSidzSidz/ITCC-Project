@@ -35,11 +35,9 @@ C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\De
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\Debug\FLMS_Enrollment_System.xml
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.ClassList.resources
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Enrollment1Form.resources
-C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Enrollment2Form.resources
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Login.resources
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Resources.resources
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.Search.resources
-C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.StudentInfo.resources
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.vbproj.GenerateResource.cache
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.vbproj.CoreCompileInputs.cache
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.exe
@@ -55,6 +53,5 @@ C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\Debug\Database_log.ldf
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\Debug\Database.mdf
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\Debug\Database_log.ldf
-C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.NewSection.resources
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.vbprojAssemblyReference.cache
 C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.vbprojAssemblyReference.cache
