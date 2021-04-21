@@ -3,7 +3,7 @@
 Public Class Enrollment1Form
     Private Function ConvertImageToByte(ByVal img As Image)
         If img Is Nothing Then
-
+            Return Nothing
         Else
             Using mStream As New MemoryStream()
                 img.Save(mStream, img.RawFormat)
@@ -206,48 +206,6 @@ Public Class Enrollment1Form
             SectionBox.Items.Add(row("Name").ToString)
         Next
 
-        ''grade 7
-        'If YearLevelBox.SelectedIndex = 0 Then
-        '    SectionBox.Items.Clear()
-        '    SectionBox.Items.Add("A")
-        '    SectionBox.Items.Add("B")
-        '    SectionBox.Items.Add("C")
-
-        '    'grade 8
-        'ElseIf YearLevelBox.SelectedIndex = 1 Then
-        '    SectionBox.Items.Clear()
-        '    SectionBox.Items.Add("D")
-        '    SectionBox.Items.Add("E")
-        '    SectionBox.Items.Add("F")
-
-        '    'grade 9
-        'ElseIf YearLevelBox.SelectedIndex = 2 Then
-        '    SectionBox.Items.Clear()
-        '    SectionBox.Items.Add("G")
-        '    SectionBox.Items.Add("H")
-        '    SectionBox.Items.Add("I")
-
-        '    'grade 10
-        'ElseIf YearLevelBox.SelectedIndex = 3 Then
-        '    SectionBox.Items.Clear()
-        '    SectionBox.Items.Add("J")
-        '    SectionBox.Items.Add("K")
-        '    SectionBox.Items.Add("L")
-
-        '    'grade 11
-        'ElseIf YearLevelBox.SelectedIndex = 4 Then
-        '    SectionBox.Items.Clear()
-        '    SectionBox.Items.Add("M")
-        '    SectionBox.Items.Add("N")
-        '    SectionBox.Items.Add("O")
-
-        '    'grade 12
-        'ElseIf YearLevelBox.SelectedIndex = 5 Then
-        '    SectionBox.Items.Clear()
-        '    SectionBox.Items.Add("Q")
-        '    SectionBox.Items.Add("R")
-        '    SectionBox.Items.Add("S")
-        'End If
     End Sub
 
     Private Sub EnrollBtn_Click(sender As Object, e As EventArgs) Handles EnrollBtn.Click
@@ -300,14 +258,17 @@ Public Class Enrollment1Form
     End Sub
 
     Private Sub SectionBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SectionBox.SelectedIndexChanged
+        Dim noStudents As Integer
+
         StudentsDTB.Visible = True
         Sections1TableAdapter.FillBySection(DatabaseDataSet.Sections1, ComboBox1.Text, SectionBox.Text, YearLevelBox.Text)
 
+        NoStudentsLabel.Text = Sections1TableAdapter.GetNoOfStudents(YearLevelBox.Text, SectionBox.Text, ComboBox1.Text)
+        noStudents = Convert.ToDecimal(NoStudentsLabel.Text)
+
         Dim rowcount As Integer
         rowcount = StudentsDTB.RowCount
-
-        NoStudentsLabel.Text = rowcount - 1
-        SlotsLeftLabel.Text = 40 - (rowcount - 1)
+        SlotsLeftLabel.Text = ClassesTableAdapter.GetMaxStudents(ComboBox1.Text, YearLevelBox.Text, SectionBox.Text) - noStudents
     End Sub
 
     Private Sub UpdateButton_Click(sender As Object, e As EventArgs) Handles UpdateButton.Click
@@ -335,5 +296,4 @@ Public Class Enrollment1Form
         End Try
 
     End Sub
-
 End Class

@@ -33,8 +33,6 @@
     Private Sub ClassList_Load(sender As Object, e As EventArgs) Handles MyBase.Load, MyBase.Shown
         'TODO: This line of code loads data into the 'DatabaseDataSet.Classes' table. You can move, or remove it, as needed.
         Me.ClassesTableAdapter.Fill(Me.DatabaseDataSet.Classes)
-        'TODO: update datagrid table
-
 
         'TODO: This line of code loads data into the 'DatabaseDataSet.Sections1' table. You can move, or remove it, as needed.
         Me.Sections1TableAdapter.Fill(Me.DatabaseDataSet.Sections1)
@@ -54,48 +52,6 @@
             SectionCBox.Items.Add(row("Name").ToString)
         Next
 
-        ''grade 7
-        'If ComboBox2.SelectedIndex = 0 Then
-        '    SectionCBox.Items.Clear()
-        '    SectionCBox.Items.Add("A")
-        '    SectionCBox.Items.Add("B")
-        '    SectionCBox.Items.Add("C")
-
-        '    'grade 8
-        'ElseIf ComboBox2.SelectedIndex = 1 Then
-        '    SectionCBox.Items.Clear()
-        '    SectionCBox.Items.Add("D")
-        '    SectionCBox.Items.Add("E")
-        '    SectionCBox.Items.Add("F")
-
-        '    'grade 9
-        'ElseIf ComboBox2.SelectedIndex = 2 Then
-        '    SectionCBox.Items.Clear()
-        '    SectionCBox.Items.Add("G")
-        '    SectionCBox.Items.Add("H")
-        '    SectionCBox.Items.Add("I")
-
-        '    'grade 10
-        'ElseIf ComboBox2.SelectedIndex = 3 Then
-        '    SectionCBox.Items.Clear()
-        '    SectionCBox.Items.Add("J")
-        '    SectionCBox.Items.Add("K")
-        '    SectionCBox.Items.Add("L")
-
-        '    'grade 11
-        'ElseIf ComboBox2.SelectedIndex = 4 Then
-        '    SectionCBox.Items.Clear()
-        '    SectionCBox.Items.Add("M")
-        '    SectionCBox.Items.Add("N")
-        '    SectionCBox.Items.Add("O")
-
-        '    'grade 12
-        'ElseIf ComboBox2.SelectedIndex = 5 Then
-        '    SectionCBox.Items.Clear()
-        '    SectionCBox.Items.Add("Q")
-        '    SectionCBox.Items.Add("R")
-        '    SectionCBox.Items.Add("S")
-        'End If
     End Sub
 
     Private Sub SelectBtn_Click(sender As Object, e As EventArgs) Handles SelectBtn.Click
@@ -153,7 +109,23 @@
         Panel1.BringToFront()
     End Sub
 
-    Private Sub SectionCBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SectionCBox.SelectedIndexChanged
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        ComboBox2.Text = Nothing
+        SectionCBox.Text = Nothing
+    End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+
+
+
+
+
+
+        ClassesTableAdapter.Update(DatabaseDataSet.Classes)
+        ClassesTableAdapter.Fill(DatabaseDataSet.Classes)
+        Sections1TableAdapter.Fill(DatabaseDataSet.Sections1)
+        EnrollmentTableAdapter.Fill(DatabaseDataSet.Enrollment)
+
+        'Sections1TableAdapter.UpdatSection()
     End Sub
 End Class

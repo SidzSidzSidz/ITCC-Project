@@ -860,6 +860,7 @@ Partial Class Enrollment1Form
         Me.StudentsDTB.DataSource = Me.Sections1BindingSource
         Me.StudentsDTB.Location = New System.Drawing.Point(26, 159)
         Me.StudentsDTB.Name = "StudentsDTB"
+        Me.StudentsDTB.RowHeadersVisible = False
         Me.StudentsDTB.Size = New System.Drawing.Size(747, 495)
         Me.StudentsDTB.TabIndex = 23
         Me.StudentsDTB.Visible = False

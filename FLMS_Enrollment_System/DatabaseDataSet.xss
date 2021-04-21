@@ -10,7 +10,7 @@
     <Shape ID="DesignTable:Sections" ZOrder="4" X="724" Y="726" Height="54" Width="80" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="45" OldDataTableHeight="45" SplitterPosition="24" />
     <Shape ID="DesignTable:Sections1" ZOrder="3" X="551" Y="352" Height="362" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
     <Shape ID="DesignTable:Enrollment" ZOrder="2" X="881" Y="126" Height="647" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="425" />
-    <Shape ID="DesignTable:Classes" ZOrder="1" X="1196" Y="132" Height="241" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="24" SplitterPosition="121" />
+    <Shape ID="DesignTable:Classes" ZOrder="1" X="1196" Y="132" Height="248" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="24" SplitterPosition="121" />
   </Shapes>
   <Connectors />
 </DiagramLayout>

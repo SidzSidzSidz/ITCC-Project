@@ -23,8 +23,18 @@ Partial Class ClassList
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ClassList))
         Me.ClassList_DGV = New System.Windows.Forms.DataGridView()
+        Me.LRNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MiddleNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Sections1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.SectionCBox = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -92,13 +102,6 @@ Partial Class ClassList
         Me.FirstName_Label = New System.Windows.Forms.Label()
         Me.Username_Label = New System.Windows.Forms.Label()
         Me.Password_Label = New System.Windows.Forms.Label()
-        Me.LRNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MiddleNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Sections1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New FLMS_Enrollment_System.DatabaseDataSet()
         Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SectionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
@@ -107,6 +110,8 @@ Partial Class ClassList
         Me.ClassesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClassesTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.ClassesTableAdapter()
         CType(Me.ClassList_DGV, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Sections1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SearchPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -119,8 +124,6 @@ Partial Class ClassList
         Me.FillBySectionToolStrip3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.Sections1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClassesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,24 +137,101 @@ Partial Class ClassList
         Me.ClassList_DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.ClassList_DGV.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClassList_DGV.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Century Gothic", 12.0!)
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ClassList_DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.ClassList_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ClassList_DGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LRNDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.MiddleNameDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn})
         Me.ClassList_DGV.DataSource = Me.Sections1BindingSource
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Century Gothic", 12.0!)
+        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ClassList_DGV.DefaultCellStyle = DataGridViewCellStyle14
         Me.ClassList_DGV.Location = New System.Drawing.Point(65, 139)
         Me.ClassList_DGV.Name = "ClassList_DGV"
         Me.ClassList_DGV.ReadOnly = True
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ClassList_DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
+        Me.ClassList_DGV.RowHeadersVisible = False
+        Me.ClassList_DGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.ClassList_DGV.Size = New System.Drawing.Size(956, 501)
         Me.ClassList_DGV.TabIndex = 16
         Me.ClassList_DGV.Visible = False
+        '
+        'LRNDataGridViewTextBoxColumn
+        '
+        Me.LRNDataGridViewTextBoxColumn.DataPropertyName = "LRN"
+        Me.LRNDataGridViewTextBoxColumn.HeaderText = "LRN"
+        Me.LRNDataGridViewTextBoxColumn.Name = "LRNDataGridViewTextBoxColumn"
+        Me.LRNDataGridViewTextBoxColumn.ReadOnly = True
+        Me.LRNDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'LastNameDataGridViewTextBoxColumn
+        '
+        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName"
+        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "Last Name"
+        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
+        Me.LastNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.LastNameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'FirstNameDataGridViewTextBoxColumn
+        '
+        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "First Name"
+        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FirstNameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'MiddleNameDataGridViewTextBoxColumn
+        '
+        Me.MiddleNameDataGridViewTextBoxColumn.DataPropertyName = "MiddleName"
+        Me.MiddleNameDataGridViewTextBoxColumn.HeaderText = "Middle Name"
+        Me.MiddleNameDataGridViewTextBoxColumn.Name = "MiddleNameDataGridViewTextBoxColumn"
+        Me.MiddleNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.MiddleNameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'SexDataGridViewTextBoxColumn
+        '
+        Me.SexDataGridViewTextBoxColumn.DataPropertyName = "Sex"
+        Me.SexDataGridViewTextBoxColumn.HeaderText = "Sex"
+        Me.SexDataGridViewTextBoxColumn.Name = "SexDataGridViewTextBoxColumn"
+        Me.SexDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SexDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'Sections1BindingSource
+        '
+        Me.Sections1BindingSource.DataMember = "Sections1"
+        Me.Sections1BindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'SectionCBox
         '
         Me.SectionCBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.SectionCBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.SectionCBox.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SectionCBox.FormattingEnabled = True
-        Me.SectionCBox.Location = New System.Drawing.Point(723, 92)
+        Me.SectionCBox.Location = New System.Drawing.Point(728, 92)
         Me.SectionCBox.Name = "SectionCBox"
-        Me.SectionCBox.Size = New System.Drawing.Size(179, 21)
+        Me.SectionCBox.Size = New System.Drawing.Size(179, 24)
         Me.SectionCBox.TabIndex = 14
         '
         'Label11
@@ -171,7 +251,7 @@ Partial Class ClassList
         Me.Label9.Font = New System.Drawing.Font("Impact", 40.0!)
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label9.Location = New System.Drawing.Point(54, 21)
+        Me.Label9.Location = New System.Drawing.Point(18, 18)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(237, 66)
         Me.Label9.TabIndex = 10
@@ -180,7 +260,7 @@ Partial Class ClassList
         'SelectBtn
         '
         Me.SelectBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.SelectBtn.Location = New System.Drawing.Point(937, 84)
+        Me.SelectBtn.Location = New System.Drawing.Point(937, 88)
         Me.SelectBtn.Name = "SelectBtn"
         Me.SelectBtn.Size = New System.Drawing.Size(84, 31)
         Me.SelectBtn.TabIndex = 15
@@ -362,11 +442,12 @@ Partial Class ClassList
         '
         Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBox2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12", ""})
-        Me.ComboBox2.Location = New System.Drawing.Point(434, 92)
+        Me.ComboBox2.Location = New System.Drawing.Point(437, 93)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(179, 21)
+        Me.ComboBox2.Size = New System.Drawing.Size(179, 24)
         Me.ComboBox2.TabIndex = 19
         '
         'Label3
@@ -395,11 +476,12 @@ Partial Class ClassList
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBox1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"2020-2021", "2021-2022", "2022-2023", "2023-2024", "2024-2025", "2026-2027", "2028-2029"})
-        Me.ComboBox1.Location = New System.Drawing.Point(112, 93)
+        Me.ComboBox1.Items.AddRange(New Object() {"2010-2011", "2011-2012", "2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017", "2017-2018", "2018-2019", "2019-2020", "2020-2021", "2021-2022", "2022-2023", "2023-2024", "2024-2025", "2026-2027", "2028-2029", "2029-2030"})
+        Me.ComboBox1.Location = New System.Drawing.Point(112, 92)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(179, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(179, 24)
         Me.ComboBox1.TabIndex = 14
         '
         'FillBySectionToolStrip
@@ -662,6 +744,8 @@ Partial Class ClassList
         '
         'YearLevelBox
         '
+        Me.YearLevelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.YearLevelBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.YearLevelBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
         Me.YearLevelBox.FormattingEnabled = True
         Me.YearLevelBox.Items.AddRange(New Object() {"Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"})
@@ -672,6 +756,8 @@ Partial Class ClassList
         '
         'SYBox
         '
+        Me.SYBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.SYBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SYBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
         Me.SYBox.FormattingEnabled = True
         Me.SYBox.Items.AddRange(New Object() {"2010-2011", "2011-2012", "2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017", "2017-2018", "2018-2019", "2019-2020", "2020-2021", "2021-2022", "2022-2023", "2023-2024", "2024-2025", "2026-2027", "2028-2029", "2029-2030"})
@@ -756,51 +842,6 @@ Partial Class ClassList
         Me.Password_Label.TabIndex = 36
         Me.Password_Label.Text = "Max Students"
         '
-        'LRNDataGridViewTextBoxColumn
-        '
-        Me.LRNDataGridViewTextBoxColumn.DataPropertyName = "LRN"
-        Me.LRNDataGridViewTextBoxColumn.HeaderText = "LRN"
-        Me.LRNDataGridViewTextBoxColumn.Name = "LRNDataGridViewTextBoxColumn"
-        Me.LRNDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'LastNameDataGridViewTextBoxColumn
-        '
-        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName"
-        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "Last Name"
-        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
-        Me.LastNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'FirstNameDataGridViewTextBoxColumn
-        '
-        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
-        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "First Name"
-        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
-        Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MiddleNameDataGridViewTextBoxColumn
-        '
-        Me.MiddleNameDataGridViewTextBoxColumn.DataPropertyName = "MiddleName"
-        Me.MiddleNameDataGridViewTextBoxColumn.HeaderText = "Middle Name"
-        Me.MiddleNameDataGridViewTextBoxColumn.Name = "MiddleNameDataGridViewTextBoxColumn"
-        Me.MiddleNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SexDataGridViewTextBoxColumn
-        '
-        Me.SexDataGridViewTextBoxColumn.DataPropertyName = "Sex"
-        Me.SexDataGridViewTextBoxColumn.HeaderText = "Sex"
-        Me.SexDataGridViewTextBoxColumn.Name = "SexDataGridViewTextBoxColumn"
-        Me.SexDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'Sections1BindingSource
-        '
-        Me.Sections1BindingSource.DataMember = "Sections1"
-        Me.Sections1BindingSource.DataSource = Me.DatabaseDataSet
-        '
-        'DatabaseDataSet
-        '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'EnrollmentBindingSource
         '
         Me.EnrollmentBindingSource.DataMember = "Enrollment"
@@ -859,6 +900,8 @@ Partial Class ClassList
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FLMS Enrollment System"
         CType(Me.ClassList_DGV, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Sections1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -878,8 +921,6 @@ Partial Class ClassList
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.Sections1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SectionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClassesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -950,11 +991,6 @@ Partial Class ClassList
     Friend WithEvents YearlevelToolStripLabel1 As ToolStripLabel
     Friend WithEvents YearlevelToolStripTextBox1 As ToolStripTextBox
     Friend WithEvents FillBySectionToolStripButton3 As ToolStripButton
-    Friend WithEvents LRNDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents LastNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents MiddleNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SexDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents SYBox As ComboBox
@@ -970,4 +1006,9 @@ Partial Class ClassList
     Friend WithEvents ClassesTableAdapter As DatabaseDataSetTableAdapters.ClassesTableAdapter
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents YearLevelBox As ComboBox
+    Friend WithEvents LRNDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LastNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MiddleNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SexDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
