@@ -211,21 +211,26 @@ Public Class Enrollment1Form
     Private Sub EnrollBtn_Click(sender As Object, e As EventArgs) Handles EnrollBtn.Click
 
         Try
-            If SlotsLeftLabel.Text = "0" Then
-                MsgBox("Section Full")
+            If ComboBox1.Text = "" Or YearLevelBox.Text = "" Or SectionBox.Text = "" Then
+                MsgBox("All Boxes Needs To Be Filled")
             Else
-                Dim section = SectionBox.Text
-                Dim lrn_sy = LrnTextBox.Text + ComboBox1.Text
-                'if new student
-                EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image), ComboBox1.Text, YearLevelBox.Text, section)
-                'add to classlist
-                Sections1TableAdapter.SectionFn(lrn_sy, YearLevelBox.Text, section, ComboBox1.Text, LrnTextBox.Text, LnameTextBox.Text, FnameTextBox.Text, MnameTextBox.Text, SexComboBox.Text)
-                Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
-                Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
+                If SlotsLeftLabel.Text = "0" Then
+                    MsgBox("Section Full")
+                Else
+                    Dim section = SectionBox.Text
+                    Dim lrn_sy = LrnTextBox.Text + ComboBox1.Text
+                    'if new student
+                    EnrollmentTableAdapter.Enrollment1Fn(LrnTextBox.Text, LnameTextBox.Text, MnameTextBox.Text, FnameTextBox.Text, SuffixTextBox.Text, DobDateTimePicker.Text, AddressTextBox.Text, GuardianTextBox.Text, LsaTextBox.Text, SexComboBox.Text, YrscTextBox.Text, YrcTextBox.Text, ConvertImageToByte(NsoPictureBox.Image), ConvertImageToByte(GmPictureBox.Image), ConvertImageToByte(RcPictureBox.Image), ConvertImageToByte(F137PictureBox.Image), ConvertImageToByte(PicPictureBox.Image), ComboBox1.Text, YearLevelBox.Text, section)
+                    'add to classlist
+                    Sections1TableAdapter.SectionFn(lrn_sy, YearLevelBox.Text, section, ComboBox1.Text, LrnTextBox.Text, LnameTextBox.Text, FnameTextBox.Text, MnameTextBox.Text, SexComboBox.Text)
+                    Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+                    Me.EnrollmentTableAdapter.Fill(Me.DatabaseDataSet.Enrollment)
 
-                clearboxes()
-                Panel2.SendToBack()
-                MsgBox("Student Enrolled")
+                    clearboxes()
+                    Panel2.SendToBack()
+                    MsgBox("Student Enrolled")
+                End If
+
             End If
 
         Catch ex As Exception

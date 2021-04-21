@@ -44,6 +44,7 @@ Partial Class Search
         Me.Search_btn = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Search1_Panel = New System.Windows.Forms.Panel()
         Me.EditInfo_Panel = New System.Windows.Forms.Panel()
         Me.F137PictureBox = New System.Windows.Forms.PictureBox()
         Me.EnrollmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -82,7 +83,6 @@ Partial Class Search
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.Search1_Panel = New System.Windows.Forms.Panel()
         Me.TableAdapterManager = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.EnrollmentTableAdapter = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.EnrollmentTableAdapter()
         Me.Sections1TableAdapter1 = New FLMS_Enrollment_System.DatabaseDataSetTableAdapters.Sections1TableAdapter()
@@ -95,6 +95,7 @@ Partial Class Search
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.Search1_Panel.SuspendLayout()
         Me.EditInfo_Panel.SuspendLayout()
         CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnrollmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,7 +104,6 @@ Partial Class Search
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Search1_Panel.SuspendLayout()
         Me.SuspendLayout()
         '
         'Sidebar
@@ -340,6 +340,17 @@ Partial Class Search
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1069, 681)
         Me.Panel1.TabIndex = 13
+        '
+        'Search1_Panel
+        '
+        Me.Search1_Panel.Controls.Add(Me.Label9)
+        Me.Search1_Panel.Controls.Add(Me.Search_btn)
+        Me.Search1_Panel.Controls.Add(Me.LRN_text)
+        Me.Search1_Panel.Controls.Add(Me.LRN_Label)
+        Me.Search1_Panel.Location = New System.Drawing.Point(0, 0)
+        Me.Search1_Panel.Name = "Search1_Panel"
+        Me.Search1_Panel.Size = New System.Drawing.Size(1069, 681)
+        Me.Search1_Panel.TabIndex = 13
         '
         'EditInfo_Panel
         '
@@ -769,17 +780,6 @@ Partial Class Search
         Me.Label30.TabIndex = 103
         Me.Label30.Text = "Last Name"
         '
-        'Search1_Panel
-        '
-        Me.Search1_Panel.Controls.Add(Me.Label9)
-        Me.Search1_Panel.Controls.Add(Me.Search_btn)
-        Me.Search1_Panel.Controls.Add(Me.LRN_text)
-        Me.Search1_Panel.Controls.Add(Me.LRN_Label)
-        Me.Search1_Panel.Location = New System.Drawing.Point(0, 0)
-        Me.Search1_Panel.Name = "Search1_Panel"
-        Me.Search1_Panel.Size = New System.Drawing.Size(1069, 681)
-        Me.Search1_Panel.TabIndex = 13
-        '
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
@@ -809,6 +809,7 @@ Partial Class Search
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Search"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FLMS Enrollment System"
@@ -821,6 +822,8 @@ Partial Class Search
         CType(Me.EnrollmentPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        Me.Search1_Panel.ResumeLayout(False)
+        Me.Search1_Panel.PerformLayout()
         Me.EditInfo_Panel.ResumeLayout(False)
         Me.EditInfo_Panel.PerformLayout()
         CType(Me.F137PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
@@ -830,8 +833,6 @@ Partial Class Search
         CType(Me.GmPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NsoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Search1_Panel.ResumeLayout(False)
-        Me.Search1_Panel.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

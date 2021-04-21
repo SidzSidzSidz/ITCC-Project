@@ -54,4 +54,3 @@ C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\Debug\Database.mdf
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\bin\Debug\Database_log.ldf
 C:\Users\Maya Asuero\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.vbprojAssemblyReference.cache
-C:\Users\Administrator\Documents\GitHub\ITCC-Project\FLMS_Enrollment_System\obj\Debug\FLMS_Enrollment_System.vbprojAssemblyReference.cache
